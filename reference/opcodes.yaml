@@ -689,22 +689,24 @@ opcodes:
   CHANGELIB:
 
   # A.12.2. Debug primitives as operations without side-effect.
-  DUMPSTK:
-  DUMPSTKTOP: ["int"]
-  HEXDUMP:
-  HEXPRINT:
-  BINDUMP:
-  BINPRINT:
-  STRDUMP:
-  STRPRINT:
-  DEBUGOFF:
-  DEBUGON:
-  DUMP: ["int"]
-  PRINT: ["int"]
-  DUMPTOSFMT: ["int"]
-  LOGSTR: ["string"]
-  LOGFLUSH:
-  PRINTSTR: ["string"]
+  DEBUG: ["int"]
+  DEBUGSTR: ["string"]
+  # DUMPSTK:
+  # DUMPSTKTOP: ["int"]
+  # HEXDUMP:
+  # HEXPRINT:
+  # BINDUMP:
+  # BINPRINT:
+  # STRDUMP:
+  # STRPRINT:
+  # DEBUGOFF:
+  # DEBUGON:
+  # DUMP: ["int"]
+  # PRINT: ["int"]
+  # DUMPTOSFMT: ["int"]
+  # LOGSTR: ["string"]
+  # LOGFLUSH:
+  # PRINTSTR: ["string"]
 
   # A.13 Codepage primitives
   SETCP: ["int"]

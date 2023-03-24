@@ -121,12 +121,8 @@ export type OpCodeWithArgs =
     | { code: 'GETPARAM', args: [number] }
     | { code: 'GETGLOB', args: [number] }
     | { code: 'SETGLOB', args: [number] }
-    | { code: 'DUMPSTKTOP', args: [number] }
-    | { code: 'DUMP', args: [number] }
-    | { code: 'PRINT', args: [number] }
-    | { code: 'DUMPTOSFMT', args: [number] }
-    | { code: 'LOGSTR', args: [string] }
-    | { code: 'PRINTSTR', args: [string] }
+    | { code: 'DEBUG', args: [number] }
+    | { code: 'DEBUGSTR', args: [string] }
     | { code: 'SETCP', args: [number] };
 
 export function isOpCodeWithArgs(op: OpCode): op is OpCodeWithArgs {
@@ -613,16 +609,6 @@ export type OpCodeNoArgs =
     | { code: 'SETCODE' }
     | { code: 'SETLIBCODE' }
     | { code: 'CHANGELIB' }
-    | { code: 'DUMPSTK' }
-    | { code: 'HEXDUMP' }
-    | { code: 'HEXPRINT' }
-    | { code: 'BINDUMP' }
-    | { code: 'BINPRINT' }
-    | { code: 'STRDUMP' }
-    | { code: 'STRPRINT' }
-    | { code: 'DEBUGOFF' }
-    | { code: 'DEBUGON' }
-    | { code: 'LOGFLUSH' }
     | { code: 'SETCPX' };
 
 export type OpCode = OpCodeWithArgs | OpCodeNoArgs;

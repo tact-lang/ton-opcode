@@ -41,7 +41,7 @@ function decompileCell(args: {
             }
 
             // Add name to a map and assign name
-            let name = '#unknown_' + (unknownIndex++);
+            let name = '?fun_' + (unknownIndex++);
             callRefs.set(k, name);
 
             // Render cell
@@ -57,7 +57,7 @@ function decompileCell(args: {
             return name;
         }
         for (let [key, value] of dict) {
-            let name = knownMethods[key] || '#unknown_' + (unknownIndex++);
+            let name = knownMethods[key] || '?fun_' + (unknownIndex++);
             let w = new Writer();
             decompileCell({
                 src: value,
@@ -101,6 +101,7 @@ function decompileCell(args: {
         if (op.op.code === 'PUSHCONT'
             || op.op.code === 'IFREFELSE'
             || op.op.code === 'CALLREF'
+            || op.op.code === 'IFJMPREF'
             || op.op.code === 'IFREF'
             || op.op.code === 'IFREFELSEREF') {
             let c = op.op.args[0];

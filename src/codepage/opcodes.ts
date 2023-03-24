@@ -1157,17 +1157,15 @@ CP0Auto.insertHex('fb03', 16, { code: 'RAWRESERVEX' });
 CP0Auto.insertHex('fb04', 16, { code: 'SETCODE' });
 CP0Auto.insertHex('fb06', 16, { code: 'SETLIBCODE' });
 CP0Auto.insertHex('fb07', 16, { code: 'CHANGELIB' });
-
-// CP0Auto.insertHex('fe', 8, (slice) => {
-//     let nn = slice.loadUint(8);
-//     if ((nn & 0xf0) == 0xf0) {
-//         let n = nn & 0x0f;
-//         let str = slice.readBuffer(n + 1).toString('utf-8');
-//         return { code: 'LOGSTR', args: [str] };
-//     }
-//     return { code: 'DEBUG', args: [nn] };
-// });
-
+CP0Auto.insertHex('fe', 8, (slice) => {
+    let nn = slice.loadUint(8);
+    if ((nn & 0xf0) == 0xf0) {
+        let n = nn & 0x0f;
+        let str = slice.loadBuffer(n + 1).toString('utf-8');
+        return { code: 'DEBUGSTR', args: [str] };
+    }
+    return { code: 'DEBUG', args: [nn] };
+});
 CP0Auto.insertHex('ff', 8, (slice) => {
     let nn = slice.loadInt(8);
     return { code: 'SETCP', args: [nn] };
