@@ -1,5 +1,5 @@
 import { Cell, Dictionary, DictionaryValue } from "ton-core";
-import { OpCode } from "../codepage/opcodes.gen";
+import { opcodeToString } from "../codepage/opcodeToString";
 import { Maybe } from "../utils/maybe";
 import { Writer } from "../utils/Writer";
 import { decompile } from "./decompiler";
@@ -34,7 +34,7 @@ function decompileCell(args: {
 
         // Extract all methods
         let unknownIndex = 0;
-        let extracted = new Map<string, { ref: boolean, rendered: string }>();
+        let extracted = new Map<string, { ref: boolean, rendered: string, src: Cell }>();
         let callRefs = new Map<string, string>();
         function extract(cell: Cell) {
 
@@ -61,7 +61,7 @@ function decompileCell(args: {
                     });
                 });
             });
-            extracted.set(name, { ref: true, rendered: w.end() });
+            extracted.set(name, { ref: true, rendered: w.end(), src: cell });
             return name;
         }
         for (let [key, value] of dict) {
@@ -78,7 +78,7 @@ function decompileCell(args: {
                     });
                 });
             });
-            extracted.set(name, { ref: false, rendered: w.end() });
+            extracted.set(name, { ref: false, rendered: w.end(), src: value });
         }
 
         // Render methods
@@ -88,13 +88,16 @@ function decompileCell(args: {
                 writer.append(printer(`DECLPROC ${key};`, writer.indent));
             }
             for (let [key, value] of extracted) {
-                writer.append(printer(`${key} ${value.ref ? 'PROCREF' : 'PROC'}:<{`, writer.indent));
+                let hash = value.src.hash().toString('hex');
+                let opstr = `${key} ${value.ref ? 'PROCREF' : 'PROC'}:<{`;
+                writer.append(printer({ op: opstr, offset: 0, length: 0, hash }, writer.indent));
                 writer.inIndent(() => {
                     value.rendered.split('\n').forEach(line => {
                         writer.append(line); // Already formatted
                     });
                 });
-                writer.append(printer(`}>`, writer.indent));
+                opstr = `}>`;
+                writer.append(printer({ op: opstr, offset: 0, length: 0, hash }, writer.indent));
             }
         });
         writer.append(printer(`}END>c`, writer.indent));
@@ -107,7 +110,8 @@ function decompileCell(args: {
         // Special cases for call refs
         if (op.op.code === 'CALLREF' && args.callRefExtractor) {
             let id = args.callRefExtractor(op.op.args[0]);
-            writer.append(printer(`${id} INLINECALLDICT`, writer.indent));
+            let opstr = `${id} INLINECALLDICT`;
+            writer.append(printer({ op: opstr, offset: op.offset, length: op.length, hash }, writer.indent));
             continue;
         }
 
@@ -119,7 +123,8 @@ function decompileCell(args: {
             || op.op.code === 'IFREF'
             || op.op.code === 'IFREFELSEREF') {
             let c = op.op.args[0];
-            writer.append(printer('<{', writer.indent));
+            let opstr = '<{';
+            writer.append(printer({ op: opstr, offset: op.offset, length: op.length, hash }, writer.indent));
             writer.inIndent(() => {
                 decompileCell({
                     src: c,
@@ -129,7 +134,8 @@ function decompileCell(args: {
                     printer: args.printer
                 });
             })
-            writer.append(printer('}> ' + op.op.code, writer.indent));
+            opstr = '}> ' + op.op.code;
+            writer.append(printer({ op: opstr, offset: op.offset, length: op.length, hash }, writer.indent));
             continue;
         }
 
@@ -138,10 +144,10 @@ function decompileCell(args: {
             writer.append('!' + op.op.data.toString());
             continue;
         }
-        let op2: OpCode = op.op; // For type checking
 
         // All remaining opcodes
-        writer.append(printer({ op: op2, offset: op.offset, length: op.length, hash }, writer.indent));
+        let opstr = opcodeToString(op.op);
+        writer.append(printer({ op: opstr, offset: op.offset, length: op.length, hash }, writer.indent));
     }
 }
 
