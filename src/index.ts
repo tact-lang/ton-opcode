@@ -18,3 +18,8 @@ export {
 export {
     opcodeToString
 } from './codepage/opcodeToString';
+
+export {
+    Printer,
+    createTextPrinter
+} from './decompiler/printer';

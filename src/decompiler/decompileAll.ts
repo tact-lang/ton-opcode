@@ -1,20 +1,24 @@
 import { Cell, Dictionary, DictionaryValue } from "ton-core";
-import { opcodeToString } from "../codepage/opcodeToString";
+import { OpCode } from "../codepage/opcodes.gen";
+import { Maybe } from "../utils/maybe";
 import { Writer } from "../utils/Writer";
 import { decompile } from "./decompiler";
 import { knownMethods } from "./knownMethods";
+import { createTextPrinter, Printer } from "./printer";
 
 function decompileCell(args: {
-    src: Buffer | Cell,
+    src: Cell,
     root: boolean,
     writer: Writer,
-    allowUnknown?: boolean,
+    printer: Printer,
     callRefExtractor?: (ref: Cell) => string
 }) {
+    const printer = args.printer;
+    const hash = args.src.hash().toString('hex');
     const writer = args.writer;
     const opcodes = decompile({
         src: args.src,
-        allowUnknown: args.allowUnknown
+        allowUnknown: false
     });
 
     // Check if we have a default opcodes of func output
@@ -46,12 +50,16 @@ function decompileCell(args: {
 
             // Render cell
             let w = new Writer();
-            decompileCell({
-                src: cell,
-                allowUnknown: args.allowUnknown,
-                root: false,
-                writer: w,
-                callRefExtractor: extract
+            w.inIndent(() => {
+                w.inIndent(() => {
+                    decompileCell({
+                        src: cell,
+                        root: false,
+                        writer: w,
+                        callRefExtractor: extract,
+                        printer: args.printer
+                    });
+                });
             });
             extracted.set(name, { ref: true, rendered: w.end() });
             return name;
@@ -59,31 +67,37 @@ function decompileCell(args: {
         for (let [key, value] of dict) {
             let name = knownMethods[key] || '?fun_' + (unknownIndex++);
             let w = new Writer();
-            decompileCell({
-                src: value,
-                allowUnknown: args.allowUnknown,
-                root: false,
-                writer: w,
-                callRefExtractor: extract
+            w.inIndent(() => {
+                w.inIndent(() => {
+                    decompileCell({
+                        src: value,
+                        root: false,
+                        writer: w,
+                        callRefExtractor: extract,
+                        printer: args.printer
+                    });
+                });
             });
             extracted.set(name, { ref: false, rendered: w.end() });
         }
 
         // Render methods
-        writer.append(`PROGRAM{`);
+        writer.append(printer(`PROGRAM{`, writer.indent));
         writer.inIndent(() => {
             for (let [key] of extracted) {
-                writer.append(`DECLPROC ${key};`);
+                writer.append(printer(`DECLPROC ${key};`, writer.indent));
             }
             for (let [key, value] of extracted) {
-                writer.append(`${key} ${value.ref ? 'PROCREF' : 'PROC'}:<{`);
+                writer.append(printer(`${key} ${value.ref ? 'PROCREF' : 'PROC'}:<{`, writer.indent));
                 writer.inIndent(() => {
-                    writer.write(value.rendered);
+                    value.rendered.split('\n').forEach(line => {
+                        writer.append(line); // Already formatted
+                    });
                 });
-                writer.append(`}>`);
+                writer.append(printer(`}>`, writer.indent));
             }
         });
-        writer.append(`}END>c`);
+        writer.append(printer(`}END>c`, writer.indent));
         return;
     }
 
@@ -93,7 +107,7 @@ function decompileCell(args: {
         // Special cases for call refs
         if (op.op.code === 'CALLREF' && args.callRefExtractor) {
             let id = args.callRefExtractor(op.op.args[0]);
-            writer.append(`${id} INLINECALLDICT`);
+            writer.append(printer(`${id} INLINECALLDICT`, writer.indent));
             continue;
         }
 
@@ -105,38 +119,46 @@ function decompileCell(args: {
             || op.op.code === 'IFREF'
             || op.op.code === 'IFREFELSEREF') {
             let c = op.op.args[0];
-            writer.append('<{');
+            writer.append(printer('<{', writer.indent));
             writer.inIndent(() => {
                 decompileCell({
                     src: c,
-                    allowUnknown: args.allowUnknown,
                     root: false,
                     writer: writer,
-                    callRefExtractor: args.callRefExtractor
+                    callRefExtractor: args.callRefExtractor,
+                    printer: args.printer
                 });
             })
-            writer.append('}> ' + op.op.code);
+            writer.append(printer('}> ' + op.op.code, writer.indent));
             continue;
         }
 
         // Special cases for unknown opcode
         if (op.op.code === 'unknown') {
-            writer.append('##unknown');
+            writer.append('!' + op.op.data.toString());
             continue;
         }
+        let op2: OpCode = op.op; // For type checking
 
         // All remaining opcodes
-        writer.append(opcodeToString(op.op));
+        writer.append(printer({ op: op2, offset: op.offset, length: op.length, hash }, writer.indent));
     }
 }
 
-export function decompileAll(args: { src: Buffer | Cell, allowUnknown?: boolean }) {
+export function decompileAll(args: { src: Buffer | Cell, printer?: Maybe<Printer> }) {
     let writer = new Writer();
+    let src: Cell;
+    if (Buffer.isBuffer(args.src)) {
+        src = Cell.fromBoc(args.src)[0];
+    } else {
+        src = args.src;
+    }
+    let printer = args.printer || createTextPrinter(2);
     decompileCell({
-        src: args.src,
-        allowUnknown: args.allowUnknown,
+        src,
         root: true,
-        writer: writer
+        writer,
+        printer
     });
     return writer.end();
 }
