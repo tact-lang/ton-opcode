@@ -32,7 +32,8 @@ export function decompile(args: { src: Cell | Buffer, allowUnknown?: boolean }):
         opCode += opCodePart ? '1' : '0'
 
         // Find opcode in codepage
-        let matches = codepage.find(opCode);
+        // Edit maxOccurencies for debugging purposes
+        let matches = codepage.find(opCode, 2);
         if (matches.length > 1) {
             continue;
         }
