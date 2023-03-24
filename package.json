@@ -10,9 +10,11 @@
     "build": "tsc --declaration",
     "test": "jest",
     "clean": "rm -fr dist",
-    "release": "yarn clean && yarn build && yarn test && yarn publish --access=public"
+    "release": "yarn clean && yarn build && yarn test && release-it --npm.yarn1"
   },
   "devDependencies": {
+    "@release-it/keep-a-changelog": "^3.1.0",
+    "release-it": "^15.5.1",
     "@types/jest": "^29.5.0",
     "@types/js-yaml": "^4.0.5",
     "@types/node": "^18.15.5",
@@ -28,5 +30,19 @@
   "peerDependencies": {
     "ton-core": ">=0.48.0",
     "ton-crypto": "^3.2.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "release-it": {
+    "github": {
+      "release": true
+    },
+    "plugins": {
+      "@release-it/keep-a-changelog": {
+        "filename": "CHANGELOG.md"
+      }
+    }
   }
 }
