@@ -1,5 +1,6 @@
 import { decompileAll } from "./decompileAll";
 import * as fs from 'fs';
+import { Printer } from "./printer";
 
 describe('decompileAll', () => {
     it('should decompile wallet v1', () => {
@@ -30,6 +31,16 @@ describe('decompileAll', () => {
         let wallet = Buffer.from('te6ccgEBCAEAlwABFP8A9KQT9LzyyAsBAgEgAgMCAUgEBQC48oMI1xgg0x/TH9MfAvgju/Jj7UTQ0x/TH9P/0VEyuvKhUUS68qIE+QFUEFX5EPKj9ATR+AB/jhYhgBD0eG+lIJgC0wfUMAH7AJEy4gGz5lsBpMjLH8sfy//J7VQABNAwAgFIBgcAF7s5ztRNDTPzHXC/+AARuMl+1E0NcLH4', 'base64');
         let res = decompileAll({ src: wallet });
         expect(res).toMatchSnapshot();
+
+        // Check internals
+        let printer: Printer = (src) => {
+            if (typeof src === 'string') {
+                return src;
+            }
+            return JSON.stringify({ op: src.op, hash: src.hash, offset: src.offset, length: src.length, });
+        };
+        let snap = decompileAll({ src: wallet, printer });
+        expect(snap).toMatchSnapshot();
     });
 
     it('should decompile wallet v4 speedtest', () => {

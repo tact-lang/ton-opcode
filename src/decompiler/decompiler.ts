@@ -25,14 +25,14 @@ export function decompile(args: { src: Cell | Slice | Buffer, srcOffset?: Maybe<
         sc = args.src;
     }
 
-    // Parse cell
-    let scl = sc.remainingBits;
+    // Prepare offset
     let sco = args.srcOffset || 0;
-
-    // Skip offset
     if (args.srcOffset && args.srcOffset > 0) {
         sc.skip(args.srcOffset);
     }
+
+    // Prepare remaining tracker
+    let scl = sc.remainingBits;
 
     while (sc.remainingBits > 0) {
 
