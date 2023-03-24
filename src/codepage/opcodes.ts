@@ -1066,9 +1066,9 @@ CP0Auto.insertHex('f48', 11, (slice) => {
 CP0Auto.insertHex('f4a0', 13, (slice) => {
     let push = slice.loadBit();
     if (push) {
-        let subslice = fetchSubslice(slice, 0, 1);
+        // let subslice = fetchSubslice(slice, 0, 1);
         let keyLen = slice.loadUint(10);
-        return { code: 'DICTPUSHCONST', args: [keyLen, subslice] };
+        return { code: 'DICTPUSHCONST', args: [keyLen, slice.loadRef()] };
     }
     let exec = slice.loadBit();
     let usign = slice.loadBit();

@@ -27,6 +27,7 @@ export const knownMethods: { [key: number]: string } = {
     [107279]: 'get_offer_data',
     [107653]: 'get_plugin_list',
     [110449]: 'get_is_closed',
+    [113617]: 'supported_interfaces',
     [116695]: 'get_reveal_mode',
     [118054]: 'get_username',
     [122498]: 'get_telemint_auction_state',
