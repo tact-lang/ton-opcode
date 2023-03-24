@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "gen": "ts-node ./scripts/gen-codepage.ts",
-    "build": "tsc",
+    "build": "tsc --declaration",
     "test": "jest",
     "clean": "rm -fr dist",
     "release": "yarn clean && yarn build && yarn test && yarn publish --access=public"
