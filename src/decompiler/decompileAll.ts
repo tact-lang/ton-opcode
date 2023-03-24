@@ -8,6 +8,7 @@ import { createTextPrinter, Printer } from "./printer";
 
 function decompileCell(args: {
     src: Cell,
+    srcOffset: number,
     root: boolean,
     writer: Writer,
     printer: Printer,
@@ -54,6 +55,7 @@ function decompileCell(args: {
                 w.inIndent(() => {
                     decompileCell({
                         src: cell,
+                        srcOffset: 0,
                         root: false,
                         writer: w,
                         callRefExtractor: extract,
@@ -72,6 +74,7 @@ function decompileCell(args: {
                 w.inIndent(() => {
                     decompileCell({
                         src: body,
+                        srcOffset: value.offset,
                         root: false,
                         writer: w,
                         callRefExtractor: extract,
@@ -134,6 +137,7 @@ function decompileCell(args: {
             writer.inIndent(() => {
                 decompileCell({
                     src: c,
+                    srcOffset: 0,
                     root: false,
                     writer: writer,
                     callRefExtractor: args.callRefExtractor,
@@ -168,6 +172,7 @@ export function decompileAll(args: { src: Buffer | Cell, printer?: Maybe<Printer
     let printer = args.printer || createTextPrinter(2);
     decompileCell({
         src,
+        srcOffset: 0,
         root: true,
         writer,
         printer

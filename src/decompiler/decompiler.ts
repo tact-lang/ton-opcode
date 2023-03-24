@@ -1,6 +1,7 @@
 import { beginCell, Cell, Slice } from "ton-core";
 import { loadOpcode } from "../codepage/loadOpcode";
 import { OpCode } from "../codepage/opcodes.gen";
+import { Maybe } from "../utils/maybe";
 
 export type DecompiledOpCode = OpCode | { code: 'unknown', data: Cell };
 export type DecompiledInstruction = {
@@ -9,7 +10,7 @@ export type DecompiledInstruction = {
     length: number
 };
 
-export function decompile(args: { src: Cell | Slice | Buffer, allowUnknown?: boolean }): DecompiledInstruction[] {
+export function decompile(args: { src: Cell | Slice | Buffer, srcOffset?: Maybe<number>, allowUnknown?: boolean }): DecompiledInstruction[] {
 
     // Result collection
     let result: DecompiledInstruction[] = [];
@@ -25,6 +26,7 @@ export function decompile(args: { src: Cell | Slice | Buffer, allowUnknown?: boo
     }
 
     // Parse cell
+    let globalOffset = args.srcOffset || 0;
     let scl = sc.remainingBits;
     let sco = 0;
     while (sc.remainingBits > 0) {
@@ -51,7 +53,7 @@ export function decompile(args: { src: Cell | Slice | Buffer, allowUnknown?: boo
                         code: 'unknown',
                         data: fullCell.endCell()
                     },
-                    offset: currentOffset,
+                    offset: currentOffset + globalOffset,
                     length: currentLength
                 });
                 break;
@@ -63,7 +65,7 @@ export function decompile(args: { src: Cell | Slice | Buffer, allowUnknown?: boo
         // Push opcode to result
         result.push({
             op: opcode.read,
-            offset: currentOffset,
+            offset: currentOffset + globalOffset,
             length: currentLength
         });
 
