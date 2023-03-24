@@ -19,6 +19,7 @@ function decompileCell(args: {
     const writer = args.writer;
     const opcodes = decompile({
         src: args.src,
+        srcOffset: args.srcOffset,
         allowUnknown: false
     });
 
@@ -68,12 +69,11 @@ function decompileCell(args: {
         }
         for (let [key, value] of dict) {
             let name = knownMethods[key] || '?fun_' + (unknownIndex++);
-            let body = value.cell.beginParse().skip(value.offset).asCell();
             let w = new Writer();
             w.inIndent(() => {
                 w.inIndent(() => {
                     decompileCell({
-                        src: body,
+                        src: value.cell,
                         srcOffset: value.offset,
                         root: false,
                         writer: w,

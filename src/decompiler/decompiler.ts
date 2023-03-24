@@ -26,9 +26,14 @@ export function decompile(args: { src: Cell | Slice | Buffer, srcOffset?: Maybe<
     }
 
     // Parse cell
-    let globalOffset = args.srcOffset || 0;
     let scl = sc.remainingBits;
-    let sco = 0;
+    let sco = args.srcOffset || 0;
+
+    // Skip offset
+    if (args.srcOffset && args.srcOffset > 0) {
+        sc.skip(args.srcOffset);
+    }
+
     while (sc.remainingBits > 0) {
 
         // Load opcode
@@ -53,7 +58,7 @@ export function decompile(args: { src: Cell | Slice | Buffer, srcOffset?: Maybe<
                         code: 'unknown',
                         data: fullCell.endCell()
                     },
-                    offset: currentOffset + globalOffset,
+                    offset: currentOffset,
                     length: currentLength
                 });
                 break;
@@ -65,7 +70,7 @@ export function decompile(args: { src: Cell | Slice | Buffer, srcOffset?: Maybe<
         // Push opcode to result
         result.push({
             op: opcode.read,
-            offset: currentOffset + globalOffset,
+            offset: currentOffset,
             length: currentLength
         });
 
