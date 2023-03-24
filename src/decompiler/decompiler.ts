@@ -1,8 +1,6 @@
 import { beginCell, Cell } from "ton-core";
-import { CP0Auto } from "../codepage/opcodes";
+import { loadOpcode } from "../codepage/loadOpcode";
 import { OpCode } from "../codepage/opcodes.gen";
-
-const codepage = CP0Auto;
 
 export type DecompiledOpCode = OpCode | { code: 'unknown', data: Cell };
 export type DecompiledInstruction = { op: DecompiledOpCode };
@@ -24,26 +22,14 @@ export function decompile(args: { src: Cell | Buffer, allowUnknown?: boolean }):
     let sc = cell.beginParse();
     let scl = sc.remainingBits;
     let sco = 0;
-    let opCode = '';
     while (sc.remainingBits > 0) {
 
-        // Load next bit
-        let opCodePart = sc.loadBit();
-        opCode += opCodePart ? '1' : '0'
-
-        // Find opcode in codepage
-        // Edit maxOccurencies for debugging purposes
-        let matches = codepage.find(opCode, 2);
-        if (matches.length > 1) {
-            continue;
-        }
-        if (matches.length == 1 && opCode.length !== matches[0].length) {
-            continue;
-        }
-        if (matches.length == 0) {
+        // Load opcode
+        const opcode = loadOpcode(sc);
+        if (!opcode.ok) {
             if (args.allowUnknown) {
                 let fullCell = beginCell();
-                for (let bit of Array.from(opCode).map(a => a == '0' ? false : true)) {
+                for (let bit of Array.from(opcode.read).map(a => a == '0' ? false : true)) {
                     fullCell.storeBit(bit);
                 }
                 fullCell.storeSlice(sc);
@@ -55,31 +41,17 @@ export function decompile(args: { src: Cell | Buffer, allowUnknown?: boolean }):
                 });
                 break;
             } else {
-                throw Error('Unknown opcode: b' + opCode);
+                throw Error('Unknown opcode: b' + opcode.read);
             }
         }
-
-        // Load opcode
-        let op = codepage.getOp(opCode)!!;
 
         // Update state
         let letNOffset = sco + scl - sc.remainingBits;
         scl = sc.remainingBits;
         sco = letNOffset;
-        opCode = '';
-
-        // Resolve real opcode
-        let resolvedOpcode: OpCode;
-        if (typeof op === 'function') {
-            resolvedOpcode = op(sc);
-        } else {
-            resolvedOpcode = op;
-        }
 
         // Push opcode to result
-        result.push({
-            op: resolvedOpcode
-        });
+        result.push({ op: opcode.read });
 
         // Implicit jump
         if (sc.remainingBits === 0 && sc.remainingRefs > 0) {
