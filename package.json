@@ -1,6 +1,6 @@
 {
   "name": "@tact-lang/opcode",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "dist/index.js",
   "repository": "https://github.com/tact-lang/ton-opcode.git",
   "author": "Steve Korshakov <steve@korshakov.com>",
