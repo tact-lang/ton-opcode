@@ -2,22 +2,22 @@
 
 exports[`decompileAll should decompile echo 1`] = `
 "PROGRAM{
-  DECLPROC #unknown_0;
-  DECLPROC #unknown_3;
-  DECLPROC #unknown_2;
-  DECLPROC #unknown_5;
-  DECLPROC #unknown_4;
-  DECLPROC #unknown_6;
-  DECLPROC #unknown_1;
+  DECLPROC ?fun_0;
+  DECLPROC ?fun_3;
+  DECLPROC ?fun_2;
+  DECLPROC ?fun_5;
+  DECLPROC ?fun_4;
+  DECLPROC ?fun_6;
+  DECLPROC ?fun_1;
   DECLPROC recv_internal;
   DECLPROC supported_interfaces;
-  DECLPROC #unknown_8;
-  DECLPROC #unknown_7;
-  #unknown_0 PROCREF:<{
+  DECLPROC ?fun_8;
+  DECLPROC ?fun_7;
+  ?fun_0 PROCREF:<{
     s0 POP
     NULL
   }>
-  #unknown_3 PROCREF:<{
+  ?fun_3 PROCREF:<{
     s0 PUSH
     SREFS
     s1 PUSH
@@ -90,7 +90,7 @@ exports[`decompileAll should decompile echo 1`] = `
     WHILE
     3 BLKDROP
   }>
-  #unknown_2 PROCREF:<{
+  ?fun_2 PROCREF:<{
     NEWC
     0 PUSHINT
     s0 s1 XCHG
@@ -101,7 +101,7 @@ exports[`decompileAll should decompile echo 1`] = `
     NULL
     TPUSH
     s0 s1 XCHG
-    #unknown_3 INLINECALLDICT
+    ?fun_3 INLINECALLDICT
     2 UNTUPLE
     s0 s1 XCHG
     ENDC
@@ -120,7 +120,7 @@ exports[`decompileAll should decompile echo 1`] = `
     WHILE
     s1 POP
   }>
-  #unknown_5 PROCREF:<{
+  ?fun_5 PROCREF:<{
     NEWC
     1 PUSHINT
     s0 s1 XCHG
@@ -268,7 +268,7 @@ exports[`decompileAll should decompile echo 1`] = `
     s0 s1 XCHG
     SENDRAWMSG
   }>
-  #unknown_4 PROCREF:<{
+  ?fun_4 PROCREF:<{
     -1 PUSHINT
     2 GETGLOBVAR
     0 PUSHINT
@@ -278,15 +278,15 @@ exports[`decompileAll should decompile echo 1`] = `
     s0 s1 XCHG
     NULL
     NULL
-    #unknown_5 INLINECALLDICT
+    ?fun_5 INLINECALLDICT
   }>
-  #unknown_6 PROCREF:<{
+  ?fun_6 PROCREF:<{
     NEWC
     s0 s1 XCHG
     STSLICER
     ENDC
   }>
-  #unknown_1 PROCREF:<{
+  ?fun_1 PROCREF:<{
     2 SAVE
     SAMEALTSAVE
     0 PUSHINT
@@ -314,16 +314,16 @@ exports[`decompileAll should decompile echo 1`] = `
       <{
         32 PUSHINT
         SDSKIPFIRST
-        #unknown_2 INLINECALLDICT
-        #unknown_4 INLINECALLDICT
+        ?fun_2 INLINECALLDICT
+        ?fun_4 INLINECALLDICT
         -1 PUSHINT
         RETFALSE
       }> PUSHCONT
       IFJMP
     }> PUSHCONT
     IF
-    #unknown_6 INLINECALLDICT
-    #unknown_4 INLINECALLDICT
+    ?fun_6 INLINECALLDICT
+    ?fun_4 INLINECALLDICT
     -1 PUSHINT
   }>
   recv_internal PROC:<{
@@ -390,11 +390,11 @@ exports[`decompileAll should decompile echo 1`] = `
       s0 s1 XCHG
       s0 s1 XCHG
       ENDS
-      #unknown_0 INLINECALLDICT
+      ?fun_0 INLINECALLDICT
     }> PUSHCONT
     IFELSE
     ROTREV
-    #unknown_1 INLINECALLDICT
+    ?fun_1 INLINECALLDICT
     s0 POP
     s0 POP
     NEWC
@@ -413,7 +413,7 @@ exports[`decompileAll should decompile echo 1`] = `
     42980537499636128163026532310500881091 PUSHINT
     209474421377847335869795010607481022628 PUSHINT
   }>
-  #unknown_8 PROCREF:<{
+  ?fun_8 PROCREF:<{
     NEWC
     0 TUPLE
     s0 s1 XCHG
@@ -421,9 +421,9 @@ exports[`decompileAll should decompile echo 1`] = `
     NULL
     TPUSH
     x{48656C6C6F2C208} PUSHSLICE
-    #unknown_3 INLINECALLDICT
+    ?fun_3 INLINECALLDICT
     s0 s1 XCHG
-    #unknown_3 INLINECALLDICT
+    ?fun_3 INLINECALLDICT
     2 UNTUPLE
     s0 s1 XCHG
     ENDC
@@ -443,7 +443,7 @@ exports[`decompileAll should decompile echo 1`] = `
     s1 POP
     CTOS
   }>
-  #unknown_7 PROC:<{
+  ?fun_7 PROC:<{
     c4 PUSH
     CTOS
     LDREF
@@ -466,11 +466,11 @@ exports[`decompileAll should decompile echo 1`] = `
       s0 s1 XCHG
       s0 s1 XCHG
       ENDS
-      #unknown_0 INLINECALLDICT
+      ?fun_0 INLINECALLDICT
     }> PUSHCONT
     IFELSE
     s0 s1 XCHG
-    #unknown_8 INLINECALLDICT
+    ?fun_8 INLINECALLDICT
     s1 POP
   }>
 }END>c"
