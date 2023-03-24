@@ -3,7 +3,11 @@ import { loadOpcode } from "../codepage/loadOpcode";
 import { OpCode } from "../codepage/opcodes.gen";
 
 export type DecompiledOpCode = OpCode | { code: 'unknown', data: Cell };
-export type DecompiledInstruction = { op: DecompiledOpCode };
+export type DecompiledInstruction = {
+    op: DecompiledOpCode,
+    offset: number,
+    length: number
+};
 
 export function decompile(args: { src: Cell | Buffer, allowUnknown?: boolean }): DecompiledInstruction[] {
 
@@ -26,6 +30,14 @@ export function decompile(args: { src: Cell | Buffer, allowUnknown?: boolean }):
 
         // Load opcode
         const opcode = loadOpcode(sc);
+
+        // Update state
+        let currentOffset = sco; // Persisted offset before reading opcode
+        let currentLength = scl - sc.remainingBits; // Check difference in remaining bits to calculate opcode length
+        scl -= currentLength;
+        sco += currentLength;
+
+        // Failed case
         if (!opcode.ok) {
             if (args.allowUnknown) {
                 let fullCell = beginCell();
@@ -37,7 +49,9 @@ export function decompile(args: { src: Cell | Buffer, allowUnknown?: boolean }):
                     op: {
                         code: 'unknown',
                         data: fullCell.endCell()
-                    }
+                    },
+                    offset: currentOffset,
+                    length: currentLength
                 });
                 break;
             } else {
@@ -45,13 +59,12 @@ export function decompile(args: { src: Cell | Buffer, allowUnknown?: boolean }):
             }
         }
 
-        // Update state
-        let letNOffset = sco + scl - sc.remainingBits;
-        scl = sc.remainingBits;
-        sco = letNOffset;
-
         // Push opcode to result
-        result.push({ op: opcode.read });
+        result.push({
+            op: opcode.read,
+            offset: currentOffset,
+            length: currentLength
+        });
 
         // Implicit jump
         if (sc.remainingBits === 0 && sc.remainingRefs > 0) {

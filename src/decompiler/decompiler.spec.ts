@@ -19,7 +19,7 @@ describe('decompiler', () => {
             let wallet = Buffer.from(w, 'base64');
             let original = fromCode(Cell.fromBoc(wallet)[0]);
             let res = decompile({ src: wallet });
-            // console.warn(res);
+            console.warn(res);
             // console.warn(original);
         }
     });
