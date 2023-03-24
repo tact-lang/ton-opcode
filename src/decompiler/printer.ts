@@ -1,4 +1,6 @@
-export type Printer = (src: string | { op: string, hash: string, offset: number, length: number }, indent: number) => string;
+import { Cell } from "ton-core";
+
+export type Printer = (src: string | { op: string, hash: string, cell: Cell, offset: number, length: number }, indent: number) => string;
 
 export function createTextPrinter(indentWidth: number): Printer {
     return (src, indent) => {

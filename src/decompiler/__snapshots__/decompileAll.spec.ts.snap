@@ -476,6 +476,94 @@ exports[`decompileAll should decompile echo 1`] = `
 }END>c"
 `;
 
+exports[`decompileAll should decompile highload wallet 1`] = `
+"PROGRAM{
+  DECLPROC recv_internal;
+  DECLPROC get_public_key;
+  DECLPROC seqno;
+  DECLPROC recv_external;
+  recv_internal PROC:<{
+    s0 POP
+  }>
+  get_public_key PROC:<{
+    c4 PUSH
+    CTOS
+    64 LDU
+    s1 POP
+    256 PLDU
+  }>
+  seqno PROC:<{
+    c4 PUSH
+    CTOS
+    32 PLDU
+  }>
+  recv_external PROC:<{
+    9 PUSHPOW2
+    LDSLICEX
+    s0 PUSH
+    32 LDU
+    32 LDU
+    32 LDU
+    s0 s2 XCHG
+    NOW
+    LEQ
+    35 THROWIF
+    c4 PUSH
+    CTOS
+    32 LDU
+    32 LDU
+    256 LDU
+    ENDS
+    s3 s2 XCPU
+    EQUAL
+    33 THROWIFNOT
+    s4 s4 XCPU
+    EQUAL
+    34 THROWIFNOT
+    s0 s4 XCHG
+    HASHSU
+    s0 s5 s5 XC2PU
+    CHKSIGNU
+    35 THROWIFNOT
+    LDDICT
+    ENDS
+    ACCEPT
+    -1 PUSHINT
+    <{
+      s1 PUSH
+      16 PUSHINT
+      DICTIGETNEXT
+      NULLSWAPIFNOT2
+      s0 PUSH
+      <{
+        s0 s2 XCHG
+        8 LDU
+        LDREF
+        s0 POP
+        s0 s1 XCHG
+        SENDRAWMSG
+      }> PUSHCONT
+      <{
+        s2 POP
+      }> PUSHCONT
+      IFELSE
+      s0 s1 XCHG
+      NOT
+    }> PUSHCONT
+    UNTIL
+    DROP2
+    s0 s1 XCHG
+    INC
+    NEWC
+    32 STU
+    32 STU
+    256 STU
+    ENDC
+    c4 POP
+  }>
+}END>c"
+`;
+
 exports[`decompileAll should decompile wallet v1 1`] = `
 "SETCP0
 s0 PUSH

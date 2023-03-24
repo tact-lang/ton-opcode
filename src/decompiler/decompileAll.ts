@@ -1,4 +1,4 @@
-import { Cell, Dictionary, DictionaryValue } from "ton-core";
+import { beginCell, BitReader, Cell, Dictionary, DictionaryValue } from "ton-core";
 import { opcodeToString } from "../codepage/opcodeToString";
 import { Maybe } from "../utils/maybe";
 import { Writer } from "../utils/Writer";
@@ -30,11 +30,11 @@ function decompileCell(args: {
         // Load dictionary
         let dictKeyLen = opcodes[1].op.args[0];
         let dictCell = opcodes[1].op.args[1];
-        let dict = Dictionary.loadDirect<number, Cell>(Dictionary.Keys.Int(dictKeyLen), createCodeCell(), dictCell);
+        let dict = Dictionary.loadDirect<number, { offset: number, cell: Cell }>(Dictionary.Keys.Int(dictKeyLen), createCodeCell(), dictCell);
 
         // Extract all methods
         let unknownIndex = 0;
-        let extracted = new Map<string, { ref: boolean, rendered: string, src: Cell }>();
+        let extracted = new Map<string, { ref: boolean, rendered: string, src: Cell, srcOffset: number }>();
         let callRefs = new Map<string, string>();
         function extract(cell: Cell) {
 
@@ -61,16 +61,17 @@ function decompileCell(args: {
                     });
                 });
             });
-            extracted.set(name, { ref: true, rendered: w.end(), src: cell });
+            extracted.set(name, { ref: true, rendered: w.end(), src: cell, srcOffset: 0 });
             return name;
         }
         for (let [key, value] of dict) {
             let name = knownMethods[key] || '?fun_' + (unknownIndex++);
+            let body = value.cell.beginParse().skip(value.offset).asCell();
             let w = new Writer();
             w.inIndent(() => {
                 w.inIndent(() => {
                     decompileCell({
-                        src: value,
+                        src: body,
                         root: false,
                         writer: w,
                         callRefExtractor: extract,
@@ -78,7 +79,12 @@ function decompileCell(args: {
                     });
                 });
             });
-            extracted.set(name, { ref: false, rendered: w.end(), src: value });
+            extracted.set(name, {
+                ref: false,
+                rendered: w.end(),
+                src: value.cell,
+                srcOffset: value.offset
+            });
         }
 
         // Render methods
@@ -90,14 +96,14 @@ function decompileCell(args: {
             for (let [key, value] of extracted) {
                 let hash = value.src.hash().toString('hex');
                 let opstr = `${key} ${value.ref ? 'PROCREF' : 'PROC'}:<{`;
-                writer.append(printer({ op: opstr, offset: 0, length: 0, hash }, writer.indent));
+                writer.append(printer({ op: opstr, offset: value.srcOffset, length: 0, hash, cell: value.src }, writer.indent));
                 writer.inIndent(() => {
                     value.rendered.split('\n').forEach(line => {
                         writer.append(line); // Already formatted
                     });
                 });
                 opstr = `}>`;
-                writer.append(printer({ op: opstr, offset: 0, length: 0, hash }, writer.indent));
+                writer.append(printer({ op: opstr, offset: value.srcOffset, length: 0, hash, cell: value.src }, writer.indent));
             }
         });
         writer.append(printer(`}END>c`, writer.indent));
@@ -111,7 +117,7 @@ function decompileCell(args: {
         if (op.op.code === 'CALLREF' && args.callRefExtractor) {
             let id = args.callRefExtractor(op.op.args[0]);
             let opstr = `${id} INLINECALLDICT`;
-            writer.append(printer({ op: opstr, offset: op.offset, length: op.length, hash }, writer.indent));
+            writer.append(printer({ op: opstr, offset: op.offset, length: op.length, hash, cell: args.src }, writer.indent));
             continue;
         }
 
@@ -124,7 +130,7 @@ function decompileCell(args: {
             || op.op.code === 'IFREFELSEREF') {
             let c = op.op.args[0];
             let opstr = '<{';
-            writer.append(printer({ op: opstr, offset: op.offset, length: op.length, hash }, writer.indent));
+            writer.append(printer({ op: opstr, offset: op.offset, length: op.length, hash, cell: args.src }, writer.indent));
             writer.inIndent(() => {
                 decompileCell({
                     src: c,
@@ -135,7 +141,7 @@ function decompileCell(args: {
                 });
             })
             opstr = '}> ' + op.op.code;
-            writer.append(printer({ op: opstr, offset: op.offset, length: op.length, hash }, writer.indent));
+            writer.append(printer({ op: opstr, offset: op.offset, length: op.length, hash, cell: args.src }, writer.indent));
             continue;
         }
 
@@ -147,7 +153,7 @@ function decompileCell(args: {
 
         // All remaining opcodes
         let opstr = opcodeToString(op.op);
-        writer.append(printer({ op: opstr, offset: op.offset, length: op.length, hash }, writer.indent));
+        writer.append(printer({ op: opstr, offset: op.offset, length: op.length, hash, cell: args.src }, writer.indent));
     }
 }
 
@@ -169,13 +175,22 @@ export function decompileAll(args: { src: Buffer | Cell, printer?: Maybe<Printer
     return writer.end();
 }
 
-function createCodeCell(): DictionaryValue<Cell> {
+function createCodeCell(): DictionaryValue<{ offset: number, cell: Cell }> {
     return {
         serialize: (src, builder) => {
-            return builder.storeSlice(src.beginParse());
+            throw Error('Not implemented');
         },
         parse: (src) => {
-            return src.asCell();
+            let bitsReader = ((src as any)._reader.clone() as BitReader);
+            let offset = (bitsReader as any)._offset as number;
+            bitsReader.reset();
+            let bits = bitsReader.loadBits(bitsReader.remaining);
+            let b = beginCell()
+                .storeBits(bits);
+            while (src.remainingRefs > 0) {
+                b.storeRef(src.loadRef());
+            }
+            return { offset, cell: b.endCell() };
         }
     };
 }

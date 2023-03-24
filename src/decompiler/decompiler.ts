@@ -1,4 +1,4 @@
-import { beginCell, Cell } from "ton-core";
+import { beginCell, Cell, Slice } from "ton-core";
 import { loadOpcode } from "../codepage/loadOpcode";
 import { OpCode } from "../codepage/opcodes.gen";
 
@@ -9,21 +9,22 @@ export type DecompiledInstruction = {
     length: number
 };
 
-export function decompile(args: { src: Cell | Buffer, allowUnknown?: boolean }): DecompiledInstruction[] {
-
-    // Load cell
-    let cell: Cell;
-    if (Buffer.isBuffer(args.src)) {
-        cell = Cell.fromBoc(args.src)[0];
-    } else {
-        cell = args.src;
-    }
+export function decompile(args: { src: Cell | Slice | Buffer, allowUnknown?: boolean }): DecompiledInstruction[] {
 
     // Result collection
     let result: DecompiledInstruction[] = [];
 
+    // Load slice
+    let sc: Slice;
+    if (Buffer.isBuffer(args.src)) {
+        sc = Cell.fromBoc(args.src)[0].beginParse();
+    } else if (args.src instanceof Cell) {
+        sc = args.src.beginParse();
+    } else {
+        sc = args.src;
+    }
+
     // Parse cell
-    let sc = cell.beginParse();
     let scl = sc.remainingBits;
     let sco = 0;
     while (sc.remainingBits > 0) {
