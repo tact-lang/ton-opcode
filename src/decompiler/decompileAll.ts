@@ -1,4 +1,4 @@
-import { beginCell, BitReader, Cell, Dictionary, DictionaryValue } from "ton-core";
+import { Cell, Dictionary, DictionaryValue } from "ton-core";
 import { opcodeToString } from "../codepage/opcodeToString";
 import { Maybe } from "../utils/maybe";
 import { Writer } from "../utils/Writer";
@@ -8,18 +8,19 @@ import { createTextPrinter, Printer } from "./printer";
 
 function decompileCell(args: {
     src: Cell,
-    srcOffset: number,
+    offset: { bits: number, refs: number },
+    limit: { bits: number, refs: number } | null,
     root: boolean,
     writer: Writer,
     printer: Printer,
     callRefExtractor?: (ref: Cell) => string
 }) {
     const printer = args.printer;
-    const hash = args.src.hash().toString('hex');
     const writer = args.writer;
     const opcodes = decompile({
         src: args.src,
-        srcOffset: args.srcOffset,
+        offset: args.offset,
+        limit: args.limit,
         allowUnknown: false
     });
 
@@ -38,7 +39,7 @@ function decompileCell(args: {
         let unknownIndex = 0;
         let extracted = new Map<string, { ref: boolean, rendered: string, src: Cell, srcOffset: number }>();
         let callRefs = new Map<string, string>();
-        function extract(cell: Cell) {
+        function extractCallRef(cell: Cell) {
 
             // Check if we have a call ref
             let k = cell.hash().toString('hex');
@@ -56,10 +57,11 @@ function decompileCell(args: {
                 w.inIndent(() => {
                     decompileCell({
                         src: cell,
-                        srcOffset: 0,
+                        offset: { bits: 0, refs: 0 },
+                        limit: null,
                         root: false,
                         writer: w,
-                        callRefExtractor: extract,
+                        callRefExtractor: extractCallRef,
                         printer: args.printer
                     });
                 });
@@ -74,10 +76,11 @@ function decompileCell(args: {
                 w.inIndent(() => {
                     decompileCell({
                         src: value.cell,
-                        srcOffset: value.offset,
+                        offset: { bits: value.offset, refs: 0 },
+                        limit: null,
                         root: false,
                         writer: w,
-                        callRefExtractor: extract,
+                        callRefExtractor: extractCallRef,
                         printer: args.printer
                     });
                 });
@@ -99,14 +102,14 @@ function decompileCell(args: {
             for (let [key, value] of extracted) {
                 let hash = value.src.hash().toString('hex');
                 let opstr = `${key} ${value.ref ? 'PROCREF' : 'PROC'}:<{`;
-                writer.append(printer({ op: opstr, offset: value.srcOffset, length: 0, hash, cell: value.src }, writer.indent));
+                writer.append(printer({ op: opstr, offset: value.srcOffset, length: 0, hash }, writer.indent));
                 writer.inIndent(() => {
                     value.rendered.split('\n').forEach(line => {
                         writer.append(line); // Already formatted
                     });
                 });
                 opstr = `}>`;
-                writer.append(printer({ op: opstr, offset: value.srcOffset, length: 0, hash, cell: value.src }, writer.indent));
+                writer.append(printer({ op: opstr, offset: value.srcOffset, length: 0, hash }, writer.indent));
             }
         });
         writer.append(printer(`}END>c`, writer.indent));
@@ -115,29 +118,25 @@ function decompileCell(args: {
 
     // Proceed with a regular decompilation
     for (const op of opcodes) {
+        const opcode = op.op;
 
         // Special cases for call refs
-        if (op.op.code === 'CALLREF' && args.callRefExtractor) {
-            let id = args.callRefExtractor(op.op.args[0]);
+        if (opcode.code === 'CALLREF' && args.callRefExtractor) {
+            let id = args.callRefExtractor(opcode.args[0]);
             let opstr = `${id} INLINECALLDICT`;
-            writer.append(printer({ op: opstr, offset: op.offset, length: op.length, hash, cell: args.src }, writer.indent));
+            writer.append(printer({ op: opstr, offset: op.offset, length: op.length, hash: op.hash }, writer.indent));
             continue;
         }
 
-        // Special cases for continuations
-        if (op.op.code === 'PUSHCONT'
-            || op.op.code === 'IFREFELSE'
-            || op.op.code === 'CALLREF'
-            || op.op.code === 'IFJMPREF'
-            || op.op.code === 'IFREF'
-            || op.op.code === 'IFREFELSEREF') {
-            let c = op.op.args[0];
+        // Special case for PUSHCONT
+        if (opcode.code === 'PUSHCONT') {
             let opstr = '<{';
-            writer.append(printer({ op: opstr, offset: op.offset, length: op.length, hash, cell: args.src }, writer.indent));
+            writer.append(printer({ op: opstr, offset: op.offset, length: op.length, hash: op.hash }, writer.indent));
             writer.inIndent(() => {
                 decompileCell({
-                    src: c,
-                    srcOffset: 0,
+                    src: args.src,
+                    offset: { bits: opcode.args[1], refs: opcode.args[2] },
+                    limit: { bits: opcode.args[3], refs: opcode.args[4] },
                     root: false,
                     writer: writer,
                     callRefExtractor: args.callRefExtractor,
@@ -145,19 +144,47 @@ function decompileCell(args: {
                 });
             })
             opstr = '}> ' + op.op.code;
-            writer.append(printer({ op: opstr, offset: op.offset, length: op.length, hash, cell: args.src }, writer.indent));
+            writer.append(printer({ op: opstr, offset: op.offset, length: op.length, hash: op.hash }, writer.indent));
+            continue;
+        }
+
+        // Special cases for continuations
+        if (opcode.code === 'IFREFELSE'
+            || opcode.code === 'CALLREF'
+            || opcode.code === 'IFJMPREF'
+            || opcode.code === 'IFREF'
+            || opcode.code === 'IFNOTREF'
+            || opcode.code === 'IFNOTJMPREF'
+            || opcode.code === 'IFREFELSEREF'
+            || opcode.code === 'IFELSEREF') {
+            let c = opcode.args[0];
+            let opstr = '<{';
+            writer.append(printer({ op: opstr, offset: op.offset, length: op.length, hash: op.hash }, writer.indent));
+            writer.inIndent(() => {
+                decompileCell({
+                    src: c,
+                    offset: { bits: 0, refs: 0 },
+                    limit: null,
+                    root: false,
+                    writer: writer,
+                    callRefExtractor: args.callRefExtractor,
+                    printer: args.printer
+                });
+            })
+            opstr = '}> ' + opcode.code;
+            writer.append(printer({ op: opstr, offset: op.offset, length: op.length, hash: op.hash }, writer.indent));
             continue;
         }
 
         // Special cases for unknown opcode
-        if (op.op.code === 'unknown') {
-            writer.append('!' + op.op.data.toString());
+        if (opcode.code === 'unknown') {
+            writer.append('!' + opcode.data.toString());
             continue;
         }
 
         // All remaining opcodes
-        let opstr = opcodeToString(op.op);
-        writer.append(printer({ op: opstr, offset: op.offset, length: op.length, hash, cell: args.src }, writer.indent));
+        let opstr = opcodeToString(opcode);
+        writer.append(printer({ op: opstr, offset: op.offset, length: op.length, hash: op.hash }, writer.indent));
     }
 }
 
@@ -172,7 +199,8 @@ export function decompileAll(args: { src: Buffer | Cell, printer?: Maybe<Printer
     let printer = args.printer || createTextPrinter(2);
     decompileCell({
         src,
-        srcOffset: 0,
+        offset: { bits: 0, refs: 0 },
+        limit: null,
         root: true,
         writer,
         printer
@@ -186,16 +214,9 @@ function createCodeCell(): DictionaryValue<{ offset: number, cell: Cell }> {
             throw Error('Not implemented');
         },
         parse: (src) => {
-            let bitsReader = ((src as any)._reader.clone() as BitReader);
-            let offset = (bitsReader as any)._offset as number;
-            bitsReader.reset();
-            let bits = bitsReader.loadBits(bitsReader.remaining);
-            let b = beginCell()
-                .storeBits(bits);
-            while (src.remainingRefs > 0) {
-                b.storeRef(src.loadRef());
-            }
-            return { offset, cell: b.endCell() };
+            let cloned = src.clone(true);
+            let offset = src.offsetBits;
+            return { offset, cell: cloned.asCell() };
         }
     };
 }

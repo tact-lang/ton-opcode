@@ -1,4 +1,4 @@
-import { Slice } from "ton-core";
+import { Cell, Slice } from "ton-core";
 import { CP0Auto } from "./opcodes";
 import { OpCode } from "./opcodes.gen";
 

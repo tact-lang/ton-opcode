@@ -1,15 +1,6 @@
 import { beginCell, Slice } from 'ton-core';
 import { Codepage } from './Codepage';
 
-function fetchSubslice(slice: Slice, bits: number, refs?: number) {
-    let b = beginCell()
-        .storeBits(slice.loadBits(bits));
-    for (let i = 0; i < (refs || 0); i++) {
-        b.storeRef(slice.loadRef());
-    }
-    return b.asCell();
-}
-
 const CP0Auto = new Codepage();
 
 CP0Auto.insertHex('0', 4, (slice) => {
@@ -281,35 +272,46 @@ CP0Auto.insertHex('89', 8, (slice) => ({ code: 'PUSHREFSLICE', args: [slice.load
 CP0Auto.insertHex('8a', 8, (slice) => ({ code: 'PUSHREFCONT', args: [slice.loadRef()] }));
 CP0Auto.insertHex('8b', 8, (slice) => {
     let x = slice.loadUint(4);
-    let len = 8 * x + 4;
-    let subslice = fetchSubslice(slice, len);
-    return { code: 'PUSHSLICE', args: [subslice] };
+    let bits = 8 * x + 4;
+    let refs = 0;
+    let bitsOffset = slice.offsetBits;
+    let refsOffset = slice.offsetRefs;
+    let cell = loadSubslice(slice, bits, refs);
+    return { code: 'PUSHSLICE', args: [cell, bitsOffset, refsOffset, bits, refs] };
 });
 CP0Auto.insertHex('8c', 8, (slice) => {
-    let r = slice.loadUint(2) + 1;
-    let xx = slice.loadUint(5);
-    let subslice = fetchSubslice(slice, 8 * xx + 1, r);
-    return { code: 'PUSHSLICE', args: [subslice] };
+    let refs = slice.loadUint(2) + 1;
+    let bits = (8 * slice.loadUint(5) + 1);
+    let bitsOffset = slice.offsetBits;
+    let refsOffset = slice.offsetRefs;
+    let cell = loadSubslice(slice, bits, refs);
+    return { code: 'PUSHSLICE', args: [cell, bitsOffset, refsOffset, bits, refs] };
 });
 CP0Auto.insertHex('8d', 8, (slice) => {
-    let r = slice.loadUint(3);
-    let xx = slice.loadUint(7);
-    let subslice = fetchSubslice(slice, 8 * xx + 6, r);
-    return { code: 'PUSHSLICE', args: [subslice] };
+    let refs = slice.loadUint(3);
+    let bits = 8 * slice.loadUint(7) + 6;
+    let bitsOffset = slice.offsetBits;
+    let refsOffset = slice.offsetRefs;
+    let cell = loadSubslice(slice, bits, refs);
+    return { code: 'PUSHSLICE', args: [cell, bitsOffset, refsOffset, bits, refs] };
 });
 // 9281536 (DUMMY)
 CP0Auto.insertHex('8E', 7, (slice) => {
     let args = slice.loadUint(9);
     let refs = (args >> 7) & 3;
-    let dataBytes = (args & 127) * 8;
-
-    let subslice = fetchSubslice(slice, dataBytes, refs);
-    return { code: 'PUSHCONT', args: [subslice] };
+    let bits = (args & 127) * 8;
+    let bitsOffset = slice.offsetBits;
+    let refsOffset = slice.offsetRefs;
+    let cell = loadSubslice(slice, bits, refs);
+    return { code: 'PUSHCONT', args: [cell, bitsOffset, refsOffset, bits, refs] };
 })
 CP0Auto.insertHex('9', 4, (slice) => {
-    let len = slice.loadUint(4) * 8;
-    let subslice = fetchSubslice(slice, len);
-    return { code: 'PUSHCONT', args: [subslice] };
+    let bits = slice.loadUint(4) * 8;
+    let refs = 0;
+    let bitsOffset = slice.offsetBits;
+    let refsOffset = slice.offsetRefs;
+    let cell = loadSubslice(slice, bits, refs);
+    return { code: 'PUSHCONT', args: [cell, bitsOffset, refsOffset, bits, refs] };
 })
 
 CP0Auto.insertHex('a0', 8, { code: 'ADD' });
@@ -534,9 +536,11 @@ CP0Auto.insertHex('cf42', 16, { code: 'STSAME' });
 // 13583104 (DUMMY)
 CP0Auto.insertHex('cf8', 9, (slice) => {
     let refs = slice.loadUint(2);
-    let dataBits = slice.loadUint(3) * 8 + 1;
-    let subslice = fetchSubslice(slice, dataBits, refs);
-    return { code: `STSLICECONST`, args: [subslice] };
+    let bits = slice.loadUint(3) * 8 + 1;
+    let bitsOffset = slice.offsetBits;
+    let refsOffset = slice.offsetRefs;
+    let cell = loadSubslice(slice, bits, refs);
+    return { code: `STSLICECONST`, args: [cell, bitsOffset, refsOffset, bits, refs] };
 });
 CP0Auto.insertHex('d0', 8, { code: 'CTOS' });
 CP0Auto.insertHex('d1', 8, { code: 'ENDS' });
@@ -1172,3 +1176,16 @@ CP0Auto.insertHex('ff', 8, (slice) => {
 });
 
 export { CP0Auto }
+
+//
+// Utils
+//
+
+function loadSubslice(slice: Slice, bits: number, refs?: number) {
+    let b = beginCell()
+        .storeBits(slice.loadBits(bits));
+    for (let i = 0; i < (refs || 0); i++) {
+        b.storeRef(slice.loadRef());
+    }
+    return b.asCell();
+}

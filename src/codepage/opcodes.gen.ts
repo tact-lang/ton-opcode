@@ -38,8 +38,8 @@ export type OpCodeWithArgs =
     | { code: 'PUSHREF', args: [Cell] }
     | { code: 'PUSHREFSLICE', args: [Cell] }
     | { code: 'PUSHREFCONT', args: [Cell] }
-    | { code: 'PUSHSLICE', args: [Cell] }
-    | { code: 'PUSHCONT', args: [Cell] }
+    | { code: 'PUSHSLICE', args: [Cell, number, number, number, number] }
+    | { code: 'PUSHCONT', args: [Cell, number, number, number, number] }
     | { code: 'ADDCONST', args: [number] }
     | { code: 'MULCONST', args: [number] }
     | { code: 'DIV', args: [boolean, number, boolean, number, number] }
@@ -61,7 +61,7 @@ export type OpCodeWithArgs =
     | { code: 'STURQ', args: [number] }
     | { code: 'BCHKBITS', args: [number] }
     | { code: 'BCHKBITSQ', args: [number] }
-    | { code: 'STSLICECONST', args: [Cell] }
+    | { code: 'STSLICECONST', args: [Cell, number, number, number, number] }
     | { code: 'LDI', args: [number] }
     | { code: 'LDU', args: [number] }
     | { code: 'LDSLICE', args: [number] }

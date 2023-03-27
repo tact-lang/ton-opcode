@@ -74,6 +74,13 @@ export function opcodeToString(op: OpCode): string {
         return `s${op.args[0]} s${op.args[1]} s${op.args[2]} ${op.code}`;
     }
 
+    // Slices
+    if (op.code === 'PUSHSLICE'
+        || op.code === 'PUSHCONT'
+        || op.code === 'STSLICECONST') {
+        return `${op.args[0]} ${op.code}`;
+    }
+
     // Debug
     if (op.code === 'DEBUG') {
         if (op.args[0] === 0x00) {

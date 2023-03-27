@@ -3,6 +3,7 @@
 exports[`decompiler should decompile a simple contract 1`] = `
 [
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 16,
     "offset": 0,
     "op": {
@@ -13,6 +14,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 8,
     "offset": 16,
     "op": {
@@ -23,6 +25,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 8,
     "offset": 24,
     "op": {
@@ -30,6 +33,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 8,
     "offset": 32,
     "op": {
@@ -40,6 +44,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 16,
     "offset": 40,
     "op": {
@@ -50,6 +55,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 24,
     "offset": 56,
     "op": {
@@ -60,6 +66,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 16,
     "offset": 80,
     "op": {
@@ -67,6 +74,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 8,
     "offset": 96,
     "op": {
@@ -77,6 +85,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 24,
     "offset": 104,
     "op": {
@@ -87,6 +96,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 16,
     "offset": 128,
     "op": {
@@ -97,6 +107,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 8,
     "offset": 144,
     "op": {
@@ -104,6 +115,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 16,
     "offset": 152,
     "op": {
@@ -114,6 +126,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 16,
     "offset": 168,
     "op": {
@@ -124,6 +137,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 8,
     "offset": 184,
     "op": {
@@ -131,6 +145,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 16,
     "offset": 192,
     "op": {
@@ -142,6 +157,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 8,
     "offset": 208,
     "op": {
@@ -149,6 +165,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 16,
     "offset": 216,
     "op": {
@@ -159,6 +176,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 8,
     "offset": 232,
     "op": {
@@ -169,6 +187,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 16,
     "offset": 240,
     "op": {
@@ -176,6 +195,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 24,
     "offset": 256,
     "op": {
@@ -188,6 +208,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 16,
     "offset": 280,
     "op": {
@@ -195,6 +216,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 16,
     "offset": 296,
     "op": {
@@ -205,6 +227,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 16,
     "offset": 312,
     "op": {
@@ -212,6 +235,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 8,
     "offset": 328,
     "op": {
@@ -223,6 +247,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 16,
     "offset": 336,
     "op": {
@@ -233,6 +258,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 8,
     "offset": 352,
     "op": {
@@ -243,6 +269,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 8,
     "offset": 360,
     "op": {
@@ -253,6 +280,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 16,
     "offset": 368,
     "op": {
@@ -260,6 +288,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 56,
     "offset": 384,
     "op": {
@@ -573,11 +602,16 @@ exports[`decompiler should decompile a simple contract 1`] = `
           "type": -1,
           Symbol(nodejs.util.inspect.custom): [Function],
         },
+        392,
+        0,
+        48,
+        0,
       ],
       "code": "PUSHCONT",
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 8,
     "offset": 440,
     "op": {
@@ -585,6 +619,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 8,
     "offset": 448,
     "op": {
@@ -592,6 +627,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 8,
     "offset": 456,
     "op": {
@@ -602,6 +638,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 8,
     "offset": 464,
     "op": {
@@ -609,6 +646,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 16,
     "offset": 472,
     "op": {
@@ -619,6 +657,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 16,
     "offset": 488,
     "op": {
@@ -629,6 +668,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 8,
     "offset": 504,
     "op": {
@@ -636,6 +676,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
     },
   },
   {
+    "hash": "a0cfc2c48aee16a271f2cfc0b7382d81756cecb1017d077faaab3bb602f6868c",
     "length": 16,
     "offset": 512,
     "op": {
@@ -651,6 +692,7 @@ exports[`decompiler should decompile a simple contract 1`] = `
 exports[`decompiler should decompile a simple contract 2`] = `
 [
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 16,
     "offset": 0,
     "op": {
@@ -661,6 +703,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 8,
     "offset": 16,
     "op": {
@@ -671,6 +714,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 8,
     "offset": 24,
     "op": {
@@ -678,6 +722,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 8,
     "offset": 32,
     "op": {
@@ -688,6 +733,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 32,
     "offset": 40,
     "op": {
@@ -698,6 +744,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 8,
     "offset": 72,
     "op": {
@@ -705,6 +752,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 64,
     "offset": 80,
     "op": {
@@ -1018,11 +1066,16 @@ exports[`decompiler should decompile a simple contract 2`] = `
           "type": -1,
           Symbol(nodejs.util.inspect.custom): [Function],
         },
+        88,
+        0,
+        56,
+        0,
       ],
       "code": "PUSHCONT",
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 8,
     "offset": 144,
     "op": {
@@ -1030,6 +1083,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 8,
     "offset": 152,
     "op": {
@@ -1040,6 +1094,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 16,
     "offset": 160,
     "op": {
@@ -1050,6 +1105,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 24,
     "offset": 176,
     "op": {
@@ -1060,6 +1116,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 16,
     "offset": 200,
     "op": {
@@ -1067,6 +1124,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 8,
     "offset": 216,
     "op": {
@@ -1077,6 +1135,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 24,
     "offset": 224,
     "op": {
@@ -1087,6 +1146,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 16,
     "offset": 248,
     "op": {
@@ -1097,6 +1157,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 8,
     "offset": 264,
     "op": {
@@ -1104,6 +1165,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 16,
     "offset": 272,
     "op": {
@@ -1114,6 +1176,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 16,
     "offset": 288,
     "op": {
@@ -1124,6 +1187,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 8,
     "offset": 304,
     "op": {
@@ -1131,6 +1195,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 16,
     "offset": 312,
     "op": {
@@ -1142,6 +1207,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 8,
     "offset": 328,
     "op": {
@@ -1149,6 +1215,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 16,
     "offset": 336,
     "op": {
@@ -1159,6 +1226,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 8,
     "offset": 352,
     "op": {
@@ -1169,6 +1237,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 16,
     "offset": 360,
     "op": {
@@ -1176,6 +1245,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 24,
     "offset": 376,
     "op": {
@@ -1188,6 +1258,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 16,
     "offset": 400,
     "op": {
@@ -1195,6 +1266,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 16,
     "offset": 416,
     "op": {
@@ -1205,6 +1277,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 16,
     "offset": 432,
     "op": {
@@ -1212,6 +1285,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 8,
     "offset": 448,
     "op": {
@@ -1223,6 +1297,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 16,
     "offset": 456,
     "op": {
@@ -1233,6 +1308,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 8,
     "offset": 472,
     "op": {
@@ -1243,6 +1319,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 8,
     "offset": 480,
     "op": {
@@ -1253,6 +1330,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 16,
     "offset": 488,
     "op": {
@@ -1260,6 +1338,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 56,
     "offset": 504,
     "op": {
@@ -1573,11 +1652,16 @@ exports[`decompiler should decompile a simple contract 2`] = `
           "type": -1,
           Symbol(nodejs.util.inspect.custom): [Function],
         },
+        512,
+        0,
+        48,
+        0,
       ],
       "code": "PUSHCONT",
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 8,
     "offset": 560,
     "op": {
@@ -1585,6 +1669,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 8,
     "offset": 568,
     "op": {
@@ -1592,6 +1677,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 8,
     "offset": 576,
     "op": {
@@ -1602,6 +1688,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 8,
     "offset": 584,
     "op": {
@@ -1609,6 +1696,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 16,
     "offset": 592,
     "op": {
@@ -1619,6 +1707,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 16,
     "offset": 608,
     "op": {
@@ -1629,6 +1718,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 8,
     "offset": 624,
     "op": {
@@ -1636,6 +1726,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
     },
   },
   {
+    "hash": "d4902fcc9fad74698fa8e353220a68da0dcf72e32bcb2eb9ee04217c17d3062c",
     "length": 16,
     "offset": 632,
     "op": {
@@ -1651,6 +1742,7 @@ exports[`decompiler should decompile a simple contract 2`] = `
 exports[`decompiler should decompile a simple contract 3`] = `
 [
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 16,
     "offset": 0,
     "op": {
@@ -1661,6 +1753,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 8,
     "offset": 16,
     "op": {
@@ -1671,6 +1764,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 8,
     "offset": 24,
     "op": {
@@ -1678,6 +1772,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 8,
     "offset": 32,
     "op": {
@@ -1688,6 +1783,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 32,
     "offset": 40,
     "op": {
@@ -1698,6 +1794,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 8,
     "offset": 72,
     "op": {
@@ -1705,6 +1802,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 8,
     "offset": 80,
     "op": {
@@ -1715,6 +1813,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 32,
     "offset": 88,
     "op": {
@@ -1725,6 +1824,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 8,
     "offset": 120,
     "op": {
@@ -1732,6 +1832,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 8,
     "offset": 128,
     "op": {
@@ -1739,6 +1840,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 104,
     "offset": 136,
     "op": {
@@ -2052,11 +2154,16 @@ exports[`decompiler should decompile a simple contract 3`] = `
           "type": -1,
           Symbol(nodejs.util.inspect.custom): [Function],
         },
+        144,
+        0,
+        96,
+        0,
       ],
       "code": "PUSHCONT",
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 8,
     "offset": 240,
     "op": {
@@ -2064,6 +2171,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 8,
     "offset": 248,
     "op": {
@@ -2074,6 +2182,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 16,
     "offset": 256,
     "op": {
@@ -2084,6 +2193,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 24,
     "offset": 272,
     "op": {
@@ -2094,6 +2204,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 16,
     "offset": 296,
     "op": {
@@ -2101,6 +2212,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 8,
     "offset": 312,
     "op": {
@@ -2111,6 +2223,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 24,
     "offset": 320,
     "op": {
@@ -2121,6 +2234,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 16,
     "offset": 344,
     "op": {
@@ -2131,6 +2245,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 8,
     "offset": 360,
     "op": {
@@ -2138,6 +2253,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 16,
     "offset": 368,
     "op": {
@@ -2148,6 +2264,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 16,
     "offset": 384,
     "op": {
@@ -2158,6 +2275,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 8,
     "offset": 400,
     "op": {
@@ -2165,6 +2283,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 16,
     "offset": 408,
     "op": {
@@ -2176,6 +2295,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 8,
     "offset": 424,
     "op": {
@@ -2183,6 +2303,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 16,
     "offset": 432,
     "op": {
@@ -2193,6 +2314,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 8,
     "offset": 448,
     "op": {
@@ -2203,6 +2325,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 16,
     "offset": 456,
     "op": {
@@ -2210,6 +2333,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 24,
     "offset": 472,
     "op": {
@@ -2222,6 +2346,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 16,
     "offset": 496,
     "op": {
@@ -2229,6 +2354,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 16,
     "offset": 512,
     "op": {
@@ -2239,6 +2365,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 16,
     "offset": 528,
     "op": {
@@ -2246,6 +2373,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 8,
     "offset": 544,
     "op": {
@@ -2257,6 +2385,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 16,
     "offset": 552,
     "op": {
@@ -2267,6 +2396,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 8,
     "offset": 568,
     "op": {
@@ -2277,6 +2407,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 8,
     "offset": 576,
     "op": {
@@ -2287,6 +2418,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 16,
     "offset": 584,
     "op": {
@@ -2294,6 +2426,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 56,
     "offset": 600,
     "op": {
@@ -2607,11 +2740,16 @@ exports[`decompiler should decompile a simple contract 3`] = `
           "type": -1,
           Symbol(nodejs.util.inspect.custom): [Function],
         },
+        608,
+        0,
+        48,
+        0,
       ],
       "code": "PUSHCONT",
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 8,
     "offset": 656,
     "op": {
@@ -2619,6 +2757,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 8,
     "offset": 664,
     "op": {
@@ -2626,6 +2765,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 8,
     "offset": 672,
     "op": {
@@ -2636,6 +2776,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 8,
     "offset": 680,
     "op": {
@@ -2643,6 +2784,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 16,
     "offset": 688,
     "op": {
@@ -2653,6 +2795,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 16,
     "offset": 704,
     "op": {
@@ -2663,6 +2806,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 8,
     "offset": 720,
     "op": {
@@ -2670,6 +2814,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
     },
   },
   {
+    "hash": "587cc789eff1c84f46ec3797e45fc809a14ff5ae24f1e0c7a6a99cc9dc9061ff",
     "length": 16,
     "offset": 728,
     "op": {
@@ -2685,6 +2830,7 @@ exports[`decompiler should decompile a simple contract 3`] = `
 exports[`decompiler should decompile a simple contract 4`] = `
 [
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 16,
     "offset": 0,
     "op": {
@@ -2695,6 +2841,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 8,
     "offset": 16,
     "op": {
@@ -2705,6 +2852,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 8,
     "offset": 24,
     "op": {
@@ -2712,6 +2860,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 8,
     "offset": 32,
     "op": {
@@ -2722,6 +2871,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 32,
     "offset": 40,
     "op": {
@@ -2732,6 +2882,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 8,
     "offset": 72,
     "op": {
@@ -2739,6 +2890,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 64,
     "offset": 80,
     "op": {
@@ -3052,11 +3204,16 @@ exports[`decompiler should decompile a simple contract 4`] = `
           "type": -1,
           Symbol(nodejs.util.inspect.custom): [Function],
         },
+        88,
+        0,
+        56,
+        0,
       ],
       "code": "PUSHCONT",
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 8,
     "offset": 144,
     "op": {
@@ -3064,6 +3221,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 8,
     "offset": 152,
     "op": {
@@ -3074,6 +3232,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 16,
     "offset": 160,
     "op": {
@@ -3084,6 +3243,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 16,
     "offset": 176,
     "op": {
@@ -3094,6 +3254,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 16,
     "offset": 192,
     "op": {
@@ -3101,6 +3262,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 8,
     "offset": 208,
     "op": {
@@ -3111,6 +3273,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 16,
     "offset": 216,
     "op": {
@@ -3121,6 +3284,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 16,
     "offset": 232,
     "op": {
@@ -3131,6 +3295,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 8,
     "offset": 248,
     "op": {
@@ -3142,6 +3307,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 16,
     "offset": 256,
     "op": {
@@ -3152,6 +3318,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 8,
     "offset": 272,
     "op": {
@@ -3159,6 +3326,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 16,
     "offset": 280,
     "op": {
@@ -3169,6 +3337,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 16,
     "offset": 296,
     "op": {
@@ -3179,6 +3348,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 8,
     "offset": 312,
     "op": {
@@ -3186,6 +3356,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 16,
     "offset": 320,
     "op": {
@@ -3196,6 +3367,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 16,
     "offset": 336,
     "op": {
@@ -3206,6 +3378,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 8,
     "offset": 352,
     "op": {
@@ -3213,6 +3386,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 16,
     "offset": 360,
     "op": {
@@ -3224,6 +3398,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 8,
     "offset": 376,
     "op": {
@@ -3231,6 +3406,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 16,
     "offset": 384,
     "op": {
@@ -3241,6 +3417,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 8,
     "offset": 400,
     "op": {
@@ -3252,6 +3429,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 16,
     "offset": 408,
     "op": {
@@ -3259,6 +3437,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 24,
     "offset": 424,
     "op": {
@@ -3271,6 +3450,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 16,
     "offset": 448,
     "op": {
@@ -3278,6 +3458,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 16,
     "offset": 464,
     "op": {
@@ -3288,6 +3469,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 16,
     "offset": 480,
     "op": {
@@ -3295,6 +3477,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 8,
     "offset": 496,
     "op": {
@@ -3306,6 +3489,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 32,
     "offset": 504,
     "op": {
@@ -3619,11 +3803,16 @@ exports[`decompiler should decompile a simple contract 4`] = `
           "type": -1,
           Symbol(nodejs.util.inspect.custom): [Function],
         },
+        512,
+        0,
+        24,
+        0,
       ],
       "code": "PUSHCONT",
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 56,
     "offset": 536,
     "op": {
@@ -3937,11 +4126,16 @@ exports[`decompiler should decompile a simple contract 4`] = `
           "type": -1,
           Symbol(nodejs.util.inspect.custom): [Function],
         },
+        544,
+        0,
+        48,
+        0,
       ],
       "code": "PUSHCONT",
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 8,
     "offset": 592,
     "op": {
@@ -3949,6 +4143,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 8,
     "offset": 600,
     "op": {
@@ -3956,6 +4151,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 8,
     "offset": 608,
     "op": {
@@ -3966,6 +4162,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 8,
     "offset": 616,
     "op": {
@@ -3973,6 +4170,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 16,
     "offset": 624,
     "op": {
@@ -3983,6 +4181,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 16,
     "offset": 640,
     "op": {
@@ -3993,6 +4192,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 8,
     "offset": 656,
     "op": {
@@ -4000,6 +4200,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
     },
   },
   {
+    "hash": "5c9a5e68c108e18721a07c42f9956bfb39ad77ec6d624b60c576ec88eee65329",
     "length": 16,
     "offset": 664,
     "op": {
@@ -4015,6 +4216,7 @@ exports[`decompiler should decompile a simple contract 4`] = `
 exports[`decompiler should decompile a simple contract 5`] = `
 [
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 16,
     "offset": 0,
     "op": {
@@ -4025,6 +4227,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 8,
     "offset": 16,
     "op": {
@@ -4035,6 +4238,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 8,
     "offset": 24,
     "op": {
@@ -4042,6 +4246,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 8,
     "offset": 32,
     "op": {
@@ -4052,6 +4257,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 32,
     "offset": 40,
     "op": {
@@ -4062,6 +4268,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 8,
     "offset": 72,
     "op": {
@@ -4069,6 +4276,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 8,
     "offset": 80,
     "op": {
@@ -4079,6 +4287,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 32,
     "offset": 88,
     "op": {
@@ -4089,6 +4298,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 8,
     "offset": 120,
     "op": {
@@ -4096,6 +4306,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 8,
     "offset": 128,
     "op": {
@@ -4103,6 +4314,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 104,
     "offset": 136,
     "op": {
@@ -4416,11 +4628,16 @@ exports[`decompiler should decompile a simple contract 5`] = `
           "type": -1,
           Symbol(nodejs.util.inspect.custom): [Function],
         },
+        144,
+        0,
+        96,
+        0,
       ],
       "code": "PUSHCONT",
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 8,
     "offset": 240,
     "op": {
@@ -4428,6 +4645,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 8,
     "offset": 248,
     "op": {
@@ -4438,6 +4656,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 16,
     "offset": 256,
     "op": {
@@ -4448,6 +4667,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 16,
     "offset": 272,
     "op": {
@@ -4458,6 +4678,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 16,
     "offset": 288,
     "op": {
@@ -4465,6 +4686,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 8,
     "offset": 304,
     "op": {
@@ -4475,6 +4697,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 16,
     "offset": 312,
     "op": {
@@ -4485,6 +4708,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 16,
     "offset": 328,
     "op": {
@@ -4495,6 +4719,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 8,
     "offset": 344,
     "op": {
@@ -4506,6 +4731,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 16,
     "offset": 352,
     "op": {
@@ -4516,6 +4742,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 8,
     "offset": 368,
     "op": {
@@ -4523,6 +4750,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 16,
     "offset": 376,
     "op": {
@@ -4533,6 +4761,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 16,
     "offset": 392,
     "op": {
@@ -4543,6 +4772,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 8,
     "offset": 408,
     "op": {
@@ -4550,6 +4780,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 16,
     "offset": 416,
     "op": {
@@ -4560,6 +4791,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 16,
     "offset": 432,
     "op": {
@@ -4570,6 +4802,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 8,
     "offset": 448,
     "op": {
@@ -4577,6 +4810,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 16,
     "offset": 456,
     "op": {
@@ -4588,6 +4822,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 8,
     "offset": 472,
     "op": {
@@ -4595,6 +4830,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 16,
     "offset": 480,
     "op": {
@@ -4605,6 +4841,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 8,
     "offset": 496,
     "op": {
@@ -4616,6 +4853,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 16,
     "offset": 504,
     "op": {
@@ -4623,6 +4861,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 24,
     "offset": 520,
     "op": {
@@ -4635,6 +4874,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 16,
     "offset": 544,
     "op": {
@@ -4642,6 +4882,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 16,
     "offset": 560,
     "op": {
@@ -4652,6 +4893,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 16,
     "offset": 576,
     "op": {
@@ -4659,6 +4901,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 8,
     "offset": 592,
     "op": {
@@ -4670,6 +4913,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 32,
     "offset": 600,
     "op": {
@@ -4983,11 +5227,16 @@ exports[`decompiler should decompile a simple contract 5`] = `
           "type": -1,
           Symbol(nodejs.util.inspect.custom): [Function],
         },
+        608,
+        0,
+        24,
+        0,
       ],
       "code": "PUSHCONT",
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 56,
     "offset": 632,
     "op": {
@@ -5301,11 +5550,16 @@ exports[`decompiler should decompile a simple contract 5`] = `
           "type": -1,
           Symbol(nodejs.util.inspect.custom): [Function],
         },
+        640,
+        0,
+        48,
+        0,
       ],
       "code": "PUSHCONT",
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 8,
     "offset": 688,
     "op": {
@@ -5313,6 +5567,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 8,
     "offset": 696,
     "op": {
@@ -5320,6 +5575,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 8,
     "offset": 704,
     "op": {
@@ -5330,6 +5586,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 8,
     "offset": 712,
     "op": {
@@ -5337,6 +5594,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 16,
     "offset": 720,
     "op": {
@@ -5347,6 +5605,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 16,
     "offset": 736,
     "op": {
@@ -5357,6 +5616,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 8,
     "offset": 752,
     "op": {
@@ -5364,6 +5624,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
     },
   },
   {
+    "hash": "fe9530d3243853083ef2ef0b4c2908c0abf6fa1c31ea243aacaa5bf8c7d753f1",
     "length": 16,
     "offset": 760,
     "op": {
@@ -5379,6 +5640,7 @@ exports[`decompiler should decompile a simple contract 5`] = `
 exports[`decompiler should decompile a simple contract 6`] = `
 [
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 16,
     "offset": 0,
     "op": {
@@ -5389,6 +5651,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 8,
     "offset": 16,
     "op": {
@@ -5399,6 +5662,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 8,
     "offset": 24,
     "op": {
@@ -5406,6 +5670,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 8,
     "offset": 32,
     "op": {
@@ -5416,6 +5681,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 32,
     "offset": 40,
     "op": {
@@ -5426,6 +5692,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 8,
     "offset": 72,
     "op": {
@@ -5433,6 +5700,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 64,
     "offset": 80,
     "op": {
@@ -5746,11 +6014,16 @@ exports[`decompiler should decompile a simple contract 6`] = `
           "type": -1,
           Symbol(nodejs.util.inspect.custom): [Function],
         },
+        88,
+        0,
+        56,
+        0,
       ],
       "code": "PUSHCONT",
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 8,
     "offset": 144,
     "op": {
@@ -5758,6 +6031,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 8,
     "offset": 152,
     "op": {
@@ -5768,6 +6042,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 16,
     "offset": 160,
     "op": {
@@ -5778,6 +6053,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 16,
     "offset": 176,
     "op": {
@@ -5788,6 +6064,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 16,
     "offset": 192,
     "op": {
@@ -5795,6 +6072,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 8,
     "offset": 208,
     "op": {
@@ -5805,6 +6083,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 16,
     "offset": 216,
     "op": {
@@ -5815,6 +6094,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 16,
     "offset": 232,
     "op": {
@@ -5825,6 +6105,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 16,
     "offset": 248,
     "op": {
@@ -5835,6 +6116,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 16,
     "offset": 264,
     "op": {
@@ -5845,6 +6127,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 8,
     "offset": 280,
     "op": {
@@ -5856,6 +6139,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 8,
     "offset": 288,
     "op": {
@@ -5863,6 +6147,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 16,
     "offset": 296,
     "op": {
@@ -5873,6 +6158,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 16,
     "offset": 312,
     "op": {
@@ -5883,6 +6169,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 8,
     "offset": 328,
     "op": {
@@ -5890,6 +6177,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 16,
     "offset": 336,
     "op": {
@@ -5900,6 +6188,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 16,
     "offset": 352,
     "op": {
@@ -5910,6 +6199,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 16,
     "offset": 368,
     "op": {
@@ -5920,6 +6210,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 8,
     "offset": 384,
     "op": {
@@ -5927,6 +6218,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 16,
     "offset": 392,
     "op": {
@@ -5938,6 +6230,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 8,
     "offset": 408,
     "op": {
@@ -5945,6 +6238,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 16,
     "offset": 416,
     "op": {
@@ -5955,6 +6249,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 16,
     "offset": 432,
     "op": {
@@ -5966,6 +6261,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 8,
     "offset": 448,
     "op": {
@@ -5973,6 +6269,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 16,
     "offset": 456,
     "op": {
@@ -5983,6 +6280,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 8,
     "offset": 472,
     "op": {
@@ -5994,6 +6292,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 16,
     "offset": 480,
     "op": {
@@ -6001,6 +6300,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 24,
     "offset": 496,
     "op": {
@@ -6013,6 +6313,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 16,
     "offset": 520,
     "op": {
@@ -6020,6 +6321,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 16,
     "offset": 536,
     "op": {
@@ -6030,6 +6332,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 16,
     "offset": 552,
     "op": {
@@ -6037,6 +6340,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 32,
     "offset": 568,
     "op": {
@@ -6350,11 +6654,16 @@ exports[`decompiler should decompile a simple contract 6`] = `
           "type": -1,
           Symbol(nodejs.util.inspect.custom): [Function],
         },
+        576,
+        0,
+        24,
+        0,
       ],
       "code": "PUSHCONT",
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 56,
     "offset": 600,
     "op": {
@@ -6668,11 +6977,16 @@ exports[`decompiler should decompile a simple contract 6`] = `
           "type": -1,
           Symbol(nodejs.util.inspect.custom): [Function],
         },
+        608,
+        0,
+        48,
+        0,
       ],
       "code": "PUSHCONT",
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 8,
     "offset": 656,
     "op": {
@@ -6680,6 +6994,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 8,
     "offset": 664,
     "op": {
@@ -6687,6 +7002,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 8,
     "offset": 672,
     "op": {
@@ -6698,6 +7014,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 8,
     "offset": 680,
     "op": {
@@ -6708,6 +7025,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 8,
     "offset": 688,
     "op": {
@@ -6715,6 +7033,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 16,
     "offset": 696,
     "op": {
@@ -6725,6 +7044,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 16,
     "offset": 712,
     "op": {
@@ -6735,6 +7055,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 16,
     "offset": 728,
     "op": {
@@ -6745,6 +7066,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 8,
     "offset": 744,
     "op": {
@@ -6752,6 +7074,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
     },
   },
   {
+    "hash": "b61041a58a7980b946e8fb9e198e3c904d24799ffa36574ea4251c41a566f581",
     "length": 16,
     "offset": 752,
     "op": {
@@ -6767,6 +7090,7 @@ exports[`decompiler should decompile a simple contract 6`] = `
 exports[`decompiler should decompile a simple contract 7`] = `
 [
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 16,
     "offset": 0,
     "op": {
@@ -6777,6 +7101,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 8,
     "offset": 16,
     "op": {
@@ -6787,6 +7112,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 8,
     "offset": 24,
     "op": {
@@ -6794,6 +7120,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 8,
     "offset": 32,
     "op": {
@@ -6804,6 +7131,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 32,
     "offset": 40,
     "op": {
@@ -6814,6 +7142,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 8,
     "offset": 72,
     "op": {
@@ -6821,6 +7150,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 8,
     "offset": 80,
     "op": {
@@ -6831,6 +7161,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 32,
     "offset": 88,
     "op": {
@@ -6841,6 +7172,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 8,
     "offset": 120,
     "op": {
@@ -6848,6 +7180,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 8,
     "offset": 128,
     "op": {
@@ -6855,6 +7188,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 128,
     "offset": 136,
     "op": {
@@ -7168,11 +7502,16 @@ exports[`decompiler should decompile a simple contract 7`] = `
           "type": -1,
           Symbol(nodejs.util.inspect.custom): [Function],
         },
+        144,
+        0,
+        120,
+        0,
       ],
       "code": "PUSHCONT",
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 8,
     "offset": 264,
     "op": {
@@ -7180,6 +7519,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 8,
     "offset": 272,
     "op": {
@@ -7190,6 +7530,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 16,
     "offset": 280,
     "op": {
@@ -7200,6 +7541,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 16,
     "offset": 296,
     "op": {
@@ -7210,6 +7552,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 16,
     "offset": 312,
     "op": {
@@ -7217,6 +7560,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 8,
     "offset": 328,
     "op": {
@@ -7227,6 +7571,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 16,
     "offset": 336,
     "op": {
@@ -7237,6 +7582,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 16,
     "offset": 352,
     "op": {
@@ -7247,6 +7593,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 16,
     "offset": 368,
     "op": {
@@ -7257,6 +7604,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 16,
     "offset": 384,
     "op": {
@@ -7267,6 +7615,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 8,
     "offset": 400,
     "op": {
@@ -7278,6 +7627,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 8,
     "offset": 408,
     "op": {
@@ -7285,6 +7635,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 16,
     "offset": 416,
     "op": {
@@ -7295,6 +7646,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 16,
     "offset": 432,
     "op": {
@@ -7305,6 +7657,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 8,
     "offset": 448,
     "op": {
@@ -7312,6 +7665,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 16,
     "offset": 456,
     "op": {
@@ -7322,6 +7676,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 16,
     "offset": 472,
     "op": {
@@ -7332,6 +7687,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 16,
     "offset": 488,
     "op": {
@@ -7342,6 +7698,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 8,
     "offset": 504,
     "op": {
@@ -7349,6 +7706,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 16,
     "offset": 512,
     "op": {
@@ -7360,6 +7718,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 8,
     "offset": 528,
     "op": {
@@ -7367,6 +7726,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 16,
     "offset": 536,
     "op": {
@@ -7377,6 +7737,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 16,
     "offset": 552,
     "op": {
@@ -7388,6 +7749,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 8,
     "offset": 568,
     "op": {
@@ -7395,6 +7757,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 16,
     "offset": 576,
     "op": {
@@ -7405,6 +7768,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 8,
     "offset": 592,
     "op": {
@@ -7416,6 +7780,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 16,
     "offset": 600,
     "op": {
@@ -7423,6 +7788,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 24,
     "offset": 616,
     "op": {
@@ -7435,6 +7801,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 16,
     "offset": 640,
     "op": {
@@ -7442,6 +7809,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 16,
     "offset": 656,
     "op": {
@@ -7452,6 +7820,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 16,
     "offset": 672,
     "op": {
@@ -7459,6 +7828,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 32,
     "offset": 688,
     "op": {
@@ -7772,11 +8142,16 @@ exports[`decompiler should decompile a simple contract 7`] = `
           "type": -1,
           Symbol(nodejs.util.inspect.custom): [Function],
         },
+        696,
+        0,
+        24,
+        0,
       ],
       "code": "PUSHCONT",
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 56,
     "offset": 720,
     "op": {
@@ -8090,11 +8465,16 @@ exports[`decompiler should decompile a simple contract 7`] = `
           "type": -1,
           Symbol(nodejs.util.inspect.custom): [Function],
         },
+        728,
+        0,
+        48,
+        0,
       ],
       "code": "PUSHCONT",
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 8,
     "offset": 776,
     "op": {
@@ -8102,6 +8482,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 8,
     "offset": 784,
     "op": {
@@ -8109,6 +8490,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 8,
     "offset": 792,
     "op": {
@@ -8120,6 +8502,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 8,
     "offset": 800,
     "op": {
@@ -8130,6 +8513,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 8,
     "offset": 808,
     "op": {
@@ -8137,6 +8521,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 16,
     "offset": 816,
     "op": {
@@ -8147,6 +8532,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 16,
     "offset": 832,
     "op": {
@@ -8157,6 +8543,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 16,
     "offset": 848,
     "op": {
@@ -8167,6 +8554,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 8,
     "offset": 864,
     "op": {
@@ -8174,6 +8562,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
     },
   },
   {
+    "hash": "84dafa449f98a6987789ba232358072bc0f76dc4524002a5d0918b9a75d2d599",
     "length": 16,
     "offset": 872,
     "op": {
@@ -8189,6 +8578,7 @@ exports[`decompiler should decompile a simple contract 7`] = `
 exports[`decompiler should decompile a simple contract 8`] = `
 [
   {
+    "hash": "feb5ff6820e2ff0d9483e7e0d62c817d846789fb4ae580c878866d959dabd5c0",
     "length": 16,
     "offset": 0,
     "op": {
@@ -8199,6 +8589,7 @@ exports[`decompiler should decompile a simple contract 8`] = `
     },
   },
   {
+    "hash": "feb5ff6820e2ff0d9483e7e0d62c817d846789fb4ae580c878866d959dabd5c0",
     "length": 24,
     "offset": 16,
     "op": {
@@ -25412,6 +25803,7 @@ exports[`decompiler should decompile a simple contract 8`] = `
     },
   },
   {
+    "hash": "feb5ff6820e2ff0d9483e7e0d62c817d846789fb4ae580c878866d959dabd5c0",
     "length": 16,
     "offset": 40,
     "op": {
@@ -25419,6 +25811,7 @@ exports[`decompiler should decompile a simple contract 8`] = `
     },
   },
   {
+    "hash": "feb5ff6820e2ff0d9483e7e0d62c817d846789fb4ae580c878866d959dabd5c0",
     "length": 24,
     "offset": 56,
     "op": {
