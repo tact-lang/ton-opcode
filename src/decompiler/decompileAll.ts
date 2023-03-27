@@ -134,7 +134,7 @@ function decompileCell(args: {
             writer.append(printer({ op: opstr, offset: op.offset, length: op.length, hash: op.hash }, writer.indent));
             writer.inIndent(() => {
                 decompileCell({
-                    src: args.src,
+                    src: opcode.args[0],
                     offset: { bits: opcode.args[1], refs: opcode.args[2] },
                     limit: { bits: opcode.args[3], refs: opcode.args[4] },
                     root: false,

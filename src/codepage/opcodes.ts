@@ -1,4 +1,4 @@
-import { beginCell, Slice } from 'ton-core';
+import { beginCell, Cell, Slice } from 'ton-core';
 import { Codepage } from './Codepage';
 
 const CP0Auto = new Codepage();
@@ -270,47 +270,47 @@ CP0Auto.insertHex('85', 8, (slice) => {
 CP0Auto.insertHex('88', 8, (slice) => ({ code: 'PUSHREF', args: [slice.loadRef()] }));
 CP0Auto.insertHex('89', 8, (slice) => ({ code: 'PUSHREFSLICE', args: [slice.loadRef()] }));
 CP0Auto.insertHex('8a', 8, (slice) => ({ code: 'PUSHREFCONT', args: [slice.loadRef()] }));
-CP0Auto.insertHex('8b', 8, (slice) => {
+CP0Auto.insertHex('8b', 8, (slice, cell) => {
     let x = slice.loadUint(4);
     let bits = 8 * x + 4;
     let refs = 0;
     let bitsOffset = slice.offsetBits;
     let refsOffset = slice.offsetRefs;
-    let cell = loadSubslice(slice, bits, refs);
+    skipSubslice(slice, bits, refs);
     return { code: 'PUSHSLICE', args: [cell, bitsOffset, refsOffset, bits, refs] };
 });
-CP0Auto.insertHex('8c', 8, (slice) => {
+CP0Auto.insertHex('8c', 8, (slice, cell) => {
     let refs = slice.loadUint(2) + 1;
     let bits = (8 * slice.loadUint(5) + 1);
     let bitsOffset = slice.offsetBits;
     let refsOffset = slice.offsetRefs;
-    let cell = loadSubslice(slice, bits, refs);
+    skipSubslice(slice, bits, refs);
     return { code: 'PUSHSLICE', args: [cell, bitsOffset, refsOffset, bits, refs] };
 });
-CP0Auto.insertHex('8d', 8, (slice) => {
+CP0Auto.insertHex('8d', 8, (slice, cell) => {
     let refs = slice.loadUint(3);
     let bits = 8 * slice.loadUint(7) + 6;
     let bitsOffset = slice.offsetBits;
     let refsOffset = slice.offsetRefs;
-    let cell = loadSubslice(slice, bits, refs);
+    skipSubslice(slice, bits, refs);
     return { code: 'PUSHSLICE', args: [cell, bitsOffset, refsOffset, bits, refs] };
 });
 // 9281536 (DUMMY)
-CP0Auto.insertHex('8E', 7, (slice) => {
+CP0Auto.insertHex('8E', 7, (slice, cell) => {
     let args = slice.loadUint(9);
     let refs = (args >> 7) & 3;
     let bits = (args & 127) * 8;
     let bitsOffset = slice.offsetBits;
     let refsOffset = slice.offsetRefs;
-    let cell = loadSubslice(slice, bits, refs);
+    skipSubslice(slice, bits, refs);
     return { code: 'PUSHCONT', args: [cell, bitsOffset, refsOffset, bits, refs] };
 })
-CP0Auto.insertHex('9', 4, (slice) => {
+CP0Auto.insertHex('9', 4, (slice, cell) => {
     let bits = slice.loadUint(4) * 8;
     let refs = 0;
     let bitsOffset = slice.offsetBits;
     let refsOffset = slice.offsetRefs;
-    let cell = loadSubslice(slice, bits, refs);
+    skipSubslice(slice, bits, refs);
     return { code: 'PUSHCONT', args: [cell, bitsOffset, refsOffset, bits, refs] };
 })
 
@@ -534,12 +534,12 @@ CP0Auto.insertHex('cf40', 16, { code: 'STZEROES' });
 CP0Auto.insertHex('cf41', 16, { code: 'STONES' });
 CP0Auto.insertHex('cf42', 16, { code: 'STSAME' });
 // 13583104 (DUMMY)
-CP0Auto.insertHex('cf8', 9, (slice) => {
+CP0Auto.insertHex('cf8', 9, (slice, cell) => {
     let refs = slice.loadUint(2);
     let bits = slice.loadUint(3) * 8 + 1;
     let bitsOffset = slice.offsetBits;
     let refsOffset = slice.offsetRefs;
-    let cell = loadSubslice(slice, bits, refs);
+    skipSubslice(slice, bits, refs);
     return { code: `STSLICECONST`, args: [cell, bitsOffset, refsOffset, bits, refs] };
 });
 CP0Auto.insertHex('d0', 8, { code: 'CTOS' });
@@ -1181,11 +1181,9 @@ export { CP0Auto }
 // Utils
 //
 
-function loadSubslice(slice: Slice, bits: number, refs?: number) {
-    let b = beginCell()
-        .storeBits(slice.loadBits(bits));
+function skipSubslice(slice: Slice, bits: number, refs?: number) {
+    slice.skip(bits);
     for (let i = 0; i < (refs || 0); i++) {
-        b.storeRef(slice.loadRef());
+        slice.loadRef();
     }
-    return b.asCell();
 }

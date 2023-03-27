@@ -2,7 +2,7 @@ import { beginCell, Cell, Slice } from "ton-core";
 import { loadOpcode } from "../codepage/loadOpcode";
 import { OpCode } from "../codepage/opcodes.gen";
 import { Maybe } from "../utils/maybe";
-import { subcell } from "../utils/subcell";
+import { subcell, subslice } from "../utils/subcell";
 
 export type DecompiledOpCode = OpCode | { code: 'unknown', data: Cell };
 export type DecompiledInstruction = {
@@ -44,24 +44,21 @@ export function decompile(args: {
     }
 
     // Prepare offset
-    let bitsLimit = args.limit ? (args.limit.bits + bitsDelta) : source.bits.length;
-    let refsLimit = args.limit ? (args.limit.refs + refsDelta) : source.refs.length;
-    let slice = subcell({
+    let bitsLimit = args.limit ? (args.limit.bits) : source.bits.length - bitsDelta;
+    let refsLimit = args.limit ? (args.limit.refs) : source.refs.length - refsDelta;
+    let slice = subslice({
         cell: source,
+        offsetBits: bitsDelta,
+        offsetRefs: refsDelta,
         bits: bitsLimit,
         refs: refsLimit
-    }).beginParse();
-    if (args.offset) {
-        slice.skip(args.offset.bits);
-        for (let i = 0; i < args.offset.refs; i++)
-            slice.loadRef();
-    }
+    });
 
     while (slice.remainingBits > 0) {
 
         // Load opcode
         const opcodeOffset = slice.offsetBits;
-        const opcode = loadOpcode(slice);
+        const opcode = loadOpcode(slice, source);
         const opcodeLength = slice.offsetBits - opcodeOffset;
 
         // Failed case
@@ -97,9 +94,9 @@ export function decompile(args: {
 
         // Implicit jump
         if (slice.remainingBits === 0 && slice.remainingRefs > 0) {
-            let n = slice.loadRef();
-            hash = n.hash().toString('hex');
-            slice = n.beginParse();
+            source = slice.loadRef();
+            hash = source.hash().toString('hex');
+            slice = source.beginParse();
         }
     }
 

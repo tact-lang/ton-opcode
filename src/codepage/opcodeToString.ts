@@ -1,3 +1,4 @@
+import { subcell } from "../utils/subcell";
 import { isOpCodeWithArgs, OpCode } from "./opcodes.gen";
 
 export function opcodeToString(op: OpCode): string {
@@ -78,7 +79,14 @@ export function opcodeToString(op: OpCode): string {
     if (op.code === 'PUSHSLICE'
         || op.code === 'PUSHCONT'
         || op.code === 'STSLICECONST') {
-        return `${op.args[0]} ${op.code}`;
+        let c = subcell({
+            cell: op.args[0],
+            offsetBits: op.args[1],
+            offsetRefs: op.args[2],
+            bits: op.args[3],
+            refs: op.args[4]
+        });
+        return `${c} ${op.code}`;
     }
 
     // Debug

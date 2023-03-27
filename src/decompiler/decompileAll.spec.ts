@@ -58,4 +58,10 @@ describe('decompileAll', () => {
         let res = decompileAll({ src: wallet });
         expect(res).toMatchSnapshot();
     });
+
+    it('should decompile wallet', () => {
+        const wallet = fs.readFileSync(__dirname + '/__testdata__/wallet_Wallet.code.boc');
+        let res = decompileAll({ src: wallet });
+        expect(res).toMatchSnapshot();
+    });
 });

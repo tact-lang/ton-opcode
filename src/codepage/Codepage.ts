@@ -5,7 +5,7 @@ import { Trie } from '../utils/trie';
 export type Arg = string | number | boolean | Cell;
 export type Op = OpCode;
 
-type OpResolver = ((slice: Slice) => Op) | Op
+type OpResolver = ((slice: Slice, cell: Cell) => Op) | Op
 
 export class Codepage {
     private readonly _trie = new Trie<OpResolver>();

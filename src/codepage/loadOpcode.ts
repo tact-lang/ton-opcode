@@ -4,12 +4,12 @@ import { OpCode } from "./opcodes.gen";
 
 const codepage = CP0Auto;
 
-export function loadOpcode(sc: Slice) {
+export function loadOpcode(slice: Slice, cell: Cell) {
     let opCode = '';
-    while (sc.remainingBits > 0) {
+    while (slice.remainingBits > 0) {
 
         // Load next bit
-        let opCodePart = sc.loadBit();
+        let opCodePart = slice.loadBit();
         opCode += opCodePart ? '1' : '0'
 
         // Find opcode in codepage
@@ -31,7 +31,7 @@ export function loadOpcode(sc: Slice) {
         // Resolve real opcode
         let resolvedOpcode: OpCode;
         if (typeof op === 'function') {
-            resolvedOpcode = op(sc);
+            resolvedOpcode = op(slice, cell);
         } else {
             resolvedOpcode = op;
         }

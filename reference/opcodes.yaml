@@ -97,7 +97,7 @@ opcodes:
   PUSHREF: ["cell"]
   PUSHREFSLICE: ["cell"]
   PUSHREFCONT: ["cell"]
-  PUSHSLICE: ["cell", "int", "int", "int", "int"] # source ref, offset bits, offset refs, bits, refs
+  PUSHSLICE: ["cell", "int", "int", "int", "int"] # source ref,  offset bits, offset refs, bits, refs
   PUSHCONT: ["cell", "int", "int", "int", "int"] # source ref, offset bits, offset refs, bits, refs
 
   # A.5.1. Addition, subtraction, multiplication.
