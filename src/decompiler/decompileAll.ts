@@ -36,8 +36,7 @@ function decompileCell(args: {
         let dict = Dictionary.loadDirect<number, { offset: number, cell: Cell }>(Dictionary.Keys.Int(dictKeyLen), createCodeCell(), dictCell);
 
         // Extract all methods
-        let unknownIndex = 0;
-        let extracted = new Map<string, { ref: boolean, rendered: string, src: Cell, srcOffset: number }>();
+        let extracted = new Map<string, { rendered: string, src: Cell, srcOffset: number }>();
         let callRefs = new Map<string, string>();
         function extractCallRef(cell: Cell) {
 
@@ -48,7 +47,7 @@ function decompileCell(args: {
             }
 
             // Add name to a map and assign name
-            let name = '?fun_' + (unknownIndex++);
+            let name = '?fun_ref_' + cell.hash().toString('hex').substring(0, 16);
             callRefs.set(k, name);
 
             // Render cell
@@ -66,11 +65,13 @@ function decompileCell(args: {
                     });
                 });
             });
-            extracted.set(name, { ref: true, rendered: w.end(), src: cell, srcOffset: 0 });
+            extracted.set(name, { rendered: w.end(), src: cell, srcOffset: 0 });
             return name;
         }
+
+        let extractedDict = new Map<number, { name: string, rendered: string, src: Cell, srcOffset: number }>();
         for (let [key, value] of dict) {
-            let name = knownMethods[key] || '?fun_' + (unknownIndex++);
+            let name = knownMethods[key] || '?fun_' + key;
             let w = new Writer();
             w.inIndent(() => {
                 w.inIndent(() => {
@@ -85,23 +86,50 @@ function decompileCell(args: {
                     });
                 });
             });
-            extracted.set(name, {
-                ref: false,
+            extractedDict.set(key, {
+                name,
                 rendered: w.end(),
                 src: value.cell,
                 srcOffset: value.offset
             });
         }
 
+        // Sort and filter
+        let dictKeys = Array.from(extractedDict.keys()).sort((a, b) => a - b);
+        let refsKeys = Array.from(extracted.keys()).sort();
+
         // Render methods
         writer.append(printer(`PROGRAM{`, writer.indent));
         writer.inIndent(() => {
-            for (let [key] of extracted) {
+
+            // Declarations
+            for (let key of dictKeys) {
+                let value = extractedDict.get(key)!;
+                writer.append(printer(`DECLPROC ${value.name};`, writer.indent));
+            }
+            for (let key of refsKeys) {
                 writer.append(printer(`DECLPROC ${key};`, writer.indent));
             }
-            for (let [key, value] of extracted) {
+
+            // Dicts
+            for (let key of dictKeys) {
+                let value = extractedDict.get(key)!;
                 let hash = value.src.hash().toString('hex');
-                let opstr = `${key} ${value.ref ? 'PROCREF' : 'PROC'}:<{`;
+                let opstr = `${value.name} PROC:<{`;
+                writer.append(printer({ op: opstr, offset: value.srcOffset, length: 0, hash }, writer.indent));
+                writer.inIndent(() => {
+                    value.rendered.split('\n').forEach(line => {
+                        writer.append(line); // Already formatted
+                    });
+                });
+                opstr = `}>`;
+                writer.append(printer({ op: opstr, offset: value.srcOffset, length: 0, hash }, writer.indent));
+            }
+            // Refs
+            for (let key of refsKeys) {
+                let value = extracted.get(key)!;
+                let hash = value.src.hash().toString('hex');
+                let opstr = `${key} PROCREF:<{`;
                 writer.append(printer({ op: opstr, offset: value.srcOffset, length: 0, hash }, writer.indent));
                 writer.inIndent(() => {
                     value.rendered.split('\n').forEach(line => {
