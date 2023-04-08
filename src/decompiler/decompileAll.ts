@@ -184,7 +184,8 @@ function decompileCell(args: {
             || opcode.code === 'IFNOTREF'
             || opcode.code === 'IFNOTJMPREF'
             || opcode.code === 'IFREFELSEREF'
-            || opcode.code === 'IFELSEREF') {
+            || opcode.code === 'IFELSEREF'
+            || opcode.code === 'PUSHREFCONT') {
             let c = opcode.args[0];
             let opstr = '<{';
             writer.append(printer({ op: opstr, offset: op.offset, length: op.length, hash: op.hash }, writer.indent));
