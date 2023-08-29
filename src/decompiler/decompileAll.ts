@@ -1,4 +1,4 @@
-import { Cell, Dictionary, DictionaryValue } from "ton-core";
+import { Cell, Dictionary, DictionaryValue } from "@ton/core";
 import { opcodeToString } from "../codepage/opcodeToString";
 import { Maybe } from "../utils/maybe";
 import { Writer } from "../utils/Writer";
