@@ -1,4 +1,4 @@
-import { Cell } from "ton-core";
+import { Cell } from "@ton/core";
 import { fromCode } from "tvm-disassembler";
 import { decompile } from "./decompiler";
 

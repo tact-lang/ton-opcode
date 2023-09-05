@@ -1,4 +1,4 @@
-import { Cell } from 'ton-core';
+import { Cell } from '@ton/core';
 
 export type OpCodeWithArgs = 
     | { code: 'XCHG', args: [number, number] }

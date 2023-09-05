@@ -1,4 +1,4 @@
-import { beginCell, Cell, Slice } from 'ton-core';
+import { beginCell, Cell, Slice } from '@ton/core';
 import { Codepage } from './Codepage';
 
 const CP0Auto = new Codepage();

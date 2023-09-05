@@ -1,4 +1,4 @@
-import { beginCell, Cell, Slice } from "ton-core";
+import { beginCell, Cell, Slice } from "@ton/core";
 
 export function subcell(args: { cell: Cell, offsetBits: number, offsetRefs: number, bits: number, refs: number }): Cell {
     let s = args.cell.beginParse();

@@ -3,7 +3,7 @@ import yaml from 'js-yaml';
 let defs = yaml.load(fs.readFileSync(__dirname + '/../reference/opcodes.yaml', 'utf-8')) as { opcodes: { [key: string]: ('int' | 'bigint' | 'bool' | 'cell' | 'string')[] | undefined } };
 
 // Generate Defs
-let opcodesDefs: string = 'import { Cell } from \'ton-core\';\n';
+let opcodesDefs: string = 'import { Cell } from \'@ton/core\';\n';
 
 function writeOpcode(name: string, args?: ("string" | "bigint" | "int" | "bool" | "cell")[]) {
     if (args && args.length > 0) {

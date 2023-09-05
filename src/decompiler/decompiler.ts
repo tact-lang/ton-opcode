@@ -1,4 +1,4 @@
-import { beginCell, Cell, Slice } from "ton-core";
+import { beginCell, Cell, Slice } from "@ton/core";
 import { loadOpcode } from "../codepage/loadOpcode";
 import { OpCode } from "../codepage/opcodes.gen";
 import { Maybe } from "../utils/maybe";
