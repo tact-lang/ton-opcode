@@ -47,9 +47,9 @@ jobs:
             - name: Test compatibility with Tact
               run: |
                   git clone https://github.com/tact-lang/tact.git
-                  cd tact-template
+                  cd tact
                   yarn install
-                  yarn link ton-opcode
+                  yarn link @tact-lang/opcode
                   yarn gen
                   yarn test
                   yarn tact --version
@@ -59,7 +59,7 @@ jobs:
                   git clone https://github.com/tact-lang/tact-template.git
                   cd tact-template
                   yarn install
-                  yarn link ton-opcode
+                  yarn link @tact-lang/opcode
                   yarn build
                   yarn test
                   yarn tact --version
@@ -68,7 +68,7 @@ jobs:
               run: |
                   yarn create ton -- test-project --type tact-counter --contractName Counter
                   cd test-project
-                  yarn link ton-opcode
+                  yarn link @tact-lang/opcode
                   yarn build
                   yarn test
                   yarn tact --version
