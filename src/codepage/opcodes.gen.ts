@@ -123,7 +123,8 @@ export type OpCodeWithArgs =
     | { code: 'SETGLOB', args: [number] }
     | { code: 'DEBUG', args: [number] }
     | { code: 'DEBUGSTR', args: [string] }
-    | { code: 'SETCP', args: [number] };
+    | { code: 'SETCP', args: [number] }
+    | { code: 'RUNVM', args: [number] };
 
 export function isOpCodeWithArgs(op: OpCode): op is OpCodeWithArgs {
     return Array.isArray((op as any).args) && ((op as any).args.length > 0);
@@ -609,6 +610,59 @@ export type OpCodeNoArgs =
     | { code: 'SETCODE' }
     | { code: 'SETLIBCODE' }
     | { code: 'CHANGELIB' }
-    | { code: 'SETCPX' };
+    | { code: 'SETCPX' }
+    | { code: 'MYCODE' }
+    | { code: 'INCOMINGVALUE' }
+    | { code: 'STORAGEFEES' }
+    | { code: 'PREVBLOCKSINFOTUPLE' }
+    | { code: 'PREVMCBLOCKS' }
+    | { code: 'PREVKEYBLOCK' }
+    | { code: 'GLOBALID' }
+    | { code: 'GASCONSUMED' }
+    | { code: 'HASHEXT' }
+    | { code: 'HASHEXTR' }
+    | { code: 'HASHEXTA' }
+    | { code: 'HASHEXTAR' }
+    | { code: 'ECRECOVER' }
+    | { code: 'P256_CHKSIGNS' }
+    | { code: 'P256_CHKSIGNU' }
+    | { code: 'RIST255_FROMHASH' }
+    | { code: 'RIST255_VALIDATE' }
+    | { code: 'RIST255_ADD' }
+    | { code: 'RIST255_SUB' }
+    | { code: 'RIST255_MUL' }
+    | { code: 'RIST255_MULBASE' }
+    | { code: 'RIST255_PUSHL' }
+    | { code: 'RIST255_QVALIDATE' }
+    | { code: 'RIST255_QADD' }
+    | { code: 'RIST255_QSUB' }
+    | { code: 'RIST255_QMUL' }
+    | { code: 'RIST255_QMULBASE' }
+    | { code: 'BLS_VERIFY' }
+    | { code: 'BLS_AGGREGATE' }
+    | { code: 'BLS_FASTAGGREGATEVERIFY' }
+    | { code: 'BLS_AGGREGATEVERIFY' }
+    | { code: 'BLS_G1_ADD' }
+    | { code: 'BLS_G1_SUB' }
+    | { code: 'BLS_G1_NEG' }
+    | { code: 'BLS_G1_MUL' }
+    | { code: 'BLS_G1_MULTIEXP' }
+    | { code: 'BLS_G1_ZERO' }
+    | { code: 'BLS_MAP_TO_G1' }
+    | { code: 'BLS_G1_INGROUP' }
+    | { code: 'BLS_G1_ISZERO' }
+    | { code: 'BLS_G2_ADD' }
+    | { code: 'BLS_G2_SUB' }
+    | { code: 'BLS_G2_NEG' }
+    | { code: 'BLS_G2_MUL' }
+    | { code: 'BLS_G2_MULTIEXP' }
+    | { code: 'BLS_G2_ZERO' }
+    | { code: 'BLS_MAP_TO_G2' }
+    | { code: 'BLS_G2_INGROUP' }
+    | { code: 'BLS_G2_ISZERO' }
+    | { code: 'BLS_PAIRING' }
+    | { code: 'BLS_PUSHR' }
+    | { code: 'RUNVMX' }
+    | { code: 'SENDMSG' };
 
 export type OpCode = OpCodeWithArgs | OpCodeNoArgs;
