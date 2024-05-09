@@ -1,0 +1,74 @@
+name: ton-opcode CI
+
+on:
+    push:
+        branches: ['main']
+    pull_request:
+        branches: ['main']
+    workflow_dispatch:
+
+jobs:
+    test:
+        strategy:
+            fail-fast: false
+            matrix:
+                node-version: [18.x]
+                os: [ubuntu-latest, windows-latest, macos-latest]
+
+        runs-on: ${{ matrix.os }}
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v3
+
+            - name: Setup Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: 'yarn'
+
+            - name: Install dependencies
+
+              run: |
+                  corepack enable
+                  yarn install
+
+            - name: Build and Test
+              run: |
+                  yarn clean
+                  yarn gen
+                  yarn build
+                  yarn test
+
+            - name: Link ton-opcode
+              run: |
+                  yarn link
+
+            - name: Test compatibility with Tact
+              run: |
+                  git clone https://github.com/tact-lang/tact.git
+                  cd tact-template
+                  yarn install
+                  yarn link ton-opcode
+                  yarn gen
+                  yarn test
+                  yarn tact --version
+
+            - name: Test compatibility with tact-template
+              run: |
+                  git clone https://github.com/tact-lang/tact-template.git
+                  cd tact-template
+                  yarn install
+                  yarn link ton-opcode
+                  yarn build
+                  yarn test
+                  yarn tact --version
+
+            - name: Test compatibility with Blueprint
+              run: |
+                  yarn create ton -- test-project --type tact-counter --contractName Counter
+                  cd test-project
+                  yarn link ton-opcode
+                  yarn build
+                  yarn test
+                  yarn tact --version
