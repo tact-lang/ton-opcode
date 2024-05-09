@@ -2,7 +2,7 @@ name: ton-opcode CI
 
 on:
     push:
-        branches: ['main', 'ci']
+        branches: ['main']
     pull_request:
         branches: ['main']
     workflow_dispatch:
@@ -50,6 +50,7 @@ jobs:
                   cd tact
                   yarn install
                   yarn link @tact-lang/opcode
+                  yarn clean
                   yarn gen
                   yarn test
                   yarn tact --version
