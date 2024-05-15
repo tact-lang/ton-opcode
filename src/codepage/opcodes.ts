@@ -1109,6 +1109,7 @@ CP0Auto.insertHex('f4bc', 14, (slice) => {
 // 16039936 (DUMMY)
 CP0Auto.insertHex('f800', 16, { code: 'ACCEPT' });
 CP0Auto.insertHex('f801', 16, { code: 'SETGASLIMIT' });
+CP0Auto.insertHex('f807', 16, { code: 'GASCONSUMED' });
 // 16253440 (DUMMY)
 CP0Auto.insertHex('f80f', 16, { code: 'COMMIT' });
 CP0Auto.insertHex('f810', 16, { code: 'RANDU256' });
