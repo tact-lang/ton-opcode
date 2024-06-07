@@ -52,8 +52,10 @@ jobs:
                   yarn link @tact-lang/opcode
                   yarn clean
                   yarn gen
+                  yarn build
                   yarn test
-                  yarn tact --version
+                  npm install -g ./
+                  tact --version
 
             - name: Test compatibility with tact-template
               run: |
