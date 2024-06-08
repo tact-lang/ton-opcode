@@ -716,6 +716,11 @@ CP0Auto.insertHex('db3e', 16, (slice) => {
     return { code: 'JMPREFDATA', args: [subslice] };
 });
 CP0Auto.insertHex('db3f', 16, { code: 'RETDATA' });
+CP0Auto.insertHex('db4', 12, (slice) => {
+    let flags = slice.loadUint(12);
+    return { code: 'RUNVM', args: [flags] };
+});
+CP0Auto.insertHex('db50', 16, { code: 'RUNVMX' });
 // 14368768 (DUMMY)
 CP0Auto.insertHex('dc', 8, { code: 'IFRET' });
 CP0Auto.insertHex('dd', 8, { code: 'IFNOTRET' });
@@ -1109,6 +1114,7 @@ CP0Auto.insertHex('f4bc', 14, (slice) => {
 // 16039936 (DUMMY)
 CP0Auto.insertHex('f800', 16, { code: 'ACCEPT' });
 CP0Auto.insertHex('f801', 16, { code: 'SETGASLIMIT' });
+CP0Auto.insertHex('F807', 16, { code: 'GASCONSUMED' });
 // 16253440 (DUMMY)
 CP0Auto.insertHex('f80f', 16, { code: 'COMMIT' });
 CP0Auto.insertHex('f810', 16, { code: 'RANDU256' });
@@ -1121,7 +1127,10 @@ CP0Auto.insertHex('f82', 12, (slice) => {
 });
 CP0Auto.insertHex('f830', 16, { code: 'CONFIGDICT' });
 CP0Auto.insertHex('f832', 16, { code: 'CONFIGPARAM' });
-CP0Auto.insertHex('f833', 16, { code: 'CONFIGOPTPARAM' });;
+CP0Auto.insertHex('f833', 16, { code: 'CONFIGOPTPARAM' });
+CP0Auto.insertHex('F83400', 24, { code: 'PREVMCBLOCKS' });
+CP0Auto.insertHex('F83401', 24, { code: 'PREVKEYBLOCK' });
+CP0Auto.insertHex('F835', 16, { code: 'GLOBALID' });
 CP0Auto.insertHex('f841', 11, (slice) => {
     let i = slice.loadUint(5);
     return { code: `GETGLOBVAR`, args: [i] };
@@ -1133,8 +1142,64 @@ CP0Auto.insertHex('f861', 11, (slice) => {
 CP0Auto.insertHex('f900', 16, { code: 'HASHCU' });
 CP0Auto.insertHex('f901', 16, { code: 'HASHSU' });
 CP0Auto.insertHex('f902', 16, { code: 'SHA256U' });
+CP0Auto.insertHex('F904', 16, (slice) => {
+    let n = slice.loadUint(8);
+    return { code: 'HASHEXT', args: [n] };
+});
+CP0Auto.insertHex('F905', 16, (slice) => {
+    let n = slice.loadUint(8);
+    return { code: 'HASHEXTR', args: [n] };
+});
+CP0Auto.insertHex('F906', 16, (slice) => {
+    let n = slice.loadUint(8);
+    return { code: 'HASHEXTA', args: [n] };
+});
+CP0Auto.insertHex('F907', 16, (slice) => {
+    let n = slice.loadUint(8);
+    return { code: 'HASHEXTAR', args: [n] };
+});
 CP0Auto.insertHex('f910', 16, { code: 'CHKSIGNU' });
 CP0Auto.insertHex('f911', 16, { code: 'CHKSIGNS' });
+CP0Auto.insertHex('F912', 16, { code: 'ECRECOVER' });
+CP0Auto.insertHex('F914', 16, { code: 'P256_CHKSIGNU' });
+CP0Auto.insertHex('F915', 16, { code: 'P256_CHKSIGNS' });
+
+CP0Auto.insertHex('F920', 16, { code: 'RIST255_FROMHASH' });
+CP0Auto.insertHex('F921', 16, { code: 'RIST255_VALIDATE' });
+CP0Auto.insertHex('F922', 16, { code: 'RIST255_ADD' });
+CP0Auto.insertHex('F923', 16, { code: 'RIST255_SUB' });
+CP0Auto.insertHex('F924', 16, { code: 'RIST255_MUL' });
+CP0Auto.insertHex('F925', 16, { code: 'RIST255_MULBASE' });
+CP0Auto.insertHex('F926', 16, { code: 'RIST255_PUSHL' });
+
+CP0Auto.insertHex('F93000', 24, { code: 'BLS_VERIFY' });
+CP0Auto.insertHex('F93001', 24, { code: 'BLS_AGGREGATE' });
+CP0Auto.insertHex('F93002', 24, { code: 'BLS_FASTAGGREGATEVERIFY' });
+CP0Auto.insertHex('F93003', 24, { code: 'BLS_AGGREGATEVERIFY' });
+
+CP0Auto.insertHex('F93010', 24, { code: 'BLS_G1_ADD' });
+CP0Auto.insertHex('F93011', 24, { code: 'BLS_G1_SUB' });
+CP0Auto.insertHex('F93012', 24, { code: 'BLS_G1_NEG' });
+CP0Auto.insertHex('F93013', 24, { code: 'BLS_G1_MUL' });
+CP0Auto.insertHex('F93014', 24, { code: 'BLS_G1_MULTIEXP' });
+CP0Auto.insertHex('F93015', 24, { code: 'BLS_G1_ZERO' });
+CP0Auto.insertHex('F93016', 24, { code: 'BLS_MAP_TO_G1' });
+CP0Auto.insertHex('F93017', 24, { code: 'BLS_G1_INGROUP' });
+CP0Auto.insertHex('F93018', 24, { code: 'BLS_G1_ISZERO' });
+
+CP0Auto.insertHex('F93020', 24, { code: 'BLS_G2_ADD' });
+CP0Auto.insertHex('F93021', 24, { code: 'BLS_G2_SUB' });
+CP0Auto.insertHex('F93022', 24, { code: 'BLS_G2_NEG' });
+CP0Auto.insertHex('F93023', 24, { code: 'BLS_G2_MUL' });
+CP0Auto.insertHex('F93024', 24, { code: 'BLS_G2_MULTIEXP' });
+CP0Auto.insertHex('F93025', 24, { code: 'BLS_G2_ZERO' });
+CP0Auto.insertHex('F93026', 24, { code: 'BLS_MAP_TO_G2' });
+CP0Auto.insertHex('F93027', 24, { code: 'BLS_G2_INGROUP' });
+CP0Auto.insertHex('F93028', 24, { code: 'BLS_G2_ISZERO' });
+
+CP0Auto.insertHex('F93030', 24, { code: 'BLS_PAIRING' });
+CP0Auto.insertHex('F93031', 24, { code: 'BLS_PUSHR' });
+
 CP0Auto.insertHex('f940', 16, { code: 'CDATASIZEQ' });
 CP0Auto.insertHex('f941', 16, { code: 'CDATASIZE' });
 CP0Auto.insertHex('f942', 16, { code: 'SDATASIZEQ' });
@@ -1161,6 +1226,7 @@ CP0Auto.insertHex('fb03', 16, { code: 'RAWRESERVEX' });
 CP0Auto.insertHex('fb04', 16, { code: 'SETCODE' });
 CP0Auto.insertHex('fb06', 16, { code: 'SETLIBCODE' });
 CP0Auto.insertHex('fb07', 16, { code: 'CHANGELIB' });
+CP0Auto.insertHex('fb08', 16, { code: 'SENDMSG' });
 CP0Auto.insertHex('fe', 8, (slice) => {
     let nn = slice.loadUint(8);
     if ((nn & 0xf0) == 0xf0) {
