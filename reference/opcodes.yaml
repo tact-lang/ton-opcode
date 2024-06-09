@@ -781,3 +781,27 @@ opcodes:
 
   # Sending messages
   SENDMSG:
+
+  # TVM Upgrade 2024.04
+  # Opcodes to work with new c7 values
+  UNPACKEDCONFIGTUPLE:
+  DUEPAYMENT:
+  # GLOBALID:
+  # SENDMSG:
+
+  # Opcodes to process config parameters
+  # GETGASFEE:
+  GETSTORAGEFEE:
+  # GETFORWARDFEE:
+  GETPRECOMPILEDGAS:
+  GETORIGINALFWDFEE:
+  GETGASFEESIMPLE:
+  GETFORWARDFEESIMPLE:
+
+  # Cell level operations
+  CLEVEL:
+  CLEVELMASK:
+  CHASHI: ["int"]
+  CDEPTHI: ["int"]
+  CHASHIX:
+  CDEPTHIX:

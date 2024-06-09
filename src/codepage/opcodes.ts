@@ -667,6 +667,18 @@ CP0Auto.insertHex('d762', 16, { code: 'LDSAME' });
 // 14115584 (DUMMY)
 CP0Auto.insertHex('d764', 16, { code: 'SDEPTH' });
 CP0Auto.insertHex('d765', 16, { code: 'CDEPTH' });
+CP0Auto.insertHex('d766', 16, { code: 'CLEVEL' });
+CP0Auto.insertHex('d767', 16, { code: 'CLEVELMASK' });
+CP0Auto.insertHex('d76a', 16, (slice) => {
+    let i = slice.loadUint(2);
+    return { code: 'CHASHI', args: [i] };
+});
+CP0Auto.insertHex('d76e', 16, (slice) => {
+    let i = slice.loadUint(2);
+    return { code: 'CDEPTHI', args: [i] };
+});
+CP0Auto.insertHex('d770', 16, { code: 'CHASHIX' });
+CP0Auto.insertHex('d771', 16, { code: 'CDEPTHIX' });
 // 14116352 (DUMMY)
 CP0Auto.insertHex('d8', 8, { code: 'EXECUTE' });
 CP0Auto.insertHex('d9', 8, { code: 'JMPX' });
@@ -1131,6 +1143,11 @@ CP0Auto.insertHex('f833', 16, { code: 'CONFIGOPTPARAM' });
 CP0Auto.insertHex('F83400', 24, { code: 'PREVMCBLOCKS' });
 CP0Auto.insertHex('F83401', 24, { code: 'PREVKEYBLOCK' });
 CP0Auto.insertHex('F835', 16, { code: 'GLOBALID' });
+CP0Auto.insertHex('F837', 16, { code: 'GETSTORAGEFEE' });
+CP0Auto.insertHex('F839', 16, { code: 'GETPRECOMPILEDGAS' });
+CP0Auto.insertHex('F83A', 16, { code: 'GETORIGINALFWDFEE' });
+CP0Auto.insertHex('F83B', 16, { code: 'GETGASFEESIMPLE' });
+CP0Auto.insertHex('F83C', 16, { code: 'GETFORWARDFEESIMPLE' });
 CP0Auto.insertHex('f841', 11, (slice) => {
     let i = slice.loadUint(5);
     return { code: `GETGLOBVAR`, args: [i] };
