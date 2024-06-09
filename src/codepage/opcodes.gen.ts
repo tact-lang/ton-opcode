@@ -124,7 +124,9 @@ export type OpCodeWithArgs =
     | { code: 'DEBUG', args: [number] }
     | { code: 'DEBUGSTR', args: [string] }
     | { code: 'SETCP', args: [number] }
-    | { code: 'RUNVM', args: [number] };
+    | { code: 'RUNVM', args: [number] }
+    | { code: 'CHASHI', args: [number] }
+    | { code: 'CDEPTHI', args: [number] };
 
 export function isOpCodeWithArgs(op: OpCode): op is OpCodeWithArgs {
     return Array.isArray((op as any).args) && ((op as any).args.length > 0);
@@ -663,6 +665,17 @@ export type OpCodeNoArgs =
     | { code: 'BLS_PAIRING' }
     | { code: 'BLS_PUSHR' }
     | { code: 'RUNVMX' }
-    | { code: 'SENDMSG' };
+    | { code: 'SENDMSG' }
+    | { code: 'UNPACKEDCONFIGTUPLE' }
+    | { code: 'DUEPAYMENT' }
+    | { code: 'GETSTORAGEFEE' }
+    | { code: 'GETPRECOMPILEDGAS' }
+    | { code: 'GETORIGINALFWDFEE' }
+    | { code: 'GETGASFEESIMPLE' }
+    | { code: 'GETFORWARDFEESIMPLE' }
+    | { code: 'CLEVEL' }
+    | { code: 'CLEVELMASK' }
+    | { code: 'CHASHIX' }
+    | { code: 'CDEPTHIX' };
 
 export type OpCode = OpCodeWithArgs | OpCodeNoArgs;

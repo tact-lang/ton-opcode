@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - All new opcodes from TVM Upgrade `2023.07`: PR [#7](https://github.com/tact-lang/ton-opcode/pull/7)
+- All new opcodes from TVM Upgrade `2024.04`: PR [#12](https://github.com/tact-lang/ton-opcode/pull/12)
 
 ## [0.0.14] - 2023-09-05
 
