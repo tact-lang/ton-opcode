@@ -1836,7 +1836,7 @@ exports[`decompileAll should decompile wallet v4 1`] = `
 }END>c"
 `;
 
-exports[`decompileAll should decompiled mathlib.fc 1`] = `
+exports[`decompileAll should decompile mathlib.fc 1`] = `
 "PROGRAM{
   DECLPROC recv_internal;
   DECLPROC ?fun_ref_1b1ae470b4614553;
