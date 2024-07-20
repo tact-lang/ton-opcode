@@ -65,7 +65,7 @@ describe('decompileAll', () => {
         expect(res).toMatchSnapshot();
     });
 
-    it('should decompiled mathlib.fc', () => {
+    it('should decompile mathlib.fc', () => {
         const mathlib = fs.readFileSync(__dirname + '/__testdata__/mathlib.boc');
         let res = decompileAll({ src: mathlib });
         expect(res).toMatchSnapshot();
