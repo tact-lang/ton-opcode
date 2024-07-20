@@ -329,13 +329,15 @@ CP0Auto.insertHex('a7', 8, (slice) => {
     return { code: 'MULCONST', args: [x] };
 });
 CP0Auto.insertHex('a8', 8, { code: 'MUL' });
+
+// #A9 m:uint1 s:uint2 cdft:(Either [ d:uint2 f:uint2 ] [ d:uint2 f:uint2 tt:uint8 ])
 CP0Auto.insertHex('A9', 8, (slice) => {
     let m = slice.loadBit();
     let s = slice.loadUint(2);
     let c = slice.loadBit();
     let d = slice.loadUint(2);
     let f = slice.loadUint(2);
-    return { code: 'DIV', args: [m, s, c, d, f] };
+    return { code: 'DIV', args: [m, s, c, d, f, c ? slice.loadUint(8) : 0] };
 });
 // 11079680 (DUMMY)
 // 11132928 (DUMMY)

@@ -109,7 +109,7 @@ opcodes:
   MUL:
 
   # A.5.2. Division.
-  DIV: ["bool", "int", "bool", "int", "int"]
+  DIV: ["bool", "int", "bool", "int", "int", "int"]
 
   # A.5.3. Shifts, logical operations.
   LSHIFT: ["int"]

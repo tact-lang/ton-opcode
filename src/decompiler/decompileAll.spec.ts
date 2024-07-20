@@ -64,4 +64,10 @@ describe('decompileAll', () => {
         let res = decompileAll({ src: wallet });
         expect(res).toMatchSnapshot();
     });
+
+    it('should decompiled mathlib.fc', () => {
+        const mathlib = fs.readFileSync(__dirname + '/__testdata__/mathlib.boc');
+        let res = decompileAll({ src: mathlib });
+        expect(res).toMatchSnapshot();
+    });
 });
