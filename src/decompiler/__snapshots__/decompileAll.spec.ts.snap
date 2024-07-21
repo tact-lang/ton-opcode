@@ -652,6 +652,1625 @@ DECLPROC seqno;
 }END>c"
 `;
 
+exports[`decompileAll should decompile mathlib.fc 1`] = `
+"PROGRAM{
+  DECLPROC recv_internal;
+  DECLPROC ?fun_ref_0318d2f33529c0c6;
+  DECLPROC ?fun_ref_0e3f3b547d0a4314;
+  DECLPROC ?fun_ref_0f0ebbb66387fc57;
+  DECLPROC ?fun_ref_14c8cb933d84cae0;
+  DECLPROC ?fun_ref_1b1ae470b4614553;
+  DECLPROC ?fun_ref_2051d9d821c3f770;
+  DECLPROC ?fun_ref_2367f6e37b0e6a76;
+  DECLPROC ?fun_ref_239e84369564e330;
+  DECLPROC ?fun_ref_318ac84049047cbe;
+  DECLPROC ?fun_ref_3449c496cc175763;
+  DECLPROC ?fun_ref_41d3f2ea6d56e172;
+  DECLPROC ?fun_ref_48cab849e3521372;
+  DECLPROC ?fun_ref_494e543f112ad30c;
+  DECLPROC ?fun_ref_5a712c8e35fef248;
+  DECLPROC ?fun_ref_5ba78fa4ab4ec6dc;
+  DECLPROC ?fun_ref_5c788425937a7d28;
+  DECLPROC ?fun_ref_5d3a4c29b0035181;
+  DECLPROC ?fun_ref_6405ea4d1c38698c;
+  DECLPROC ?fun_ref_6c2cc5b04a23eeb2;
+  DECLPROC ?fun_ref_7134bd42618a8d1e;
+  DECLPROC ?fun_ref_73739320b258991c;
+  DECLPROC ?fun_ref_7753d4b96608d450;
+  DECLPROC ?fun_ref_811ebbe381228c78;
+  DECLPROC ?fun_ref_87780ff3a5ebd2bc;
+  DECLPROC ?fun_ref_88faf969245bcd15;
+  DECLPROC ?fun_ref_8a8385f8d78f60b7;
+  DECLPROC ?fun_ref_8bf58ecefe2e19cb;
+  DECLPROC ?fun_ref_aa50613cca252c08;
+  DECLPROC ?fun_ref_afe5ab170f89ef23;
+  DECLPROC ?fun_ref_b03a280997c9cc26;
+  DECLPROC ?fun_ref_b2fd74bee4445ab9;
+  DECLPROC ?fun_ref_cdb28b381a5130bf;
+  DECLPROC ?fun_ref_d78034247225d612;
+  DECLPROC ?fun_ref_da70c8217d8f9a46;
+  DECLPROC ?fun_ref_e11f9343f87d5b4b;
+  DECLPROC ?fun_ref_e9b023c94244cb2e;
+  DECLPROC ?fun_ref_eabdf5efadfce810;
+  DECLPROC ?fun_ref_ec287b9511e936b8;
+  DECLPROC ?fun_ref_f8345f3d64016266;
+  DECLPROC ?fun_ref_fbd4cc263c208ffd;
+  recv_internal PROC:<{
+    ?fun_ref_d78034247225d612 INLINECALLDICT
+    1 PUSHINT
+    ?fun_ref_d78034247225d612 INLINECALLDICT
+    248 PUSHPOW2
+    ?fun_ref_d78034247225d612 INLINECALLDICT
+    255 PUSHPOW2
+    ?fun_ref_d78034247225d612 INLINECALLDICT
+    s0 PUSH
+    true 1 true 1 1 247 DIV
+    s0 PUSH
+    true 1 true 1 1 254 DIV
+    ?fun_ref_2051d9d821c3f770 INLINECALLDICT
+    ?fun_ref_aa50613cca252c08 INLINECALLDICT
+    ?fun_ref_e9b023c94244cb2e INLINECALLDICT
+    ?fun_ref_0e3f3b547d0a4314 INLINECALLDICT
+    ?fun_ref_6405ea4d1c38698c INLINECALLDICT
+    ?fun_ref_2051d9d821c3f770 INLINECALLDICT
+    s0 POP
+    ?fun_ref_2051d9d821c3f770 INLINECALLDICT
+    s0 POP
+    false 1 true 1 1 7 DIV
+    ?fun_ref_aa50613cca252c08 INLINECALLDICT
+    s0 POP
+    ?fun_ref_aa50613cca252c08 INLINECALLDICT
+    s0 POP
+    false 1 true 1 1 5 DIV
+    ?fun_ref_7753d4b96608d450 INLINECALLDICT
+    ?fun_ref_88faf969245bcd15 INLINECALLDICT
+    ?fun_ref_eabdf5efadfce810 INLINECALLDICT
+    ?fun_ref_14c8cb933d84cae0 INLINECALLDICT
+    s0 s0 PUSH2
+    true 1 true 1 1 255 DIV
+    251 PUSHPOW2
+    33 PUSHINT
+    250 LSHIFT
+    s0 PUSH
+    14 PUSHINT
+    <{
+      s1 s2 XCPU
+      SUB
+      s0 s5 s5 PU2XC
+      true 2 true 1 1 235 DIV
+      SUB
+    }> PUSHCONT
+    REPEAT
+    2 1 BLKDROP2
+    3 PUSHINT
+    254 LSHIFT
+    s2 s3 PUXC
+    true 2 true 1 1 239 DIV
+    SUB
+    s2 PUSH
+    1 RSHIFT
+    s2 PUSH
+    false 1 true 1 1 9 DIV
+    s1 s2 XCHG
+    SUB
+    s1 s2 XCHG
+    true 0 false 1 1 0 DIV
+    false 1 true 1 1 8 DIV
+    ADD
+    ?fun_ref_41d3f2ea6d56e172 INLINECALLDICT
+    s0 s0 PUSH2
+    true 1 true 1 1 255 DIV
+    251 PUSHPOW2
+    41 PUSHINT
+    250 LSHIFT
+    s0 PUSH
+    18 PUSHINT
+    <{
+      s1 s2 XCPU
+      SUB
+      s0 s5 s5 PU2XC
+      true 2 true 1 1 239 DIV
+      SUB
+    }> PUSHCONT
+    REPEAT
+    2 1 BLKDROP2
+    3 PUSHINT
+    254 LSHIFT
+    s2 s3 PUXC
+    true 2 true 1 1 243 DIV
+    SUB
+    s2 PUSH
+    1 RSHIFT
+    s2 PUSH
+    false 1 true 1 1 5 DIV
+    s1 s2 XCHG
+    SUB
+    s1 s2 XCHG
+    true 0 false 1 1 0 DIV
+    false 1 true 1 1 4 DIV
+    ADD
+    ?fun_ref_3449c496cc175763 INLINECALLDICT
+    s0 s0 PUSH2
+    true 1 true 1 1 255 DIV
+    251 PUSHPOW2
+    33 PUSHINT
+    250 LSHIFT
+    s0 PUSH
+    14 PUSHINT
+    <{
+      s1 s2 XCPU
+      SUB
+      s0 s5 s5 PU2XC
+      true 2 true 1 1 235 DIV
+      SUB
+    }> PUSHCONT
+    REPEAT
+    2 1 BLKDROP2
+    3 PUSHINT
+    254 LSHIFT
+    s2 s3 PUXC
+    true 2 true 1 1 239 DIV
+    SUB
+    s2 PUSH
+    1 RSHIFT
+    s2 PUSH
+    false 1 true 1 1 9 DIV
+    s1 s2 XCHG
+    SUB
+    s1 s2 XCHG
+    true 0 false 1 1 0 DIV
+    false 1 true 1 1 8 DIV
+    ADD
+    s0 s0 PUSH2
+    true 1 true 1 1 255 DIV
+    s0 PUSH
+    false 1 true 1 1 8 DIV
+    255 PUSHPOW2
+    ADD
+    s2 PUSH
+    1 RSHIFT
+    s2 s1 PUSH2
+    true 0 false 1 1 0 DIV
+    false 1 true 1 1 7 DIV
+    s1 s3 XCHG
+    SUB
+    s1 PUSH
+    1 RSHIFT
+    s0 s2 s5 XCPUXC
+    true 0 false 1 1 0 DIV
+    false 1 true 1 1 7 DIV
+    SUB
+    ?fun_ref_318ac84049047cbe INLINECALLDICT
+    ?fun_ref_239e84369564e330 INLINECALLDICT
+    ?fun_ref_2367f6e37b0e6a76 INLINECALLDICT
+    ?fun_ref_b03a280997c9cc26 INLINECALLDICT
+    ?fun_ref_0f0ebbb66387fc57 INLINECALLDICT
+    ?fun_ref_0f0ebbb66387fc57 INLINECALLDICT
+    s0 POP
+    ?fun_ref_0f0ebbb66387fc57 INLINECALLDICT
+    s1 POP
+    ?fun_ref_e11f9343f87d5b4b INLINECALLDICT
+    ?fun_ref_8bf58ecefe2e19cb INLINECALLDICT
+    ?fun_ref_fbd4cc263c208ffd INLINECALLDICT
+    s1 s1 PUSH2
+    true 1 true 1 1 255 DIV
+    254 PUSHPOW2
+    s0 s2 PUSH2
+    false 0 false 1 1 0 DIV
+    255 PUSHPOW2
+    ADD
+    s3 PUSH
+    -1 ADD
+    <{
+      s2 s1 PUXC
+      true 2 true 1 1 241 DIV
+      s1 s1 PUXC
+      SUB
+      s3 PUSH
+      -1 ADD
+      s4 s4 XCPU
+      true 0 false 1 1 0 DIV
+      s1 PUSH
+      ADD
+    }> PUSHCONT
+    REPEAT
+    s1 POP
+    s2 POP
+    s0 PUSH
+    false 1 true 1 1 11 DIV
+    s1 s2 XCHG
+    SUB
+    s2 PUSH
+    ROTREV
+    true 0 false 1 1 0 DIV
+    false 1 true 1 1 11 DIV
+    ADD
+    ?fun_ref_afe5ab170f89ef23 INLINECALLDICT
+    ?fun_ref_0318d2f33529c0c6 INLINECALLDICT
+    1 PUSHINT
+    s0 s1 XCHG
+    <{
+      33 MULCONST
+    }> PUSHCONT
+    REPEAT
+    5 PUSHINT
+    false 0 false 3 0 0 DIV
+    1 PUSHINT
+    s0 s1 XCHG
+    <{
+      33 MULCONST
+    }> PUSHCONT
+    REPEAT
+    s0 s1 XCHG
+    <{
+      39135393 PUSHINT
+      MUL
+    }> PUSHCONT
+    REPEAT
+    ?fun_ref_1b1ae470b4614553 INLINECALLDICT
+    ?fun_ref_ec287b9511e936b8 INLINECALLDICT
+    ?fun_ref_48cab849e3521372 INLINECALLDICT
+    ?fun_ref_87780ff3a5ebd2bc INLINECALLDICT
+    ?fun_ref_48cab849e3521372 INLINECALLDICT
+    248 PUSHINT
+    SUB
+    248 LSHIFT
+    s0 s1 XCHG
+    false 1 true 1 1 7 DIV
+    ADD
+    ?fun_ref_811ebbe381228c78 INLINECALLDICT
+    ?fun_ref_73739320b258991c INLINECALLDICT
+    s1 s1 PUSH2
+    true 1 true 1 1 255 DIV
+    254 PUSHPOW2
+    s0 s2 PUSH2
+    false 0 false 1 1 0 DIV
+    255 PUSHPOW2
+    ADD
+    s3 PUSH
+    -1 ADD
+    <{
+      s2 s1 PUXC
+      true 2 true 1 1 241 DIV
+      s1 s1 PUXC
+      ADD
+      s3 PUSH
+      -1 ADD
+      s4 s4 XCPU
+      true 0 false 1 1 0 DIV
+      s1 PUSH
+      ADD
+    }> PUSHCONT
+    REPEAT
+    s1 POP
+    s2 POP
+    s0 PUSH
+    false 1 true 1 1 11 DIV
+    s1 s2 XCHG
+    ADD
+    s2 PUSH
+    ROTREV
+    true 0 false 1 1 0 DIV
+    false 1 true 1 1 11 DIV
+    SUB
+    ?fun_ref_5d3a4c29b0035181 INLINECALLDICT
+    ?fun_ref_8a8385f8d78f60b7 INLINECALLDICT
+    ?fun_ref_b2fd74bee4445ab9 INLINECALLDICT
+    ?fun_ref_6c2cc5b04a23eeb2 INLINECALLDICT
+    ?fun_ref_7134bd42618a8d1e INLINECALLDICT
+    ?fun_ref_5c788425937a7d28 INLINECALLDICT
+    ?fun_ref_494e543f112ad30c INLINECALLDICT
+    ?fun_ref_5ba78fa4ab4ec6dc INLINECALLDICT
+    7 LSHIFT
+    ?fun_ref_494e543f112ad30c INLINECALLDICT
+    false 1 true 1 1 6 DIV
+    7 LSHIFT
+    ?fun_ref_5ba78fa4ab4ec6dc INLINECALLDICT
+    false 1 true 1 1 5 DIV
+    ?fun_ref_cdb28b381a5130bf INLINECALLDICT
+    ?fun_ref_da70c8217d8f9a46 INLINECALLDICT
+    ?fun_ref_5a712c8e35fef248 INLINECALLDICT
+    ?fun_ref_f8345f3d64016266 INLINECALLDICT
+    RANDU256
+    8 RSHIFT
+    ?fun_ref_5a712c8e35fef248 INLINECALLDICT
+    false 1 true 1 1 3 DIV
+    ?fun_ref_f8345f3d64016266 INLINECALLDICT
+    false 1 true 1 1 3 DIV
+  }>
+  ?fun_ref_0318d2f33529c0c6 PROCREF:<{
+    s0 PUSH
+    UBITSIZE
+    8 PUSHPOW2
+    s1 PUSH
+    SUB
+    s1 s2 XCHG
+    LSHIFTX
+    256 PUSHNEGPOW2
+    s1 PUSH
+    249 RSHIFT
+    91 LESSINT
+    <{
+      1 RSHIFT
+      s0 s2 XCHG
+      -1 ADD
+      s0 s2 XCHG
+    }> PUSHCONT
+    IF
+    TUCK
+    ADD
+    s0 PUSH
+    1 LSHIFT
+    s0 s1 XCHG
+    1 RSHIFT
+    ROT
+    SUB
+    true 2 true 1 1 255 DIV
+    36 PUSHINT
+    ?fun_ref_fbd4cc263c208ffd INLINECALLDICT
+    s0 s1 XCHG
+  }>
+  ?fun_ref_0e3f3b547d0a4314 PROCREF:<{
+    115194597005316551477397594802136977648153890007566736408151129975021336532841 PUSHINT
+  }>
+  ?fun_ref_0f0ebbb66387fc57 PROCREF:<{
+    ?fun_ref_aa50613cca252c08 INLINECALLDICT
+    ROTREV
+    true 2 true 3 1 6 DIV
+    1 LSHIFT
+    s1 s4 PUXC
+    true 1 true 1 1 126 DIV
+    s1 s2 XCHG
+    SUB
+    ?fun_ref_2367f6e37b0e6a76 INLINECALLDICT
+    248 PUSHPOW2
+    s0 s1 XCHG
+    false 1 true 1 1 8 DIV
+    SUB
+    s0 s1 XCHG
+    false 1 true 1 1 7 DIV
+    s0 s2 XCHG
+    3 PUSHINT
+    AND
+    <{
+      s0 s1 XCHG
+      -1 MULCONST
+    }> PUSHCONT
+    REPEAT
+  }>
+  ?fun_ref_14c8cb933d84cae0 PROCREF:<{
+    false 1 true 3 1 247 DIV
+    ?fun_ref_2051d9d821c3f770 INLINECALLDICT
+    s0 POP
+    true 1 true 1 1 246 DIV
+    ?fun_ref_88faf969245bcd15 INLINECALLDICT
+    9 PUSHINT
+    s2 PUSH
+    SUB
+    false 1 false 1 1 0 DIV
+    248 PUSHINT
+    ROT
+    ADD
+    -1 PUSHINT
+    s0 s1 XCHG
+    LSHIFTX
+    SUB
+  }>
+  ?fun_ref_1b1ae470b4614553 PROCREF:<{
+    s0 PUSH
+    UBITSIZE
+    -1 ADD
+    8 PUSHPOW2DEC
+    s1 PUSH
+    SUB
+    s1 s2 XCHG
+    LSHIFTX
+    2873 PUSHINT
+    244 LSHIFT
+    DUP2
+    SUB
+    1 RSHIFT
+    s0 PUSH
+    65 PUSHINT
+    s0 s3 XCHG
+    ADD
+    s1 s2 XCHG
+    true 0 false 1 1 0 DIV
+    11 ADD
+    s0 PUSH
+    5 PUSHINT
+    false 0 false 3 0 0 DIV
+    1 PUSHINT
+    s0 s1 XCHG
+    <{
+      33 MULCONST
+    }> PUSHCONT
+    REPEAT
+    s0 s1 XCHG
+    <{
+      39135393 PUSHINT
+      MUL
+    }> PUSHCONT
+    REPEAT
+    51 PUSHINT
+    s2 PUSH
+    SUB
+    5 MULCONST
+    LSHIFTX
+    s2 s2 XCPU
+    SUB
+    s0 PUSH
+    4 LSHIFT
+    s0 s1 XCHG
+    1 RSHIFT
+    s0 s3 XCHG2
+    ADD
+    s1 s2 XCHG
+    true 2 true 1 1 255 DIV
+    18 PUSHINT
+    ?fun_ref_afe5ab170f89ef23 INLINECALLDICT
+  }>
+  ?fun_ref_2051d9d821c3f770 PROCREF:<{
+    80260960185991308862233904206310070533990667611589946606122867505419956976172 PUSHINT
+    -32272921378999278490133606779486332143 PUSHINT
+  }>
+  ?fun_ref_2367f6e37b0e6a76 PROCREF:<{
+    s0 s0 PUSH2
+    true 1 true 1 1 255 DIV
+    251 PUSHPOW2
+    33 PUSHINT
+    250 LSHIFT
+    s0 PUSH
+    14 PUSHINT
+    <{
+      s1 s2 XCPU
+      SUB
+      s0 s5 s5 PU2XC
+      true 2 true 1 1 235 DIV
+      SUB
+    }> PUSHCONT
+    REPEAT
+    2 1 BLKDROP2
+    3 PUSHINT
+    254 LSHIFT
+    s2 s3 PUXC
+    true 2 true 1 1 239 DIV
+    SUB
+    s2 PUSH
+    1 RSHIFT
+    s2 PUSH
+    false 1 true 1 1 9 DIV
+    s1 s2 XCHG
+    SUB
+    s1 s2 XCHG
+    true 0 false 1 1 0 DIV
+    false 1 true 1 1 8 DIV
+    ADD
+    s0 s0 PUSH2
+    true 1 true 1 1 255 DIV
+    s0 PUSH
+    false 1 true 1 1 8 DIV
+    255 PUSHPOW2
+    ADD
+    s2 PUSH
+    1 RSHIFT
+    s2 s1 PUSH2
+    true 0 false 1 1 0 DIV
+    false 1 true 1 1 7 DIV
+    s1 s3 XCHG
+    SUB
+    s1 PUSH
+    1 RSHIFT
+    s0 s2 s5 XCPUXC
+    true 0 false 1 1 0 DIV
+    false 1 true 1 1 7 DIV
+    SUB
+    7 PUSHINT
+    3 PUSHINT
+    <{
+      s2 s2 PUSH2
+      true 1 true 1 1 255 DIV
+      s3 s4 PUXC
+      true 1 true 1 1 255 DIV
+      s1 PUSH
+      false 1 false 1 1 0 DIV
+      s1 s3 XCHG
+      SUB
+      s0 s2 XCHG
+      -2 ADD
+    }> PUSHCONT
+    REPEAT
+    s0 POP
+  }>
+  ?fun_ref_239e84369564e330 PROCREF:<{
+    s1 PUSH
+    ABS
+    ?fun_ref_0e3f3b547d0a4314 INLINECALLDICT
+    true 2 true 3 1 1 DIV
+    1 LSHIFT
+    ROT
+    ADD
+    ?fun_ref_318ac84049047cbe INLINECALLDICT
+    -1 PUSHINT
+    0 PUSHINT
+    1 PUSHINT
+    s0 s5 XCHG
+    <{
+      s1 PUSH
+      63 MULCONST
+      s1 PUSH
+      4 LSHIFT
+      SUB
+      s0 s2 XCHG
+      4 LSHIFT
+      s0 s1 XCHG
+      63 MULCONST
+      ADD
+      s0 s4 XCHG
+      65 MULCONST
+      s0 s4 XCHG
+    }> PUSHCONT
+    REPEAT
+    s4 PUSH
+    true 2 true 3 1 255 DIV
+    s5 PUSH
+    true 2 true 1 1 6 DIV
+    s2 s5 XCPU
+    true 2 true 3 1 255 DIV
+    s0 s6 XCHG2
+    true 2 true 1 1 6 DIV
+    s0 s6 XCHG
+    SGN
+    s1 s3 PUSH2
+    true 1 true 1 1 255 DIV
+    s0 s3 XCHG2
+    SUB
+    false 1 true 1 1 3 DIV
+    s5 s4 PUSH2
+    true 1 true 1 1 255 DIV
+    SUB
+    false 1 true 1 1 2 DIV
+    s1 PUSH
+    SUB
+    s1 s2 XCHG
+    MUL
+    s4 s4 PUXC
+    true 1 true 1 1 255 DIV
+    s0 s5 XCHG2
+    SUB
+    false 1 true 1 1 3 DIV
+    s4 s2 XCHG2
+    true 1 true 1 1 255 DIV
+    ADD
+    false 1 true 1 1 2 DIV
+    SUB
+  }>
+  ?fun_ref_318ac84049047cbe PROCREF:<{
+    s0 s0 PUSH2
+    true 1 true 1 1 255 DIV
+    251 PUSHPOW2
+    33 PUSHINT
+    250 LSHIFT
+    s0 PUSH
+    14 PUSHINT
+    <{
+      s1 s2 XCPU
+      SUB
+      s0 s5 s5 PU2XC
+      true 2 true 1 1 235 DIV
+      SUB
+    }> PUSHCONT
+    REPEAT
+    2 1 BLKDROP2
+    3 PUSHINT
+    254 LSHIFT
+    s2 s3 PUXC
+    true 2 true 1 1 239 DIV
+    SUB
+    s2 PUSH
+    1 RSHIFT
+    s2 PUSH
+    false 1 true 1 1 9 DIV
+    s1 s2 XCHG
+    SUB
+    s1 s2 XCHG
+    true 0 false 1 1 0 DIV
+    false 1 true 1 1 8 DIV
+    ADD
+    s0 s0 PUSH2
+    true 1 true 1 1 255 DIV
+    s0 PUSH
+    false 1 true 1 1 8 DIV
+    255 PUSHPOW2
+    ADD
+    s2 PUSH
+    1 RSHIFT
+    s2 s1 PUSH2
+    true 0 false 1 1 0 DIV
+    false 1 true 1 1 7 DIV
+    s1 s3 XCHG
+    SUB
+    s1 PUSH
+    1 RSHIFT
+    s0 s2 s5 XCPUXC
+    true 0 false 1 1 0 DIV
+    false 1 true 1 1 7 DIV
+    SUB
+  }>
+  ?fun_ref_3449c496cc175763 PROCREF:<{
+    s0 s0 PUSH2
+    true 1 true 1 1 255 DIV
+    251 PUSHPOW2
+    41 PUSHINT
+    250 LSHIFT
+    s0 PUSH
+    18 PUSHINT
+    <{
+      s1 s2 XCPU
+      SUB
+      s0 s5 s5 PU2XC
+      true 2 true 1 1 239 DIV
+      SUB
+    }> PUSHCONT
+    REPEAT
+    2 1 BLKDROP2
+    3 PUSHINT
+    254 LSHIFT
+    s2 s3 PUXC
+    true 2 true 1 1 243 DIV
+    SUB
+    s2 PUSH
+    1 RSHIFT
+    s2 PUSH
+    false 1 true 1 1 5 DIV
+    s1 s2 XCHG
+    SUB
+    s1 s2 XCHG
+    true 0 false 1 1 0 DIV
+    false 1 true 1 1 4 DIV
+    ADD
+  }>
+  ?fun_ref_41d3f2ea6d56e172 PROCREF:<{
+    s0 s0 PUSH2
+    true 1 true 1 1 255 DIV
+    251 PUSHPOW2
+    33 PUSHINT
+    250 LSHIFT
+    s0 PUSH
+    14 PUSHINT
+    <{
+      s1 s2 XCPU
+      SUB
+      s0 s5 s5 PU2XC
+      true 2 true 1 1 235 DIV
+      SUB
+    }> PUSHCONT
+    REPEAT
+    2 1 BLKDROP2
+    3 PUSHINT
+    254 LSHIFT
+    s2 s3 PUXC
+    true 2 true 1 1 239 DIV
+    SUB
+    s2 PUSH
+    1 RSHIFT
+    s2 PUSH
+    false 1 true 1 1 9 DIV
+    s1 s2 XCHG
+    SUB
+    s1 s2 XCHG
+    true 0 false 1 1 0 DIV
+    false 1 true 1 1 8 DIV
+    ADD
+  }>
+  ?fun_ref_48cab849e3521372 PROCREF:<{
+    ?fun_ref_1b1ae470b4614553 INLINECALLDICT
+    ?fun_ref_2051d9d821c3f770 INLINECALLDICT
+    s0 POP
+    true 2 true 1 1 255 DIV
+    false 1 true 1 1 3 DIV
+    s0 s1 XCHG
+    5140487830366106860412008603913034462883915832139695448455767612111363481357 PUSHINT
+    MUL
+    ADD
+    s0 s1 XCHG
+  }>
+  ?fun_ref_494e543f112ad30c PROCREF:<{
+    255 PUSHPOW2
+    s1 PUSH
+    s0 PUSH
+    true 1 true 1 1 254 DIV
+    SUB
+    s0 PUSH
+    <{
+      s0 POP
+      SGN
+      ?fun_ref_aa50613cca252c08 INLINECALLDICT
+      s0 POP
+      MUL
+    }> PUSHCONT
+    IFNOTJMP
+    255 PUSHPOW2
+    ?fun_ref_d78034247225d612 INLINECALLDICT
+    255 PUSHNEGPOW2
+    s0 s1 XCHG
+    SUB
+    true 2 true 1 1 255 DIV
+    -1 MULCONST
+    ?fun_ref_5c788425937a7d28 INLINECALLDICT
+  }>
+  ?fun_ref_5a712c8e35fef248 PROCREF:<{
+    256 PUSHPOW2
+    29483 PUSHINT
+    236 LSHIFT
+    -3167 PUSHINT
+    239 LSHIFT
+    12845 PUSHINT
+    16693 PUSHINT
+    9043 PUSHINT
+    <{
+      RANDU256
+      4 RSHIFT
+      INC
+      RANDU256
+      255 PUSHPOW2
+      SUB
+      7027 PUSHINT
+      true 1 true 1 1 15 DIV
+      s0 PUSH
+      ABS
+      s2 s7 PUSH2
+      SUB
+      s1 s7 PUSH2
+      SUB
+      s1 s1 PUSH2
+      true 1 true 1 1 251 DIV
+      s1 s8 PUSH2
+      true 1 true 1 1 15 DIV
+      s3 s8 XCPU
+      true 1 true 1 1 15 DIV
+      s1 s3 XCHG
+      SUB
+      true 1 true 1 1 251 DIV
+      ADD
+      237 RSHIFT
+      s4 PUSH
+      SUB
+      s0 PUSH
+      82 LESSINT
+      s2 s4 XCPU
+      false 0 false 1 0 0 DIV
+      16 LESSINT
+      s1 s2 XCHG
+      AND
+      <{
+        s8 POP
+        s1 PUSH
+        true 2 true 1 1 251 DIV
+        s0 s7 XCHG
+        -1 GTINT
+        <{
+          s6 s6 PUSH2
+          true 1 true 1 1 255 DIV
+          false 1 true 1 1 1 DIV
+          -1 MULCONST
+          ?fun_ref_eabdf5efadfce810 INLINECALLDICT
+          4 LSHIFT
+          GREATER
+          <{
+            s5 POP
+            256 PUSHPOW2
+            s0 s5 XCHG
+          }> PUSHCONT
+          IF
+        }> PUSHCONT
+        <{
+          s0 POP
+        }> PUSHCONT
+        IFELSE
+      }> PUSHCONT
+      <{
+        3 BLKDROP
+      }> PUSHCONT
+      IFELSE
+      s5 PUSH
+      ISNAN
+      NOT
+    }> PUSHREFCONT
+    UNTIL
+    5 BLKDROP
+  }>
+  ?fun_ref_5ba78fa4ab4ec6dc PROCREF:<{
+    ?fun_ref_aa50613cca252c08 INLINECALLDICT
+    s0 POP
+    s1 PUSH
+    255 PUSHNEGPOW2
+    EQUAL
+    <{
+      s1 POP
+    }> PUSHCONT
+    IFJMP
+    1 RSHIFT
+    255 PUSHPOW2
+    s2 PUSH
+    s0 PUSH
+    true 1 true 1 1 254 DIV
+    SUB
+    255 PUSHPOW2
+    ?fun_ref_d78034247225d612 INLINECALLDICT
+    255 PUSHNEGPOW2
+    s0 s1 XCHG
+    SUB
+    s1 s2 XCHG
+    true 2 true 1 1 255 DIV
+    ?fun_ref_5c788425937a7d28 INLINECALLDICT
+    false 1 true 1 1 0 DIV
+    ADD
+  }>
+  ?fun_ref_5c788425937a7d28 PROCREF:<{
+    ?fun_ref_b2fd74bee4445ab9 INLINECALLDICT
+    ?fun_ref_6405ea4d1c38698c INLINECALLDICT
+    s1 s2 XCHG
+    true 1 true 3 1 4 DIV
+    s1 s2 XCHG
+    ADD
+    false 1 true 1 1 4 DIV
+    ADD
+  }>
+  ?fun_ref_5d3a4c29b0035181 PROCREF:<{
+    s1 s1 PUSH2
+    true 1 true 1 1 255 DIV
+    254 PUSHPOW2
+    s0 s2 PUSH2
+    false 0 false 1 1 0 DIV
+    255 PUSHPOW2
+    ADD
+    s3 PUSH
+    -1 ADD
+    <{
+      s2 s1 PUXC
+      true 2 true 1 1 241 DIV
+      s1 s1 PUXC
+      ADD
+      s3 PUSH
+      -1 ADD
+      s4 s4 XCPU
+      true 0 false 1 1 0 DIV
+      s1 PUSH
+      ADD
+    }> PUSHCONT
+    REPEAT
+    s1 POP
+    s2 POP
+    s0 PUSH
+    false 1 true 1 1 11 DIV
+    s1 s2 XCHG
+    ADD
+    s2 PUSH
+    ROTREV
+    true 0 false 1 1 0 DIV
+    false 1 true 1 1 11 DIV
+    SUB
+  }>
+  ?fun_ref_6405ea4d1c38698c PROCREF:<{
+    115754418570128574501879331591757054405465733718902755858991306434399246026247 PUSHINT
+  }>
+  ?fun_ref_6c2cc5b04a23eeb2 PROCREF:<{
+    s0 PUSH
+    false 1 true 1 1 231 DIV
+    ?fun_ref_8a8385f8d78f60b7 INLINECALLDICT
+    s1 s3 PUSH2
+    true 1 true 3 1 255 DIV
+    1 RSHIFT
+    s1 s2 XCPU
+    SUB
+    s2 s5 XCHG2
+    true 1 true 3 1 255 DIV
+    1 RSHIFT
+    s0 s3 XCHG
+    ADD
+    s4 s4 XCPU
+    true 2 true 3 1 254 DIV
+    s1 s2 XCHG
+    ADD
+    s4 PUSH
+    true 2 true 1 1 254 DIV
+    s2 s2 s6 XCPUXC
+    true 0 false 1 1 0 DIV
+    s1 s3 XCHG
+    SUB
+    false 1 true 1 1 248 DIV
+    s0 s2 XCHG
+    6 LSHIFT
+    s1 s2 XCHG
+    ADD
+    18 PUSHINT
+    s1 s1 PUSH2
+    true 1 true 1 1 255 DIV
+    254 PUSHPOW2
+    s0 s2 PUSH2
+    false 0 false 1 1 0 DIV
+    255 PUSHPOW2
+    ADD
+    s3 PUSH
+    -1 ADD
+    <{
+      s2 s1 PUXC
+      true 2 true 1 1 241 DIV
+      s1 s1 PUXC
+      ADD
+      s3 PUSH
+      -1 ADD
+      s4 s4 XCPU
+      true 0 false 1 1 0 DIV
+      s1 PUSH
+      ADD
+    }> PUSHCONT
+    REPEAT
+    s1 POP
+    s2 POP
+    s0 PUSH
+    false 1 true 1 1 11 DIV
+    s1 s2 XCHG
+    ADD
+    s2 PUSH
+    ROTREV
+    true 0 false 1 1 0 DIV
+    false 1 true 1 1 11 DIV
+    SUB
+  }>
+  ?fun_ref_7134bd42618a8d1e PROCREF:<{
+    s0 PUSH
+    false 1 true 1 1 255 DIV
+    s0 PUSH
+    <{
+      255 PUSHNEGPOW2
+      ROT
+      true 2 true 1 1 255 DIV
+    }> PUSHCONT
+    <{
+      s0 s1 XCHG
+      1 LSHIFT
+    }> PUSHCONT
+    IFELSE
+    ?fun_ref_b2fd74bee4445ab9 INLINECALLDICT
+    ?fun_ref_aa50613cca252c08 INLINECALLDICT
+    ?fun_ref_6405ea4d1c38698c INLINECALLDICT
+    s1 s4 XCHG
+    true 1 true 3 1 5 DIV
+    s5 s4 PUXC
+    MUL
+    ADD
+    ROTREV
+    ADD
+    SWAP2
+    true 1 true 1 1 121 DIV
+    ADD
+    false 1 true 1 1 5 DIV
+    ADD
+  }>
+  ?fun_ref_73739320b258991c PROCREF:<{
+    s1 s1 PUSH2
+    true 1 true 1 1 255 DIV
+    254 PUSHPOW2
+    s0 s2 PUSH2
+    false 0 false 1 1 0 DIV
+    255 PUSHPOW2
+    ADD
+    s3 PUSH
+    -1 ADD
+    <{
+      s2 s1 PUXC
+      true 2 true 1 1 245 DIV
+      s1 s1 PUXC
+      ADD
+      s3 PUSH
+      -1 ADD
+      s4 s4 XCPU
+      true 0 false 1 1 0 DIV
+      s1 PUSH
+      ADD
+    }> PUSHCONT
+    REPEAT
+    s1 POP
+    s2 POP
+    s0 PUSH
+    false 1 true 1 1 7 DIV
+    s1 s2 XCHG
+    ADD
+    s2 PUSH
+    ROTREV
+    true 0 false 1 1 0 DIV
+    false 1 true 1 1 7 DIV
+    SUB
+  }>
+  ?fun_ref_7753d4b96608d450 PROCREF:<{
+    s1 s1 PUSH2
+    true 1 true 1 1 254 DIV
+    s1 PUSH
+    1 LSHIFT
+    5 ADD
+    250 LSHIFT
+    s0 PUSH
+    251 PUSHPOW2
+    s0 s4 XCHG
+    <{
+      s1 s3 XCPU
+      SUB
+      s0 s4 s5 PU2XC
+      true 2 true 1 1 238 DIV
+      ADD
+    }> PUSHCONT
+    REPEAT
+    s1 POP
+    s2 POP
+    3 PUSHINT
+    254 LSHIFT
+    s1 s4 PUXC
+    true 2 true 1 1 242 DIV
+    s1 s2 XCHG
+    ADD
+    s1 PUSH
+    false 1 true 1 1 6 DIV
+    ADD
+    s2 PUSH
+    ROTREV
+    true 0 false 1 1 0 DIV
+    false 1 true 1 1 6 DIV
+    SUB
+  }>
+  ?fun_ref_811ebbe381228c78 PROCREF:<{
+    s0 PUSH
+    <{
+      DROP2
+      248 PUSHPOW2
+    }> PUSHCONT
+    IFNOTJMP
+    s1 PUSH
+    1 LESSINT
+    <{
+      OR
+      0 LESSINT
+      0 PUSHINT
+      s0 s1 XCHG
+      RSHIFTX
+    }> PUSHCONT
+    IFJMP
+    s0 s1 XCHG
+    ?fun_ref_48cab849e3521372 INLINECALLDICT
+    248 PUSHINT
+    SUB
+    s2 PUSH
+    true 1 true 3 1 247 DIV
+    s2 s3 XCHG2
+    true 1 true 3 0 255 DIV
+    247 RSHIFT
+    s0 s1 XCHG
+    false 1 true 3 1 247 DIV
+    s1 s4 XCHG
+    ADD
+    false 1 true 3 1 247 DIV
+    9 LSHIFT
+    ROT
+    ADD
+    s2 s3 XCHG2
+    ADD
+    ADD
+    s0 PUSH
+    248 PUSHINT
+    ADD
+    s0 PUSH
+    1 LESSINT
+    <{
+      2 1 BLKDROP2
+      0 EQINT
+      -1 MULCONST
+    }> PUSHCONT
+    IFJMP
+    ?fun_ref_2051d9d821c3f770 INLINECALLDICT
+    s0 POP
+    s1 s3 XCHG
+    true 1 true 1 1 255 DIV
+    ?fun_ref_88faf969245bcd15 INLINECALLDICT
+    9 PUSHINT
+    ROT
+    SUB
+    false 1 false 1 1 0 DIV
+    s0 s1 XCHG
+    -1 PUSHINT
+    s0 s1 XCHG
+    LSHIFTX
+    SUB
+  }>
+  ?fun_ref_87780ff3a5ebd2bc PROCREF:<{
+    ?fun_ref_ec287b9511e936b8 INLINECALLDICT
+    248 PUSHINT
+    SUB
+    ?fun_ref_2051d9d821c3f770 INLINECALLDICT
+    s0 POP
+    true 1 true 1 1 7 DIV
+    s0 s1 XCHG
+    false 1 true 1 1 7 DIV
+    ADD
+  }>
+  ?fun_ref_88faf969245bcd15 PROCREF:<{
+    s0 s0 PUSH2
+    true 1 true 1 1 254 DIV
+    251 PUSHPOW2
+    39 PUSHINT
+    250 LSHIFT
+    s0 PUSH
+    17 PUSHINT
+    <{
+      s1 s2 XCPU
+      SUB
+      s0 s5 s5 PU2XC
+      true 2 true 1 1 238 DIV
+      ADD
+    }> PUSHCONT
+    REPEAT
+    2 1 BLKDROP2
+    3 PUSHINT
+    254 LSHIFT
+    s2 s3 PUXC
+    true 2 true 1 1 242 DIV
+    ADD
+    s2 PUSH
+    false 1 true 1 1 3 DIV
+    s1 PUSH
+    SUB
+    s0 PUSH
+    1 RSHIFT
+    s4 s3 PUXC
+    true 1 true 1 1 255 DIV
+    false 1 true 1 1 1 DIV
+    s1 s2 XCHG
+    ADD
+    true 0 false 1 1 0 DIV
+    false 1 true 1 1 1 DIV
+    SUB
+  }>
+  ?fun_ref_8a8385f8d78f60b7 PROCREF:<{
+    s0 PUSH
+    ABS
+    7214596 PUSHINT
+    DUP2
+    SUB
+    ROTREV
+    MUL
+    48 PUSHPOW2
+    ADD
+    true 2 true 1 1 87 DIV
+    s0 PUSH
+    3073 PUSHINT
+    MUL
+    s1 s0 XCPU
+    MUL
+    3 PUSHINT
+    128 LSHIFT
+    ADD
+    true 2 true 1 1 58 DIV
+    13 ADD
+    33226912 PUSHINT
+    5232641 PUSHINT
+    s2 PUSH
+    5 PUSHINT
+    false 0 false 3 0 0 DIV
+    51 PUSHINT
+    s5 PUSH
+    SUB
+    5 MULCONST
+    POW2
+    0 PUSHINT
+    s0 s2 XCHG
+    <{
+      DUP2
+      5 LSHIFT
+      SUBR
+      s0 s2 XCHG
+      5 LSHIFT
+      ADD
+      s0 s1 XCHG
+    }> PUSHCONT
+    REPEAT
+    s0 s2 XCHG
+    <{
+      s1 s3 PUSH2
+      MUL
+      s1 s3 PUSH2
+      MUL
+      SUB
+      s2 s3 XCPU
+      MUL
+      s1 s4 XCPU
+      MUL
+      ADD
+    }> PUSHCONT
+    REPEAT
+    2 2 BLKDROP2
+    s0 s3 XCHG
+    SGN
+    s0 s4 PUXC
+    MUL
+    s2 s3 XCHG2
+    MUL
+  }>
+  ?fun_ref_8bf58ecefe2e19cb PROCREF:<{
+    ?fun_ref_aa50613cca252c08 INLINECALLDICT
+    ROTREV
+    true 2 true 3 1 6 DIV
+    1 LSHIFT
+    s1 s4 PUXC
+    true 1 true 1 1 126 DIV
+    s1 s2 XCHG
+    SUB
+    ?fun_ref_b03a280997c9cc26 INLINECALLDICT
+    s0 s2 XCHG
+    1 PUSHINT
+    AND
+    <{
+      s0 s1 XCHG
+      -1 MULCONST
+    }> PUSHCONT
+    IF
+    true 2 true 1 1 247 DIV
+  }>
+  ?fun_ref_aa50613cca252c08 PROCREF:<{
+    90942894222941581070058735694432465663348344332098107489693037779484723616546 PUSHINT
+    108051869516004014909778934258921521947 PUSHINT
+  }>
+  ?fun_ref_afe5ab170f89ef23 PROCREF:<{
+    s1 s1 PUSH2
+    true 1 true 1 1 255 DIV
+    254 PUSHPOW2
+    s0 s2 PUSH2
+    false 0 false 1 1 0 DIV
+    255 PUSHPOW2
+    ADD
+    s3 PUSH
+    -1 ADD
+    <{
+      s2 s1 PUXC
+      true 2 true 1 1 241 DIV
+      s1 s1 PUXC
+      SUB
+      s3 PUSH
+      -1 ADD
+      s4 s4 XCPU
+      true 0 false 1 1 0 DIV
+      s1 PUSH
+      ADD
+    }> PUSHCONT
+    REPEAT
+    s1 POP
+    s2 POP
+    s0 PUSH
+    false 1 true 1 1 11 DIV
+    s1 s2 XCHG
+    SUB
+    s2 PUSH
+    ROTREV
+    true 0 false 1 1 0 DIV
+    false 1 true 1 1 11 DIV
+    ADD
+  }>
+  ?fun_ref_b03a280997c9cc26 PROCREF:<{
+    s0 s0 PUSH2
+    true 1 true 1 1 255 DIV
+    251 PUSHPOW2
+    41 PUSHINT
+    250 LSHIFT
+    s0 PUSH
+    18 PUSHINT
+    <{
+      s1 s2 XCPU
+      SUB
+      s0 s5 s5 PU2XC
+      true 2 true 1 1 239 DIV
+      SUB
+    }> PUSHCONT
+    REPEAT
+    2 1 BLKDROP2
+    3 PUSHINT
+    254 LSHIFT
+    s2 s3 PUXC
+    true 2 true 1 1 243 DIV
+    SUB
+    s2 PUSH
+    1 RSHIFT
+    s2 PUSH
+    false 1 true 1 1 5 DIV
+    s1 s2 XCHG
+    SUB
+    s1 s2 XCHG
+    true 0 false 1 1 0 DIV
+    false 1 true 1 1 4 DIV
+    ADD
+    s0 s0 PUSH2
+    true 1 true 1 1 255 DIV
+    s0 PUSH
+    false 1 true 1 1 3 DIV
+    256 PUSHNEGPOW2
+    ADD
+    s2 PUSH
+    ROTREV
+    true 0 false 1 1 0 DIV
+    false 1 true 1 1 3 DIV
+    s0 s1 XCHG
+    SUB
+    s0 s0 PUSH2
+    true 1 true 1 1 255 DIV
+    false 1 true 1 1 1 DIV
+    256 PUSHNEGPOW2
+    ADD
+  }>
+  ?fun_ref_b2fd74bee4445ab9 PROCREF:<{
+    s0 PUSH
+    false 1 true 1 1 231 DIV
+    ?fun_ref_8a8385f8d78f60b7 INLINECALLDICT
+    s1 s3 PUSH2
+    true 1 true 3 1 255 DIV
+    false 1 true 1 1 249 DIV
+    s1 s2 XCPU
+    SUB
+    6 LSHIFT
+    ADD
+    s0 s4 XCHG
+    true 1 true 1 1 255 DIV
+    ADD
+    s1 s2 XCHG
+    true 2 true 1 1 254 DIV
+    18 PUSHINT
+    s1 s1 PUSH2
+    true 1 true 1 1 255 DIV
+    254 PUSHPOW2
+    s0 s2 PUSH2
+    false 0 false 1 1 0 DIV
+    255 PUSHPOW2
+    ADD
+    s3 PUSH
+    -1 ADD
+    <{
+      s2 s1 PUXC
+      true 2 true 1 1 241 DIV
+      s1 s1 PUXC
+      ADD
+      s3 PUSH
+      -1 ADD
+      s4 s4 XCPU
+      true 0 false 1 1 0 DIV
+      s1 PUSH
+      ADD
+    }> PUSHCONT
+    REPEAT
+    s1 POP
+    s2 POP
+    s0 PUSH
+    false 1 true 1 1 11 DIV
+    s1 s2 XCHG
+    ADD
+    s2 PUSH
+    ROTREV
+    true 0 false 1 1 0 DIV
+    false 1 true 1 1 11 DIV
+    SUB
+  }>
+  ?fun_ref_cdb28b381a5130bf PROCREF:<{
+    s0 PUSH
+    false 1 true 1 1 248 DIV
+    s0 PUSH
+    <{
+      SGN
+      248 PUSHNEGPOW2
+      ROT
+      true 2 true 1 1 255 DIV
+    }> PUSHCONT
+    <{
+      s0 s1 XCHG
+      8 LSHIFT
+    }> PUSHCONT
+    IFELSE
+    ?fun_ref_b2fd74bee4445ab9 INLINECALLDICT
+    false 1 true 1 1 5 DIV
+    ?fun_ref_aa50613cca252c08 INLINECALLDICT
+    s0 POP
+    s1 s3 XCHG
+    MUL
+    s1 s2 XCHG
+    ADD
+    ?fun_ref_6405ea4d1c38698c INLINECALLDICT
+    s1 s2 XCHG
+    true 1 true 1 1 5 DIV
+    ADD
+    false 1 true 1 1 6 DIV
+  }>
+  ?fun_ref_d78034247225d612 PROCREF:<{
+    DUP2
+    MIN
+    <{
+      DROP2
+      0 PUSHINT
+    }> PUSHCONT
+    IFNOTJMP
+    s1 PUSH
+    UBITSIZE
+    s1 PUSH
+    UBITSIZE
+    DUP2
+    EQUAL
+    <{
+      DROP2
+      DUP2
+      SUB
+      1 RSHIFT
+      s1 PUSH
+      ADD
+    }> PUSHCONT
+    <{
+      ADD
+      1 RSHIFT
+      POW2
+    }> PUSHCONT
+    IFELSE
+    <{
+      s2 s1 s0 PUSH3
+      true 0 false 1 2 0 DIV
+      s1 PUSH
+      SUB
+      1 RSHIFT
+      TUCK
+      ADD
+      s0 s1 XCHG
+      0 EQINT
+    }> PUSHCONT
+    UNTIL
+    2 1 BLKDROP2
+  }>
+  ?fun_ref_da70c8217d8f9a46 PROCREF:<{
+    s0 PUSH
+    false 1 true 1 1 248 DIV
+    <{
+      248 PUSHNEGPOW2
+      s0 s1 XCHG
+      true 2 true 1 1 255 DIV
+      0 PUSHINT
+    }> PUSHCONT
+    <{
+      8 LSHIFT
+      s0 PUSH
+      SGN
+    }> PUSHCONT
+    IFELSE
+    s0 s1 XCHG
+    ?fun_ref_b2fd74bee4445ab9 INLINECALLDICT
+    ?fun_ref_aa50613cca252c08 INLINECALLDICT
+    s0 POP
+    s1 s3 XCHG
+    MUL
+    s0 s2 XCHG
+    false 1 true 1 1 5 DIV
+    s1 s2 XCHG
+    SUB
+    ?fun_ref_6405ea4d1c38698c INLINECALLDICT
+    s1 s2 XCHG
+    true 1 true 1 1 5 DIV
+    SUB
+    false 1 true 1 1 6 DIV
+  }>
+  ?fun_ref_e11f9343f87d5b4b PROCREF:<{
+    ?fun_ref_aa50613cca252c08 INLINECALLDICT
+    ROTREV
+    true 2 true 3 1 6 DIV
+    1 LSHIFT
+    s1 s4 PUXC
+    true 1 true 1 1 126 DIV
+    s1 s2 XCHG
+    SUB
+    ?fun_ref_b03a280997c9cc26 INLINECALLDICT
+    s0 s2 XCHG
+    1 PUSHINT
+    AND
+    <{
+      -1 MULCONST
+      s0 s1 XCHG
+    }> PUSHCONT
+    IF
+    s0 s1 XCHG
+    true 2 true 1 1 247 DIV
+  }>
+  ?fun_ref_e9b023c94244cb2e PROCREF:<{
+    115641670674223639132965820642403718536242645001775371762318060545014644837101 PUSHINT
+  }>
+  ?fun_ref_eabdf5efadfce810 PROCREF:<{
+    ?fun_ref_2051d9d821c3f770 INLINECALLDICT
+    ROTREV
+    8 PUSHINT
+    true 2 false 3 1 0 DIV
+    1 LSHIFT
+    s1 s4 PUXC
+    true 1 true 1 1 126 DIV
+    s1 s2 XCHG
+    SUB
+    ?fun_ref_88faf969245bcd15 INLINECALLDICT
+    9 PUSHINT
+    s2 PUSH
+    SUB
+    false 1 false 1 1 0 DIV
+    248 PUSHINT
+    ROT
+    ADD
+    -1 PUSHINT
+    s0 s1 XCHG
+    LSHIFTX
+    SUB
+  }>
+  ?fun_ref_ec287b9511e936b8 PROCREF:<{
+    ?fun_ref_1b1ae470b4614553 INLINECALLDICT
+    false 1 true 3 1 3 DIV
+    9 LSHIFT
+    s2 PUSH
+    -3769 PUSHINT
+    MUL
+    ADD
+    false 1 true 1 1 12 DIV
+    ADD
+    s0 s1 XCHG
+    3563114646320977386603103333812068872452913448227778071188132859183498739150 PUSHINT
+    MUL
+    ADD
+    s0 s1 XCHG
+  }>
+  ?fun_ref_f8345f3d64016266 PROCREF:<{
+    -3 PUSHINT
+    253 LSHIFT
+    12 PUSHINT
+    <{
+      RANDU256
+      4 RSHIFT
+      ADD
+    }> PUSHCONT
+    REPEAT
+  }>
+  ?fun_ref_fbd4cc263c208ffd PROCREF:<{
+    s1 s1 PUSH2
+    true 1 true 1 1 255 DIV
+    254 PUSHPOW2
+    s0 s2 PUSH2
+    false 0 false 1 1 0 DIV
+    255 PUSHPOW2
+    ADD
+    s3 PUSH
+    -1 ADD
+    <{
+      s2 s1 PUXC
+      true 2 true 1 1 247 DIV
+      s1 s1 PUXC
+      SUB
+      s3 PUSH
+      -1 ADD
+      s4 s4 XCPU
+      true 0 false 1 1 0 DIV
+      s1 PUSH
+      ADD
+    }> PUSHCONT
+    REPEAT
+    s1 POP
+    s2 POP
+    s0 PUSH
+    1 RSHIFT
+    s0 s1 XCHG
+    false 1 true 1 1 5 DIV
+    s1 s2 XCHG
+    SUB
+    s2 PUSH
+    ROTREV
+    true 0 false 1 1 0 DIV
+    false 1 true 1 1 4 DIV
+    ADD
+  }>
+}END>c"
+`;
+
 exports[`decompileAll should decompile wallet 1`] = `
 "PROGRAM{
   DECLPROC recv_internal;
@@ -1832,132 +3451,6 @@ exports[`decompileAll should decompile wallet v4 1`] = `
     }> PUSHCONT
     UNTIL
     s0 POP
-  }>
-}END>c"
-`;
-
-exports[`decompileAll should decompile mathlib.fc 1`] = `
-"PROGRAM{
-  DECLPROC recv_internal;
-  DECLPROC ?fun_ref_1b1ae470b4614553;
-  DECLPROC ?fun_ref_2051d9d821c3f770;
-  DECLPROC ?fun_ref_48cab849e3521372;
-  DECLPROC ?fun_ref_afe5ab170f89ef23;
-  recv_internal PROC:<{
-    248 PUSHPOW2
-    ?fun_ref_48cab849e3521372 INLINECALLDICT
-    248 PUSHINT
-    SUB
-    248 LSHIFT
-    s0 s1 XCHG
-    false 1 true 1 1 7 DIV
-    ADD
-    s0 POP
-  }>
-  ?fun_ref_1b1ae470b4614553 PROCREF:<{
-    s0 PUSH
-    UBITSIZE
-    -1 ADD
-    8 PUSHPOW2DEC
-    s1 PUSH
-    SUB
-    s1 s2 XCHG
-    LSHIFTX
-    2873 PUSHINT
-    244 LSHIFT
-    DUP2
-    SUB
-    1 RSHIFT
-    s0 PUSH
-    65 PUSHINT
-    s0 s3 XCHG
-    ADD
-    s1 s2 XCHG
-    true 0 false 1 1 0 DIV
-    11 ADD
-    s0 PUSH
-    5 PUSHINT
-    false 0 false 3 0 0 DIV
-    1 PUSHINT
-    s0 s1 XCHG
-    <{
-      33 MULCONST
-    }> PUSHCONT
-    REPEAT
-    s0 s1 XCHG
-    <{
-      39135393 PUSHINT
-      MUL
-    }> PUSHCONT
-    REPEAT
-    51 PUSHINT
-    s2 PUSH
-    SUB
-    5 MULCONST
-    LSHIFTX
-    s2 s2 XCPU
-    SUB
-    s0 PUSH
-    4 LSHIFT
-    s0 s1 XCHG
-    1 RSHIFT
-    s0 s3 XCHG2
-    ADD
-    s1 s2 XCHG
-    true 2 true 1 1 255 DIV
-    18 PUSHINT
-    ?fun_ref_afe5ab170f89ef23 INLINECALLDICT
-  }>
-  ?fun_ref_2051d9d821c3f770 PROCREF:<{
-    80260960185991308862233904206310070533990667611589946606122867505419956976172 PUSHINT
-    -32272921378999278490133606779486332143 PUSHINT
-  }>
-  ?fun_ref_48cab849e3521372 PROCREF:<{
-    ?fun_ref_1b1ae470b4614553 INLINECALLDICT
-    ?fun_ref_2051d9d821c3f770 INLINECALLDICT
-    s0 POP
-    true 2 true 1 1 255 DIV
-    false 1 true 1 1 3 DIV
-    s0 s1 XCHG
-    5140487830366106860412008603913034462883915832139695448455767612111363481357 PUSHINT
-    MUL
-    ADD
-    s0 s1 XCHG
-  }>
-  ?fun_ref_afe5ab170f89ef23 PROCREF:<{
-    s1 s1 PUSH2
-    true 1 true 1 1 255 DIV
-    254 PUSHPOW2
-    s0 s2 PUSH2
-    false 0 false 1 1 0 DIV
-    255 PUSHPOW2
-    ADD
-    s3 PUSH
-    -1 ADD
-    <{
-      s2 s1 PUXC
-      true 2 true 1 1 241 DIV
-      s1 s1 PUXC
-      SUB
-      s3 PUSH
-      -1 ADD
-      s4 s4 XCPU
-      true 0 false 1 1 0 DIV
-      s1 PUSH
-      ADD
-    }> PUSHCONT
-    REPEAT
-    s1 POP
-    s2 POP
-    s0 PUSH
-    false 1 true 1 1 11 DIV
-    s1 s2 XCHG
-    SUB
-    s2 PUSH
-    ROTREV
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 11 DIV
-    ADD
   }>
 }END>c"
 `;
