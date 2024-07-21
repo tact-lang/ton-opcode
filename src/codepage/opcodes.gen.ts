@@ -42,7 +42,7 @@ export type OpCodeWithArgs =
     | { code: 'PUSHCONT', args: [Cell, number, number, number, number] }
     | { code: 'ADDCONST', args: [number] }
     | { code: 'MULCONST', args: [number] }
-    | { code: 'DIV', args: [boolean, number, boolean, number, number] }
+    | { code: 'DIV', args: [boolean, number, boolean, number, number, number] }
     | { code: 'LSHIFT', args: [number] }
     | { code: 'RSHIFT', args: [number] }
     | { code: 'FITS', args: [number] }
