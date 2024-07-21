@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.16] - 2024-07-21
+
+### Added
+
+- Test decompilation of the binary produced for [`mathlib.fc`](https://github.com/ton-blockchain/ton/blob/5c392e0f2d946877bb79a09ed35068f7b0bd333a/crypto/smartcont/mathlib.fc): PR [#16](https://github.com/tact-lang/ton-opcode/pull/16)
+
+### Fixed
+
+- Division instructions parsing: PR [#16](https://github.com/tact-lang/ton-opcode/pull/16)
+
 ## [0.0.15] - 2024-06-09
 
 ### Added
