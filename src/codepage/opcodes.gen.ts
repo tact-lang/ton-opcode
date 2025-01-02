@@ -672,6 +672,7 @@ export type OpCodeNoArgs =
     | { code: 'GETPRECOMPILEDGAS' }
     | { code: 'GETORIGINALFWDFEE' }
     | { code: 'GETGASFEESIMPLE' }
+    | { code: 'GETGASFEE' }
     | { code: 'GETFORWARDFEESIMPLE' }
     | { code: 'CLEVEL' }
     | { code: 'CLEVELMASK' }
