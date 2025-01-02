@@ -20,7 +20,6 @@ CP0Auto.insertHex('1', 4, (slice) => {
     }
     return { code: 'XCHG', args: [1, n] };
 })
-
 CP0Auto.insertHex('2', 4, (slice) => {
     let n = slice.loadUint(4);
     return { code: 'PUSH', args: [n] };
