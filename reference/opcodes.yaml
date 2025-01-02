@@ -790,7 +790,7 @@ opcodes:
   # SENDMSG:
 
   # Opcodes to process config parameters
-  # GETGASFEE:
+  GETGASFEE:
   GETSTORAGEFEE:
   # GETFORWARDFEE:
   GETPRECOMPILEDGAS:

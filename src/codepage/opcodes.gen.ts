@@ -668,6 +668,7 @@ export type OpCodeNoArgs =
     | { code: 'SENDMSG' }
     | { code: 'UNPACKEDCONFIGTUPLE' }
     | { code: 'DUEPAYMENT' }
+    | { code: 'GETGASFEE' }
     | { code: 'GETSTORAGEFEE' }
     | { code: 'GETPRECOMPILEDGAS' }
     | { code: 'GETORIGINALFWDFEE' }
