@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.17] - 2025-01-03
+
+### Added
+- Support of `GETGASFEE` opcode: PR [#21](https://github.com/tact-lang/ton-opcode/pull/21)
+
+### Updated
+- Node.js version to match tact compiler requirements.
+
 ## [0.0.16] - 2024-07-21
 
 ### Added
