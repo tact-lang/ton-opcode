@@ -670,6 +670,7 @@ export type OpCodeNoArgs =
     | { code: 'DUEPAYMENT' }
     | { code: 'GETGASFEE' }
     | { code: 'GETSTORAGEFEE' }
+    | { code: 'GETFORWARDFEE' }
     | { code: 'GETPRECOMPILEDGAS' }
     | { code: 'GETORIGINALFWDFEE' }
     | { code: 'GETGASFEESIMPLE' }

@@ -1147,6 +1147,7 @@ CP0Auto.insertHex('F83401', 24, { code: 'PREVKEYBLOCK' });
 CP0Auto.insertHex('F835', 16, { code: 'GLOBALID' });
 CP0Auto.insertHex('F836', 16, { code: 'GETGASFEE' });
 CP0Auto.insertHex('F837', 16, { code: 'GETSTORAGEFEE' });
+CP0Auto.insertHex('F838', 16, { code: 'GETFORWARDFEE' });
 CP0Auto.insertHex('F839', 16, { code: 'GETPRECOMPILEDGAS' });
 CP0Auto.insertHex('F83A', 16, { code: 'GETORIGINALFWDFEE' });
 CP0Auto.insertHex('F83B', 16, { code: 'GETGASFEESIMPLE' });
