@@ -1155,11 +1155,11 @@ CP0Auto.insertHex('F83C', 16, { code: 'GETFORWARDFEESIMPLE' });
 
 CP0Auto.insertHex('f841', 11, (slice) => {
     let i = slice.loadUint(5);
-    return { code: `GETGLOB`, args: [i] };
+    return { code: `GETGLOBVAR`, args: [i] };
 });
 CP0Auto.insertHex('f861', 11, (slice) => {
     let i = slice.loadUint(5);
-    return { code: `SETGLOB`, args: [i] };
+    return { code: `SETGLOBVAR`, args: [i] };
 });
 CP0Auto.insertHex('f900', 16, { code: 'HASHCU' });
 CP0Auto.insertHex('f901', 16, { code: 'HASHSU' });
