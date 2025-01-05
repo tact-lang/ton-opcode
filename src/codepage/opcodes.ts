@@ -1147,17 +1147,19 @@ CP0Auto.insertHex('F83401', 24, { code: 'PREVKEYBLOCK' });
 CP0Auto.insertHex('F835', 16, { code: 'GLOBALID' });
 CP0Auto.insertHex('F836', 16, { code: 'GETGASFEE' });
 CP0Auto.insertHex('F837', 16, { code: 'GETSTORAGEFEE' });
+CP0Auto.insertHex('F838', 16, { code: 'GETFORWARDFEE' });
 CP0Auto.insertHex('F839', 16, { code: 'GETPRECOMPILEDGAS' });
 CP0Auto.insertHex('F83A', 16, { code: 'GETORIGINALFWDFEE' });
 CP0Auto.insertHex('F83B', 16, { code: 'GETGASFEESIMPLE' });
 CP0Auto.insertHex('F83C', 16, { code: 'GETFORWARDFEESIMPLE' });
+
 CP0Auto.insertHex('f841', 11, (slice) => {
     let i = slice.loadUint(5);
-    return { code: `GETGLOBVAR`, args: [i] };
+    return { code: `GETGLOB`, args: [i] };
 });
 CP0Auto.insertHex('f861', 11, (slice) => {
     let i = slice.loadUint(5);
-    return { code: `SETGLOBVAR`, args: [i] };
+    return { code: `SETGLOB`, args: [i] };
 });
 CP0Auto.insertHex('f900', 16, { code: 'HASHCU' });
 CP0Auto.insertHex('f901', 16, { code: 'HASHSU' });
