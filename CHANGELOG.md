@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.0.18] - 2025-01-05
 
 ### Added
-- Support of `GETFORWARDFEE` opcode: PR [#22]()
+- Support of `GETFORWARDFEE` opcode: PR [#23](https://github.com/tact-lang/ton-opcode/pull/23)
 
 ## [0.0.17] - 2025-01-03
 
