@@ -1152,7 +1152,6 @@ CP0Auto.insertHex('F839', 16, { code: 'GETPRECOMPILEDGAS' });
 CP0Auto.insertHex('F83A', 16, { code: 'GETORIGINALFWDFEE' });
 CP0Auto.insertHex('F83B', 16, { code: 'GETGASFEESIMPLE' });
 CP0Auto.insertHex('F83C', 16, { code: 'GETFORWARDFEESIMPLE' });
-
 CP0Auto.insertHex('f841', 11, (slice) => {
     let i = slice.loadUint(5);
     return { code: `GETGLOBVAR`, args: [i] };
