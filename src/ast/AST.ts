@@ -1,3 +1,5 @@
+// This file is based on code from https://github.com/scaleton-labs/tvm-disassembler
+
 import {
     BlockNode,
     InstructionNode,
