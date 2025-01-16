@@ -22,6 +22,11 @@ const decompiledCode = decompileAll({ src: sourceCode });
 
 ```
 
+## Authors
+
+- [Steve Korshakov](https://github.com/ex3ndr)
+- [Nick Nekilov](https://github.com/NickNekilov)
+
 ## License
 
 MIT
