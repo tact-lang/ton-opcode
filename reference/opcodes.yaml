@@ -424,6 +424,8 @@ opcodes:
   SAMEALTSAVE:
 
   # A.8.7. Dictionary subroutine calls and jumps.
+  CALLDICT: ["int"]
+  INLINECALLDICT: ["int"]
   CALL: ["int"]
   JMP: ["int"]
   PREPARE: ["int"]
