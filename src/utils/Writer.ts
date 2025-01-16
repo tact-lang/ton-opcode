@@ -1,13 +1,8 @@
-import { trimIndent } from './text';
 export class Writer {
     #indent = 0;
     #lines: string[] = [];
 
-    get indent() {
-        return this.#indent;
-    }
-
-    inIndent = (handler: () => void) => {
+    indent = (handler: () => void) => {
         this.#indent++;
         try {
             handler();
@@ -16,26 +11,27 @@ export class Writer {
         }
     };
 
-    append(src: string = '') {
-        this.#lines.push(src);
+    #currentLine = '';
+
+    write(src: string) {
+        this.#currentLine += src;
     }
 
-    // appendNoIndent(src: string = '') {
-    //     this.#lines.push(src);
-    // }
+    newLine() {
+        this.#lines.push(' '.repeat(this.#indent * 2) + this.#currentLine);
+        this.#currentLine = '';
+    }
 
-    // append(src: string = '') {
-    //     this.appendNoIndent(' '.repeat(this.#indent * 2) + src);
-    // }
-
-    // write(src: string) {
-    //     let lines = trimIndent(src).split('\n');
-    //     for (let l of lines) {
-    //         this.append(l);
-    //     }
-    // }
+    writeLine(src: string) {
+        this.#lines.push(' '.repeat(this.#indent * 2) + this.#currentLine + src);
+        this.#currentLine = '';
+    }
 
     end() {
+        if (this.#currentLine !== '') {
+            this.newLine();
+        }
+
         return this.#lines.join('\n');
     }
 }

@@ -107,6 +107,7 @@ export type OpCodeWithArgs =
     | { code: 'SAVEALT', args: [number] }
     | { code: 'SAVEBOTH', args: [number] }
     | { code: 'CALL', args: [number] }
+    | { code: 'CALLDICT'; args: [number] }
     | { code: 'JMP', args: [number] }
     | { code: 'PREPARE', args: [number] }
     | { code: 'THROW', args: [number] }
@@ -357,6 +358,7 @@ export type OpCodeNoArgs =
     | { code: 'RETFALSE' }
     | { code: 'RETBOOL' }
     | { code: 'CALLCC' }
+    | { code: 'INLINECALLDICT' }
     | { code: 'JMPXDATA' }
     | { code: 'CALLXVARARGS' }
     | { code: 'RETVARARGS' }

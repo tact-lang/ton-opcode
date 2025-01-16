@@ -718,6 +718,20 @@
     detect-newline "^4.0.0"
     string-template "^1.0.0"
 
+"@scaleton/func-debug-symbols@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@scaleton/func-debug-symbols/-/func-debug-symbols-0.1.4.tgz#b4c1841bfffca76880a684b8b700f1e80325e50a"
+  integrity sha512-6A+PERwnUz+GdWei7vPAuTrHtvsj5Tyl0MMFK1GPEJ5iwfRO7zElcEzUnf1F+cdipSKIlRfbeeVN2sW95C9hXA==
+  dependencies:
+    "@scaleton/tree-sitter-func" "^1.0.1"
+    buffer-crc32 "^0.2.13"
+    web-tree-sitter "^0.20.8"
+
+"@scaleton/tree-sitter-func@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@scaleton/tree-sitter-func/-/tree-sitter-func-1.0.1.tgz#a9fb6f479da5c823d05159a05949b224244d2505"
+  integrity sha512-zpnSUyEgMogkC8ydWjII7DNkYyNjsyVhGQ/YsbblBvh6ZI+FspVkxP2UECLsfo6Ep2R+2jocxn7Dpkm2FGeNGw==
+
 "@sinclair/typebox@^0.25.16":
   version "0.25.24"
   resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.25.24.tgz#8c7688559979f7079aacaf31aa881c3aa410b718"
@@ -1184,6 +1198,11 @@ bser@2.1.1:
   integrity sha512-gQxTNE/GAfIIrmHLUE3oJyp5FO6HRBfhjnw4/wMmA63ZGDJnWBmgY/lyQBpnDUkGmAhbSe39tx2d/iTOAfglwQ==
   dependencies:
     node-int64 "^0.4.0"
+
+buffer-crc32@^0.2.13:
+  version "0.2.13"
+  resolved "https://registry.yarnpkg.com/buffer-crc32/-/buffer-crc32-0.2.13.tgz#0d333e3f00eac50aa1454abd30ef8c2a5d9a7242"
+  integrity sha512-VO9Ht/+p3SN7SKWqcrgEzjGbRSJYTx+Q1pTQC0wrWqHx0vpJraQ6GtHx8tvcg1rlK1byhU5gccxgOgj7B0TDkQ==
 
 buffer-from@^1.0.0:
   version "1.1.2"
@@ -4442,6 +4461,11 @@ web-streams-polyfill@^3.0.3:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/web-streams-polyfill/-/web-streams-polyfill-3.2.1.tgz#71c2718c52b45fd49dbeee88634b3a60ceab42a6"
   integrity sha512-e0MO3wdXWKrLbL0DgGnUV7WHVuw9OUvL4hjgnPkIeEvESk74gAITi5G606JtZPp39cd8HA9VQzCIvA49LpPN5Q==
+
+web-tree-sitter@^0.20.8:
+  version "0.20.8"
+  resolved "https://registry.yarnpkg.com/web-tree-sitter/-/web-tree-sitter-0.20.8.tgz#1e371cb577584789cadd75cb49c7ddfbc99d04c8"
+  integrity sha512-weOVgZ3aAARgdnb220GqYuh7+rZU0Ka9k9yfKtGAzEYMa6GgiCzW9JjQRJyCJakvibQW+dfjJdihjInKuuCAUQ==
 
 webidl-conversions@^3.0.0:
   version "3.0.1"
