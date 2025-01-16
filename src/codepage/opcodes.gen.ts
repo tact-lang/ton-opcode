@@ -106,6 +106,8 @@ export type OpCodeWithArgs =
     | { code: 'SAVE', args: [number] }
     | { code: 'SAVEALT', args: [number] }
     | { code: 'SAVEBOTH', args: [number] }
+    | { code: 'CALLDICT', args: [number] }
+    | { code: 'INLINECALLDICT', args: [number] }
     | { code: 'CALL', args: [number] }
     | { code: 'JMP', args: [number] }
     | { code: 'PREPARE', args: [number] }
