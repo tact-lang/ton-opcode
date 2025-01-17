@@ -684,14 +684,14 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     255 PUSHPOW2
     ADD
     s3 PUSH
-    -1 ADD
+    DEC
     <{
       s2 s1 PUXC
       DIVR
       s1 s1 PUXC
       SUB
       s3 PUSH
-      -1 ADD
+      DEC
       s4 s4 XCPU
       DIVR
       s1 PUSH
@@ -752,14 +752,14 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     255 PUSHPOW2
     ADD
     s3 PUSH
-    -1 ADD
+    DEC
     <{
       s2 s1 PUXC
       DIVR
       s1 s1 PUXC
       ADD
       s3 PUSH
-      -1 ADD
+      DEC
       s4 s4 XCPU
       DIVR
       s1 PUSH
@@ -817,7 +817,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     <{
       1 RSHIFT
       s0 s2 XCHG
-      -1 ADD
+      DEC
       s0 s2 XCHG
     }> PUSHCONT
     IF
@@ -858,7 +858,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     AND
     <{
       s0 s1 XCHG
-      -1 MULCONST
+      NEGATE
     }> PUSHCONT
     REPEAT
   }>
@@ -883,7 +883,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
   ?fun_ref_1b1ae470b4614553 PROCREF:<{
     s0 PUSH
     UBITSIZE
-    -1 ADD
+    DEC
     8 PUSHPOW2DEC
     s1 PUSH
     SUB
@@ -1001,7 +1001,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       s1 s3 XCHG
       SUB
       s0 s2 XCHG
-      -2 ADD
+      -2 ADDCONST
     }> PUSHCONT
     REPEAT
     s0 POP
@@ -1350,14 +1350,14 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     255 PUSHPOW2
     ADD
     s3 PUSH
-    -1 ADD
+    DEC
     <{
       s2 s1 PUXC
       DIVR
       s1 s1 PUXC
       ADD
       s3 PUSH
-      -1 ADD
+      DEC
       s4 s4 XCPU
       DIVR
       s1 PUSH
@@ -1417,14 +1417,14 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     255 PUSHPOW2
     ADD
     s3 PUSH
-    -1 ADD
+    DEC
     <{
       s2 s1 PUXC
       DIVR
       s1 s1 PUXC
       ADD
       s3 PUSH
-      -1 ADD
+      DEC
       s4 s4 XCPU
       DIVR
       s1 PUSH
@@ -1482,14 +1482,14 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     255 PUSHPOW2
     ADD
     s3 PUSH
-    -1 ADD
+    DEC
     <{
       s2 s1 PUXC
       DIVR
       s1 s1 PUXC
       ADD
       s3 PUSH
-      -1 ADD
+      DEC
       s4 s4 XCPU
       DIVR
       s1 PUSH
@@ -1513,7 +1513,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     DIVR
     s1 PUSH
     1 LSHIFT
-    5 ADD
+    5 ADDCONST
     250 LSHIFT
     s0 PUSH
     251 PUSHPOW2
@@ -1588,7 +1588,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     <{
       2 1 BLKDROP2
       0 EQINT
-      -1 MULCONST
+      NEGATE
     }> PUSHCONT
     IFJMP
     ?fun_ref_2051d9d821c3f770 INLINECALLDICT
@@ -1734,7 +1734,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     AND
     <{
       s0 s1 XCHG
-      -1 MULCONST
+      NEGATE
     }> PUSHCONT
     IF
     DIVR
@@ -1752,14 +1752,14 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     255 PUSHPOW2
     ADD
     s3 PUSH
-    -1 ADD
+    DEC
     <{
       s2 s1 PUXC
       DIVR
       s1 s1 PUXC
       SUB
       s3 PUSH
-      -1 ADD
+      DEC
       s4 s4 XCPU
       DIVR
       s1 PUSH
@@ -1853,14 +1853,14 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     255 PUSHPOW2
     ADD
     s3 PUSH
-    -1 ADD
+    DEC
     <{
       s2 s1 PUXC
       DIVR
       s1 s1 PUXC
       ADD
       s3 PUSH
-      -1 ADD
+      DEC
       s4 s4 XCPU
       DIVR
       s1 PUSH
@@ -1995,7 +1995,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     1 PUSHINT
     AND
     <{
-      -1 MULCONST
+      NEGATE
       s0 s1 XCHG
     }> PUSHCONT
     IF
@@ -2064,14 +2064,14 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     255 PUSHPOW2
     ADD
     s3 PUSH
-    -1 ADD
+    DEC
     <{
       s2 s1 PUXC
       DIVR
       s1 s1 PUXC
       SUB
       s3 PUSH
-      -1 ADD
+      DEC
       s4 s4 XCPU
       DIVR
       s1 PUSH

@@ -194,8 +194,15 @@ export class AssemblerWriter {
       if (firstArg === 1) {
         return 'INC';
       }
+      if (firstArg === -1) {
+        return 'DEC';
+      }
+    }
 
-      return `${firstArg} ADD`;
+    if (node.opcode === 'MULCONST') {
+      if (firstArg === -1) {
+        return 'NEGATE';
+      }
     }
 
     // Debug
