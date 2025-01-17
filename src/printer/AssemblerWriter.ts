@@ -116,8 +116,8 @@ export class AssemblerWriter {
     // ~% -> false 1 true 2 1 0 DIV  -> integer reduction by modulo (round) -> MODR
     // ^% -> false 1 true 2 2 0 DIV  -> integer reduction by modulo (ceil)  -> MODC
     // /% -> false 1 true 3 0 0 DIV  -> quotient and the remainder          -> DIVMOD
-    // ~/% -> false 1 true 3 0 0 DIV -> quotient and the remainder (round)  -> DIVMODR
-    // ^/% -> false 1 true 3 0 0 DIV -> quotient and the remainder (ceil)   -> DIVMODC
+    // ~/% -> false 1 true 3 1 0 DIV -> quotient and the remainder (round)  -> DIVMODR
+    // ^/% -> false 1 true 3 2 0 DIV -> quotient and the remainder (ceil)   -> DIVMODC
     if (node.opcode === 'DIV') {
       const fourthArg = (node.arguments[3] as ScalarNode)?.value
       if (fourthArg === undefined) {
