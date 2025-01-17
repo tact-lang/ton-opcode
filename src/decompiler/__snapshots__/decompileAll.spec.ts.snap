@@ -528,9 +528,9 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     255 PUSHPOW2
     ?fun_ref_d78034247225d612 INLINECALLDICT
     s0 PUSH
-    true 1 true 1 1 247 DIV
+    DIVR
     s0 PUSH
-    true 1 true 1 1 254 DIV
+    DIVR
     ?fun_ref_2051d9d821c3f770 INLINECALLDICT
     ?fun_ref_aa50613cca252c08 INLINECALLDICT
     ?fun_ref_e9b023c94244cb2e INLINECALLDICT
@@ -540,18 +540,18 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s0 POP
     ?fun_ref_2051d9d821c3f770 INLINECALLDICT
     s0 POP
-    false 1 true 1 1 7 DIV
+    DIVR
     ?fun_ref_aa50613cca252c08 INLINECALLDICT
     s0 POP
     ?fun_ref_aa50613cca252c08 INLINECALLDICT
     s0 POP
-    false 1 true 1 1 5 DIV
+    DIVR
     ?fun_ref_7753d4b96608d450 INLINECALLDICT
     ?fun_ref_88faf969245bcd15 INLINECALLDICT
     ?fun_ref_eabdf5efadfce810 INLINECALLDICT
     ?fun_ref_14c8cb933d84cae0 INLINECALLDICT
     s0 s0 PUSH2
-    true 1 true 1 1 255 DIV
+    DIVR
     251 PUSHPOW2
     33 PUSHINT
     250 LSHIFT
@@ -561,7 +561,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       s1 s2 XCPU
       SUB
       s0 s5 s5 PU2XC
-      true 2 true 1 1 235 DIV
+      DIVR
       SUB
     }> PUSHCONT
     REPEAT
@@ -569,21 +569,21 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     3 PUSHINT
     254 LSHIFT
     s2 s3 PUXC
-    true 2 true 1 1 239 DIV
+    DIVR
     SUB
     s2 PUSH
     1 RSHIFT
     s2 PUSH
-    false 1 true 1 1 9 DIV
+    DIVR
     s1 s2 XCHG
     SUB
     s1 s2 XCHG
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 8 DIV
+    DIVR
+    DIVR
     ADD
     ?fun_ref_41d3f2ea6d56e172 INLINECALLDICT
     s0 s0 PUSH2
-    true 1 true 1 1 255 DIV
+    DIVR
     251 PUSHPOW2
     41 PUSHINT
     250 LSHIFT
@@ -593,7 +593,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       s1 s2 XCPU
       SUB
       s0 s5 s5 PU2XC
-      true 2 true 1 1 239 DIV
+      DIVR
       SUB
     }> PUSHCONT
     REPEAT
@@ -601,21 +601,21 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     3 PUSHINT
     254 LSHIFT
     s2 s3 PUXC
-    true 2 true 1 1 243 DIV
+    DIVR
     SUB
     s2 PUSH
     1 RSHIFT
     s2 PUSH
-    false 1 true 1 1 5 DIV
+    DIVR
     s1 s2 XCHG
     SUB
     s1 s2 XCHG
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 4 DIV
+    DIVR
+    DIVR
     ADD
     ?fun_ref_3449c496cc175763 INLINECALLDICT
     s0 s0 PUSH2
-    true 1 true 1 1 255 DIV
+    DIVR
     251 PUSHPOW2
     33 PUSHINT
     250 LSHIFT
@@ -625,7 +625,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       s1 s2 XCPU
       SUB
       s0 s5 s5 PU2XC
-      true 2 true 1 1 235 DIV
+      DIVR
       SUB
     }> PUSHCONT
     REPEAT
@@ -633,36 +633,36 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     3 PUSHINT
     254 LSHIFT
     s2 s3 PUXC
-    true 2 true 1 1 239 DIV
+    DIVR
     SUB
     s2 PUSH
     1 RSHIFT
     s2 PUSH
-    false 1 true 1 1 9 DIV
+    DIVR
     s1 s2 XCHG
     SUB
     s1 s2 XCHG
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 8 DIV
+    DIVR
+    DIVR
     ADD
     s0 s0 PUSH2
-    true 1 true 1 1 255 DIV
+    DIVR
     s0 PUSH
-    false 1 true 1 1 8 DIV
+    DIVR
     255 PUSHPOW2
     ADD
     s2 PUSH
     1 RSHIFT
     s2 s1 PUSH2
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 7 DIV
+    DIVR
+    DIVR
     s1 s3 XCHG
     SUB
     s1 PUSH
     1 RSHIFT
     s0 s2 s5 XCPUXC
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 7 DIV
+    DIVR
+    DIVR
     SUB
     ?fun_ref_318ac84049047cbe INLINECALLDICT
     ?fun_ref_239e84369564e330 INLINECALLDICT
@@ -677,23 +677,23 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     ?fun_ref_8bf58ecefe2e19cb INLINECALLDICT
     ?fun_ref_fbd4cc263c208ffd INLINECALLDICT
     s1 s1 PUSH2
-    true 1 true 1 1 255 DIV
+    DIVR
     254 PUSHPOW2
     s0 s2 PUSH2
-    false 0 false 1 1 0 DIV
+    DIVR
     255 PUSHPOW2
     ADD
     s3 PUSH
     -1 ADD
     <{
       s2 s1 PUXC
-      true 2 true 1 1 241 DIV
+      DIVR
       s1 s1 PUXC
       SUB
       s3 PUSH
       -1 ADD
       s4 s4 XCPU
-      true 0 false 1 1 0 DIV
+      DIVR
       s1 PUSH
       ADD
     }> PUSHCONT
@@ -701,13 +701,13 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s1 POP
     s2 POP
     s0 PUSH
-    false 1 true 1 1 11 DIV
+    DIVR
     s1 s2 XCHG
     SUB
     s2 PUSH
     ROTREV
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 11 DIV
+    DIVR
+    DIVR
     ADD
     ?fun_ref_afe5ab170f89ef23 INLINECALLDICT
     ?fun_ref_0318d2f33529c0c6 INLINECALLDICT
@@ -740,28 +740,28 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     SUB
     248 LSHIFT
     s0 s1 XCHG
-    false 1 true 1 1 7 DIV
+    DIVR
     ADD
     ?fun_ref_811ebbe381228c78 INLINECALLDICT
     ?fun_ref_73739320b258991c INLINECALLDICT
     s1 s1 PUSH2
-    true 1 true 1 1 255 DIV
+    DIVR
     254 PUSHPOW2
     s0 s2 PUSH2
-    false 0 false 1 1 0 DIV
+    DIVR
     255 PUSHPOW2
     ADD
     s3 PUSH
     -1 ADD
     <{
       s2 s1 PUXC
-      true 2 true 1 1 241 DIV
+      DIVR
       s1 s1 PUXC
       ADD
       s3 PUSH
       -1 ADD
       s4 s4 XCPU
-      true 0 false 1 1 0 DIV
+      DIVR
       s1 PUSH
       ADD
     }> PUSHCONT
@@ -769,13 +769,13 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s1 POP
     s2 POP
     s0 PUSH
-    false 1 true 1 1 11 DIV
+    DIVR
     s1 s2 XCHG
     ADD
     s2 PUSH
     ROTREV
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 11 DIV
+    DIVR
+    DIVR
     SUB
     ?fun_ref_5d3a4c29b0035181 INLINECALLDICT
     ?fun_ref_8a8385f8d78f60b7 INLINECALLDICT
@@ -787,10 +787,10 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     ?fun_ref_5ba78fa4ab4ec6dc INLINECALLDICT
     7 LSHIFT
     ?fun_ref_494e543f112ad30c INLINECALLDICT
-    false 1 true 1 1 6 DIV
+    DIVR
     7 LSHIFT
     ?fun_ref_5ba78fa4ab4ec6dc INLINECALLDICT
-    false 1 true 1 1 5 DIV
+    DIVR
     ?fun_ref_cdb28b381a5130bf INLINECALLDICT
     ?fun_ref_da70c8217d8f9a46 INLINECALLDICT
     ?fun_ref_5a712c8e35fef248 INLINECALLDICT
@@ -798,9 +798,9 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     RANDU256
     8 RSHIFT
     ?fun_ref_5a712c8e35fef248 INLINECALLDICT
-    false 1 true 1 1 3 DIV
+    DIVR
     ?fun_ref_f8345f3d64016266 INLINECALLDICT
-    false 1 true 1 1 3 DIV
+    DIVR
   }>
   ?fun_ref_0318d2f33529c0c6 PROCREF:<{
     s0 PUSH
@@ -829,7 +829,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     1 RSHIFT
     ROT
     SUB
-    true 2 true 1 1 255 DIV
+    DIVR
     36 PUSHINT
     ?fun_ref_fbd4cc263c208ffd INLINECALLDICT
     s0 s1 XCHG
@@ -843,16 +843,16 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     true 2 true 3 1 6 DIV
     1 LSHIFT
     s1 s4 PUXC
-    true 1 true 1 1 126 DIV
+    DIVR
     s1 s2 XCHG
     SUB
     ?fun_ref_2367f6e37b0e6a76 INLINECALLDICT
     248 PUSHPOW2
     s0 s1 XCHG
-    false 1 true 1 1 8 DIV
+    DIVR
     SUB
     s0 s1 XCHG
-    false 1 true 1 1 7 DIV
+    DIVR
     s0 s2 XCHG
     3 PUSHINT
     AND
@@ -866,12 +866,12 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     false 1 true 3 1 247 DIV
     ?fun_ref_2051d9d821c3f770 INLINECALLDICT
     s0 POP
-    true 1 true 1 1 246 DIV
+    DIVR
     ?fun_ref_88faf969245bcd15 INLINECALLDICT
     9 PUSHINT
     s2 PUSH
     SUB
-    false 1 false 1 1 0 DIV
+    DIVR
     248 PUSHINT
     ROT
     ADD
@@ -899,7 +899,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s0 s3 XCHG
     ADD
     s1 s2 XCHG
-    true 0 false 1 1 0 DIV
+    DIVR
     11 ADD
     s0 PUSH
     5 PUSHINT
@@ -930,7 +930,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s0 s3 XCHG2
     ADD
     s1 s2 XCHG
-    true 2 true 1 1 255 DIV
+    DIVR
     18 PUSHINT
     ?fun_ref_afe5ab170f89ef23 INLINECALLDICT
   }>
@@ -940,7 +940,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
   }>
   ?fun_ref_2367f6e37b0e6a76 PROCREF:<{
     s0 s0 PUSH2
-    true 1 true 1 1 255 DIV
+    DIVR
     251 PUSHPOW2
     33 PUSHINT
     250 LSHIFT
@@ -950,7 +950,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       s1 s2 XCPU
       SUB
       s0 s5 s5 PU2XC
-      true 2 true 1 1 235 DIV
+      DIVR
       SUB
     }> PUSHCONT
     REPEAT
@@ -958,46 +958,46 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     3 PUSHINT
     254 LSHIFT
     s2 s3 PUXC
-    true 2 true 1 1 239 DIV
+    DIVR
     SUB
     s2 PUSH
     1 RSHIFT
     s2 PUSH
-    false 1 true 1 1 9 DIV
+    DIVR
     s1 s2 XCHG
     SUB
     s1 s2 XCHG
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 8 DIV
+    DIVR
+    DIVR
     ADD
     s0 s0 PUSH2
-    true 1 true 1 1 255 DIV
+    DIVR
     s0 PUSH
-    false 1 true 1 1 8 DIV
+    DIVR
     255 PUSHPOW2
     ADD
     s2 PUSH
     1 RSHIFT
     s2 s1 PUSH2
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 7 DIV
+    DIVR
+    DIVR
     s1 s3 XCHG
     SUB
     s1 PUSH
     1 RSHIFT
     s0 s2 s5 XCPUXC
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 7 DIV
+    DIVR
+    DIVR
     SUB
     7 PUSHINT
     3 PUSHINT
     <{
       s2 s2 PUSH2
-      true 1 true 1 1 255 DIV
+      DIVR
       s3 s4 PUXC
-      true 1 true 1 1 255 DIV
+      DIVR
       s1 PUSH
-      false 1 false 1 1 0 DIV
+      DIVR
       s1 s3 XCHG
       SUB
       s0 s2 XCHG
@@ -1038,40 +1038,40 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s4 PUSH
     true 2 true 3 1 255 DIV
     s5 PUSH
-    true 2 true 1 1 6 DIV
+    DIVR
     s2 s5 XCPU
     true 2 true 3 1 255 DIV
     s0 s6 XCHG2
-    true 2 true 1 1 6 DIV
+    DIVR
     s0 s6 XCHG
     SGN
     s1 s3 PUSH2
-    true 1 true 1 1 255 DIV
+    DIVR
     s0 s3 XCHG2
     SUB
-    false 1 true 1 1 3 DIV
+    DIVR
     s5 s4 PUSH2
-    true 1 true 1 1 255 DIV
+    DIVR
     SUB
-    false 1 true 1 1 2 DIV
+    DIVR
     s1 PUSH
     SUB
     s1 s2 XCHG
     MUL
     s4 s4 PUXC
-    true 1 true 1 1 255 DIV
+    DIVR
     s0 s5 XCHG2
     SUB
-    false 1 true 1 1 3 DIV
+    DIVR
     s4 s2 XCHG2
-    true 1 true 1 1 255 DIV
+    DIVR
     ADD
-    false 1 true 1 1 2 DIV
+    DIVR
     SUB
   }>
   ?fun_ref_318ac84049047cbe PROCREF:<{
     s0 s0 PUSH2
-    true 1 true 1 1 255 DIV
+    DIVR
     251 PUSHPOW2
     33 PUSHINT
     250 LSHIFT
@@ -1081,7 +1081,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       s1 s2 XCPU
       SUB
       s0 s5 s5 PU2XC
-      true 2 true 1 1 235 DIV
+      DIVR
       SUB
     }> PUSHCONT
     REPEAT
@@ -1089,41 +1089,41 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     3 PUSHINT
     254 LSHIFT
     s2 s3 PUXC
-    true 2 true 1 1 239 DIV
+    DIVR
     SUB
     s2 PUSH
     1 RSHIFT
     s2 PUSH
-    false 1 true 1 1 9 DIV
+    DIVR
     s1 s2 XCHG
     SUB
     s1 s2 XCHG
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 8 DIV
+    DIVR
+    DIVR
     ADD
     s0 s0 PUSH2
-    true 1 true 1 1 255 DIV
+    DIVR
     s0 PUSH
-    false 1 true 1 1 8 DIV
+    DIVR
     255 PUSHPOW2
     ADD
     s2 PUSH
     1 RSHIFT
     s2 s1 PUSH2
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 7 DIV
+    DIVR
+    DIVR
     s1 s3 XCHG
     SUB
     s1 PUSH
     1 RSHIFT
     s0 s2 s5 XCPUXC
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 7 DIV
+    DIVR
+    DIVR
     SUB
   }>
   ?fun_ref_3449c496cc175763 PROCREF:<{
     s0 s0 PUSH2
-    true 1 true 1 1 255 DIV
+    DIVR
     251 PUSHPOW2
     41 PUSHINT
     250 LSHIFT
@@ -1133,7 +1133,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       s1 s2 XCPU
       SUB
       s0 s5 s5 PU2XC
-      true 2 true 1 1 239 DIV
+      DIVR
       SUB
     }> PUSHCONT
     REPEAT
@@ -1141,22 +1141,22 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     3 PUSHINT
     254 LSHIFT
     s2 s3 PUXC
-    true 2 true 1 1 243 DIV
+    DIVR
     SUB
     s2 PUSH
     1 RSHIFT
     s2 PUSH
-    false 1 true 1 1 5 DIV
+    DIVR
     s1 s2 XCHG
     SUB
     s1 s2 XCHG
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 4 DIV
+    DIVR
+    DIVR
     ADD
   }>
   ?fun_ref_41d3f2ea6d56e172 PROCREF:<{
     s0 s0 PUSH2
-    true 1 true 1 1 255 DIV
+    DIVR
     251 PUSHPOW2
     33 PUSHINT
     250 LSHIFT
@@ -1166,7 +1166,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       s1 s2 XCPU
       SUB
       s0 s5 s5 PU2XC
-      true 2 true 1 1 235 DIV
+      DIVR
       SUB
     }> PUSHCONT
     REPEAT
@@ -1174,25 +1174,25 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     3 PUSHINT
     254 LSHIFT
     s2 s3 PUXC
-    true 2 true 1 1 239 DIV
+    DIVR
     SUB
     s2 PUSH
     1 RSHIFT
     s2 PUSH
-    false 1 true 1 1 9 DIV
+    DIVR
     s1 s2 XCHG
     SUB
     s1 s2 XCHG
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 8 DIV
+    DIVR
+    DIVR
     ADD
   }>
   ?fun_ref_48cab849e3521372 PROCREF:<{
     ?fun_ref_1b1ae470b4614553 INLINECALLDICT
     ?fun_ref_2051d9d821c3f770 INLINECALLDICT
     s0 POP
-    true 2 true 1 1 255 DIV
-    false 1 true 1 1 3 DIV
+    DIVR
+    DIVR
     s0 s1 XCHG
     5140487830366106860412008603913034462883915832139695448455767612111363481357 PUSHINT
     MUL
@@ -1203,7 +1203,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     255 PUSHPOW2
     s1 PUSH
     s0 PUSH
-    true 1 true 1 1 254 DIV
+    DIVR
     SUB
     s0 PUSH
     <{
@@ -1219,7 +1219,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     255 PUSHNEGPOW2
     s0 s1 XCHG
     SUB
-    true 2 true 1 1 255 DIV
+    DIVR
     -1 MULCONST
     ?fun_ref_5c788425937a7d28 INLINECALLDICT
   }>
@@ -1240,7 +1240,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       255 PUSHPOW2
       SUB
       7027 PUSHINT
-      true 1 true 1 1 15 DIV
+      DIVR
       s0 PUSH
       ABS
       s2 s7 PUSH2
@@ -1248,14 +1248,14 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       s1 s7 PUSH2
       SUB
       s1 s1 PUSH2
-      true 1 true 1 1 251 DIV
+      DIVR
       s1 s8 PUSH2
-      true 1 true 1 1 15 DIV
+      DIVR
       s3 s8 XCPU
-      true 1 true 1 1 15 DIV
+      DIVR
       s1 s3 XCHG
       SUB
-      true 1 true 1 1 251 DIV
+      DIVR
       ADD
       237 RSHIFT
       s4 PUSH
@@ -1263,20 +1263,20 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       s0 PUSH
       82 LESSINT
       s2 s4 XCPU
-      false 0 false 1 0 0 DIV
+      DIV
       16 LESSINT
       s1 s2 XCHG
       AND
       <{
         s8 POP
         s1 PUSH
-        true 2 true 1 1 251 DIV
+        DIVR
         s0 s7 XCHG
         -1 GTINT
         <{
           s6 s6 PUSH2
-          true 1 true 1 1 255 DIV
-          false 1 true 1 1 1 DIV
+          DIVR
+          DIVR
           -1 MULCONST
           ?fun_ref_eabdf5efadfce810 INLINECALLDICT
           4 LSHIFT
@@ -1318,7 +1318,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     255 PUSHPOW2
     s2 PUSH
     s0 PUSH
-    true 1 true 1 1 254 DIV
+    DIVR
     SUB
     255 PUSHPOW2
     ?fun_ref_d78034247225d612 INLINECALLDICT
@@ -1326,9 +1326,9 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s0 s1 XCHG
     SUB
     s1 s2 XCHG
-    true 2 true 1 1 255 DIV
+    DIVR
     ?fun_ref_5c788425937a7d28 INLINECALLDICT
-    false 1 true 1 1 0 DIV
+    DIVR
     ADD
   }>
   ?fun_ref_5c788425937a7d28 PROCREF:<{
@@ -1338,28 +1338,28 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     true 1 true 3 1 4 DIV
     s1 s2 XCHG
     ADD
-    false 1 true 1 1 4 DIV
+    DIVR
     ADD
   }>
   ?fun_ref_5d3a4c29b0035181 PROCREF:<{
     s1 s1 PUSH2
-    true 1 true 1 1 255 DIV
+    DIVR
     254 PUSHPOW2
     s0 s2 PUSH2
-    false 0 false 1 1 0 DIV
+    DIVR
     255 PUSHPOW2
     ADD
     s3 PUSH
     -1 ADD
     <{
       s2 s1 PUXC
-      true 2 true 1 1 241 DIV
+      DIVR
       s1 s1 PUXC
       ADD
       s3 PUSH
       -1 ADD
       s4 s4 XCPU
-      true 0 false 1 1 0 DIV
+      DIVR
       s1 PUSH
       ADD
     }> PUSHCONT
@@ -1367,13 +1367,13 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s1 POP
     s2 POP
     s0 PUSH
-    false 1 true 1 1 11 DIV
+    DIVR
     s1 s2 XCHG
     ADD
     s2 PUSH
     ROTREV
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 11 DIV
+    DIVR
+    DIVR
     SUB
   }>
   ?fun_ref_6405ea4d1c38698c PROCREF:<{
@@ -1381,7 +1381,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
   }>
   ?fun_ref_6c2cc5b04a23eeb2 PROCREF:<{
     s0 PUSH
-    false 1 true 1 1 231 DIV
+    DIVR
     ?fun_ref_8a8385f8d78f60b7 INLINECALLDICT
     s1 s3 PUSH2
     true 1 true 3 1 255 DIV
@@ -1398,35 +1398,35 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s1 s2 XCHG
     ADD
     s4 PUSH
-    true 2 true 1 1 254 DIV
+    DIVR
     s2 s2 s6 XCPUXC
-    true 0 false 1 1 0 DIV
+    DIVR
     s1 s3 XCHG
     SUB
-    false 1 true 1 1 248 DIV
+    DIVR
     s0 s2 XCHG
     6 LSHIFT
     s1 s2 XCHG
     ADD
     18 PUSHINT
     s1 s1 PUSH2
-    true 1 true 1 1 255 DIV
+    DIVR
     254 PUSHPOW2
     s0 s2 PUSH2
-    false 0 false 1 1 0 DIV
+    DIVR
     255 PUSHPOW2
     ADD
     s3 PUSH
     -1 ADD
     <{
       s2 s1 PUXC
-      true 2 true 1 1 241 DIV
+      DIVR
       s1 s1 PUXC
       ADD
       s3 PUSH
       -1 ADD
       s4 s4 XCPU
-      true 0 false 1 1 0 DIV
+      DIVR
       s1 PUSH
       ADD
     }> PUSHCONT
@@ -1434,23 +1434,23 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s1 POP
     s2 POP
     s0 PUSH
-    false 1 true 1 1 11 DIV
+    DIVR
     s1 s2 XCHG
     ADD
     s2 PUSH
     ROTREV
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 11 DIV
+    DIVR
+    DIVR
     SUB
   }>
   ?fun_ref_7134bd42618a8d1e PROCREF:<{
     s0 PUSH
-    false 1 true 1 1 255 DIV
+    DIVR
     s0 PUSH
     <{
       255 PUSHNEGPOW2
       ROT
-      true 2 true 1 1 255 DIV
+      DIVR
     }> PUSHCONT
     <{
       s0 s1 XCHG
@@ -1468,30 +1468,30 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     ROTREV
     ADD
     SWAP2
-    true 1 true 1 1 121 DIV
+    DIVR
     ADD
-    false 1 true 1 1 5 DIV
+    DIVR
     ADD
   }>
   ?fun_ref_73739320b258991c PROCREF:<{
     s1 s1 PUSH2
-    true 1 true 1 1 255 DIV
+    DIVR
     254 PUSHPOW2
     s0 s2 PUSH2
-    false 0 false 1 1 0 DIV
+    DIVR
     255 PUSHPOW2
     ADD
     s3 PUSH
     -1 ADD
     <{
       s2 s1 PUXC
-      true 2 true 1 1 245 DIV
+      DIVR
       s1 s1 PUXC
       ADD
       s3 PUSH
       -1 ADD
       s4 s4 XCPU
-      true 0 false 1 1 0 DIV
+      DIVR
       s1 PUSH
       ADD
     }> PUSHCONT
@@ -1499,18 +1499,18 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s1 POP
     s2 POP
     s0 PUSH
-    false 1 true 1 1 7 DIV
+    DIVR
     s1 s2 XCHG
     ADD
     s2 PUSH
     ROTREV
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 7 DIV
+    DIVR
+    DIVR
     SUB
   }>
   ?fun_ref_7753d4b96608d450 PROCREF:<{
     s1 s1 PUSH2
-    true 1 true 1 1 254 DIV
+    DIVR
     s1 PUSH
     1 LSHIFT
     5 ADD
@@ -1522,7 +1522,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       s1 s3 XCPU
       SUB
       s0 s4 s5 PU2XC
-      true 2 true 1 1 238 DIV
+      DIVR
       ADD
     }> PUSHCONT
     REPEAT
@@ -1531,16 +1531,16 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     3 PUSHINT
     254 LSHIFT
     s1 s4 PUXC
-    true 2 true 1 1 242 DIV
+    DIVR
     s1 s2 XCHG
     ADD
     s1 PUSH
-    false 1 true 1 1 6 DIV
+    DIVR
     ADD
     s2 PUSH
     ROTREV
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 6 DIV
+    DIVR
+    DIVR
     SUB
   }>
   ?fun_ref_811ebbe381228c78 PROCREF:<{
@@ -1594,12 +1594,12 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     ?fun_ref_2051d9d821c3f770 INLINECALLDICT
     s0 POP
     s1 s3 XCHG
-    true 1 true 1 1 255 DIV
+    DIVR
     ?fun_ref_88faf969245bcd15 INLINECALLDICT
     9 PUSHINT
     ROT
     SUB
-    false 1 false 1 1 0 DIV
+    DIVR
     s0 s1 XCHG
     -1 PUSHINT
     s0 s1 XCHG
@@ -1612,14 +1612,14 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     SUB
     ?fun_ref_2051d9d821c3f770 INLINECALLDICT
     s0 POP
-    true 1 true 1 1 7 DIV
+    DIVR
     s0 s1 XCHG
-    false 1 true 1 1 7 DIV
+    DIVR
     ADD
   }>
   ?fun_ref_88faf969245bcd15 PROCREF:<{
     s0 s0 PUSH2
-    true 1 true 1 1 254 DIV
+    DIVR
     251 PUSHPOW2
     39 PUSHINT
     250 LSHIFT
@@ -1629,7 +1629,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       s1 s2 XCPU
       SUB
       s0 s5 s5 PU2XC
-      true 2 true 1 1 238 DIV
+      DIVR
       ADD
     }> PUSHCONT
     REPEAT
@@ -1637,21 +1637,21 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     3 PUSHINT
     254 LSHIFT
     s2 s3 PUXC
-    true 2 true 1 1 242 DIV
+    DIVR
     ADD
     s2 PUSH
-    false 1 true 1 1 3 DIV
+    DIVR
     s1 PUSH
     SUB
     s0 PUSH
     1 RSHIFT
     s4 s3 PUXC
-    true 1 true 1 1 255 DIV
-    false 1 true 1 1 1 DIV
+    DIVR
+    DIVR
     s1 s2 XCHG
     ADD
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 1 DIV
+    DIVR
+    DIVR
     SUB
   }>
   ?fun_ref_8a8385f8d78f60b7 PROCREF:<{
@@ -1664,7 +1664,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     MUL
     48 PUSHPOW2
     ADD
-    true 2 true 1 1 87 DIV
+    DIVR
     s0 PUSH
     3073 PUSHINT
     MUL
@@ -1673,7 +1673,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     3 PUSHINT
     128 LSHIFT
     ADD
-    true 2 true 1 1 58 DIV
+    DIVR
     13 ADD
     33226912 PUSHINT
     5232641 PUSHINT
@@ -1725,7 +1725,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     true 2 true 3 1 6 DIV
     1 LSHIFT
     s1 s4 PUXC
-    true 1 true 1 1 126 DIV
+    DIVR
     s1 s2 XCHG
     SUB
     ?fun_ref_b03a280997c9cc26 INLINECALLDICT
@@ -1737,7 +1737,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       -1 MULCONST
     }> PUSHCONT
     IF
-    true 2 true 1 1 247 DIV
+    DIVR
   }>
   ?fun_ref_aa50613cca252c08 PROCREF:<{
     90942894222941581070058735694432465663348344332098107489693037779484723616546 PUSHINT
@@ -1745,23 +1745,23 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
   }>
   ?fun_ref_afe5ab170f89ef23 PROCREF:<{
     s1 s1 PUSH2
-    true 1 true 1 1 255 DIV
+    DIVR
     254 PUSHPOW2
     s0 s2 PUSH2
-    false 0 false 1 1 0 DIV
+    DIVR
     255 PUSHPOW2
     ADD
     s3 PUSH
     -1 ADD
     <{
       s2 s1 PUXC
-      true 2 true 1 1 241 DIV
+      DIVR
       s1 s1 PUXC
       SUB
       s3 PUSH
       -1 ADD
       s4 s4 XCPU
-      true 0 false 1 1 0 DIV
+      DIVR
       s1 PUSH
       ADD
     }> PUSHCONT
@@ -1769,18 +1769,18 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s1 POP
     s2 POP
     s0 PUSH
-    false 1 true 1 1 11 DIV
+    DIVR
     s1 s2 XCHG
     SUB
     s2 PUSH
     ROTREV
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 11 DIV
+    DIVR
+    DIVR
     ADD
   }>
   ?fun_ref_b03a280997c9cc26 PROCREF:<{
     s0 s0 PUSH2
-    true 1 true 1 1 255 DIV
+    DIVR
     251 PUSHPOW2
     41 PUSHINT
     250 LSHIFT
@@ -1790,7 +1790,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       s1 s2 XCPU
       SUB
       s0 s5 s5 PU2XC
-      true 2 true 1 1 239 DIV
+      DIVR
       SUB
     }> PUSHCONT
     REPEAT
@@ -1798,71 +1798,71 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     3 PUSHINT
     254 LSHIFT
     s2 s3 PUXC
-    true 2 true 1 1 243 DIV
+    DIVR
     SUB
     s2 PUSH
     1 RSHIFT
     s2 PUSH
-    false 1 true 1 1 5 DIV
+    DIVR
     s1 s2 XCHG
     SUB
     s1 s2 XCHG
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 4 DIV
+    DIVR
+    DIVR
     ADD
     s0 s0 PUSH2
-    true 1 true 1 1 255 DIV
+    DIVR
     s0 PUSH
-    false 1 true 1 1 3 DIV
+    DIVR
     256 PUSHNEGPOW2
     ADD
     s2 PUSH
     ROTREV
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 3 DIV
+    DIVR
+    DIVR
     s0 s1 XCHG
     SUB
     s0 s0 PUSH2
-    true 1 true 1 1 255 DIV
-    false 1 true 1 1 1 DIV
+    DIVR
+    DIVR
     256 PUSHNEGPOW2
     ADD
   }>
   ?fun_ref_b2fd74bee4445ab9 PROCREF:<{
     s0 PUSH
-    false 1 true 1 1 231 DIV
+    DIVR
     ?fun_ref_8a8385f8d78f60b7 INLINECALLDICT
     s1 s3 PUSH2
     true 1 true 3 1 255 DIV
-    false 1 true 1 1 249 DIV
+    DIVR
     s1 s2 XCPU
     SUB
     6 LSHIFT
     ADD
     s0 s4 XCHG
-    true 1 true 1 1 255 DIV
+    DIVR
     ADD
     s1 s2 XCHG
-    true 2 true 1 1 254 DIV
+    DIVR
     18 PUSHINT
     s1 s1 PUSH2
-    true 1 true 1 1 255 DIV
+    DIVR
     254 PUSHPOW2
     s0 s2 PUSH2
-    false 0 false 1 1 0 DIV
+    DIVR
     255 PUSHPOW2
     ADD
     s3 PUSH
     -1 ADD
     <{
       s2 s1 PUXC
-      true 2 true 1 1 241 DIV
+      DIVR
       s1 s1 PUXC
       ADD
       s3 PUSH
       -1 ADD
       s4 s4 XCPU
-      true 0 false 1 1 0 DIV
+      DIVR
       s1 PUSH
       ADD
     }> PUSHCONT
@@ -1870,24 +1870,24 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s1 POP
     s2 POP
     s0 PUSH
-    false 1 true 1 1 11 DIV
+    DIVR
     s1 s2 XCHG
     ADD
     s2 PUSH
     ROTREV
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 11 DIV
+    DIVR
+    DIVR
     SUB
   }>
   ?fun_ref_cdb28b381a5130bf PROCREF:<{
     s0 PUSH
-    false 1 true 1 1 248 DIV
+    DIVR
     s0 PUSH
     <{
       SGN
       248 PUSHNEGPOW2
       ROT
-      true 2 true 1 1 255 DIV
+      DIVR
     }> PUSHCONT
     <{
       s0 s1 XCHG
@@ -1895,7 +1895,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     }> PUSHCONT
     IFELSE
     ?fun_ref_b2fd74bee4445ab9 INLINECALLDICT
-    false 1 true 1 1 5 DIV
+    DIVR
     ?fun_ref_aa50613cca252c08 INLINECALLDICT
     s0 POP
     s1 s3 XCHG
@@ -1904,9 +1904,9 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     ADD
     ?fun_ref_6405ea4d1c38698c INLINECALLDICT
     s1 s2 XCHG
-    true 1 true 1 1 5 DIV
+    DIVR
     ADD
-    false 1 true 1 1 6 DIV
+    DIVR
   }>
   ?fun_ref_d78034247225d612 PROCREF:<{
     DUP2
@@ -1938,7 +1938,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     IFELSE
     <{
       s2 s1 s0 PUSH3
-      true 0 false 1 2 0 DIV
+      DIVC
       s1 PUSH
       SUB
       1 RSHIFT
@@ -1952,11 +1952,11 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
   }>
   ?fun_ref_da70c8217d8f9a46 PROCREF:<{
     s0 PUSH
-    false 1 true 1 1 248 DIV
+    DIVR
     <{
       248 PUSHNEGPOW2
       s0 s1 XCHG
-      true 2 true 1 1 255 DIV
+      DIVR
       0 PUSHINT
     }> PUSHCONT
     <{
@@ -1972,14 +1972,14 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s1 s3 XCHG
     MUL
     s0 s2 XCHG
-    false 1 true 1 1 5 DIV
+    DIVR
     s1 s2 XCHG
     SUB
     ?fun_ref_6405ea4d1c38698c INLINECALLDICT
     s1 s2 XCHG
-    true 1 true 1 1 5 DIV
+    DIVR
     SUB
-    false 1 true 1 1 6 DIV
+    DIVR
   }>
   ?fun_ref_e11f9343f87d5b4b PROCREF:<{
     ?fun_ref_aa50613cca252c08 INLINECALLDICT
@@ -1987,7 +1987,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     true 2 true 3 1 6 DIV
     1 LSHIFT
     s1 s4 PUXC
-    true 1 true 1 1 126 DIV
+    DIVR
     s1 s2 XCHG
     SUB
     ?fun_ref_b03a280997c9cc26 INLINECALLDICT
@@ -2000,7 +2000,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     }> PUSHCONT
     IF
     s0 s1 XCHG
-    true 2 true 1 1 247 DIV
+    DIVR
   }>
   ?fun_ref_e9b023c94244cb2e PROCREF:<{
     115641670674223639132965820642403718536242645001775371762318060545014644837101 PUSHINT
@@ -2012,14 +2012,14 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     true 2 false 3 1 0 DIV
     1 LSHIFT
     s1 s4 PUXC
-    true 1 true 1 1 126 DIV
+    DIVR
     s1 s2 XCHG
     SUB
     ?fun_ref_88faf969245bcd15 INLINECALLDICT
     9 PUSHINT
     s2 PUSH
     SUB
-    false 1 false 1 1 0 DIV
+    DIVR
     248 PUSHINT
     ROT
     ADD
@@ -2036,7 +2036,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     -3769 PUSHINT
     MUL
     ADD
-    false 1 true 1 1 12 DIV
+    DIVR
     ADD
     s0 s1 XCHG
     3563114646320977386603103333812068872452913448227778071188132859183498739150 PUSHINT
@@ -2057,23 +2057,23 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
   }>
   ?fun_ref_fbd4cc263c208ffd PROCREF:<{
     s1 s1 PUSH2
-    true 1 true 1 1 255 DIV
+    DIVR
     254 PUSHPOW2
     s0 s2 PUSH2
-    false 0 false 1 1 0 DIV
+    DIVR
     255 PUSHPOW2
     ADD
     s3 PUSH
     -1 ADD
     <{
       s2 s1 PUXC
-      true 2 true 1 1 247 DIV
+      DIVR
       s1 s1 PUXC
       SUB
       s3 PUSH
       -1 ADD
       s4 s4 XCPU
-      true 0 false 1 1 0 DIV
+      DIVR
       s1 PUSH
       ADD
     }> PUSHCONT
@@ -2083,13 +2083,13 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s0 PUSH
     1 RSHIFT
     s0 s1 XCHG
-    false 1 true 1 1 5 DIV
+    DIVR
     s1 s2 XCHG
     SUB
     s2 PUSH
     ROTREV
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 4 DIV
+    DIVR
+    DIVR
     ADD
   }>
 }END>c"

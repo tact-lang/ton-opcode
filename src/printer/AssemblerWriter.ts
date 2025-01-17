@@ -109,6 +109,45 @@ export class AssemblerWriter {
         return null;
     }
 
+    // /  -> false 0 false 1 0 0 DIV -> integer division                    -> DIV
+    // ~/ -> false 1 true 1 1 0 DIV  -> integer division (round)            -> DIVR
+    // ^/ -> false 1 true 1 2 0 DIV  -> integer division (ceil)             -> DIVC
+    // %  -> false 1 true 2 0 0 DIV  -> integer reduction by modulo (floor) -> MOD
+    // ~% -> false 1 true 2 1 0 DIV  -> integer reduction by modulo (round) -> MODR
+    // ^% -> false 1 true 2 2 0 DIV  -> integer reduction by modulo (ceil)  -> MODC
+    if (node.opcode === 'DIV') {
+      const fourthArg = (node.arguments[3] as ScalarNode)?.value
+      if (fourthArg === undefined) {
+        return null;
+      }
+      const fifthArg = (node.arguments[4] as ScalarNode)?.value
+      if (fifthArg === undefined) {
+        return null;
+      }
+      if (fourthArg === 1) {
+        if (fifthArg === 0) {
+          return "DIV";
+        }
+        if (fifthArg === 1) {
+          return "DIVR";
+        }
+        if (fifthArg === 2) {
+          return "DIVC";
+        }
+      }
+      if (fourthArg === 2) {
+        if (fifthArg === 0) {
+          return "MOD";
+        }
+        if (fifthArg === 1) {
+          return "MODR";
+        }
+        if (fifthArg === 2) {
+          return "MODC";
+        }
+      }
+    }
+
     if (node.opcode === 'SETCP') {
       return `SETCP${firstArg}`;
     }
