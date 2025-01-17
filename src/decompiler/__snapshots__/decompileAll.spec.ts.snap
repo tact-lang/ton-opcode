@@ -900,7 +900,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     ADD
     s1 s2 XCHG
     DIVR
-    11 ADD
+    11 ADDCONST
     s0 PUSH
     5 PUSHINT
     DIVMOD
@@ -1220,7 +1220,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s0 s1 XCHG
     SUB
     DIVR
-    -1 MULCONST
+    NEGATE
     ?fun_ref_5c788425937a7d28 INLINECALLDICT
   }>
   ?fun_ref_5a712c8e35fef248 PROCREF:<{
@@ -1277,7 +1277,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
           s6 s6 PUSH2
           DIVR
           DIVR
-          -1 MULCONST
+          NEGATE
           ?fun_ref_eabdf5efadfce810 INLINECALLDICT
           4 LSHIFT
           GREATER
@@ -1674,7 +1674,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     128 LSHIFT
     ADD
     DIVR
-    13 ADD
+    13 ADDCONST
     33226912 PUSHINT
     5232641 PUSHINT
     s2 PUSH
