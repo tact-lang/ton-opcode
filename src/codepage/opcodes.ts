@@ -623,10 +623,17 @@ CP0Auto.insertHex('d723', 16, { code: 'SDSKIPLAST' });
 CP0Auto.insertHex('d724', 16, { code: 'SDSUBSTR' });
 // 14099712 (DUMMY)
 CP0Auto.insertHex('d726', 16, { code: 'SDBEGINSX' });
-CP0Auto.insertHex('d727', 16, { code: 'SDBEGINSXQ' });
-CP0Auto.insertHex('d728', 13, (slice) => {
-    let args = slice.loadUint(8);
-    return { code: 'SDBEGINS', args: [args] };
+CP0Auto.insertHex('d72C', 16, (slice) => {
+    let len = slice.loadUint(8);
+    return { code: 'SDBEGINS', args: [len] };
+});
+CP0Auto.insertHex('D728', 16, (slice) => {
+    let len = slice.loadUint(8);
+    return { code: 'SDBEGINS', args: [len] };
+});
+CP0Auto.insertHex('d72E', 16, (slice) => {
+    let len = slice.loadUint(8);
+    return { code: 'SDBEGINSQ', args: [len] };
 });
 CP0Auto.insertHex('d730', 16, { code: 'SCUTFIRST' });
 CP0Auto.insertHex('d731', 16, { code: 'SSKIPFIRST' });
