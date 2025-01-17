@@ -718,7 +718,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     }> PUSHCONT
     REPEAT
     5 PUSHINT
-    false 0 false 3 0 0 DIV
+    DIVMOD
     1 PUSHINT
     s0 s1 XCHG
     <{
@@ -840,7 +840,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
   ?fun_ref_0f0ebbb66387fc57 PROCREF:<{
     ?fun_ref_aa50613cca252c08 INLINECALLDICT
     ROTREV
-    true 2 true 3 1 6 DIV
+    DIVMODR
     1 LSHIFT
     s1 s4 PUXC
     DIVR
@@ -863,7 +863,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     REPEAT
   }>
   ?fun_ref_14c8cb933d84cae0 PROCREF:<{
-    false 1 true 3 1 247 DIV
+    DIVMODR
     ?fun_ref_2051d9d821c3f770 INLINECALLDICT
     s0 POP
     DIVR
@@ -903,7 +903,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     11 ADD
     s0 PUSH
     5 PUSHINT
-    false 0 false 3 0 0 DIV
+    DIVMOD
     1 PUSHINT
     s0 s1 XCHG
     <{
@@ -1010,7 +1010,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s1 PUSH
     ABS
     ?fun_ref_0e3f3b547d0a4314 INLINECALLDICT
-    true 2 true 3 1 1 DIV
+    DIVMODR
     1 LSHIFT
     ROT
     ADD
@@ -1036,11 +1036,11 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     }> PUSHCONT
     REPEAT
     s4 PUSH
-    true 2 true 3 1 255 DIV
+    DIVMODR
     s5 PUSH
     DIVR
     s2 s5 XCPU
-    true 2 true 3 1 255 DIV
+    DIVMODR
     s0 s6 XCHG2
     DIVR
     s0 s6 XCHG
@@ -1335,7 +1335,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     ?fun_ref_b2fd74bee4445ab9 INLINECALLDICT
     ?fun_ref_6405ea4d1c38698c INLINECALLDICT
     s1 s2 XCHG
-    true 1 true 3 1 4 DIV
+    DIVMODR
     s1 s2 XCHG
     ADD
     DIVR
@@ -1384,17 +1384,17 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     DIVR
     ?fun_ref_8a8385f8d78f60b7 INLINECALLDICT
     s1 s3 PUSH2
-    true 1 true 3 1 255 DIV
+    DIVMODR
     1 RSHIFT
     s1 s2 XCPU
     SUB
     s2 s5 XCHG2
-    true 1 true 3 1 255 DIV
+    DIVMODR
     1 RSHIFT
     s0 s3 XCHG
     ADD
     s4 s4 XCPU
-    true 2 true 3 1 254 DIV
+    DIVMODR
     s1 s2 XCHG
     ADD
     s4 PUSH
@@ -1461,7 +1461,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     ?fun_ref_aa50613cca252c08 INLINECALLDICT
     ?fun_ref_6405ea4d1c38698c INLINECALLDICT
     s1 s4 XCHG
-    true 1 true 3 1 5 DIV
+    DIVMODR
     s5 s4 PUXC
     MUL
     ADD
@@ -1565,15 +1565,15 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     248 PUSHINT
     SUB
     s2 PUSH
-    true 1 true 3 1 247 DIV
+    DIVMODR
     s2 s3 XCHG2
-    true 1 true 3 0 255 DIV
+    DIVMOD
     247 RSHIFT
     s0 s1 XCHG
-    false 1 true 3 1 247 DIV
+    DIVMODR
     s1 s4 XCHG
     ADD
-    false 1 true 3 1 247 DIV
+    DIVMODR
     9 LSHIFT
     ROT
     ADD
@@ -1679,7 +1679,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     5232641 PUSHINT
     s2 PUSH
     5 PUSHINT
-    false 0 false 3 0 0 DIV
+    DIVMOD
     51 PUSHINT
     s5 PUSH
     SUB
@@ -1722,7 +1722,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
   ?fun_ref_8bf58ecefe2e19cb PROCREF:<{
     ?fun_ref_aa50613cca252c08 INLINECALLDICT
     ROTREV
-    true 2 true 3 1 6 DIV
+    DIVMODR
     1 LSHIFT
     s1 s4 PUXC
     DIVR
@@ -1833,7 +1833,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     DIVR
     ?fun_ref_8a8385f8d78f60b7 INLINECALLDICT
     s1 s3 PUSH2
-    true 1 true 3 1 255 DIV
+    DIVMODR
     DIVR
     s1 s2 XCPU
     SUB
@@ -1984,7 +1984,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
   ?fun_ref_e11f9343f87d5b4b PROCREF:<{
     ?fun_ref_aa50613cca252c08 INLINECALLDICT
     ROTREV
-    true 2 true 3 1 6 DIV
+    DIVMODR
     1 LSHIFT
     s1 s4 PUXC
     DIVR
@@ -2009,7 +2009,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     ?fun_ref_2051d9d821c3f770 INLINECALLDICT
     ROTREV
     8 PUSHINT
-    true 2 false 3 1 0 DIV
+    DIVMODR
     1 LSHIFT
     s1 s4 PUXC
     DIVR
@@ -2030,7 +2030,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
   }>
   ?fun_ref_ec287b9511e936b8 PROCREF:<{
     ?fun_ref_1b1ae470b4614553 INLINECALLDICT
-    false 1 true 3 1 3 DIV
+    DIVMODR
     9 LSHIFT
     s2 PUSH
     -3769 PUSHINT
