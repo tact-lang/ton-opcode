@@ -100,5 +100,7 @@ export function opcodeToString(op: OpCode): string {
         return `${op.args[0]} DEBUG`;
     }
 
+
+
     return `${op.args.join(' ')} ${op.code}`;
 }

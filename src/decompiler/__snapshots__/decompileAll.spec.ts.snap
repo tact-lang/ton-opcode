@@ -3497,10 +3497,7 @@ exports[`decompileAll should decompile wallet v5 1`] = `
       }> PUSHCONT
       <{
         s0 s1 XCHG
-        32 SDBEGINS
-        6 PUSHINT
-        s1 s14 XCHG
-        s3 s6 s12 XCHG3
+        x{0EC3C86D9_} SDBEGINS
         s0 PUSH
         SBITS
         8 EQINT
@@ -3541,16 +3538,14 @@ exports[`decompileAll should decompile wallet v5 1`] = `
     }> PUSHCONT
     IFJMP
     AGAINEND
-    8 SDBEGINS
-    s1 s4 XCHG
+    x{029_} SDBEGINSQ
     s0 PUSH
     <{
       0 PUSHINT
     }> PUSHCONT
     <{
       s0 s1 XCHG
-      8 SDBEGINS
-      s1 s12 XCHG
+      x{039_} SDBEGINSQ
       s1 s2 XCHG
     }> PUSHCONT
     IFELSE
@@ -3608,8 +3603,7 @@ exports[`decompileAll should decompile wallet v5 1`] = `
     s0 PUSH
     SREFS
     s0 POP
-    8 SDBEGINS
-    s4 PUSH
+    x{049_} SDBEGINSQ
     <{
       s1 PUSH
       146 THROWIFNOT

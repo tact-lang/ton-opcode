@@ -105,6 +105,7 @@ export class AssemblerWriter {
 
   maybeSpecificWrite(node: InstructionNode): string | null {
     const firstArg = (node.arguments[0] as ScalarNode)?.value
+    const secondArg = (node.arguments[1] as ScalarNode)?.value;
     if (firstArg === undefined) {
         return null;
     }
@@ -135,6 +136,10 @@ export class AssemblerWriter {
       if (firstArg === 9) {
         return 'CONFIGROOT';
       }
+    }
+
+    if(node.opcode == "SDBEGINS" || node.opcode == "SDBEGINSQ") {
+      return `x{${secondArg}} ${node.opcode}`;
     }
 
     if (node.opcode === 'ADDCONST') {

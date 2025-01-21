@@ -75,8 +75,8 @@ export type OpCodeWithArgs =
     | { code: 'PLDSLICE', args: [number] }
     | { code: 'LDSLICEQ', args: [number] }
     | { code: 'PLDSLICEQ', args: [number] }
-    | { code: 'SDBEGINS', args: [number] }
-    | { code: 'SDBEGINSQ', args: [number] }
+    | { code: 'SDBEGINS', args: [number, string] }
+    | { code: 'SDBEGINSQ', args: [number, string] }
     | { code: 'PLDREFIDX', args: [number] }
     | { code: 'CALLXARGS', args: [number, number] }
     | { code: 'JMPXARGS', args: [number] }

@@ -622,18 +622,18 @@ CP0Auto.insertHex('d722', 16, { code: 'SDCUTLAST' });
 CP0Auto.insertHex('d723', 16, { code: 'SDSKIPLAST' });
 CP0Auto.insertHex('d724', 16, { code: 'SDSUBSTR' });
 // 14099712 (DUMMY)
-CP0Auto.insertHex('d726', 16, { code: 'SDBEGINSX' });
-CP0Auto.insertHex('d72C', 16, (slice) => {
-    let len = slice.loadUint(8);
-    return { code: 'SDBEGINS', args: [len] };
+CP0Auto.insertHex('D726', 16, { code: 'SDBEGINSX' });
+CP0Auto.insertHex('D727', 16, { code: 'SDBEGINSXQ' });
+
+CP0Auto.insertHex('D72A', 14, (slice) => {
+    const len = slice.loadUint(7);
+    const bits = slice.loadBits(8 * len + 3);
+    return { code: 'SDBEGINS', args: [len, bits.toString()] };
 });
-CP0Auto.insertHex('D728', 16, (slice) => {
-    let len = slice.loadUint(8);
-    return { code: 'SDBEGINS', args: [len] };
-});
-CP0Auto.insertHex('d72E', 16, (slice) => {
-    let len = slice.loadUint(8);
-    return { code: 'SDBEGINSQ', args: [len] };
+CP0Auto.insertHex('D72E', 14, (slice) => {
+    let len = slice.loadUint(7);
+    const bits = slice.loadBits(8 * len + 3);
+    return { code: 'SDBEGINSQ', args: [len, bits.toString()] };
 });
 CP0Auto.insertHex('d730', 16, { code: 'SCUTFIRST' });
 CP0Auto.insertHex('d731', 16, { code: 'SSKIPFIRST' });
