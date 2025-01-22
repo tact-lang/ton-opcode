@@ -276,8 +276,8 @@ opcodes:
   SDSUBSTR:
   SDBEGINSX:
   SDBEGINSXQ:
-  SDBEGINS:
-  SDBEGINSQ:
+  SDBEGINS: ["int", "string"] # number of bits, bitstring with len = number of bits
+  SDBEGINSQ: ["int", "string"] # number of bits, bitstring with len = number of bits
   SCUTFIRST:
   SSKIPFIRST:
   SCUTLAST:

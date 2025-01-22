@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.019] - 2025-01-22
+
+- Splited decompilation to AST and Writer: PR [#26](https://github.com/tact-lang/ton-opcode/pull/26)
+- Added more aliases: `x ADD => x ADDCONST, -1 ADD => DEC, -1 MUL => NEGATE`. PR [#29](https://github.com/tact-lang/ton-opcode/pull/29)
+- Added support for `SDBEGINS` and `SDBEGINSQ` opcodes. PR [#31](https://github.com/tact-lang/ton-opcode/pull/31)
+
 ## [0.0.18] - 2025-01-05
 
 ### Added
