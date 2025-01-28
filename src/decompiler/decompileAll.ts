@@ -6,8 +6,10 @@ import {debugSymbols} from "./knownMethods";
 import {AST, BlockNode, InstructionNode, MethodNode, ProcedureNode, ProgramNode, ScalarNode} from "../ast";
 import {AssemblerWriter} from "../printer/AssemblerWriter";
 import {subcell} from "../utils/subcell";
+import { NumericValue, RefValue } from "../codepage/operand-loader";
+import { DisplayHint } from "../codepage/tvm-spec";
 
-function decompileCell(args: {
+export function decompileCell(args: {
     root: boolean;
     source: Cell;
     offset: { bits: number; refs: number };
@@ -23,18 +25,18 @@ function decompileCell(args: {
 
     // Check if we have a default opcodes of func output
     if (args.root && opcodes.length === 4
-        && opcodes[0].op.code === 'SETCP'
-        && opcodes[1].op.code === 'DICTPUSHCONST'
-        && opcodes[2].op.code === 'DICTIGETJMPZ'
-        && opcodes[3].op.code === 'THROWARG') {
+        && opcodes[0].op.definition.mnemonic === 'SETCP'
+        && opcodes[1].op.definition.mnemonic === 'DICTPUSHCONST'
+        && opcodes[2].op.definition.mnemonic === 'DICTIGETJMPZ'
+        && opcodes[3].op.definition.mnemonic === 'THROWARG') {
 
         // Load dictionary
-        let dictKeyLen = opcodes[1].op.args[0];
-        let dictCell = opcodes[1].op.args[1];
+        let dictKeyLen = opcodes[1].op.operands.find(operand => operand.definition.name == 'n') as NumericValue;
+        let dictCell = opcodes[1].op.operands.find(operand => operand.definition.name == 'd') as RefValue;
         let dict = Dictionary.loadDirect<number, {
             offset: number,
             cell: Cell
-        }>(Dictionary.Keys.Int(dictKeyLen), createCodeCell(), dictCell);
+        }>(Dictionary.Keys.Int(dictKeyLen.value), createCodeCell(), dictCell.value);
 
         // Extract all methods
         let registeredCells = new Map<string, string>();
@@ -92,179 +94,96 @@ function decompileCell(args: {
     const instructions: InstructionNode[] = opcodes.map(op => {
         const opcode = op.op;
 
-        switch (opcode.code) {
-            case 'CALLREF':
-                if (args.registerRef) {
-                    args.registerRef(opcode.args[0]);
+        // special cases
+        if (opcode.definition.mnemonic == 'CALLREF') {
+            let operand = opcode.operands.find(op => op.definition.name == 'c')! as RefValue;
+
+            if (args.registerRef) {
+                args.registerRef(operand.value);
+            }
+            return AST.instruction(
+                opcode,
+                [AST.reference(operand.value.hash().toString('hex'))],
+                op.offset,
+                op.length,
+                op.hash,
+            );
+        }
+
+        if (opcode.definition.mnemonic == 'CALLDICT' || opcode.definition.mnemonic == 'CALLDICT_LONG' || opcode.definition.mnemonic == 'JMPDICT') {
+            let operand = opcode.operands.find(op => op.definition.name == 'n')! as NumericValue;
+            return AST.instruction(
+                opcode,
+                [AST.methodReference(operand.value)],
+                op.offset,
+                op.length,
+                op.hash,
+            );
+        }
+
+        let operands = [];
+        for (let operand of opcode.operands) {
+            if (operand.type == 'numeric') {
+                let addHint = operand.definition.display_hints.find(hint => hint.type == 'add') as Extract<DisplayHint, {'type': 'add'}>;
+                let add = addHint?.value || 0;
+                let displayNumber = operand.value + add;
+                if (operand.definition.display_hints.some(hint => hint.type == 'pushint4')) {
+                    displayNumber = displayNumber > 10 ? displayNumber - 16 : displayNumber;
+                } else if (operand.definition.display_hints.some(hint => hint.type == 'optional_nargs')) {
+                    displayNumber = displayNumber == 15 ? -1 : displayNumber;
+                } else if (operand.definition.display_hints.some(hint => hint.type == 'plduz')) {
+                    displayNumber = 32 * (displayNumber + 1);
                 }
-
-                return AST.instruction(
-                    'INLINECALLDICT',
-                    [AST.reference(opcode.args[0].hash().toString('hex'))],
-                    op.offset,
-                    op.length,
-                    op.hash,
-                );
-
-            case 'CALLDICT':
-                return AST.instruction(
-                    opcode.code,
-                    [AST.methodReference(opcode.args[0])],
-                    op.offset,
-                    op.length,
-                    op.hash,
-                );
-
-            case 'PUSHCONT':
-                return AST.instruction(
-                    opcode.code,
-                    [
-                        decompileCell({
-                            source: opcode.args[0],
-                            offset: {
-                                bits: opcode.args[1],
-                                refs: opcode.args[2],
-                            },
-                            limit: {
-                                bits: opcode.args[3],
-                                refs: opcode.args[4],
-                            },
+                if (operand.definition.display_hints.some(hint => hint.type == 'stack')) {
+                    operands.push(AST.stackEntry(displayNumber));
+                } else if (operand.definition.display_hints.some(hint => hint.type == 'register')) {
+                    operands.push(AST.controlRegister(displayNumber));
+                } else {
+                    operands.push(AST.scalar(displayNumber));
+                }
+            } else if (operand.type == 'bigint') {
+                operands.push(AST.scalar(operand.value));
+            } else if (operand.type == 'ref' || operand.type == 'subslice') {
+                if (operand.definition.display_hints.some(hint => hint.type == 'continuation')) {
+                    if (operand.type == 'ref') {
+                        operands.push(decompileCell({
                             root: false,
-                            registerRef: args.registerRef,
-                        }) as BlockNode,
-                    ],
-                    op.offset,
-                    op.length,
-                    op.hash,
-                );
-
-            // Slices
-            case 'PUSHSLICE':
-            case 'STSLICECONST':
-                const slice = subcell({
-                    cell: opcode.args[0],
-                    offsetBits: opcode.args[1],
-                    offsetRefs: opcode.args[2],
-                    bits: opcode.args[3],
-                    refs: opcode.args[4],
-                });
-
-                return AST.instruction(
-                    opcode.code,
-                    [AST.scalar(slice.toString())],
-                    op.offset,
-                    op.length,
-                    op.hash,
-                );
-
-            // Special cases for continuations
-            case 'IFREFELSE':
-            case 'IFJMPREF':
-            case 'IFREF':
-            case 'IFNOTREF':
-            case 'IFNOTJMPREF':
-            case 'IFREFELSEREF':
-            case 'IFELSEREF':
-            case 'PUSHREFCONT':
-                return AST.instruction(
-                    opcode.code,
-                    [
-                        decompileCell({
-                            root: false,
-                            source: opcode.args[0],
+                            source: operand.value,
                             offset: {
                                 bits: 0,
                                 refs: 0,
                             },
                             limit: null,
                             registerRef: args.registerRef,
-                        }) as BlockNode,
-                    ],
-                    op.offset,
-                    op.length,
-                    op.hash,
-                );
-
-            // Globals
-            case 'SETGLOB':
-            case 'GETGLOB':
-                return AST.instruction(
-                    opcode.code,
-                    [AST.globalVariable(opcode.args[0])],
-                    op.offset,
-                    op.length,
-                    op.hash,
-                );
-
-            // Control Registers
-            case 'POPCTR':
-            case 'PUSHCTR':
-                return AST.instruction(
-                    opcode.code === 'POPCTR' ? 'POP' : 'PUSH',
-                    [AST.controlRegister(opcode.args[0])],
-                    op.offset,
-                    op.length,
-                    op.hash,
-                );
-
-            // Stack Primitives
-            case 'POP':
-            case 'PUSH':
-                return AST.instruction(
-                    opcode.code,
-                    [AST.stackEntry(opcode.args[0])],
-                    op.offset,
-                    op.length,
-                    op.hash,
-                );
-
-            // OPCODE s(i) s(j)
-            case 'XCHG':
-            case 'XCHG2':
-            case 'XCPU':
-            case 'PUXC':
-            case 'PUSH2':
-                return AST.instruction(
-                    opcode.code,
-                    [AST.stackEntry(opcode.args[0]), AST.stackEntry(opcode.args[1])],
-                    op.offset,
-                    op.length,
-                    op.hash,
-                );
-
-            // OPCODE s(i) s(j) s(k)
-            case 'XCHG3':
-            case 'PUSH3':
-            case 'XC2PU':
-            case 'XCPUXC':
-            case 'XCPU2':
-            case 'PUXC2':
-            case 'PUXCPU':
-            case 'PU2XC':
-                return AST.instruction(
-                    opcode.code,
-                    [
-                        AST.stackEntry(opcode.args[0]),
-                        AST.stackEntry(opcode.args[1]),
-                        AST.stackEntry(opcode.args[2]),
-                    ],
-                    op.offset,
-                    op.length,
-                    op.hash,
-                );
-
-            // All remaining opcodes
-            default:
-                return AST.instruction(
-                    opcode.code as InstructionNode['opcode'],
-                    'args' in opcode
-                        ? opcode.args.map((arg): ScalarNode => AST.scalar(arg as any))
-                        : [],
-                    op.offset,
-                    op.length,
-                    op.hash,
-                );
+                        }) as BlockNode);
+                    } else {
+                        operands.push(decompileCell({
+                            root: false,
+                            source: args.source,
+                            offset: {
+                                bits: operand.offsetBits,
+                                refs: operand.offsetRefs,
+                            },
+                            limit: {
+                                bits: operand.limitBits,
+                                refs: operand.limitRefs,
+                            },
+                            registerRef: args.registerRef,
+                        }) as BlockNode);
+                    }
+                } else {
+                    operands.push(AST.scalar(operand.value.toString()))
+                }
+            }
         }
+
+        return AST.instruction(
+            opcode,
+            operands,
+            op.offset,
+            op.length,
+            op.hash,
+        );
     })
 
     if (instructions.length === 0) {

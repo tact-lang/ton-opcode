@@ -106,15 +106,15 @@ PROGRAM{
   }>
   sqrt PROCINLINE:<{
     1 PUSHINT
-    geom_mean INLINECALLDICT
+    geom_mean CALL
   }>
   fixed248::sqrt PROCINLINE:<{
     248 PUSHPOW2
-    geom_mean INLINECALLDICT
+    geom_mean CALL
   }>
   fixed255::sqrt PROCINLINE:<{
     255 PUSHPOW2
-    geom_mean INLINECALLDICT
+    geom_mean CALL
   }>
   fixed248::sqr PROCINLINE:<{
     DUP
@@ -142,19 +142,19 @@ PROGRAM{
     115754418570128574501879331591757054405465733718902755858991306434399246026247 PUSHINT
   }>
   log2_const_f256 PROCINLINE:<{
-    log2_xconst_f256 INLINECALLDICT
+    log2_xconst_f256 CALL
     DROP
   }>
   fixed248::log2_const PROCINLINE:<{
-    log2_const_f256 INLINECALLDICT
+    log2_const_f256 CALL
     8 RSHIFTR#
   }>
   Pi_const_f254 PROCINLINE:<{
-    Pi_xconst_f254 INLINECALLDICT
+    Pi_xconst_f254 CALL
     DROP
   }>
   fixed248::Pi_const PROCINLINE:<{
-    Pi_const_f254 INLINECALLDICT
+    Pi_const_f254 CALL
     6 RSHIFTR#
   }>
   tanh_f258 PROCREF:<{
@@ -228,7 +228,7 @@ PROGRAM{
     SUB
   }>
   fixed248::exp PROCREF:<{
-    log2_xconst_f256 INLINECALLDICT
+    log2_xconst_f256 CALL
     -ROT
     8 PUSHINT
     LSHIFTDIVMODR
@@ -237,7 +237,7 @@ PROGRAM{
     127 MULRSHIFTR#
     s1 s2 XCHG
     SUB
-    expm1_f257 INLINECALLDICT
+    expm1_f257 CALL
     9 PUSHINT
     s2 PUSH
     SUB
@@ -250,9 +250,9 @@ PROGRAM{
   }>
   fixed248::exp2 PROCREF:<{
     248 RSHIFTR#MOD
-    log2_const_f256 INLINECALLDICT
+    log2_const_f256 CALL
     247 MULRSHIFTR#
-    expm1_f257 INLINECALLDICT
+    expm1_f257 CALL
     9 PUSHINT
     s2 PUSH
     SUB
@@ -296,7 +296,7 @@ PROGRAM{
     ADD
   }>
   tan_f260 PROCREF:<{
-    tan_f260_inlined INLINECALLDICT
+    tan_f260_inlined CALL
   }>
   tan_f258_inlined PROCINLINE:<{
     s0 s0 PUSH2
@@ -331,10 +331,10 @@ PROGRAM{
     ADD
   }>
   tan_f258 PROCREF:<{
-    tan_f258_inlined INLINECALLDICT
+    tan_f258_inlined CALL
   }>
   sincosm1_f259_inlined PROCINLINE:<{
-    tan_f260_inlined INLINECALLDICT
+    tan_f260_inlined CALL
     s0 s0 PUSH2
     256 MULRSHIFTR#
     DUP
@@ -356,17 +356,17 @@ PROGRAM{
     SUB
   }>
   sincosm1_f259 PROCREF:<{
-    sincosm1_f259_inlined INLINECALLDICT
+    sincosm1_f259_inlined CALL
   }>
   sincosn_f256 PROCREF:<{
     OVER
     ABS
-    Atan1_8_f259 INLINECALLDICT
+    Atan1_8_f259 CALL
     2 LSHIFT#DIVMODR
     1 LSHIFT#
     ROT
     ADD
-    sincosm1_f259 INLINECALLDICT
+    sincosm1_f259 CALL
     -1 PUSHINT
     0 PUSHINT
     1 PUSHINT
@@ -421,7 +421,7 @@ PROGRAM{
     SUB
   }>
   sincosm1_f256 PROCREF:<{
-    sincosm1_f259_inlined INLINECALLDICT
+    sincosm1_f259_inlined CALL
     7 PUSHINT
     3 PUSHINT
     REPEAT:<{
@@ -439,7 +439,7 @@ PROGRAM{
     DROP
   }>
   tan_aux_f256 PROCREF:<{
-    tan_f258_inlined INLINECALLDICT
+    tan_f258_inlined CALL
     s0 s0 PUSH2
     256 MULRSHIFTR#
     DUP
@@ -459,7 +459,7 @@ PROGRAM{
     ADD
   }>
   fixed248::sincos PROCREF:<{
-    Pi_xconst_f254 INLINECALLDICT
+    Pi_xconst_f254 CALL
     -ROT
     7 LSHIFT#DIVMODR
     1 LSHIFT#
@@ -467,7 +467,7 @@ PROGRAM{
     127 MULRSHIFTR#
     s1 s2 XCHG
     SUB
-    sincosm1_f256 INLINECALLDICT
+    sincosm1_f256 CALL
     248 PUSHPOW2
     SWAP
     9 RSHIFTR#
@@ -483,15 +483,15 @@ PROGRAM{
     }>
   }>
   fixed248::sin PROCINLINE:<{
-    fixed248::sincos INLINECALLDICT
+    fixed248::sincos CALL
     DROP
   }>
   fixed248::cos PROCINLINE:<{
-    fixed248::sincos INLINECALLDICT
+    fixed248::sincos CALL
     NIP
   }>
   fixed248::tan PROCREF:<{
-    Pi_xconst_f254 INLINECALLDICT
+    Pi_xconst_f254 CALL
     -ROT
     7 LSHIFT#DIVMODR
     1 LSHIFT#
@@ -499,7 +499,7 @@ PROGRAM{
     127 MULRSHIFTR#
     s1 s2 XCHG
     SUB
-    tan_aux_f256 INLINECALLDICT
+    tan_aux_f256 CALL
     s0 s2 XCHG
     1 PUSHINT
     AND
@@ -511,7 +511,7 @@ PROGRAM{
     248 LSHIFT#DIVR
   }>
   fixed248::cot PROCREF:<{
-    Pi_xconst_f254 INLINECALLDICT
+    Pi_xconst_f254 CALL
     -ROT
     7 LSHIFT#DIVMODR
     1 LSHIFT#
@@ -519,7 +519,7 @@ PROGRAM{
     127 MULRSHIFTR#
     s1 s2 XCHG
     SUB
-    tan_aux_f256 INLINECALLDICT
+    tan_aux_f256 CALL
     s0 s2 XCHG
     1 PUSHINT
     AND
@@ -600,7 +600,7 @@ PROGRAM{
     ADD
   }>
   atanh_f261 PROCREF:<{
-    atanh_f261_inlined INLINECALLDICT
+    atanh_f261_inlined CALL
   }>
   log_aux_f257 PROCREF:<{
     DUP
@@ -630,7 +630,7 @@ PROGRAM{
     SUB
     256 LSHIFT#DIVR
     36 PUSHINT
-    atanh_f258 INLINECALLDICT
+    atanh_f258 CALL
     SWAP
   }>
   pow33 PROCINLINE:<{
@@ -676,7 +676,7 @@ PROGRAM{
     MULDIVR
     11 ADDCONST
     DUP
-    pow33b INLINECALLDICT
+    pow33b CALL
     51 PUSHINT
     s2 PUSH
     SUB
@@ -693,10 +693,10 @@ PROGRAM{
     s1 s2 XCHG
     256 LSHIFT#DIVR
     18 PUSHINT
-    atanh_f261 INLINECALLDICT
+    atanh_f261 CALL
   }>
   log_aux_f256 PROCREF:<{
-    log_auxx_f260 INLINECALLDICT
+    log_auxx_f260 CALL
     4 RSHIFTR#MOD
     9 LSHIFT#
     s2 PUSH
@@ -712,8 +712,8 @@ PROGRAM{
     SWAP
   }>
   log2_aux_f256 PROCREF:<{
-    log_auxx_f260 INLINECALLDICT
-    log2_const_f256 INLINECALLDICT
+    log_auxx_f260 CALL
+    log2_const_f256 CALL
     256 LSHIFT#DIVR
     4 RSHIFTR#
     SWAP
@@ -723,17 +723,17 @@ PROGRAM{
     SWAP
   }>
   fixed248::log PROCREF:<{
-    log_aux_f256 INLINECALLDICT
+    log_aux_f256 CALL
     248 PUSHINT
     SUB
-    log2_const_f256 INLINECALLDICT
+    log2_const_f256 CALL
     8 MULRSHIFTR#
     SWAP
     8 RSHIFTR#
     ADD
   }>
   fixed248::log2 PROCINLINE:<{
-    log2_aux_f256 INLINECALLDICT
+    log2_aux_f256 CALL
     248 PUSHINT
     SUB
     248 LSHIFT#
@@ -757,7 +757,7 @@ PROGRAM{
       RSHIFT
     }>
     SWAP
-    log2_aux_f256 INLINECALLDICT
+    log2_aux_f256 CALL
     248 PUSHINT
     SUB
     s2 PUSH
@@ -786,10 +786,10 @@ PROGRAM{
       0 EQINT
       NEGATE
     }>
-    log2_const_f256 INLINECALLDICT
+    log2_const_f256 CALL
     s1 s3 XCHG
     256 MULRSHIFTR#
-    expm1_f257 INLINECALLDICT
+    expm1_f257 CALL
     9 PUSHINT
     ROT
     SUB
@@ -867,7 +867,7 @@ PROGRAM{
     SUB
   }>
   atan_f261 PROCREF:<{
-    atan_f261_inlined INLINECALLDICT
+    atan_f261_inlined CALL
   }>
   atan_aux_prereduce PROCREF:<{
     DUP
@@ -935,7 +935,7 @@ PROGRAM{
   atan_aux_f256 PROCREF:<{
     DUP
     232 RSHIFTR#
-    atan_aux_prereduce INLINECALLDICT
+    atan_aux_prereduce CALL
     s1 s3 PUSH2
     256 MULRSHIFTR#MOD
     250 RSHIFTR#
@@ -949,12 +949,12 @@ PROGRAM{
     s1 s2 XCHG
     255 LSHIFT#DIVR
     18 PUSHINT
-    atan_f261_inlined INLINECALLDICT
+    atan_f261_inlined CALL
   }>
   atan_auxx_f256 PROCREF:<{
     DUP
     232 RSHIFTR#
-    atan_aux_prereduce INLINECALLDICT
+    atan_aux_prereduce CALL
     s1 s3 PUSH2
     256 MULRSHIFTR#MOD
     1 RSHIFT#
@@ -981,7 +981,7 @@ PROGRAM{
     s1 s2 XCHG
     ADD
     18 PUSHINT
-    atan_f261_inlined INLINECALLDICT
+    atan_f261_inlined CALL
   }>
   atan_f255 PROCREF:<{
     DUP
@@ -995,9 +995,9 @@ PROGRAM{
       SWAP
       1 LSHIFT#
     }>
-    atan_aux_f256 INLINECALLDICT
-    Pi_xconst_f254 INLINECALLDICT
-    Atan1_32_f261 INLINECALLDICT
+    atan_aux_f256 CALL
+    Pi_xconst_f254 CALL
+    Atan1_32_f261 CALL
     s1 s4 XCHG
     6 MULRSHIFTR#MOD
     s5 s2 PUXC
@@ -1012,8 +1012,8 @@ PROGRAM{
     ADD
   }>
   atan_f256_small PROCREF:<{
-    atan_aux_f256 INLINECALLDICT
-    Atan1_32_f261 INLINECALLDICT
+    atan_aux_f256 CALL
+    Atan1_32_f261 CALL
     s1 s2 XCHG
     5 MULRSHIFTR#MOD
     s1 s2 XCHG
@@ -1024,25 +1024,25 @@ PROGRAM{
   asin_f255 PROCREF:<{
     255 PUSHPOW2
     OVER
-    fixed255::sqr INLINECALLDICT
+    fixed255::sqr CALL
     SUB
     DUP
     IFNOTJMP:<{
       DROP
       SGN
-      Pi_const_f254 INLINECALLDICT
+      Pi_const_f254 CALL
       MUL
     }>
-    fixed255::sqrt INLINECALLDICT
+    fixed255::sqrt CALL
     255 PUSHNEGPOW2
     SWAP
     SUB
     256 LSHIFT#DIVR
     NEGATE
-    atan_f256_small INLINECALLDICT
+    atan_f256_small CALL
   }>
   acos_f255 PROCREF:<{
-    Pi_const_f254 INLINECALLDICT
+    Pi_const_f254 CALL
     OVER
     255 PUSHNEGPOW2
     EQUAL
@@ -1052,26 +1052,26 @@ PROGRAM{
     1 RSHIFT#
     255 PUSHPOW2
     s2 PUSH
-    fixed255::sqr INLINECALLDICT
+    fixed255::sqr CALL
     SUB
-    fixed255::sqrt INLINECALLDICT
+    fixed255::sqrt CALL
     255 PUSHNEGPOW2
     SWAP
     SUB
     s1 s2 XCHG
     256 LSHIFT#DIVR
-    atan_f256_small INLINECALLDICT
+    atan_f256_small CALL
     1 RSHIFTR#
     ADD
   }>
   fixed248::asin PROCINLINE:<{
     7 LSHIFT#
-    asin_f255 INLINECALLDICT
+    asin_f255 CALL
     7 RSHIFTR#
   }>
   fixed248::acos PROCINLINE:<{
     7 LSHIFT#
-    acos_f255 INLINECALLDICT
+    acos_f255 CALL
     6 RSHIFTR#
   }>
   fixed248::atan PROCREF:<{
@@ -1087,14 +1087,14 @@ PROGRAM{
       SWAP
       8 LSHIFT#
     }>
-    atan_aux_f256 INLINECALLDICT
+    atan_aux_f256 CALL
     6 RSHIFTR#
-    Pi_const_f254 INLINECALLDICT
+    Pi_const_f254 CALL
     s1 s3 XCHG
     MUL
     s1 s2 XCHG
     ADD
-    Atan1_32_f261 INLINECALLDICT
+    Atan1_32_f261 CALL
     s1 s2 XCHG
     6 MULRSHIFTR#
     ADD
@@ -1114,15 +1114,15 @@ PROGRAM{
       SGN
     }>
     SWAP
-    atan_aux_f256 INLINECALLDICT
-    Pi_const_f254 INLINECALLDICT
+    atan_aux_f256 CALL
+    Pi_const_f254 CALL
     s1 s3 XCHG
     MUL
     s0 s2 XCHG
     6 RSHIFTR#
     s1 s2 XCHG
     SUB
-    Atan1_32_f261 INLINECALLDICT
+    Atan1_32_f261 CALL
     s1 s2 XCHG
     6 MULRSHIFTR#
     SUB
@@ -1183,7 +1183,7 @@ PROGRAM{
           256 MULRSHIFTR#
           2 RSHIFTR#
           NEGATE
-          fixed248::exp INLINECALLDICT
+          fixed248::exp CALL
           4 LSHIFT#
           GREATER
           IF:<{
@@ -1218,78 +1218,78 @@ PROGRAM{
     8 RSHIFT#
   }>
   fixed248::nrand PROCINLINE:<{
-    nrand_f252 INLINECALLDICT
+    nrand_f252 CALL
     4 RSHIFTR#
   }>
   fixed248::nrand_fast PROCINLINE:<{
-    nrand_fast_f252 INLINECALLDICT
+    nrand_fast_f252 CALL
     4 RSHIFTR#
   }>
   main PROC:<{
-    geom_mean INLINECALLDICT
-    sqrt INLINECALLDICT
-    fixed248::sqrt INLINECALLDICT
-    fixed255::sqrt INLINECALLDICT
-    fixed248::sqr INLINECALLDICT
-    fixed255::sqr INLINECALLDICT
-    log2_xconst_f256 INLINECALLDICT
-    Pi_xconst_f254 INLINECALLDICT
-    Atan1_16_f260 INLINECALLDICT
-    Atan1_8_f259 INLINECALLDICT
-    Atan1_32_f261 INLINECALLDICT
-    log2_const_f256 INLINECALLDICT
-    fixed248::log2_const INLINECALLDICT
-    Pi_const_f254 INLINECALLDICT
-    fixed248::Pi_const INLINECALLDICT
-    tanh_f258 INLINECALLDICT
-    expm1_f257 INLINECALLDICT
-    fixed248::exp INLINECALLDICT
-    fixed248::exp2 INLINECALLDICT
-    tan_f260_inlined INLINECALLDICT
-    tan_f260 INLINECALLDICT
-    tan_f258_inlined INLINECALLDICT
-    tan_f258 INLINECALLDICT
-    sincosm1_f259_inlined INLINECALLDICT
-    sincosm1_f259 INLINECALLDICT
-    sincosn_f256 INLINECALLDICT
-    sincosm1_f256 INLINECALLDICT
-    tan_aux_f256 INLINECALLDICT
-    fixed248::sincos INLINECALLDICT
-    fixed248::sin INLINECALLDICT
-    fixed248::cos INLINECALLDICT
-    fixed248::tan INLINECALLDICT
-    fixed248::cot INLINECALLDICT
-    atanh_f258 INLINECALLDICT
-    atanh_f261_inlined INLINECALLDICT
-    atanh_f261 INLINECALLDICT
-    log_aux_f257 INLINECALLDICT
-    pow33 INLINECALLDICT
-    pow33b INLINECALLDICT
-    log_auxx_f260 INLINECALLDICT
-    log_aux_f256 INLINECALLDICT
-    log2_aux_f256 INLINECALLDICT
-    fixed248::log INLINECALLDICT
-    fixed248::log2 INLINECALLDICT
-    fixed248::pow INLINECALLDICT
-    atan_f259 INLINECALLDICT
-    atan_f261_inlined INLINECALLDICT
-    atan_f261 INLINECALLDICT
-    atan_aux_prereduce INLINECALLDICT
-    atan_aux_f256 INLINECALLDICT
-    atan_auxx_f256 INLINECALLDICT
-    atan_f255 INLINECALLDICT
-    atan_f256_small INLINECALLDICT
-    asin_f255 INLINECALLDICT
-    acos_f255 INLINECALLDICT
-    fixed248::asin INLINECALLDICT
-    fixed248::acos INLINECALLDICT
-    fixed248::atan INLINECALLDICT
-    fixed248::acot INLINECALLDICT
-    nrand_f252 INLINECALLDICT
-    nrand_fast_f252 INLINECALLDICT
-    fixed248::random INLINECALLDICT
-    fixed248::nrand INLINECALLDICT
-    fixed248::nrand_fast INLINECALLDICT
+    geom_mean CALL
+    sqrt CALL
+    fixed248::sqrt CALL
+    fixed255::sqrt CALL
+    fixed248::sqr CALL
+    fixed255::sqr CALL
+    log2_xconst_f256 CALL
+    Pi_xconst_f254 CALL
+    Atan1_16_f260 CALL
+    Atan1_8_f259 CALL
+    Atan1_32_f261 CALL
+    log2_const_f256 CALL
+    fixed248::log2_const CALL
+    Pi_const_f254 CALL
+    fixed248::Pi_const CALL
+    tanh_f258 CALL
+    expm1_f257 CALL
+    fixed248::exp CALL
+    fixed248::exp2 CALL
+    tan_f260_inlined CALL
+    tan_f260 CALL
+    tan_f258_inlined CALL
+    tan_f258 CALL
+    sincosm1_f259_inlined CALL
+    sincosm1_f259 CALL
+    sincosn_f256 CALL
+    sincosm1_f256 CALL
+    tan_aux_f256 CALL
+    fixed248::sincos CALL
+    fixed248::sin CALL
+    fixed248::cos CALL
+    fixed248::tan CALL
+    fixed248::cot CALL
+    atanh_f258 CALL
+    atanh_f261_inlined CALL
+    atanh_f261 CALL
+    log_aux_f257 CALL
+    pow33 CALL
+    pow33b CALL
+    log_auxx_f260 CALL
+    log_aux_f256 CALL
+    log2_aux_f256 CALL
+    fixed248::log CALL
+    fixed248::log2 CALL
+    fixed248::pow CALL
+    atan_f259 CALL
+    atan_f261_inlined CALL
+    atan_f261 CALL
+    atan_aux_prereduce CALL
+    atan_aux_f256 CALL
+    atan_auxx_f256 CALL
+    atan_f255 CALL
+    atan_f256_small CALL
+    asin_f255 CALL
+    acos_f255 CALL
+    fixed248::asin CALL
+    fixed248::acos CALL
+    fixed248::atan CALL
+    fixed248::acot CALL
+    nrand_f252 CALL
+    nrand_fast_f252 CALL
+    fixed248::random CALL
+    fixed248::nrand CALL
+    fixed248::nrand_fast CALL
   }>
 }END>c
 2 boc+>B "mathlib.boc" B>file

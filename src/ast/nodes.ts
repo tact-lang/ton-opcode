@@ -1,7 +1,7 @@
 // This file is based on code from https://github.com/scaleton-labs/tvm-disassembler
 
 import {Cell} from '@ton/core';
-import {OpCode} from '../codepage/opcodes.gen';
+import { DecodedInstruction } from '../codepage/instruction-decoder';
 
 export enum NodeType {
     PROGRAM,
@@ -49,7 +49,7 @@ export type MethodReferenceNode = {
 
 export type InstructionNode = {
     type: NodeType.INSTRUCTION;
-    opcode: OpCode['code'];
+    opcode: DecodedInstruction;
     arguments: (
         | ScalarNode
         | BlockNode

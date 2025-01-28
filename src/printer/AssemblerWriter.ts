@@ -11,6 +11,22 @@ import {
 } from '../ast';
 import {Writer} from "../utils/Writer";
 
+const OPCODE_RENAMES = new Map([
+  ['PUSHINT_4', 'PUSHINT'],
+  ['PUSHINT_8', 'PUSHINT'],
+  ['PUSHINT_16', 'PUSHINT'],
+  ['PUSHINT_LONG', 'PUSHINT'],
+  ['POPCTR', 'POP'],
+  ['PUSHCTR', 'PUSH'],
+  ['XCHG_0I', 'XCHG'],
+  ['XCHG_1I', 'XCHG'],
+  ['CALLREF', 'CALL'],
+  ['PUSHCONT_SHORT', 'PUSHCONT'],
+  ['RETALT', 'RETFALSE'],
+  ['THROWIFNOT_SHORT', 'THROWIFNOT'],
+  ['THROWIF_SHORT', 'THROWIF'],
+]);
+
 export class AssemblerWriter {
   #writer = new Writer();
 
@@ -110,11 +126,19 @@ export class AssemblerWriter {
         return null;
     }
 
-    if (node.opcode === 'SETCP') {
+    if (node.opcode.definition.mnemonic === 'SETCP') {
       return `SETCP${firstArg}`;
     }
 
-    if (node.opcode === 'GETPARAM') {
+    if (node.opcode.definition.mnemonic === 'XCHG_0I') {
+      return `s0 s${firstArg} XCHG`;
+    }
+
+    if (node.opcode.definition.mnemonic === 'XCHG_1I') {
+      return `s1 s${firstArg} XCHG`;
+    }
+
+    if (node.opcode.definition.mnemonic === 'GETPARAM') {
       if (firstArg === 3) {
         return 'NOW';
       }
@@ -138,11 +162,11 @@ export class AssemblerWriter {
       }
     }
 
-    if(node.opcode == "SDBEGINS" || node.opcode == "SDBEGINSQ") {
+    if(node.opcode.definition.mnemonic == "SDBEGINS" || node.opcode.definition.mnemonic == "SDBEGINSQ") {
       return `x{${secondArg}} ${node.opcode}`;
     }
 
-    if (node.opcode === 'ADDCONST') {
+    if (node.opcode.definition.mnemonic === 'ADDCONST') {
       if (firstArg === 1) {
         return 'INC';
       }
@@ -151,14 +175,14 @@ export class AssemblerWriter {
       }
     }
 
-    if (node.opcode === 'MULCONST') {
+    if (node.opcode.definition.mnemonic === 'MULCONST') {
       if (firstArg === -1) {
         return 'NEGATE';
       }
     }
 
     // Debug
-    if (node.opcode === 'DEBUG') {
+    if (node.opcode.definition.mnemonic === 'DEBUG') {
       if (firstArg === 0x00) {
         return 'DUMPSTK';
       }
@@ -210,7 +234,7 @@ export class AssemblerWriter {
       }
     });
 
-    this.#writer.writeLine(node.opcode);
+    this.#writer.writeLine(OPCODE_RENAMES.get(node.opcode.definition.mnemonic) || node.opcode.definition.mnemonic);
   }
 
   writeNode(

@@ -1,12 +1,11 @@
 import { beginCell, Cell, Slice } from "@ton/core";
-import { loadOpcode } from "../codepage/loadOpcode";
-import { OpCode } from "../codepage/opcodes.gen";
 import { Maybe } from "../utils/maybe";
 import { subcell, subslice } from "../utils/subcell";
+import { DecodedInstruction, decodeInstruction } from "../codepage/instruction-decoder";
 
-export type DecompiledOpCode = OpCode | { code: 'unknown', data: Cell };
+// export type DecompiledOpCode = OpCode | { code: 'unknown', data: Cell };
 export type DecompiledInstruction = {
-    op: DecompiledOpCode,
+    op: DecodedInstruction,
     hash: string,
     offset: number,
     length: number
@@ -58,35 +57,35 @@ export function decompile(args: {
 
         // Load opcode
         const opcodeOffset = slice.offsetBits;
-        const opcode = loadOpcode(slice, source);
+        const opcode = decodeInstruction(slice);
         const opcodeLength = slice.offsetBits - opcodeOffset;
 
         // Failed case
-        if (!opcode.ok) {
-            if (args.allowUnknown) {
-                let fullCell = beginCell();
-                for (let bit of Array.from(opcode.read).map(a => a == '0' ? false : true)) {
-                    fullCell.storeBit(bit);
-                }
-                fullCell.storeSlice(slice);
-                result.push({
-                    op: {
-                        code: 'unknown',
-                        data: fullCell.endCell()
-                    },
-                    hash,
-                    offset: opcodeOffset,
-                    length: opcodeLength
-                });
-                break;
-            } else {
-                throw Error('Unknown opcode: b' + opcode.read);
-            }
-        }
+        // if (!opcode.ok) {
+        //     if (args.allowUnknown) {
+        //         let fullCell = beginCell();
+        //         for (let bit of Array.from(opcode.read).map(a => a == '0' ? false : true)) {
+        //             fullCell.storeBit(bit);
+        //         }
+        //         fullCell.storeSlice(slice);
+        //         result.push({
+        //             op: {
+        //                 code: 'unknown',
+        //                 data: fullCell.endCell()
+        //             },
+        //             hash,
+        //             offset: opcodeOffset,
+        //             length: opcodeLength
+        //         });
+        //         break;
+        //     } else {
+        //         throw Error('Unknown opcode: b' + opcode.read);
+        //     }
+        // }
 
         // Push opcode to result
         result.push({
-            op: opcode.read,
+            op: opcode,
             hash,
             offset: opcodeOffset,
             length: opcodeLength

@@ -52,14 +52,14 @@ exports[`decompileAll should decompile echo 1`] = `
     s0 s6 s4 PUXCPU
     s0 s3 XCHG
     4 TUPLE
-    1 SETGLOBVAR
+    1 SETGLOB
     s0 s2 XCHG
-    2 SETGLOBVAR
+    2 SETGLOB
     c4 PUSH
     CTOS
     LDREF
     s0 s1 XCHG
-    3 SETGLOBVAR
+    3 SETGLOB
     1 LDI
     s0 s1 XCHG
     <{
@@ -77,15 +77,15 @@ exports[`decompileAll should decompile echo 1`] = `
       s0 s1 XCHG
       s0 s1 XCHG
       ENDS
-      ?fun_ref_dca7aba6e712f2dd INLINECALLDICT
+      ?fun_ref_dca7aba6e712f2dd CALL
     }> PUSHCONT
     IFELSE
     ROTREV
-    ?fun_ref_f5ca007f3e344181 INLINECALLDICT
+    ?fun_ref_f5ca007f3e344181 CALL
     s0 POP
     s0 POP
     NEWC
-    3 GETGLOBVAR
+    3 GETGLOB
     s0 s1 XCHG
     STREF
     -1 PUSHINT
@@ -105,7 +105,7 @@ exports[`decompileAll should decompile echo 1`] = `
     CTOS
     LDREF
     s0 s1 XCHG
-    3 SETGLOBVAR
+    3 SETGLOB
     1 LDI
     s0 s1 XCHG
     <{
@@ -123,16 +123,16 @@ exports[`decompileAll should decompile echo 1`] = `
       s0 s1 XCHG
       s0 s1 XCHG
       ENDS
-      ?fun_ref_dca7aba6e712f2dd INLINECALLDICT
+      ?fun_ref_dca7aba6e712f2dd CALL
     }> PUSHCONT
     IFELSE
     s0 s1 XCHG
-    ?fun_ref_fc8ae1407928bf8b INLINECALLDICT
+    ?fun_ref_fc8ae1407928bf8b CALL
     s1 POP
   }>
   ?fun_ref_05a658b0b82d492f PROCREF:<{
     -1 PUSHINT
-    2 GETGLOBVAR
+    2 GETGLOB
     0 PUSHINT
     ROT
     s0 s3 XCHG
@@ -140,7 +140,7 @@ exports[`decompileAll should decompile echo 1`] = `
     s0 s1 XCHG
     NULL
     NULL
-    ?fun_ref_3301d2d6bbf180a4 INLINECALLDICT
+    ?fun_ref_3301d2d6bbf180a4 CALL
   }>
   ?fun_ref_3301d2d6bbf180a4 PROCREF:<{
     NEWC
@@ -307,7 +307,7 @@ exports[`decompileAll should decompile echo 1`] = `
     NULL
     TPUSH
     s0 s1 XCHG
-    ?fun_ref_a2813468f47d741c INLINECALLDICT
+    ?fun_ref_a2813468f47d741c CALL
     2 UNTUPLE
     s0 s1 XCHG
     ENDC
@@ -404,7 +404,7 @@ exports[`decompileAll should decompile echo 1`] = `
     NULL
   }>
   ?fun_ref_f5ca007f3e344181 PROCREF:<{
-    2 SAVE
+    c2 SAVE
     SAMEALTSAVE
     0 PUSHINT
     s1 PUSH
@@ -431,16 +431,16 @@ exports[`decompileAll should decompile echo 1`] = `
       <{
         32 PUSHINT
         SDSKIPFIRST
-        ?fun_ref_7b0b7ac68163f545 INLINECALLDICT
-        ?fun_ref_05a658b0b82d492f INLINECALLDICT
+        ?fun_ref_7b0b7ac68163f545 CALL
+        ?fun_ref_05a658b0b82d492f CALL
         -1 PUSHINT
         RETFALSE
       }> PUSHCONT
       IFJMP
     }> PUSHCONT
     IF
-    ?fun_ref_3ee8ad4bdf599298 INLINECALLDICT
-    ?fun_ref_05a658b0b82d492f INLINECALLDICT
+    ?fun_ref_3ee8ad4bdf599298 CALL
+    ?fun_ref_05a658b0b82d492f CALL
     -1 PUSHINT
   }>
   ?fun_ref_fc8ae1407928bf8b PROCREF:<{
@@ -451,9 +451,9 @@ exports[`decompileAll should decompile echo 1`] = `
     NULL
     TPUSH
     x{48656C6C6F2C208} PUSHSLICE
-    ?fun_ref_a2813468f47d741c INLINECALLDICT
+    ?fun_ref_a2813468f47d741c CALL
     s0 s1 XCHG
-    ?fun_ref_a2813468f47d741c INLINECALLDICT
+    ?fun_ref_a2813468f47d741c CALL
     2 UNTUPLE
     s0 s1 XCHG
     ENDC
@@ -520,36 +520,36 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
   DECLPROC ?fun_ref_f8345f3d64016266;
   DECLPROC ?fun_ref_fbd4cc263c208ffd;
   recv_internal PROC:<{
-    ?fun_ref_d78034247225d612 INLINECALLDICT
+    ?fun_ref_d78034247225d612 CALL
     1 PUSHINT
-    ?fun_ref_d78034247225d612 INLINECALLDICT
+    ?fun_ref_d78034247225d612 CALL
     248 PUSHPOW2
-    ?fun_ref_d78034247225d612 INLINECALLDICT
+    ?fun_ref_d78034247225d612 CALL
     255 PUSHPOW2
-    ?fun_ref_d78034247225d612 INLINECALLDICT
+    ?fun_ref_d78034247225d612 CALL
     s0 PUSH
     true 1 true 1 1 247 DIV
     s0 PUSH
     true 1 true 1 1 254 DIV
-    ?fun_ref_2051d9d821c3f770 INLINECALLDICT
-    ?fun_ref_aa50613cca252c08 INLINECALLDICT
-    ?fun_ref_e9b023c94244cb2e INLINECALLDICT
-    ?fun_ref_0e3f3b547d0a4314 INLINECALLDICT
-    ?fun_ref_6405ea4d1c38698c INLINECALLDICT
-    ?fun_ref_2051d9d821c3f770 INLINECALLDICT
+    ?fun_ref_2051d9d821c3f770 CALL
+    ?fun_ref_aa50613cca252c08 CALL
+    ?fun_ref_e9b023c94244cb2e CALL
+    ?fun_ref_0e3f3b547d0a4314 CALL
+    ?fun_ref_6405ea4d1c38698c CALL
+    ?fun_ref_2051d9d821c3f770 CALL
     s0 POP
-    ?fun_ref_2051d9d821c3f770 INLINECALLDICT
+    ?fun_ref_2051d9d821c3f770 CALL
     s0 POP
     false 1 true 1 1 7 DIV
-    ?fun_ref_aa50613cca252c08 INLINECALLDICT
+    ?fun_ref_aa50613cca252c08 CALL
     s0 POP
-    ?fun_ref_aa50613cca252c08 INLINECALLDICT
+    ?fun_ref_aa50613cca252c08 CALL
     s0 POP
     false 1 true 1 1 5 DIV
-    ?fun_ref_7753d4b96608d450 INLINECALLDICT
-    ?fun_ref_88faf969245bcd15 INLINECALLDICT
-    ?fun_ref_eabdf5efadfce810 INLINECALLDICT
-    ?fun_ref_14c8cb933d84cae0 INLINECALLDICT
+    ?fun_ref_7753d4b96608d450 CALL
+    ?fun_ref_88faf969245bcd15 CALL
+    ?fun_ref_eabdf5efadfce810 CALL
+    ?fun_ref_14c8cb933d84cae0 CALL
     s0 s0 PUSH2
     true 1 true 1 1 255 DIV
     251 PUSHPOW2
@@ -581,7 +581,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     true 0 false 1 1 0 DIV
     false 1 true 1 1 8 DIV
     ADD
-    ?fun_ref_41d3f2ea6d56e172 INLINECALLDICT
+    ?fun_ref_41d3f2ea6d56e172 CALL
     s0 s0 PUSH2
     true 1 true 1 1 255 DIV
     251 PUSHPOW2
@@ -613,7 +613,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     true 0 false 1 1 0 DIV
     false 1 true 1 1 4 DIV
     ADD
-    ?fun_ref_3449c496cc175763 INLINECALLDICT
+    ?fun_ref_3449c496cc175763 CALL
     s0 s0 PUSH2
     true 1 true 1 1 255 DIV
     251 PUSHPOW2
@@ -664,18 +664,18 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     true 0 false 1 1 0 DIV
     false 1 true 1 1 7 DIV
     SUB
-    ?fun_ref_318ac84049047cbe INLINECALLDICT
-    ?fun_ref_239e84369564e330 INLINECALLDICT
-    ?fun_ref_2367f6e37b0e6a76 INLINECALLDICT
-    ?fun_ref_b03a280997c9cc26 INLINECALLDICT
-    ?fun_ref_0f0ebbb66387fc57 INLINECALLDICT
-    ?fun_ref_0f0ebbb66387fc57 INLINECALLDICT
+    ?fun_ref_318ac84049047cbe CALL
+    ?fun_ref_239e84369564e330 CALL
+    ?fun_ref_2367f6e37b0e6a76 CALL
+    ?fun_ref_b03a280997c9cc26 CALL
+    ?fun_ref_0f0ebbb66387fc57 CALL
+    ?fun_ref_0f0ebbb66387fc57 CALL
     s0 POP
-    ?fun_ref_0f0ebbb66387fc57 INLINECALLDICT
+    ?fun_ref_0f0ebbb66387fc57 CALL
     s1 POP
-    ?fun_ref_e11f9343f87d5b4b INLINECALLDICT
-    ?fun_ref_8bf58ecefe2e19cb INLINECALLDICT
-    ?fun_ref_fbd4cc263c208ffd INLINECALLDICT
+    ?fun_ref_e11f9343f87d5b4b CALL
+    ?fun_ref_8bf58ecefe2e19cb CALL
+    ?fun_ref_fbd4cc263c208ffd CALL
     s1 s1 PUSH2
     true 1 true 1 1 255 DIV
     254 PUSHPOW2
@@ -709,8 +709,8 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     true 0 false 1 1 0 DIV
     false 1 true 1 1 11 DIV
     ADD
-    ?fun_ref_afe5ab170f89ef23 INLINECALLDICT
-    ?fun_ref_0318d2f33529c0c6 INLINECALLDICT
+    ?fun_ref_afe5ab170f89ef23 CALL
+    ?fun_ref_0318d2f33529c0c6 CALL
     1 PUSHINT
     s0 s1 XCHG
     <{
@@ -731,19 +731,19 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       MUL
     }> PUSHCONT
     REPEAT
-    ?fun_ref_1b1ae470b4614553 INLINECALLDICT
-    ?fun_ref_ec287b9511e936b8 INLINECALLDICT
-    ?fun_ref_48cab849e3521372 INLINECALLDICT
-    ?fun_ref_87780ff3a5ebd2bc INLINECALLDICT
-    ?fun_ref_48cab849e3521372 INLINECALLDICT
+    ?fun_ref_1b1ae470b4614553 CALL
+    ?fun_ref_ec287b9511e936b8 CALL
+    ?fun_ref_48cab849e3521372 CALL
+    ?fun_ref_87780ff3a5ebd2bc CALL
+    ?fun_ref_48cab849e3521372 CALL
     248 PUSHINT
     SUB
     248 LSHIFT
     s0 s1 XCHG
     false 1 true 1 1 7 DIV
     ADD
-    ?fun_ref_811ebbe381228c78 INLINECALLDICT
-    ?fun_ref_73739320b258991c INLINECALLDICT
+    ?fun_ref_811ebbe381228c78 CALL
+    ?fun_ref_73739320b258991c CALL
     s1 s1 PUSH2
     true 1 true 1 1 255 DIV
     254 PUSHPOW2
@@ -777,29 +777,29 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     true 0 false 1 1 0 DIV
     false 1 true 1 1 11 DIV
     SUB
-    ?fun_ref_5d3a4c29b0035181 INLINECALLDICT
-    ?fun_ref_8a8385f8d78f60b7 INLINECALLDICT
-    ?fun_ref_b2fd74bee4445ab9 INLINECALLDICT
-    ?fun_ref_6c2cc5b04a23eeb2 INLINECALLDICT
-    ?fun_ref_7134bd42618a8d1e INLINECALLDICT
-    ?fun_ref_5c788425937a7d28 INLINECALLDICT
-    ?fun_ref_494e543f112ad30c INLINECALLDICT
-    ?fun_ref_5ba78fa4ab4ec6dc INLINECALLDICT
+    ?fun_ref_5d3a4c29b0035181 CALL
+    ?fun_ref_8a8385f8d78f60b7 CALL
+    ?fun_ref_b2fd74bee4445ab9 CALL
+    ?fun_ref_6c2cc5b04a23eeb2 CALL
+    ?fun_ref_7134bd42618a8d1e CALL
+    ?fun_ref_5c788425937a7d28 CALL
+    ?fun_ref_494e543f112ad30c CALL
+    ?fun_ref_5ba78fa4ab4ec6dc CALL
     7 LSHIFT
-    ?fun_ref_494e543f112ad30c INLINECALLDICT
+    ?fun_ref_494e543f112ad30c CALL
     false 1 true 1 1 6 DIV
     7 LSHIFT
-    ?fun_ref_5ba78fa4ab4ec6dc INLINECALLDICT
+    ?fun_ref_5ba78fa4ab4ec6dc CALL
     false 1 true 1 1 5 DIV
-    ?fun_ref_cdb28b381a5130bf INLINECALLDICT
-    ?fun_ref_da70c8217d8f9a46 INLINECALLDICT
-    ?fun_ref_5a712c8e35fef248 INLINECALLDICT
-    ?fun_ref_f8345f3d64016266 INLINECALLDICT
+    ?fun_ref_cdb28b381a5130bf CALL
+    ?fun_ref_da70c8217d8f9a46 CALL
+    ?fun_ref_5a712c8e35fef248 CALL
+    ?fun_ref_f8345f3d64016266 CALL
     RANDU256
     8 RSHIFT
-    ?fun_ref_5a712c8e35fef248 INLINECALLDICT
+    ?fun_ref_5a712c8e35fef248 CALL
     false 1 true 1 1 3 DIV
-    ?fun_ref_f8345f3d64016266 INLINECALLDICT
+    ?fun_ref_f8345f3d64016266 CALL
     false 1 true 1 1 3 DIV
   }>
   ?fun_ref_0318d2f33529c0c6 PROCREF:<{
@@ -831,14 +831,14 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     SUB
     true 2 true 1 1 255 DIV
     36 PUSHINT
-    ?fun_ref_fbd4cc263c208ffd INLINECALLDICT
+    ?fun_ref_fbd4cc263c208ffd CALL
     s0 s1 XCHG
   }>
   ?fun_ref_0e3f3b547d0a4314 PROCREF:<{
     115194597005316551477397594802136977648153890007566736408151129975021336532841 PUSHINT
   }>
   ?fun_ref_0f0ebbb66387fc57 PROCREF:<{
-    ?fun_ref_aa50613cca252c08 INLINECALLDICT
+    ?fun_ref_aa50613cca252c08 CALL
     ROTREV
     true 2 true 3 1 6 DIV
     1 LSHIFT
@@ -846,7 +846,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     true 1 true 1 1 126 DIV
     s1 s2 XCHG
     SUB
-    ?fun_ref_2367f6e37b0e6a76 INLINECALLDICT
+    ?fun_ref_2367f6e37b0e6a76 CALL
     248 PUSHPOW2
     s0 s1 XCHG
     false 1 true 1 1 8 DIV
@@ -864,10 +864,10 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
   }>
   ?fun_ref_14c8cb933d84cae0 PROCREF:<{
     false 1 true 3 1 247 DIV
-    ?fun_ref_2051d9d821c3f770 INLINECALLDICT
+    ?fun_ref_2051d9d821c3f770 CALL
     s0 POP
     true 1 true 1 1 246 DIV
-    ?fun_ref_88faf969245bcd15 INLINECALLDICT
+    ?fun_ref_88faf969245bcd15 CALL
     9 PUSHINT
     s2 PUSH
     SUB
@@ -932,7 +932,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s1 s2 XCHG
     true 2 true 1 1 255 DIV
     18 PUSHINT
-    ?fun_ref_afe5ab170f89ef23 INLINECALLDICT
+    ?fun_ref_afe5ab170f89ef23 CALL
   }>
   ?fun_ref_2051d9d821c3f770 PROCREF:<{
     80260960185991308862233904206310070533990667611589946606122867505419956976172 PUSHINT
@@ -1009,12 +1009,12 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
   ?fun_ref_239e84369564e330 PROCREF:<{
     s1 PUSH
     ABS
-    ?fun_ref_0e3f3b547d0a4314 INLINECALLDICT
+    ?fun_ref_0e3f3b547d0a4314 CALL
     true 2 true 3 1 1 DIV
     1 LSHIFT
     ROT
     ADD
-    ?fun_ref_318ac84049047cbe INLINECALLDICT
+    ?fun_ref_318ac84049047cbe CALL
     -1 PUSHINT
     0 PUSHINT
     1 PUSHINT
@@ -1188,8 +1188,8 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     ADD
   }>
   ?fun_ref_48cab849e3521372 PROCREF:<{
-    ?fun_ref_1b1ae470b4614553 INLINECALLDICT
-    ?fun_ref_2051d9d821c3f770 INLINECALLDICT
+    ?fun_ref_1b1ae470b4614553 CALL
+    ?fun_ref_2051d9d821c3f770 CALL
     s0 POP
     true 2 true 1 1 255 DIV
     false 1 true 1 1 3 DIV
@@ -1209,19 +1209,19 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     <{
       s0 POP
       SGN
-      ?fun_ref_aa50613cca252c08 INLINECALLDICT
+      ?fun_ref_aa50613cca252c08 CALL
       s0 POP
       MUL
     }> PUSHCONT
     IFNOTJMP
     255 PUSHPOW2
-    ?fun_ref_d78034247225d612 INLINECALLDICT
+    ?fun_ref_d78034247225d612 CALL
     255 PUSHNEGPOW2
     s0 s1 XCHG
     SUB
     true 2 true 1 1 255 DIV
     NEGATE
-    ?fun_ref_5c788425937a7d28 INLINECALLDICT
+    ?fun_ref_5c788425937a7d28 CALL
   }>
   ?fun_ref_5a712c8e35fef248 PROCREF:<{
     256 PUSHPOW2
@@ -1278,7 +1278,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
           true 1 true 1 1 255 DIV
           false 1 true 1 1 1 DIV
           NEGATE
-          ?fun_ref_eabdf5efadfce810 INLINECALLDICT
+          ?fun_ref_eabdf5efadfce810 CALL
           4 LSHIFT
           GREATER
           <{
@@ -1305,7 +1305,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     5 BLKDROP
   }>
   ?fun_ref_5ba78fa4ab4ec6dc PROCREF:<{
-    ?fun_ref_aa50613cca252c08 INLINECALLDICT
+    ?fun_ref_aa50613cca252c08 CALL
     s0 POP
     s1 PUSH
     255 PUSHNEGPOW2
@@ -1321,19 +1321,19 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     true 1 true 1 1 254 DIV
     SUB
     255 PUSHPOW2
-    ?fun_ref_d78034247225d612 INLINECALLDICT
+    ?fun_ref_d78034247225d612 CALL
     255 PUSHNEGPOW2
     s0 s1 XCHG
     SUB
     s1 s2 XCHG
     true 2 true 1 1 255 DIV
-    ?fun_ref_5c788425937a7d28 INLINECALLDICT
+    ?fun_ref_5c788425937a7d28 CALL
     false 1 true 1 1 0 DIV
     ADD
   }>
   ?fun_ref_5c788425937a7d28 PROCREF:<{
-    ?fun_ref_b2fd74bee4445ab9 INLINECALLDICT
-    ?fun_ref_6405ea4d1c38698c INLINECALLDICT
+    ?fun_ref_b2fd74bee4445ab9 CALL
+    ?fun_ref_6405ea4d1c38698c CALL
     s1 s2 XCHG
     true 1 true 3 1 4 DIV
     s1 s2 XCHG
@@ -1382,7 +1382,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
   ?fun_ref_6c2cc5b04a23eeb2 PROCREF:<{
     s0 PUSH
     false 1 true 1 1 231 DIV
-    ?fun_ref_8a8385f8d78f60b7 INLINECALLDICT
+    ?fun_ref_8a8385f8d78f60b7 CALL
     s1 s3 PUSH2
     true 1 true 3 1 255 DIV
     1 RSHIFT
@@ -1457,9 +1457,9 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       1 LSHIFT
     }> PUSHCONT
     IFELSE
-    ?fun_ref_b2fd74bee4445ab9 INLINECALLDICT
-    ?fun_ref_aa50613cca252c08 INLINECALLDICT
-    ?fun_ref_6405ea4d1c38698c INLINECALLDICT
+    ?fun_ref_b2fd74bee4445ab9 CALL
+    ?fun_ref_aa50613cca252c08 CALL
+    ?fun_ref_6405ea4d1c38698c CALL
     s1 s4 XCHG
     true 1 true 3 1 5 DIV
     s5 s4 PUXC
@@ -1561,7 +1561,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     }> PUSHCONT
     IFJMP
     s0 s1 XCHG
-    ?fun_ref_48cab849e3521372 INLINECALLDICT
+    ?fun_ref_48cab849e3521372 CALL
     248 PUSHINT
     SUB
     s2 PUSH
@@ -1591,11 +1591,11 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       NEGATE
     }> PUSHCONT
     IFJMP
-    ?fun_ref_2051d9d821c3f770 INLINECALLDICT
+    ?fun_ref_2051d9d821c3f770 CALL
     s0 POP
     s1 s3 XCHG
     true 1 true 1 1 255 DIV
-    ?fun_ref_88faf969245bcd15 INLINECALLDICT
+    ?fun_ref_88faf969245bcd15 CALL
     9 PUSHINT
     ROT
     SUB
@@ -1607,10 +1607,10 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     SUB
   }>
   ?fun_ref_87780ff3a5ebd2bc PROCREF:<{
-    ?fun_ref_ec287b9511e936b8 INLINECALLDICT
+    ?fun_ref_ec287b9511e936b8 CALL
     248 PUSHINT
     SUB
-    ?fun_ref_2051d9d821c3f770 INLINECALLDICT
+    ?fun_ref_2051d9d821c3f770 CALL
     s0 POP
     true 1 true 1 1 7 DIV
     s0 s1 XCHG
@@ -1720,7 +1720,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     MUL
   }>
   ?fun_ref_8bf58ecefe2e19cb PROCREF:<{
-    ?fun_ref_aa50613cca252c08 INLINECALLDICT
+    ?fun_ref_aa50613cca252c08 CALL
     ROTREV
     true 2 true 3 1 6 DIV
     1 LSHIFT
@@ -1728,7 +1728,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     true 1 true 1 1 126 DIV
     s1 s2 XCHG
     SUB
-    ?fun_ref_b03a280997c9cc26 INLINECALLDICT
+    ?fun_ref_b03a280997c9cc26 CALL
     s0 s2 XCHG
     1 PUSHINT
     AND
@@ -1831,7 +1831,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
   ?fun_ref_b2fd74bee4445ab9 PROCREF:<{
     s0 PUSH
     false 1 true 1 1 231 DIV
-    ?fun_ref_8a8385f8d78f60b7 INLINECALLDICT
+    ?fun_ref_8a8385f8d78f60b7 CALL
     s1 s3 PUSH2
     true 1 true 3 1 255 DIV
     false 1 true 1 1 249 DIV
@@ -1894,15 +1894,15 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       8 LSHIFT
     }> PUSHCONT
     IFELSE
-    ?fun_ref_b2fd74bee4445ab9 INLINECALLDICT
+    ?fun_ref_b2fd74bee4445ab9 CALL
     false 1 true 1 1 5 DIV
-    ?fun_ref_aa50613cca252c08 INLINECALLDICT
+    ?fun_ref_aa50613cca252c08 CALL
     s0 POP
     s1 s3 XCHG
     MUL
     s1 s2 XCHG
     ADD
-    ?fun_ref_6405ea4d1c38698c INLINECALLDICT
+    ?fun_ref_6405ea4d1c38698c CALL
     s1 s2 XCHG
     true 1 true 1 1 5 DIV
     ADD
@@ -1966,8 +1966,8 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     }> PUSHCONT
     IFELSE
     s0 s1 XCHG
-    ?fun_ref_b2fd74bee4445ab9 INLINECALLDICT
-    ?fun_ref_aa50613cca252c08 INLINECALLDICT
+    ?fun_ref_b2fd74bee4445ab9 CALL
+    ?fun_ref_aa50613cca252c08 CALL
     s0 POP
     s1 s3 XCHG
     MUL
@@ -1975,14 +1975,14 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     false 1 true 1 1 5 DIV
     s1 s2 XCHG
     SUB
-    ?fun_ref_6405ea4d1c38698c INLINECALLDICT
+    ?fun_ref_6405ea4d1c38698c CALL
     s1 s2 XCHG
     true 1 true 1 1 5 DIV
     SUB
     false 1 true 1 1 6 DIV
   }>
   ?fun_ref_e11f9343f87d5b4b PROCREF:<{
-    ?fun_ref_aa50613cca252c08 INLINECALLDICT
+    ?fun_ref_aa50613cca252c08 CALL
     ROTREV
     true 2 true 3 1 6 DIV
     1 LSHIFT
@@ -1990,7 +1990,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     true 1 true 1 1 126 DIV
     s1 s2 XCHG
     SUB
-    ?fun_ref_b03a280997c9cc26 INLINECALLDICT
+    ?fun_ref_b03a280997c9cc26 CALL
     s0 s2 XCHG
     1 PUSHINT
     AND
@@ -2006,7 +2006,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     115641670674223639132965820642403718536242645001775371762318060545014644837101 PUSHINT
   }>
   ?fun_ref_eabdf5efadfce810 PROCREF:<{
-    ?fun_ref_2051d9d821c3f770 INLINECALLDICT
+    ?fun_ref_2051d9d821c3f770 CALL
     ROTREV
     8 PUSHINT
     true 2 false 3 1 0 DIV
@@ -2015,7 +2015,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     true 1 true 1 1 126 DIV
     s1 s2 XCHG
     SUB
-    ?fun_ref_88faf969245bcd15 INLINECALLDICT
+    ?fun_ref_88faf969245bcd15 CALL
     9 PUSHINT
     s2 PUSH
     SUB
@@ -2029,7 +2029,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     SUB
   }>
   ?fun_ref_ec287b9511e936b8 PROCREF:<{
-    ?fun_ref_1b1ae470b4614553 INLINECALLDICT
+    ?fun_ref_1b1ae470b4614553 CALL
     false 1 true 3 1 3 DIV
     9 LSHIFT
     s2 PUSH
@@ -2147,14 +2147,14 @@ exports[`decompileAll should decompile wallet 1`] = `
     s0 s6 s4 PUXCPU
     s0 s3 XCHG
     4 TUPLE
-    1 SETGLOBVAR
+    1 SETGLOB
     s0 s2 XCHG
-    2 SETGLOBVAR
+    2 SETGLOB
     c4 PUSH
     CTOS
     LDREF
     s0 s1 XCHG
-    3 SETGLOBVAR
+    3 SETGLOB
     1 LDI
     s0 s1 XCHG
     <{
@@ -2178,14 +2178,14 @@ exports[`decompileAll should decompile wallet 1`] = `
       s0 s2 XCHG
       ENDS
       s0 s1 XCHG
-      ?fun_ref_cd29dd004f76b216 INLINECALLDICT
+      ?fun_ref_cd29dd004f76b216 CALL
     }> PUSHCONT
     IFELSE
     2 3 BLKSWAP
-    ?fun_ref_e3ac26e214db4b5d INLINECALLDICT
+    ?fun_ref_e3ac26e214db4b5d CALL
     s0 POP
     NEWC
-    3 GETGLOBVAR
+    3 GETGLOB
     s0 s1 XCHG
     STREF
     -1 PUSHINT
@@ -2204,7 +2204,7 @@ exports[`decompileAll should decompile wallet 1`] = `
     CTOS
     LDREF
     s0 s1 XCHG
-    3 SETGLOBVAR
+    3 SETGLOB
     1 LDI
     s0 s1 XCHG
     <{
@@ -2228,10 +2228,10 @@ exports[`decompileAll should decompile wallet 1`] = `
       s0 s2 XCHG
       ENDS
       s0 s1 XCHG
-      ?fun_ref_cd29dd004f76b216 INLINECALLDICT
+      ?fun_ref_cd29dd004f76b216 CALL
     }> PUSHCONT
     IFELSE
-    ?fun_ref_b2f99ae1a1dd4dfb INLINECALLDICT
+    ?fun_ref_b2f99ae1a1dd4dfb CALL
     3 1 BLKDROP2
   }>
   ?fun_86520 PROC:<{
@@ -2239,7 +2239,7 @@ exports[`decompileAll should decompile wallet 1`] = `
     CTOS
     LDREF
     s0 s1 XCHG
-    3 SETGLOBVAR
+    3 SETGLOB
     1 LDI
     s0 s1 XCHG
     <{
@@ -2263,10 +2263,10 @@ exports[`decompileAll should decompile wallet 1`] = `
       s0 s2 XCHG
       ENDS
       s0 s1 XCHG
-      ?fun_ref_cd29dd004f76b216 INLINECALLDICT
+      ?fun_ref_cd29dd004f76b216 CALL
     }> PUSHCONT
     IFELSE
-    ?fun_ref_44086a5ce86162fe INLINECALLDICT
+    ?fun_ref_44086a5ce86162fe CALL
     3 1 BLKDROP2
   }>
   supported_interfaces PROC:<{
@@ -2280,7 +2280,7 @@ exports[`decompileAll should decompile wallet 1`] = `
     CTOS
     LDREF
     s0 s1 XCHG
-    3 SETGLOBVAR
+    3 SETGLOB
     1 LDI
     s0 s1 XCHG
     <{
@@ -2304,10 +2304,10 @@ exports[`decompileAll should decompile wallet 1`] = `
       s0 s2 XCHG
       ENDS
       s0 s1 XCHG
-      ?fun_ref_cd29dd004f76b216 INLINECALLDICT
+      ?fun_ref_cd29dd004f76b216 CALL
     }> PUSHCONT
     IFELSE
-    ?fun_ref_40d98146a47dbe3b INLINECALLDICT
+    ?fun_ref_40d98146a47dbe3b CALL
     3 1 BLKDROP2
   }>
   ?fun_ref_3301d2d6bbf180a4 PROCREF:<{
@@ -2472,7 +2472,7 @@ exports[`decompileAll should decompile wallet 1`] = `
     ROTREV
   }>
   ?fun_ref_e3ac26e214db4b5d PROCREF:<{
-    2 SAVE
+    c2 SAVE
     SAMEALTSAVE
     0 PUSHINT
     s1 PUSH
@@ -2605,7 +2605,7 @@ exports[`decompileAll should decompile wallet 1`] = `
       s4 s4 s4 XCHG3
       NULL
       NULL
-      ?fun_ref_3301d2d6bbf180a4 INLINECALLDICT
+      ?fun_ref_3301d2d6bbf180a4 CALL
       -1 PUSHINT
     }> PUSHCONT
     IFJMP
@@ -3350,7 +3350,7 @@ exports[`decompileAll should decompile wallet v5 1`] = `
         SDSKIPFIRST
         0 PUSHINT
         -1 PUSHINT
-        ?fun_ref_75c1f54304030ec4 INLINECALLDICT
+        ?fun_ref_75c1f54304030ec4 CALL
       }> PUSHCONT
       IFJMP
       s1 POP
@@ -3364,7 +3364,7 @@ exports[`decompileAll should decompile wallet v5 1`] = `
       IFJMP
       0 PUSHINT
       <{
-        2 SAVE
+        c2 SAVE
         SAMEALTSAVE
         s1 PUSH
         9 PUSHPOW2
@@ -3435,7 +3435,7 @@ exports[`decompileAll should decompile wallet v5 1`] = `
         }> PUSHCONT
         IF
         0 PUSHINT
-        ?fun_ref_75c1f54304030ec4 INLINECALLDICT
+        ?fun_ref_75c1f54304030ec4 CALL
       }> PUSHCONT
       EXECUTE
     }> PUSHCONT
@@ -3475,7 +3475,7 @@ exports[`decompileAll should decompile wallet v5 1`] = `
     PLDDICT
   }>
   ?fun_ref_75c1f54304030ec4 PROCREF:<{
-    2 SAVE
+    c2 SAVE
     SAMEALTSAVE
     s0 s2 XCHG
     LDDICT
