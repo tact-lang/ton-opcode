@@ -54,10 +54,10 @@ export function decompile(args: {
     });
 
     while (slice.remainingBits > 0) {
-
+        
         // Load opcode
         const opcodeOffset = slice.offsetBits;
-        const opcode = decodeInstruction(slice);
+        const opcode = decodeInstruction(source, slice);
         const opcodeLength = slice.offsetBits - opcodeOffset;
 
         // Failed case

@@ -16,13 +16,7 @@ const OPCODE_RENAMES = new Map([
   ['PUSHINT_8', 'PUSHINT'],
   ['PUSHINT_16', 'PUSHINT'],
   ['PUSHINT_LONG', 'PUSHINT'],
-  ['POPCTR', 'POP'],
-  ['PUSHCTR', 'PUSH'],
-  ['XCHG_0I', 'XCHG'],
-  ['XCHG_1I', 'XCHG'],
-  ['CALLREF', 'CALL'],
   ['PUSHCONT_SHORT', 'PUSHCONT'],
-  ['RETALT', 'RETFALSE'],
   ['THROWIFNOT_SHORT', 'THROWIFNOT'],
   ['THROWIF_SHORT', 'THROWIF'],
 ]);
@@ -162,10 +156,6 @@ export class AssemblerWriter {
       }
     }
 
-    if(node.opcode.definition.mnemonic == "SDBEGINS" || node.opcode.definition.mnemonic == "SDBEGINSQ") {
-      return `x{${secondArg}} ${node.opcode}`;
-    }
-
     if (node.opcode.definition.mnemonic === 'ADDCONST') {
       if (firstArg === 1) {
         return 'INC';
@@ -195,6 +185,8 @@ export class AssemblerWriter {
   }
 
   writeInstructionNode(node: InstructionNode) {
+    //this.#writer.write(`[${node.hash.substring(0, 16)}:${node.offset}] `);
+
     const specific = this.maybeSpecificWrite(node);
     if (specific) {
       this.#writer.writeLine(specific);

@@ -55,7 +55,7 @@ exports[`decompileAll should decompile echo 1`] = `
     1 SETGLOB
     s0 s2 XCHG
     2 SETGLOB
-    c4 PUSH
+    c4 PUSHCTR
     CTOS
     LDREF
     s0 s1 XCHG
@@ -77,11 +77,11 @@ exports[`decompileAll should decompile echo 1`] = `
       s0 s1 XCHG
       s0 s1 XCHG
       ENDS
-      ?fun_ref_dca7aba6e712f2dd CALL
+      ?fun_ref_dca7aba6e712f2dd CALLREF
     }> PUSHCONT
     IFELSE
     ROTREV
-    ?fun_ref_f5ca007f3e344181 CALL
+    ?fun_ref_f5ca007f3e344181 CALLREF
     s0 POP
     s0 POP
     NEWC
@@ -92,7 +92,7 @@ exports[`decompileAll should decompile echo 1`] = `
     s0 s1 XCHG
     1 STI
     ENDC
-    c4 POP
+    c4 POPCTR
   }>
   supported_interfaces PROC:<{
     123515602279859691144772641439386770278 PUSHINT
@@ -101,7 +101,7 @@ exports[`decompileAll should decompile echo 1`] = `
     209474421377847335869795010607481022628 PUSHINT
   }>
   ?fun_115554 PROC:<{
-    c4 PUSH
+    c4 PUSHCTR
     CTOS
     LDREF
     s0 s1 XCHG
@@ -123,11 +123,11 @@ exports[`decompileAll should decompile echo 1`] = `
       s0 s1 XCHG
       s0 s1 XCHG
       ENDS
-      ?fun_ref_dca7aba6e712f2dd CALL
+      ?fun_ref_dca7aba6e712f2dd CALLREF
     }> PUSHCONT
     IFELSE
     s0 s1 XCHG
-    ?fun_ref_fc8ae1407928bf8b CALL
+    ?fun_ref_fc8ae1407928bf8b CALLREF
     s1 POP
   }>
   ?fun_ref_05a658b0b82d492f PROCREF:<{
@@ -140,7 +140,7 @@ exports[`decompileAll should decompile echo 1`] = `
     s0 s1 XCHG
     NULL
     NULL
-    ?fun_ref_3301d2d6bbf180a4 CALL
+    ?fun_ref_3301d2d6bbf180a4 CALLREF
   }>
   ?fun_ref_3301d2d6bbf180a4 PROCREF:<{
     NEWC
@@ -307,7 +307,7 @@ exports[`decompileAll should decompile echo 1`] = `
     NULL
     TPUSH
     s0 s1 XCHG
-    ?fun_ref_a2813468f47d741c CALL
+    ?fun_ref_a2813468f47d741c CALLREF
     2 UNTUPLE
     s0 s1 XCHG
     ENDC
@@ -431,16 +431,16 @@ exports[`decompileAll should decompile echo 1`] = `
       <{
         32 PUSHINT
         SDSKIPFIRST
-        ?fun_ref_7b0b7ac68163f545 CALL
-        ?fun_ref_05a658b0b82d492f CALL
+        ?fun_ref_7b0b7ac68163f545 CALLREF
+        ?fun_ref_05a658b0b82d492f CALLREF
         -1 PUSHINT
-        RETFALSE
+        RETALT
       }> PUSHCONT
       IFJMP
     }> PUSHCONT
     IF
-    ?fun_ref_3ee8ad4bdf599298 CALL
-    ?fun_ref_05a658b0b82d492f CALL
+    ?fun_ref_3ee8ad4bdf599298 CALLREF
+    ?fun_ref_05a658b0b82d492f CALLREF
     -1 PUSHINT
   }>
   ?fun_ref_fc8ae1407928bf8b PROCREF:<{
@@ -450,10 +450,10 @@ exports[`decompileAll should decompile echo 1`] = `
     TPUSH
     NULL
     TPUSH
-    x{48656C6C6F2C208} PUSHSLICE
-    ?fun_ref_a2813468f47d741c CALL
+    x{48656C6C6F2C20} PUSHSLICE
+    ?fun_ref_a2813468f47d741c CALLREF
     s0 s1 XCHG
-    ?fun_ref_a2813468f47d741c CALL
+    ?fun_ref_a2813468f47d741c CALLREF
     2 UNTUPLE
     s0 s1 XCHG
     ENDC
@@ -520,38 +520,38 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
   DECLPROC ?fun_ref_f8345f3d64016266;
   DECLPROC ?fun_ref_fbd4cc263c208ffd;
   recv_internal PROC:<{
-    ?fun_ref_d78034247225d612 CALL
+    ?fun_ref_d78034247225d612 CALLREF
     1 PUSHINT
-    ?fun_ref_d78034247225d612 CALL
+    ?fun_ref_d78034247225d612 CALLREF
     248 PUSHPOW2
-    ?fun_ref_d78034247225d612 CALL
+    ?fun_ref_d78034247225d612 CALLREF
     255 PUSHPOW2
-    ?fun_ref_d78034247225d612 CALL
+    ?fun_ref_d78034247225d612 CALLREF
     s0 PUSH
-    true 1 true 1 1 247 DIV
+    248 MULRSHIFTR
     s0 PUSH
-    true 1 true 1 1 254 DIV
-    ?fun_ref_2051d9d821c3f770 CALL
-    ?fun_ref_aa50613cca252c08 CALL
-    ?fun_ref_e9b023c94244cb2e CALL
-    ?fun_ref_0e3f3b547d0a4314 CALL
-    ?fun_ref_6405ea4d1c38698c CALL
-    ?fun_ref_2051d9d821c3f770 CALL
+    255 MULRSHIFTR
+    ?fun_ref_2051d9d821c3f770 CALLREF
+    ?fun_ref_aa50613cca252c08 CALLREF
+    ?fun_ref_e9b023c94244cb2e CALLREF
+    ?fun_ref_0e3f3b547d0a4314 CALLREF
+    ?fun_ref_6405ea4d1c38698c CALLREF
+    ?fun_ref_2051d9d821c3f770 CALLREF
     s0 POP
-    ?fun_ref_2051d9d821c3f770 CALL
+    ?fun_ref_2051d9d821c3f770 CALLREF
     s0 POP
-    false 1 true 1 1 7 DIV
-    ?fun_ref_aa50613cca252c08 CALL
+    8 RSHIFTR
+    ?fun_ref_aa50613cca252c08 CALLREF
     s0 POP
-    ?fun_ref_aa50613cca252c08 CALL
+    ?fun_ref_aa50613cca252c08 CALLREF
     s0 POP
-    false 1 true 1 1 5 DIV
-    ?fun_ref_7753d4b96608d450 CALL
-    ?fun_ref_88faf969245bcd15 CALL
-    ?fun_ref_eabdf5efadfce810 CALL
-    ?fun_ref_14c8cb933d84cae0 CALL
+    6 RSHIFTR
+    ?fun_ref_7753d4b96608d450 CALLREF
+    ?fun_ref_88faf969245bcd15 CALLREF
+    ?fun_ref_eabdf5efadfce810 CALLREF
+    ?fun_ref_14c8cb933d84cae0 CALLREF
     s0 s0 PUSH2
-    true 1 true 1 1 255 DIV
+    256 MULRSHIFTR
     251 PUSHPOW2
     33 PUSHINT
     250 LSHIFT
@@ -561,7 +561,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       s1 s2 XCPU
       SUB
       s0 s5 s5 PU2XC
-      true 2 true 1 1 235 DIV
+      236 LSHIFTDIVR
       SUB
     }> PUSHCONT
     REPEAT
@@ -569,21 +569,21 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     3 PUSHINT
     254 LSHIFT
     s2 s3 PUXC
-    true 2 true 1 1 239 DIV
+    240 LSHIFTDIVR
     SUB
     s2 PUSH
     1 RSHIFT
     s2 PUSH
-    false 1 true 1 1 9 DIV
+    10 RSHIFTR
     s1 s2 XCHG
     SUB
     s1 s2 XCHG
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 8 DIV
+    MULDIVR
+    9 RSHIFTR
     ADD
-    ?fun_ref_41d3f2ea6d56e172 CALL
+    ?fun_ref_41d3f2ea6d56e172 CALLREF
     s0 s0 PUSH2
-    true 1 true 1 1 255 DIV
+    256 MULRSHIFTR
     251 PUSHPOW2
     41 PUSHINT
     250 LSHIFT
@@ -593,7 +593,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       s1 s2 XCPU
       SUB
       s0 s5 s5 PU2XC
-      true 2 true 1 1 239 DIV
+      240 LSHIFTDIVR
       SUB
     }> PUSHCONT
     REPEAT
@@ -601,21 +601,21 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     3 PUSHINT
     254 LSHIFT
     s2 s3 PUXC
-    true 2 true 1 1 243 DIV
+    244 LSHIFTDIVR
     SUB
     s2 PUSH
     1 RSHIFT
     s2 PUSH
-    false 1 true 1 1 5 DIV
+    6 RSHIFTR
     s1 s2 XCHG
     SUB
     s1 s2 XCHG
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 4 DIV
+    MULDIVR
+    5 RSHIFTR
     ADD
-    ?fun_ref_3449c496cc175763 CALL
+    ?fun_ref_3449c496cc175763 CALLREF
     s0 s0 PUSH2
-    true 1 true 1 1 255 DIV
+    256 MULRSHIFTR
     251 PUSHPOW2
     33 PUSHINT
     250 LSHIFT
@@ -625,7 +625,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       s1 s2 XCPU
       SUB
       s0 s5 s5 PU2XC
-      true 2 true 1 1 235 DIV
+      236 LSHIFTDIVR
       SUB
     }> PUSHCONT
     REPEAT
@@ -633,67 +633,67 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     3 PUSHINT
     254 LSHIFT
     s2 s3 PUXC
-    true 2 true 1 1 239 DIV
+    240 LSHIFTDIVR
     SUB
     s2 PUSH
     1 RSHIFT
     s2 PUSH
-    false 1 true 1 1 9 DIV
+    10 RSHIFTR
     s1 s2 XCHG
     SUB
     s1 s2 XCHG
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 8 DIV
+    MULDIVR
+    9 RSHIFTR
     ADD
     s0 s0 PUSH2
-    true 1 true 1 1 255 DIV
+    256 MULRSHIFTR
     s0 PUSH
-    false 1 true 1 1 8 DIV
+    9 RSHIFTR
     255 PUSHPOW2
     ADD
     s2 PUSH
     1 RSHIFT
     s2 s1 PUSH2
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 7 DIV
+    MULDIVR
+    8 RSHIFTR
     s1 s3 XCHG
     SUB
     s1 PUSH
     1 RSHIFT
     s0 s2 s5 XCPUXC
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 7 DIV
+    MULDIVR
+    8 RSHIFTR
     SUB
-    ?fun_ref_318ac84049047cbe CALL
-    ?fun_ref_239e84369564e330 CALL
-    ?fun_ref_2367f6e37b0e6a76 CALL
-    ?fun_ref_b03a280997c9cc26 CALL
-    ?fun_ref_0f0ebbb66387fc57 CALL
-    ?fun_ref_0f0ebbb66387fc57 CALL
+    ?fun_ref_318ac84049047cbe CALLREF
+    ?fun_ref_239e84369564e330 CALLREF
+    ?fun_ref_2367f6e37b0e6a76 CALLREF
+    ?fun_ref_b03a280997c9cc26 CALLREF
+    ?fun_ref_0f0ebbb66387fc57 CALLREF
+    ?fun_ref_0f0ebbb66387fc57 CALLREF
     s0 POP
-    ?fun_ref_0f0ebbb66387fc57 CALL
+    ?fun_ref_0f0ebbb66387fc57 CALLREF
     s1 POP
-    ?fun_ref_e11f9343f87d5b4b CALL
-    ?fun_ref_8bf58ecefe2e19cb CALL
-    ?fun_ref_fbd4cc263c208ffd CALL
+    ?fun_ref_e11f9343f87d5b4b CALLREF
+    ?fun_ref_8bf58ecefe2e19cb CALLREF
+    ?fun_ref_fbd4cc263c208ffd CALLREF
     s1 s1 PUSH2
-    true 1 true 1 1 255 DIV
+    256 MULRSHIFTR
     254 PUSHPOW2
     s0 s2 PUSH2
-    false 0 false 1 1 0 DIV
+    DIVR
     255 PUSHPOW2
     ADD
     s3 PUSH
     DEC
     <{
       s2 s1 PUXC
-      true 2 true 1 1 241 DIV
+      242 LSHIFTDIVR
       s1 s1 PUXC
       SUB
       s3 PUSH
       DEC
       s4 s4 XCPU
-      true 0 false 1 1 0 DIV
+      MULDIVR
       s1 PUSH
       ADD
     }> PUSHCONT
@@ -701,16 +701,16 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s1 POP
     s2 POP
     s0 PUSH
-    false 1 true 1 1 11 DIV
+    12 RSHIFTR
     s1 s2 XCHG
     SUB
     s2 PUSH
     ROTREV
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 11 DIV
+    MULDIVR
+    12 RSHIFTR
     ADD
-    ?fun_ref_afe5ab170f89ef23 CALL
-    ?fun_ref_0318d2f33529c0c6 CALL
+    ?fun_ref_afe5ab170f89ef23 CALLREF
+    ?fun_ref_0318d2f33529c0c6 CALLREF
     1 PUSHINT
     s0 s1 XCHG
     <{
@@ -718,7 +718,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     }> PUSHCONT
     REPEAT
     5 PUSHINT
-    false 0 false 3 0 0 DIV
+    DIVMOD
     1 PUSHINT
     s0 s1 XCHG
     <{
@@ -731,37 +731,37 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       MUL
     }> PUSHCONT
     REPEAT
-    ?fun_ref_1b1ae470b4614553 CALL
-    ?fun_ref_ec287b9511e936b8 CALL
-    ?fun_ref_48cab849e3521372 CALL
-    ?fun_ref_87780ff3a5ebd2bc CALL
-    ?fun_ref_48cab849e3521372 CALL
+    ?fun_ref_1b1ae470b4614553 CALLREF
+    ?fun_ref_ec287b9511e936b8 CALLREF
+    ?fun_ref_48cab849e3521372 CALLREF
+    ?fun_ref_87780ff3a5ebd2bc CALLREF
+    ?fun_ref_48cab849e3521372 CALLREF
     248 PUSHINT
     SUB
     248 LSHIFT
     s0 s1 XCHG
-    false 1 true 1 1 7 DIV
+    8 RSHIFTR
     ADD
-    ?fun_ref_811ebbe381228c78 CALL
-    ?fun_ref_73739320b258991c CALL
+    ?fun_ref_811ebbe381228c78 CALLREF
+    ?fun_ref_73739320b258991c CALLREF
     s1 s1 PUSH2
-    true 1 true 1 1 255 DIV
+    256 MULRSHIFTR
     254 PUSHPOW2
     s0 s2 PUSH2
-    false 0 false 1 1 0 DIV
+    DIVR
     255 PUSHPOW2
     ADD
     s3 PUSH
     DEC
     <{
       s2 s1 PUXC
-      true 2 true 1 1 241 DIV
+      242 LSHIFTDIVR
       s1 s1 PUXC
       ADD
       s3 PUSH
       DEC
       s4 s4 XCPU
-      true 0 false 1 1 0 DIV
+      MULDIVR
       s1 PUSH
       ADD
     }> PUSHCONT
@@ -769,38 +769,38 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s1 POP
     s2 POP
     s0 PUSH
-    false 1 true 1 1 11 DIV
+    12 RSHIFTR
     s1 s2 XCHG
     ADD
     s2 PUSH
     ROTREV
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 11 DIV
+    MULDIVR
+    12 RSHIFTR
     SUB
-    ?fun_ref_5d3a4c29b0035181 CALL
-    ?fun_ref_8a8385f8d78f60b7 CALL
-    ?fun_ref_b2fd74bee4445ab9 CALL
-    ?fun_ref_6c2cc5b04a23eeb2 CALL
-    ?fun_ref_7134bd42618a8d1e CALL
-    ?fun_ref_5c788425937a7d28 CALL
-    ?fun_ref_494e543f112ad30c CALL
-    ?fun_ref_5ba78fa4ab4ec6dc CALL
+    ?fun_ref_5d3a4c29b0035181 CALLREF
+    ?fun_ref_8a8385f8d78f60b7 CALLREF
+    ?fun_ref_b2fd74bee4445ab9 CALLREF
+    ?fun_ref_6c2cc5b04a23eeb2 CALLREF
+    ?fun_ref_7134bd42618a8d1e CALLREF
+    ?fun_ref_5c788425937a7d28 CALLREF
+    ?fun_ref_494e543f112ad30c CALLREF
+    ?fun_ref_5ba78fa4ab4ec6dc CALLREF
     7 LSHIFT
-    ?fun_ref_494e543f112ad30c CALL
-    false 1 true 1 1 6 DIV
+    ?fun_ref_494e543f112ad30c CALLREF
+    7 RSHIFTR
     7 LSHIFT
-    ?fun_ref_5ba78fa4ab4ec6dc CALL
-    false 1 true 1 1 5 DIV
-    ?fun_ref_cdb28b381a5130bf CALL
-    ?fun_ref_da70c8217d8f9a46 CALL
-    ?fun_ref_5a712c8e35fef248 CALL
-    ?fun_ref_f8345f3d64016266 CALL
+    ?fun_ref_5ba78fa4ab4ec6dc CALLREF
+    6 RSHIFTR
+    ?fun_ref_cdb28b381a5130bf CALLREF
+    ?fun_ref_da70c8217d8f9a46 CALLREF
+    ?fun_ref_5a712c8e35fef248 CALLREF
+    ?fun_ref_f8345f3d64016266 CALLREF
     RANDU256
     8 RSHIFT
-    ?fun_ref_5a712c8e35fef248 CALL
-    false 1 true 1 1 3 DIV
-    ?fun_ref_f8345f3d64016266 CALL
-    false 1 true 1 1 3 DIV
+    ?fun_ref_5a712c8e35fef248 CALLREF
+    4 RSHIFTR
+    ?fun_ref_f8345f3d64016266 CALLREF
+    4 RSHIFTR
   }>
   ?fun_ref_0318d2f33529c0c6 PROCREF:<{
     s0 PUSH
@@ -809,7 +809,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s1 PUSH
     SUB
     s1 s2 XCHG
-    LSHIFTX
+    LSHIFT_VAR
     256 PUSHNEGPOW2
     s1 PUSH
     249 RSHIFT
@@ -829,30 +829,30 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     1 RSHIFT
     ROT
     SUB
-    true 2 true 1 1 255 DIV
+    256 LSHIFTDIVR
     36 PUSHINT
-    ?fun_ref_fbd4cc263c208ffd CALL
+    ?fun_ref_fbd4cc263c208ffd CALLREF
     s0 s1 XCHG
   }>
   ?fun_ref_0e3f3b547d0a4314 PROCREF:<{
     115194597005316551477397594802136977648153890007566736408151129975021336532841 PUSHINT
   }>
   ?fun_ref_0f0ebbb66387fc57 PROCREF:<{
-    ?fun_ref_aa50613cca252c08 CALL
+    ?fun_ref_aa50613cca252c08 CALLREF
     ROTREV
-    true 2 true 3 1 6 DIV
+    7 LSHIFTDIVMODR
     1 LSHIFT
     s1 s4 PUXC
-    true 1 true 1 1 126 DIV
+    127 MULRSHIFTR
     s1 s2 XCHG
     SUB
-    ?fun_ref_2367f6e37b0e6a76 CALL
+    ?fun_ref_2367f6e37b0e6a76 CALLREF
     248 PUSHPOW2
     s0 s1 XCHG
-    false 1 true 1 1 8 DIV
+    9 RSHIFTR
     SUB
     s0 s1 XCHG
-    false 1 true 1 1 7 DIV
+    8 RSHIFTR
     s0 s2 XCHG
     3 PUSHINT
     AND
@@ -863,21 +863,21 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     REPEAT
   }>
   ?fun_ref_14c8cb933d84cae0 PROCREF:<{
-    false 1 true 3 1 247 DIV
-    ?fun_ref_2051d9d821c3f770 CALL
+    248 QRSHIFTRMOD
+    ?fun_ref_2051d9d821c3f770 CALLREF
     s0 POP
-    true 1 true 1 1 246 DIV
-    ?fun_ref_88faf969245bcd15 CALL
+    247 MULRSHIFTR
+    ?fun_ref_88faf969245bcd15 CALLREF
     9 PUSHINT
     s2 PUSH
     SUB
-    false 1 false 1 1 0 DIV
+    RSHIFTR_VAR
     248 PUSHINT
     ROT
     ADD
     -1 PUSHINT
     s0 s1 XCHG
-    LSHIFTX
+    LSHIFT_VAR
     SUB
   }>
   ?fun_ref_1b1ae470b4614553 PROCREF:<{
@@ -888,7 +888,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s1 PUSH
     SUB
     s1 s2 XCHG
-    LSHIFTX
+    LSHIFT_VAR
     2873 PUSHINT
     244 LSHIFT
     DUP2
@@ -899,11 +899,11 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s0 s3 XCHG
     ADD
     s1 s2 XCHG
-    true 0 false 1 1 0 DIV
+    MULDIVR
     11 ADDCONST
     s0 PUSH
     5 PUSHINT
-    false 0 false 3 0 0 DIV
+    DIVMOD
     1 PUSHINT
     s0 s1 XCHG
     <{
@@ -920,7 +920,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s2 PUSH
     SUB
     5 MULCONST
-    LSHIFTX
+    LSHIFT_VAR
     s2 s2 XCPU
     SUB
     s0 PUSH
@@ -930,9 +930,9 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s0 s3 XCHG2
     ADD
     s1 s2 XCHG
-    true 2 true 1 1 255 DIV
+    256 LSHIFTDIVR
     18 PUSHINT
-    ?fun_ref_afe5ab170f89ef23 CALL
+    ?fun_ref_afe5ab170f89ef23 CALLREF
   }>
   ?fun_ref_2051d9d821c3f770 PROCREF:<{
     80260960185991308862233904206310070533990667611589946606122867505419956976172 PUSHINT
@@ -940,7 +940,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
   }>
   ?fun_ref_2367f6e37b0e6a76 PROCREF:<{
     s0 s0 PUSH2
-    true 1 true 1 1 255 DIV
+    256 MULRSHIFTR
     251 PUSHPOW2
     33 PUSHINT
     250 LSHIFT
@@ -950,7 +950,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       s1 s2 XCPU
       SUB
       s0 s5 s5 PU2XC
-      true 2 true 1 1 235 DIV
+      236 LSHIFTDIVR
       SUB
     }> PUSHCONT
     REPEAT
@@ -958,46 +958,46 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     3 PUSHINT
     254 LSHIFT
     s2 s3 PUXC
-    true 2 true 1 1 239 DIV
+    240 LSHIFTDIVR
     SUB
     s2 PUSH
     1 RSHIFT
     s2 PUSH
-    false 1 true 1 1 9 DIV
+    10 RSHIFTR
     s1 s2 XCHG
     SUB
     s1 s2 XCHG
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 8 DIV
+    MULDIVR
+    9 RSHIFTR
     ADD
     s0 s0 PUSH2
-    true 1 true 1 1 255 DIV
+    256 MULRSHIFTR
     s0 PUSH
-    false 1 true 1 1 8 DIV
+    9 RSHIFTR
     255 PUSHPOW2
     ADD
     s2 PUSH
     1 RSHIFT
     s2 s1 PUSH2
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 7 DIV
+    MULDIVR
+    8 RSHIFTR
     s1 s3 XCHG
     SUB
     s1 PUSH
     1 RSHIFT
     s0 s2 s5 XCPUXC
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 7 DIV
+    MULDIVR
+    8 RSHIFTR
     SUB
     7 PUSHINT
     3 PUSHINT
     <{
       s2 s2 PUSH2
-      true 1 true 1 1 255 DIV
+      256 MULRSHIFTR
       s3 s4 PUXC
-      true 1 true 1 1 255 DIV
+      256 MULRSHIFTR
       s1 PUSH
-      false 1 false 1 1 0 DIV
+      RSHIFTR_VAR
       s1 s3 XCHG
       SUB
       s0 s2 XCHG
@@ -1009,12 +1009,12 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
   ?fun_ref_239e84369564e330 PROCREF:<{
     s1 PUSH
     ABS
-    ?fun_ref_0e3f3b547d0a4314 CALL
-    true 2 true 3 1 1 DIV
+    ?fun_ref_0e3f3b547d0a4314 CALLREF
+    2 LSHIFTDIVMODR
     1 LSHIFT
     ROT
     ADD
-    ?fun_ref_318ac84049047cbe CALL
+    ?fun_ref_318ac84049047cbe CALLREF
     -1 PUSHINT
     0 PUSHINT
     1 PUSHINT
@@ -1036,42 +1036,42 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     }> PUSHCONT
     REPEAT
     s4 PUSH
-    true 2 true 3 1 255 DIV
+    256 LSHIFTDIVMODR
     s5 PUSH
-    true 2 true 1 1 6 DIV
+    7 LSHIFTDIVR
     s2 s5 XCPU
-    true 2 true 3 1 255 DIV
+    256 LSHIFTDIVMODR
     s0 s6 XCHG2
-    true 2 true 1 1 6 DIV
+    7 LSHIFTDIVR
     s0 s6 XCHG
     SGN
     s1 s3 PUSH2
-    true 1 true 1 1 255 DIV
+    256 MULRSHIFTR
     s0 s3 XCHG2
     SUB
-    false 1 true 1 1 3 DIV
+    4 RSHIFTR
     s5 s4 PUSH2
-    true 1 true 1 1 255 DIV
+    256 MULRSHIFTR
     SUB
-    false 1 true 1 1 2 DIV
+    3 RSHIFTR
     s1 PUSH
     SUB
     s1 s2 XCHG
     MUL
     s4 s4 PUXC
-    true 1 true 1 1 255 DIV
+    256 MULRSHIFTR
     s0 s5 XCHG2
     SUB
-    false 1 true 1 1 3 DIV
+    4 RSHIFTR
     s4 s2 XCHG2
-    true 1 true 1 1 255 DIV
+    256 MULRSHIFTR
     ADD
-    false 1 true 1 1 2 DIV
+    3 RSHIFTR
     SUB
   }>
   ?fun_ref_318ac84049047cbe PROCREF:<{
     s0 s0 PUSH2
-    true 1 true 1 1 255 DIV
+    256 MULRSHIFTR
     251 PUSHPOW2
     33 PUSHINT
     250 LSHIFT
@@ -1081,7 +1081,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       s1 s2 XCPU
       SUB
       s0 s5 s5 PU2XC
-      true 2 true 1 1 235 DIV
+      236 LSHIFTDIVR
       SUB
     }> PUSHCONT
     REPEAT
@@ -1089,41 +1089,41 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     3 PUSHINT
     254 LSHIFT
     s2 s3 PUXC
-    true 2 true 1 1 239 DIV
+    240 LSHIFTDIVR
     SUB
     s2 PUSH
     1 RSHIFT
     s2 PUSH
-    false 1 true 1 1 9 DIV
+    10 RSHIFTR
     s1 s2 XCHG
     SUB
     s1 s2 XCHG
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 8 DIV
+    MULDIVR
+    9 RSHIFTR
     ADD
     s0 s0 PUSH2
-    true 1 true 1 1 255 DIV
+    256 MULRSHIFTR
     s0 PUSH
-    false 1 true 1 1 8 DIV
+    9 RSHIFTR
     255 PUSHPOW2
     ADD
     s2 PUSH
     1 RSHIFT
     s2 s1 PUSH2
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 7 DIV
+    MULDIVR
+    8 RSHIFTR
     s1 s3 XCHG
     SUB
     s1 PUSH
     1 RSHIFT
     s0 s2 s5 XCPUXC
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 7 DIV
+    MULDIVR
+    8 RSHIFTR
     SUB
   }>
   ?fun_ref_3449c496cc175763 PROCREF:<{
     s0 s0 PUSH2
-    true 1 true 1 1 255 DIV
+    256 MULRSHIFTR
     251 PUSHPOW2
     41 PUSHINT
     250 LSHIFT
@@ -1133,7 +1133,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       s1 s2 XCPU
       SUB
       s0 s5 s5 PU2XC
-      true 2 true 1 1 239 DIV
+      240 LSHIFTDIVR
       SUB
     }> PUSHCONT
     REPEAT
@@ -1141,22 +1141,22 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     3 PUSHINT
     254 LSHIFT
     s2 s3 PUXC
-    true 2 true 1 1 243 DIV
+    244 LSHIFTDIVR
     SUB
     s2 PUSH
     1 RSHIFT
     s2 PUSH
-    false 1 true 1 1 5 DIV
+    6 RSHIFTR
     s1 s2 XCHG
     SUB
     s1 s2 XCHG
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 4 DIV
+    MULDIVR
+    5 RSHIFTR
     ADD
   }>
   ?fun_ref_41d3f2ea6d56e172 PROCREF:<{
     s0 s0 PUSH2
-    true 1 true 1 1 255 DIV
+    256 MULRSHIFTR
     251 PUSHPOW2
     33 PUSHINT
     250 LSHIFT
@@ -1166,7 +1166,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       s1 s2 XCPU
       SUB
       s0 s5 s5 PU2XC
-      true 2 true 1 1 235 DIV
+      236 LSHIFTDIVR
       SUB
     }> PUSHCONT
     REPEAT
@@ -1174,25 +1174,25 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     3 PUSHINT
     254 LSHIFT
     s2 s3 PUXC
-    true 2 true 1 1 239 DIV
+    240 LSHIFTDIVR
     SUB
     s2 PUSH
     1 RSHIFT
     s2 PUSH
-    false 1 true 1 1 9 DIV
+    10 RSHIFTR
     s1 s2 XCHG
     SUB
     s1 s2 XCHG
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 8 DIV
+    MULDIVR
+    9 RSHIFTR
     ADD
   }>
   ?fun_ref_48cab849e3521372 PROCREF:<{
-    ?fun_ref_1b1ae470b4614553 CALL
-    ?fun_ref_2051d9d821c3f770 CALL
+    ?fun_ref_1b1ae470b4614553 CALLREF
+    ?fun_ref_2051d9d821c3f770 CALLREF
     s0 POP
-    true 2 true 1 1 255 DIV
-    false 1 true 1 1 3 DIV
+    256 LSHIFTDIVR
+    4 RSHIFTR
     s0 s1 XCHG
     5140487830366106860412008603913034462883915832139695448455767612111363481357 PUSHINT
     MUL
@@ -1203,28 +1203,28 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     255 PUSHPOW2
     s1 PUSH
     s0 PUSH
-    true 1 true 1 1 254 DIV
+    255 MULRSHIFTR
     SUB
     s0 PUSH
     <{
       s0 POP
       SGN
-      ?fun_ref_aa50613cca252c08 CALL
+      ?fun_ref_aa50613cca252c08 CALLREF
       s0 POP
       MUL
     }> PUSHCONT
     IFNOTJMP
     255 PUSHPOW2
-    ?fun_ref_d78034247225d612 CALL
+    ?fun_ref_d78034247225d612 CALLREF
     255 PUSHNEGPOW2
     s0 s1 XCHG
     SUB
-    true 2 true 1 1 255 DIV
+    256 LSHIFTDIVR
     NEGATE
-    ?fun_ref_5c788425937a7d28 CALL
+    ?fun_ref_5c788425937a7d28 CALLREF
   }>
   ?fun_ref_5a712c8e35fef248 PROCREF:<{
-    256 PUSHPOW2
+    PUSHNAN
     29483 PUSHINT
     236 LSHIFT
     -3167 PUSHINT
@@ -1240,7 +1240,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       255 PUSHPOW2
       SUB
       7027 PUSHINT
-      true 1 true 1 1 15 DIV
+      16 MULRSHIFTR
       s0 PUSH
       ABS
       s2 s7 PUSH2
@@ -1248,14 +1248,14 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       s1 s7 PUSH2
       SUB
       s1 s1 PUSH2
-      true 1 true 1 1 251 DIV
+      252 MULRSHIFTR
       s1 s8 PUSH2
-      true 1 true 1 1 15 DIV
+      16 MULRSHIFTR
       s3 s8 XCPU
-      true 1 true 1 1 15 DIV
+      16 MULRSHIFTR
       s1 s3 XCHG
       SUB
-      true 1 true 1 1 251 DIV
+      252 MULRSHIFTR
       ADD
       237 RSHIFT
       s4 PUSH
@@ -1263,27 +1263,27 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       s0 PUSH
       82 LESSINT
       s2 s4 XCPU
-      false 0 false 1 0 0 DIV
+      DIV
       16 LESSINT
       s1 s2 XCHG
       AND
       <{
         s8 POP
         s1 PUSH
-        true 2 true 1 1 251 DIV
+        252 LSHIFTDIVR
         s0 s7 XCHG
         -1 GTINT
         <{
           s6 s6 PUSH2
-          true 1 true 1 1 255 DIV
-          false 1 true 1 1 1 DIV
+          256 MULRSHIFTR
+          2 RSHIFTR
           NEGATE
-          ?fun_ref_eabdf5efadfce810 CALL
+          ?fun_ref_eabdf5efadfce810 CALLREF
           4 LSHIFT
           GREATER
           <{
             s5 POP
-            256 PUSHPOW2
+            PUSHNAN
             s0 s5 XCHG
           }> PUSHCONT
           IF
@@ -1305,7 +1305,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     5 BLKDROP
   }>
   ?fun_ref_5ba78fa4ab4ec6dc PROCREF:<{
-    ?fun_ref_aa50613cca252c08 CALL
+    ?fun_ref_aa50613cca252c08 CALLREF
     s0 POP
     s1 PUSH
     255 PUSHNEGPOW2
@@ -1318,48 +1318,48 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     255 PUSHPOW2
     s2 PUSH
     s0 PUSH
-    true 1 true 1 1 254 DIV
+    255 MULRSHIFTR
     SUB
     255 PUSHPOW2
-    ?fun_ref_d78034247225d612 CALL
+    ?fun_ref_d78034247225d612 CALLREF
     255 PUSHNEGPOW2
     s0 s1 XCHG
     SUB
     s1 s2 XCHG
-    true 2 true 1 1 255 DIV
-    ?fun_ref_5c788425937a7d28 CALL
-    false 1 true 1 1 0 DIV
+    256 LSHIFTDIVR
+    ?fun_ref_5c788425937a7d28 CALLREF
+    1 RSHIFTR
     ADD
   }>
   ?fun_ref_5c788425937a7d28 PROCREF:<{
-    ?fun_ref_b2fd74bee4445ab9 CALL
-    ?fun_ref_6405ea4d1c38698c CALL
+    ?fun_ref_b2fd74bee4445ab9 CALLREF
+    ?fun_ref_6405ea4d1c38698c CALLREF
     s1 s2 XCHG
-    true 1 true 3 1 4 DIV
+    5 MULRSHIFTRMOD
     s1 s2 XCHG
     ADD
-    false 1 true 1 1 4 DIV
+    5 RSHIFTR
     ADD
   }>
   ?fun_ref_5d3a4c29b0035181 PROCREF:<{
     s1 s1 PUSH2
-    true 1 true 1 1 255 DIV
+    256 MULRSHIFTR
     254 PUSHPOW2
     s0 s2 PUSH2
-    false 0 false 1 1 0 DIV
+    DIVR
     255 PUSHPOW2
     ADD
     s3 PUSH
     DEC
     <{
       s2 s1 PUXC
-      true 2 true 1 1 241 DIV
+      242 LSHIFTDIVR
       s1 s1 PUXC
       ADD
       s3 PUSH
       DEC
       s4 s4 XCPU
-      true 0 false 1 1 0 DIV
+      MULDIVR
       s1 PUSH
       ADD
     }> PUSHCONT
@@ -1367,13 +1367,13 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s1 POP
     s2 POP
     s0 PUSH
-    false 1 true 1 1 11 DIV
+    12 RSHIFTR
     s1 s2 XCHG
     ADD
     s2 PUSH
     ROTREV
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 11 DIV
+    MULDIVR
+    12 RSHIFTR
     SUB
   }>
   ?fun_ref_6405ea4d1c38698c PROCREF:<{
@@ -1381,52 +1381,52 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
   }>
   ?fun_ref_6c2cc5b04a23eeb2 PROCREF:<{
     s0 PUSH
-    false 1 true 1 1 231 DIV
-    ?fun_ref_8a8385f8d78f60b7 CALL
+    232 RSHIFTR
+    ?fun_ref_8a8385f8d78f60b7 CALLREF
     s1 s3 PUSH2
-    true 1 true 3 1 255 DIV
+    256 MULRSHIFTRMOD
     1 RSHIFT
     s1 s2 XCPU
     SUB
     s2 s5 XCHG2
-    true 1 true 3 1 255 DIV
+    256 MULRSHIFTRMOD
     1 RSHIFT
     s0 s3 XCHG
     ADD
     s4 s4 XCPU
-    true 2 true 3 1 254 DIV
+    255 LSHIFTDIVMODR
     s1 s2 XCHG
     ADD
     s4 PUSH
-    true 2 true 1 1 254 DIV
+    255 LSHIFTDIVR
     s2 s2 s6 XCPUXC
-    true 0 false 1 1 0 DIV
+    MULDIVR
     s1 s3 XCHG
     SUB
-    false 1 true 1 1 248 DIV
+    249 RSHIFTR
     s0 s2 XCHG
     6 LSHIFT
     s1 s2 XCHG
     ADD
     18 PUSHINT
     s1 s1 PUSH2
-    true 1 true 1 1 255 DIV
+    256 MULRSHIFTR
     254 PUSHPOW2
     s0 s2 PUSH2
-    false 0 false 1 1 0 DIV
+    DIVR
     255 PUSHPOW2
     ADD
     s3 PUSH
     DEC
     <{
       s2 s1 PUXC
-      true 2 true 1 1 241 DIV
+      242 LSHIFTDIVR
       s1 s1 PUXC
       ADD
       s3 PUSH
       DEC
       s4 s4 XCPU
-      true 0 false 1 1 0 DIV
+      MULDIVR
       s1 PUSH
       ADD
     }> PUSHCONT
@@ -1434,64 +1434,64 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s1 POP
     s2 POP
     s0 PUSH
-    false 1 true 1 1 11 DIV
+    12 RSHIFTR
     s1 s2 XCHG
     ADD
     s2 PUSH
     ROTREV
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 11 DIV
+    MULDIVR
+    12 RSHIFTR
     SUB
   }>
   ?fun_ref_7134bd42618a8d1e PROCREF:<{
     s0 PUSH
-    false 1 true 1 1 255 DIV
+    256 RSHIFTR
     s0 PUSH
     <{
       255 PUSHNEGPOW2
       ROT
-      true 2 true 1 1 255 DIV
+      256 LSHIFTDIVR
     }> PUSHCONT
     <{
       s0 s1 XCHG
       1 LSHIFT
     }> PUSHCONT
     IFELSE
-    ?fun_ref_b2fd74bee4445ab9 CALL
-    ?fun_ref_aa50613cca252c08 CALL
-    ?fun_ref_6405ea4d1c38698c CALL
+    ?fun_ref_b2fd74bee4445ab9 CALLREF
+    ?fun_ref_aa50613cca252c08 CALLREF
+    ?fun_ref_6405ea4d1c38698c CALLREF
     s1 s4 XCHG
-    true 1 true 3 1 5 DIV
+    6 MULRSHIFTRMOD
     s5 s4 PUXC
     MUL
     ADD
     ROTREV
     ADD
     SWAP2
-    true 1 true 1 1 121 DIV
+    122 MULRSHIFTR
     ADD
-    false 1 true 1 1 5 DIV
+    6 RSHIFTR
     ADD
   }>
   ?fun_ref_73739320b258991c PROCREF:<{
     s1 s1 PUSH2
-    true 1 true 1 1 255 DIV
+    256 MULRSHIFTR
     254 PUSHPOW2
     s0 s2 PUSH2
-    false 0 false 1 1 0 DIV
+    DIVR
     255 PUSHPOW2
     ADD
     s3 PUSH
     DEC
     <{
       s2 s1 PUXC
-      true 2 true 1 1 245 DIV
+      246 LSHIFTDIVR
       s1 s1 PUXC
       ADD
       s3 PUSH
       DEC
       s4 s4 XCPU
-      true 0 false 1 1 0 DIV
+      MULDIVR
       s1 PUSH
       ADD
     }> PUSHCONT
@@ -1499,18 +1499,18 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s1 POP
     s2 POP
     s0 PUSH
-    false 1 true 1 1 7 DIV
+    8 RSHIFTR
     s1 s2 XCHG
     ADD
     s2 PUSH
     ROTREV
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 7 DIV
+    MULDIVR
+    8 RSHIFTR
     SUB
   }>
   ?fun_ref_7753d4b96608d450 PROCREF:<{
     s1 s1 PUSH2
-    true 1 true 1 1 254 DIV
+    255 MULRSHIFTR
     s1 PUSH
     1 LSHIFT
     5 ADDCONST
@@ -1522,7 +1522,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       s1 s3 XCPU
       SUB
       s0 s4 s5 PU2XC
-      true 2 true 1 1 238 DIV
+      239 LSHIFTDIVR
       ADD
     }> PUSHCONT
     REPEAT
@@ -1531,16 +1531,16 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     3 PUSHINT
     254 LSHIFT
     s1 s4 PUXC
-    true 2 true 1 1 242 DIV
+    243 LSHIFTDIVR
     s1 s2 XCHG
     ADD
     s1 PUSH
-    false 1 true 1 1 6 DIV
+    7 RSHIFTR
     ADD
     s2 PUSH
     ROTREV
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 6 DIV
+    MULDIVR
+    7 RSHIFTR
     SUB
   }>
   ?fun_ref_811ebbe381228c78 PROCREF:<{
@@ -1557,23 +1557,23 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       0 LESSINT
       0 PUSHINT
       s0 s1 XCHG
-      RSHIFTX
+      RSHIFT_VAR
     }> PUSHCONT
     IFJMP
     s0 s1 XCHG
-    ?fun_ref_48cab849e3521372 CALL
+    ?fun_ref_48cab849e3521372 CALLREF
     248 PUSHINT
     SUB
     s2 PUSH
-    true 1 true 3 1 247 DIV
+    248 MULRSHIFTRMOD
     s2 s3 XCHG2
-    true 1 true 3 0 255 DIV
+    256 MULRSHIFTMOD
     247 RSHIFT
     s0 s1 XCHG
-    false 1 true 3 1 247 DIV
+    248 QRSHIFTRMOD
     s1 s4 XCHG
     ADD
-    false 1 true 3 1 247 DIV
+    248 QRSHIFTRMOD
     9 LSHIFT
     ROT
     ADD
@@ -1591,35 +1591,35 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       NEGATE
     }> PUSHCONT
     IFJMP
-    ?fun_ref_2051d9d821c3f770 CALL
+    ?fun_ref_2051d9d821c3f770 CALLREF
     s0 POP
     s1 s3 XCHG
-    true 1 true 1 1 255 DIV
-    ?fun_ref_88faf969245bcd15 CALL
+    256 MULRSHIFTR
+    ?fun_ref_88faf969245bcd15 CALLREF
     9 PUSHINT
     ROT
     SUB
-    false 1 false 1 1 0 DIV
+    RSHIFTR_VAR
     s0 s1 XCHG
     -1 PUSHINT
     s0 s1 XCHG
-    LSHIFTX
+    LSHIFT_VAR
     SUB
   }>
   ?fun_ref_87780ff3a5ebd2bc PROCREF:<{
-    ?fun_ref_ec287b9511e936b8 CALL
+    ?fun_ref_ec287b9511e936b8 CALLREF
     248 PUSHINT
     SUB
-    ?fun_ref_2051d9d821c3f770 CALL
+    ?fun_ref_2051d9d821c3f770 CALLREF
     s0 POP
-    true 1 true 1 1 7 DIV
+    8 MULRSHIFTR
     s0 s1 XCHG
-    false 1 true 1 1 7 DIV
+    8 RSHIFTR
     ADD
   }>
   ?fun_ref_88faf969245bcd15 PROCREF:<{
     s0 s0 PUSH2
-    true 1 true 1 1 254 DIV
+    255 MULRSHIFTR
     251 PUSHPOW2
     39 PUSHINT
     250 LSHIFT
@@ -1629,7 +1629,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       s1 s2 XCPU
       SUB
       s0 s5 s5 PU2XC
-      true 2 true 1 1 238 DIV
+      239 LSHIFTDIVR
       ADD
     }> PUSHCONT
     REPEAT
@@ -1637,21 +1637,21 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     3 PUSHINT
     254 LSHIFT
     s2 s3 PUXC
-    true 2 true 1 1 242 DIV
+    243 LSHIFTDIVR
     ADD
     s2 PUSH
-    false 1 true 1 1 3 DIV
+    4 RSHIFTR
     s1 PUSH
     SUB
     s0 PUSH
     1 RSHIFT
     s4 s3 PUXC
-    true 1 true 1 1 255 DIV
-    false 1 true 1 1 1 DIV
+    256 MULRSHIFTR
+    2 RSHIFTR
     s1 s2 XCHG
     ADD
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 1 DIV
+    MULDIVR
+    2 RSHIFTR
     SUB
   }>
   ?fun_ref_8a8385f8d78f60b7 PROCREF:<{
@@ -1664,7 +1664,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     MUL
     48 PUSHPOW2
     ADD
-    true 2 true 1 1 87 DIV
+    88 LSHIFTDIVR
     s0 PUSH
     3073 PUSHINT
     MUL
@@ -1673,13 +1673,13 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     3 PUSHINT
     128 LSHIFT
     ADD
-    true 2 true 1 1 58 DIV
+    59 LSHIFTDIVR
     13 ADDCONST
     33226912 PUSHINT
     5232641 PUSHINT
     s2 PUSH
     5 PUSHINT
-    false 0 false 3 0 0 DIV
+    DIVMOD
     51 PUSHINT
     s5 PUSH
     SUB
@@ -1720,15 +1720,15 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     MUL
   }>
   ?fun_ref_8bf58ecefe2e19cb PROCREF:<{
-    ?fun_ref_aa50613cca252c08 CALL
+    ?fun_ref_aa50613cca252c08 CALLREF
     ROTREV
-    true 2 true 3 1 6 DIV
+    7 LSHIFTDIVMODR
     1 LSHIFT
     s1 s4 PUXC
-    true 1 true 1 1 126 DIV
+    127 MULRSHIFTR
     s1 s2 XCHG
     SUB
-    ?fun_ref_b03a280997c9cc26 CALL
+    ?fun_ref_b03a280997c9cc26 CALLREF
     s0 s2 XCHG
     1 PUSHINT
     AND
@@ -1737,7 +1737,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       NEGATE
     }> PUSHCONT
     IF
-    true 2 true 1 1 247 DIV
+    248 LSHIFTDIVR
   }>
   ?fun_ref_aa50613cca252c08 PROCREF:<{
     90942894222941581070058735694432465663348344332098107489693037779484723616546 PUSHINT
@@ -1745,23 +1745,23 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
   }>
   ?fun_ref_afe5ab170f89ef23 PROCREF:<{
     s1 s1 PUSH2
-    true 1 true 1 1 255 DIV
+    256 MULRSHIFTR
     254 PUSHPOW2
     s0 s2 PUSH2
-    false 0 false 1 1 0 DIV
+    DIVR
     255 PUSHPOW2
     ADD
     s3 PUSH
     DEC
     <{
       s2 s1 PUXC
-      true 2 true 1 1 241 DIV
+      242 LSHIFTDIVR
       s1 s1 PUXC
       SUB
       s3 PUSH
       DEC
       s4 s4 XCPU
-      true 0 false 1 1 0 DIV
+      MULDIVR
       s1 PUSH
       ADD
     }> PUSHCONT
@@ -1769,18 +1769,18 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s1 POP
     s2 POP
     s0 PUSH
-    false 1 true 1 1 11 DIV
+    12 RSHIFTR
     s1 s2 XCHG
     SUB
     s2 PUSH
     ROTREV
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 11 DIV
+    MULDIVR
+    12 RSHIFTR
     ADD
   }>
   ?fun_ref_b03a280997c9cc26 PROCREF:<{
     s0 s0 PUSH2
-    true 1 true 1 1 255 DIV
+    256 MULRSHIFTR
     251 PUSHPOW2
     41 PUSHINT
     250 LSHIFT
@@ -1790,7 +1790,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
       s1 s2 XCPU
       SUB
       s0 s5 s5 PU2XC
-      true 2 true 1 1 239 DIV
+      240 LSHIFTDIVR
       SUB
     }> PUSHCONT
     REPEAT
@@ -1798,71 +1798,71 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     3 PUSHINT
     254 LSHIFT
     s2 s3 PUXC
-    true 2 true 1 1 243 DIV
+    244 LSHIFTDIVR
     SUB
     s2 PUSH
     1 RSHIFT
     s2 PUSH
-    false 1 true 1 1 5 DIV
+    6 RSHIFTR
     s1 s2 XCHG
     SUB
     s1 s2 XCHG
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 4 DIV
+    MULDIVR
+    5 RSHIFTR
     ADD
     s0 s0 PUSH2
-    true 1 true 1 1 255 DIV
+    256 MULRSHIFTR
     s0 PUSH
-    false 1 true 1 1 3 DIV
+    4 RSHIFTR
     256 PUSHNEGPOW2
     ADD
     s2 PUSH
     ROTREV
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 3 DIV
+    MULDIVR
+    4 RSHIFTR
     s0 s1 XCHG
     SUB
     s0 s0 PUSH2
-    true 1 true 1 1 255 DIV
-    false 1 true 1 1 1 DIV
+    256 MULRSHIFTR
+    2 RSHIFTR
     256 PUSHNEGPOW2
     ADD
   }>
   ?fun_ref_b2fd74bee4445ab9 PROCREF:<{
     s0 PUSH
-    false 1 true 1 1 231 DIV
-    ?fun_ref_8a8385f8d78f60b7 CALL
+    232 RSHIFTR
+    ?fun_ref_8a8385f8d78f60b7 CALLREF
     s1 s3 PUSH2
-    true 1 true 3 1 255 DIV
-    false 1 true 1 1 249 DIV
+    256 MULRSHIFTRMOD
+    250 RSHIFTR
     s1 s2 XCPU
     SUB
     6 LSHIFT
     ADD
     s0 s4 XCHG
-    true 1 true 1 1 255 DIV
+    256 MULRSHIFTR
     ADD
     s1 s2 XCHG
-    true 2 true 1 1 254 DIV
+    255 LSHIFTDIVR
     18 PUSHINT
     s1 s1 PUSH2
-    true 1 true 1 1 255 DIV
+    256 MULRSHIFTR
     254 PUSHPOW2
     s0 s2 PUSH2
-    false 0 false 1 1 0 DIV
+    DIVR
     255 PUSHPOW2
     ADD
     s3 PUSH
     DEC
     <{
       s2 s1 PUXC
-      true 2 true 1 1 241 DIV
+      242 LSHIFTDIVR
       s1 s1 PUXC
       ADD
       s3 PUSH
       DEC
       s4 s4 XCPU
-      true 0 false 1 1 0 DIV
+      MULDIVR
       s1 PUSH
       ADD
     }> PUSHCONT
@@ -1870,43 +1870,43 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s1 POP
     s2 POP
     s0 PUSH
-    false 1 true 1 1 11 DIV
+    12 RSHIFTR
     s1 s2 XCHG
     ADD
     s2 PUSH
     ROTREV
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 11 DIV
+    MULDIVR
+    12 RSHIFTR
     SUB
   }>
   ?fun_ref_cdb28b381a5130bf PROCREF:<{
     s0 PUSH
-    false 1 true 1 1 248 DIV
+    249 RSHIFTR
     s0 PUSH
     <{
       SGN
       248 PUSHNEGPOW2
       ROT
-      true 2 true 1 1 255 DIV
+      256 LSHIFTDIVR
     }> PUSHCONT
     <{
       s0 s1 XCHG
       8 LSHIFT
     }> PUSHCONT
     IFELSE
-    ?fun_ref_b2fd74bee4445ab9 CALL
-    false 1 true 1 1 5 DIV
-    ?fun_ref_aa50613cca252c08 CALL
+    ?fun_ref_b2fd74bee4445ab9 CALLREF
+    6 RSHIFTR
+    ?fun_ref_aa50613cca252c08 CALLREF
     s0 POP
     s1 s3 XCHG
     MUL
     s1 s2 XCHG
     ADD
-    ?fun_ref_6405ea4d1c38698c CALL
+    ?fun_ref_6405ea4d1c38698c CALLREF
     s1 s2 XCHG
-    true 1 true 1 1 5 DIV
+    6 MULRSHIFTR
     ADD
-    false 1 true 1 1 6 DIV
+    7 RSHIFTR
   }>
   ?fun_ref_d78034247225d612 PROCREF:<{
     DUP2
@@ -1938,7 +1938,7 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     IFELSE
     <{
       s2 s1 s0 PUSH3
-      true 0 false 1 2 0 DIV
+      MULDIVC
       s1 PUSH
       SUB
       1 RSHIFT
@@ -1952,11 +1952,11 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
   }>
   ?fun_ref_da70c8217d8f9a46 PROCREF:<{
     s0 PUSH
-    false 1 true 1 1 248 DIV
+    249 RSHIFTR
     <{
       248 PUSHNEGPOW2
       s0 s1 XCHG
-      true 2 true 1 1 255 DIV
+      256 LSHIFTDIVR
       0 PUSHINT
     }> PUSHCONT
     <{
@@ -1966,31 +1966,31 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     }> PUSHCONT
     IFELSE
     s0 s1 XCHG
-    ?fun_ref_b2fd74bee4445ab9 CALL
-    ?fun_ref_aa50613cca252c08 CALL
+    ?fun_ref_b2fd74bee4445ab9 CALLREF
+    ?fun_ref_aa50613cca252c08 CALLREF
     s0 POP
     s1 s3 XCHG
     MUL
     s0 s2 XCHG
-    false 1 true 1 1 5 DIV
+    6 RSHIFTR
     s1 s2 XCHG
     SUB
-    ?fun_ref_6405ea4d1c38698c CALL
+    ?fun_ref_6405ea4d1c38698c CALLREF
     s1 s2 XCHG
-    true 1 true 1 1 5 DIV
+    6 MULRSHIFTR
     SUB
-    false 1 true 1 1 6 DIV
+    7 RSHIFTR
   }>
   ?fun_ref_e11f9343f87d5b4b PROCREF:<{
-    ?fun_ref_aa50613cca252c08 CALL
+    ?fun_ref_aa50613cca252c08 CALLREF
     ROTREV
-    true 2 true 3 1 6 DIV
+    7 LSHIFTDIVMODR
     1 LSHIFT
     s1 s4 PUXC
-    true 1 true 1 1 126 DIV
+    127 MULRSHIFTR
     s1 s2 XCHG
     SUB
-    ?fun_ref_b03a280997c9cc26 CALL
+    ?fun_ref_b03a280997c9cc26 CALLREF
     s0 s2 XCHG
     1 PUSHINT
     AND
@@ -2000,43 +2000,43 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     }> PUSHCONT
     IF
     s0 s1 XCHG
-    true 2 true 1 1 247 DIV
+    248 LSHIFTDIVR
   }>
   ?fun_ref_e9b023c94244cb2e PROCREF:<{
     115641670674223639132965820642403718536242645001775371762318060545014644837101 PUSHINT
   }>
   ?fun_ref_eabdf5efadfce810 PROCREF:<{
-    ?fun_ref_2051d9d821c3f770 CALL
+    ?fun_ref_2051d9d821c3f770 CALLREF
     ROTREV
     8 PUSHINT
-    true 2 false 3 1 0 DIV
+    LSHIFTDIVMODR_VAR
     1 LSHIFT
     s1 s4 PUXC
-    true 1 true 1 1 126 DIV
+    127 MULRSHIFTR
     s1 s2 XCHG
     SUB
-    ?fun_ref_88faf969245bcd15 CALL
+    ?fun_ref_88faf969245bcd15 CALLREF
     9 PUSHINT
     s2 PUSH
     SUB
-    false 1 false 1 1 0 DIV
+    RSHIFTR_VAR
     248 PUSHINT
     ROT
     ADD
     -1 PUSHINT
     s0 s1 XCHG
-    LSHIFTX
+    LSHIFT_VAR
     SUB
   }>
   ?fun_ref_ec287b9511e936b8 PROCREF:<{
-    ?fun_ref_1b1ae470b4614553 CALL
-    false 1 true 3 1 3 DIV
+    ?fun_ref_1b1ae470b4614553 CALLREF
+    4 QRSHIFTRMOD
     9 LSHIFT
     s2 PUSH
     -3769 PUSHINT
     MUL
     ADD
-    false 1 true 1 1 12 DIV
+    13 RSHIFTR
     ADD
     s0 s1 XCHG
     3563114646320977386603103333812068872452913448227778071188132859183498739150 PUSHINT
@@ -2057,23 +2057,23 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
   }>
   ?fun_ref_fbd4cc263c208ffd PROCREF:<{
     s1 s1 PUSH2
-    true 1 true 1 1 255 DIV
+    256 MULRSHIFTR
     254 PUSHPOW2
     s0 s2 PUSH2
-    false 0 false 1 1 0 DIV
+    DIVR
     255 PUSHPOW2
     ADD
     s3 PUSH
     DEC
     <{
       s2 s1 PUXC
-      true 2 true 1 1 247 DIV
+      248 LSHIFTDIVR
       s1 s1 PUXC
       SUB
       s3 PUSH
       DEC
       s4 s4 XCPU
-      true 0 false 1 1 0 DIV
+      MULDIVR
       s1 PUSH
       ADD
     }> PUSHCONT
@@ -2083,13 +2083,13 @@ exports[`decompileAll should decompile mathlib.fc 1`] = `
     s0 PUSH
     1 RSHIFT
     s0 s1 XCHG
-    false 1 true 1 1 5 DIV
+    6 RSHIFTR
     s1 s2 XCHG
     SUB
     s2 PUSH
     ROTREV
-    true 0 false 1 1 0 DIV
-    false 1 true 1 1 4 DIV
+    MULDIVR
+    5 RSHIFTR
     ADD
   }>
 }END>c"
@@ -2150,7 +2150,7 @@ exports[`decompileAll should decompile wallet 1`] = `
     1 SETGLOB
     s0 s2 XCHG
     2 SETGLOB
-    c4 PUSH
+    c4 PUSHCTR
     CTOS
     LDREF
     s0 s1 XCHG
@@ -2161,7 +2161,7 @@ exports[`decompileAll should decompile wallet 1`] = `
       32 LDU
       256 LDU
       64 LDU
-      3 1 BLKSWAP
+      s3 s1 BLKSWAP
       1 3 BLKDROP2
     }> PUSHCONT
     <{
@@ -2178,11 +2178,11 @@ exports[`decompileAll should decompile wallet 1`] = `
       s0 s2 XCHG
       ENDS
       s0 s1 XCHG
-      ?fun_ref_cd29dd004f76b216 CALL
+      ?fun_ref_cd29dd004f76b216 CALLREF
     }> PUSHCONT
     IFELSE
-    2 3 BLKSWAP
-    ?fun_ref_e3ac26e214db4b5d CALL
+    s2 s3 BLKSWAP
+    ?fun_ref_e3ac26e214db4b5d CALLREF
     s0 POP
     NEWC
     3 GETGLOB
@@ -2191,16 +2191,16 @@ exports[`decompileAll should decompile wallet 1`] = `
     -1 PUSHINT
     s0 s1 XCHG
     1 STI
-    3 1 BLKSWAP
+    s3 s1 BLKSWAP
     s2 s3 XCHG2
     32 STU
     256 STU
     64 STU
     ENDC
-    c4 POP
+    c4 POPCTR
   }>
   seqno PROC:<{
-    c4 PUSH
+    c4 PUSHCTR
     CTOS
     LDREF
     s0 s1 XCHG
@@ -2211,7 +2211,7 @@ exports[`decompileAll should decompile wallet 1`] = `
       32 LDU
       256 LDU
       64 LDU
-      3 1 BLKSWAP
+      s3 s1 BLKSWAP
       1 3 BLKDROP2
     }> PUSHCONT
     <{
@@ -2228,14 +2228,14 @@ exports[`decompileAll should decompile wallet 1`] = `
       s0 s2 XCHG
       ENDS
       s0 s1 XCHG
-      ?fun_ref_cd29dd004f76b216 CALL
+      ?fun_ref_cd29dd004f76b216 CALLREF
     }> PUSHCONT
     IFELSE
-    ?fun_ref_b2f99ae1a1dd4dfb CALL
+    ?fun_ref_b2f99ae1a1dd4dfb CALLREF
     3 1 BLKDROP2
   }>
   ?fun_86520 PROC:<{
-    c4 PUSH
+    c4 PUSHCTR
     CTOS
     LDREF
     s0 s1 XCHG
@@ -2246,7 +2246,7 @@ exports[`decompileAll should decompile wallet 1`] = `
       32 LDU
       256 LDU
       64 LDU
-      3 1 BLKSWAP
+      s3 s1 BLKSWAP
       1 3 BLKDROP2
     }> PUSHCONT
     <{
@@ -2263,10 +2263,10 @@ exports[`decompileAll should decompile wallet 1`] = `
       s0 s2 XCHG
       ENDS
       s0 s1 XCHG
-      ?fun_ref_cd29dd004f76b216 CALL
+      ?fun_ref_cd29dd004f76b216 CALLREF
     }> PUSHCONT
     IFELSE
-    ?fun_ref_44086a5ce86162fe CALL
+    ?fun_ref_44086a5ce86162fe CALLREF
     3 1 BLKDROP2
   }>
   supported_interfaces PROC:<{
@@ -2276,7 +2276,7 @@ exports[`decompileAll should decompile wallet 1`] = `
     209474421377847335869795010607481022628 PUSHINT
   }>
   ?fun_114762 PROC:<{
-    c4 PUSH
+    c4 PUSHCTR
     CTOS
     LDREF
     s0 s1 XCHG
@@ -2287,7 +2287,7 @@ exports[`decompileAll should decompile wallet 1`] = `
       32 LDU
       256 LDU
       64 LDU
-      3 1 BLKSWAP
+      s3 s1 BLKSWAP
       1 3 BLKDROP2
     }> PUSHCONT
     <{
@@ -2304,10 +2304,10 @@ exports[`decompileAll should decompile wallet 1`] = `
       s0 s2 XCHG
       ENDS
       s0 s1 XCHG
-      ?fun_ref_cd29dd004f76b216 CALL
+      ?fun_ref_cd29dd004f76b216 CALLREF
     }> PUSHCONT
     IFELSE
-    ?fun_ref_40d98146a47dbe3b CALL
+    ?fun_ref_40d98146a47dbe3b CALLREF
     3 1 BLKDROP2
   }>
   ?fun_ref_3301d2d6bbf180a4 PROCREF:<{
@@ -2537,13 +2537,13 @@ exports[`decompileAll should decompile wallet 1`] = `
         s0 s1 XCHG
       }> PUSHCONT
       IFELSE
-      5 1 BLKSWAP
-      s5 s6 XCHG
+      s5 s1 BLKSWAP
+      s5 s6 XCHG_IJ
       1 6 BLKDROP2
       s4 s3 s2 PUSH3
       s4 s3 PUSH2
       NEWC
-      5 1 BLKSWAP
+      s5 s1 BLKSWAP
       s4 s5 XCHG2
       32 STU
       s1 s2 XCHG
@@ -2605,7 +2605,7 @@ exports[`decompileAll should decompile wallet 1`] = `
       s4 s4 s4 XCHG3
       NULL
       NULL
-      ?fun_ref_3301d2d6bbf180a4 CALL
+      ?fun_ref_3301d2d6bbf180a4 CALLREF
       -1 PUSHINT
     }> PUSHCONT
     IFJMP
@@ -2634,7 +2634,7 @@ exports[`decompileAll should decompile wallet 1`] = `
       <{
         DROP2
         -1 PUSHINT
-        RETFALSE
+        RETALT
       }> PUSHCONT
       IFJMP
       s0 PUSH
@@ -2646,7 +2646,7 @@ exports[`decompileAll should decompile wallet 1`] = `
         INC
         s0 s2 XCHG
         -1 PUSHINT
-        RETFALSE
+        RETALT
       }> PUSHCONT
       IFJMP
       s0 PUSH
@@ -2658,7 +2658,7 @@ exports[`decompileAll should decompile wallet 1`] = `
         INC
         s0 s2 XCHG
         -1 PUSHINT
-        RETFALSE
+        RETALT
       }> PUSHCONT
       IFJMP
       70845166824474961660404539579183775280814018357735859006660992311266151320569 PUSHINT
@@ -2666,7 +2666,7 @@ exports[`decompileAll should decompile wallet 1`] = `
       <{
         s0 POP
         -1 PUSHINT
-        RETFALSE
+        RETALT
       }> PUSHCONT
       IFJMP
     }> IFREF
@@ -2689,7 +2689,7 @@ INC
 LDSLICEX
 s0 PUSH
 32 PLDU
-c4 PUSH
+c4 PUSHCTR
 CTOS
 32 LDU
 256 LDU
@@ -2721,7 +2721,7 @@ NEWC
 32 STU
 256 STU
 ENDC
-c4 POP"
+c4 POPCTR"
 `;
 
 exports[`decompileAll should decompile wallet v2 1`] = `
@@ -2733,7 +2733,7 @@ s0 PUSH
 EQUAL
 <{
   s0 POP
-  c4 PUSH
+  c4 PUSHCTR
   CTOS
   32 PLDU
 }> PUSHCONT
@@ -2749,7 +2749,7 @@ s0 s1 XCHG
 NOW
 LEQ
 35 THROWIF
-c4 PUSH
+c4 PUSHCTR
 CTOS
 32 LDU
 256 LDU
@@ -2781,7 +2781,7 @@ NEWC
 32 STU
 256 STU
 ENDC
-c4 POP"
+c4 POPCTR"
 `;
 
 exports[`decompileAll should decompile wallet v3 1`] = `
@@ -2798,7 +2798,7 @@ OR
 <{
   1 PUSHINT
   AND
-  c4 PUSH
+  c4 PUSHCTR
   CTOS
   32 LDU
   32 LDU
@@ -2819,7 +2819,7 @@ NOW
 s1 s3 XCHG
 LEQ
 35 THROWIF
-c4 PUSH
+c4 PUSHCTR
 CTOS
 32 LDU
 32 LDU
@@ -2856,7 +2856,7 @@ NEWC
 32 STU
 256 STU
 ENDC
-c4 POP"
+c4 POPCTR"
 `;
 
 exports[`decompileAll should decompile wallet v4 1`] = `
@@ -2879,7 +2879,7 @@ exports[`decompileAll should decompile wallet v4 1`] = `
     NOW
     LEQ
     36 THROWIF
-    c4 PUSH
+    c4 PUSHCTR
     CTOS
     32 LDU
     32 LDU
@@ -2909,7 +2909,7 @@ exports[`decompileAll should decompile wallet v4 1`] = `
     s1 s1 PUXC
     STDICT
     ENDC
-    c4 POP
+    c4 POPCTR
     COMMIT
     s0 s1 XCHG
     8 LDU
@@ -3049,7 +3049,7 @@ exports[`decompileAll should decompile wallet v4 1`] = `
     256 STU
     STDICT
     ENDC
-    c4 POP
+    c4 POPCTR
   }>
   recv_internal PROC:<{
     s0 s1 XCHG
@@ -3093,7 +3093,7 @@ exports[`decompileAll should decompile wallet v4 1`] = `
     256 STU
     ENDC
     CTOS
-    c4 PUSH
+    c4 PUSHCTR
     CTOS
     320 PUSHINT
     SDSKIPFIRST
@@ -3167,7 +3167,7 @@ exports[`decompileAll should decompile wallet v4 1`] = `
       264 PUSHINT
       DICTDEL
       s0 POP
-      c4 PUSH
+      c4 PUSHCTR
       CTOS
       320 PUSHINT
       SDCUTFIRST
@@ -3176,7 +3176,7 @@ exports[`decompileAll should decompile wallet v4 1`] = `
       STSLICER
       STDICT
       ENDC
-      c4 POP
+      c4 POPCTR
       s0 s1 XCHG
       2 PUSHINT
       AND
@@ -3207,7 +3207,7 @@ exports[`decompileAll should decompile wallet v4 1`] = `
     }> IFREFELSE
   }>
   is_plugin_installed PROC:<{
-    c4 PUSH
+    c4 PUSHCTR
     CTOS
     320 PUSHINT
     SDSKIPFIRST
@@ -3226,27 +3226,27 @@ exports[`decompileAll should decompile wallet v4 1`] = `
     s1 POP
   }>
   get_public_key PROC:<{
-    c4 PUSH
+    c4 PUSHCTR
     CTOS
     64 PUSHINT
     SDSKIPFIRST
     256 PLDU
   }>
   get_subwallet_id PROC:<{
-    c4 PUSH
+    c4 PUSHCTR
     CTOS
     32 PUSHINT
     SDSKIPFIRST
     32 PLDU
   }>
   seqno PROC:<{
-    c4 PUSH
+    c4 PUSHCTR
     CTOS
     32 PLDU
   }>
   get_plugin_list PROC:<{
     NULL
-    c4 PUSH
+    c4 PUSHCTR
     CTOS
     320 PUSHINT
     SDSKIPFIRST
@@ -3333,7 +3333,7 @@ exports[`decompileAll should decompile wallet v5 1`] = `
           DROP2
         }> PUSHCONT
         IFJMP
-        c4 PUSH
+        c4 PUSHCTR
         CTOS
         321 PUSHINT
         SDSKIPFIRST
@@ -3350,7 +3350,7 @@ exports[`decompileAll should decompile wallet v5 1`] = `
         SDSKIPFIRST
         0 PUSHINT
         -1 PUSHINT
-        ?fun_ref_75c1f54304030ec4 CALL
+        ?fun_ref_75c1f54304030ec4 CALLREF
       }> PUSHCONT
       IFJMP
       s1 POP
@@ -3378,7 +3378,7 @@ exports[`decompileAll should decompile wallet v5 1`] = `
         32 LDU
         32 LDU
         32 LDU
-        c4 PUSH
+        c4 PUSHCTR
         CTOS
         1 LDI
         32 LDU
@@ -3394,7 +3394,7 @@ exports[`decompileAll should decompile wallet v5 1`] = `
           s8 PUSH
           <{
             10 BLKDROP
-            RETFALSE
+            RETALT
           }> PUSHCONT
           IFNOTJMP
           135 THROW
@@ -3428,47 +3428,47 @@ exports[`decompileAll should decompile wallet v5 1`] = `
         s0 s1 XCHG
         STSLICER
         ENDC
-        c4 POP
+        c4 POPCTR
         s0 PUSH
         <{
           COMMIT
         }> PUSHCONT
         IF
         0 PUSHINT
-        ?fun_ref_75c1f54304030ec4 CALL
+        ?fun_ref_75c1f54304030ec4 CALLREF
       }> PUSHCONT
       EXECUTE
     }> PUSHCONT
     IFELSE
   }>
   get_public_key PROC:<{
-    c4 PUSH
+    c4 PUSHCTR
     CTOS
     65 PUSHINT
     SDSKIPFIRST
     256 PLDU
   }>
   get_subwallet_id PROC:<{
-    c4 PUSH
+    c4 PUSHCTR
     CTOS
     33 PUSHINT
     SDSKIPFIRST
     32 PLDU
   }>
   seqno PROC:<{
-    c4 PUSH
+    c4 PUSHCTR
     CTOS
     1 PUSHINT
     SDSKIPFIRST
     32 PLDU
   }>
   ?fun_88459 PROC:<{
-    c4 PUSH
+    c4 PUSHCTR
     CTOS
     1 PLDI
   }>
   ?fun_117729 PROC:<{
-    c4 PUSH
+    c4 PUSHCTR
     CTOS
     321 PUSHINT
     SDSKIPFIRST
@@ -3497,7 +3497,7 @@ exports[`decompileAll should decompile wallet v5 1`] = `
       }> PUSHCONT
       <{
         s0 s1 XCHG
-        x{0EC3C86D9_} SDBEGINS
+        x{0EC3C86D} SDBEGINS
         s0 PUSH
         SBITS
         8 EQINT
@@ -3507,7 +3507,7 @@ exports[`decompileAll should decompile wallet v5 1`] = `
         2 EQINT
         147 THROWIFNOT
         s0 PUSH
-        7 PLDSLICEX
+        7 PLDSLICE
         SDCNTTRAIL0
         0 GTINT
         s3 s1 PUXC
@@ -3527,7 +3527,7 @@ exports[`decompileAll should decompile wallet v5 1`] = `
       SREFS
       0 EQINT
       147 THROWIFNOT
-      c5 POP
+      c5 POPCTR
     }> PUSHCONT
     IFELSE
     1 LDI
@@ -3538,14 +3538,14 @@ exports[`decompileAll should decompile wallet v5 1`] = `
     }> PUSHCONT
     IFJMP
     AGAINEND
-    x{029_} SDBEGINSQ
+    x{02} SDBEGINSQ
     s0 PUSH
     <{
       0 PUSHINT
     }> PUSHCONT
     <{
       s0 s1 XCHG
-      x{039_} SDBEGINSQ
+      x{03} SDBEGINSQ
       s1 s2 XCHG
     }> PUSHCONT
     IFELSE
@@ -3562,7 +3562,7 @@ exports[`decompileAll should decompile wallet v5 1`] = `
       ROT
       EQUAL
       145 THROWIFNOT
-      c4 PUSH
+      c4 PUSHCTR
       CTOS
       321 PUSHINT
       LDSLICEX
@@ -3598,45 +3598,53 @@ exports[`decompileAll should decompile wallet v5 1`] = `
       s1 s2 XCHG
       STDICT
       ENDC
-      c4 POP
+      c4 POPCTR
+    }> <{
+      s0 POP
+      x{04} SDBEGINSQ
+      <{
+        s1 PUSH
+        146 THROWIFNOT
+        1 LDI
+        c4 PUSHCTR
+        CTOS
+        1 LDI
+        s1 s3 XCPU
+        EQUAL
+        143 THROWIF
+        s0 s4 s1 PUXCPU
+        <{
+          s1 POP
+        }> PUSHCONT
+        <{
+          s0 s1 XCHG
+          320 PUSHINT
+          SDSKIPFIRST
+          1 PLDI
+          142 THROWIFNOT
+        }> PUSHCONT
+        IFELSE
+        NEWC
+        1 STI
+        ROT
+        STSLICER
+        ENDC
+        c4 POPCTR
+      }> PUSHCONT
+      <{
+        141 THROW
+      }> PUSHCONT
+      IFELSE
     }> IFREFELSEREF
     s0 PUSH
     SREFS
-    s0 POP
-    x{049_} SDBEGINSQ
     <{
-      s1 PUSH
-      146 THROWIFNOT
-      1 LDI
-      c4 PUSH
-      CTOS
-      1 LDI
-      s1 s3 XCPU
-      EQUAL
-      143 THROWIF
-      s0 s4 s1 PUXCPU
-      <{
-        s1 POP
-      }> PUSHCONT
-      <{
-        s0 s1 XCHG
-        320 PUSHINT
-        SDSKIPFIRST
-        1 PLDI
-        142 THROWIFNOT
-      }> PUSHCONT
-      IFELSE
-      NEWC
-      1 STI
-      ROT
-      STSLICER
-      ENDC
-      c4 POP
+      DROP2
+      RETALT
     }> PUSHCONT
-    <{
-      141 THROW
-    }> PUSHCONT
-    IFELSE
+    IFNOTJMP
+    0 PLDREFIDX
+    CTOS
   }>
 }END>c"
 `;

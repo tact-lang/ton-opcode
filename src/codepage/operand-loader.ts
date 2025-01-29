@@ -34,6 +34,7 @@ export interface SliceValue {
     type: 'subslice',
     definition: SubsliceOperand,
     value: Cell,
+    source: Cell,
     offsetBits: number,
     offsetRefs: number,
     limitBits: number,
@@ -42,11 +43,11 @@ export interface SliceValue {
 
 export type OperandValue = NumericValue | BigIntValue | RefValue | SliceValue;
 
-export function loadOperands(slice: Slice, instruction: Instruction): OperandValue[]  {
+export function loadOperands(source: Cell, slice: Slice, instruction: Instruction): OperandValue[]  {
     let operands = [];
     for (let operand of instruction.bytecode.operands) {
         try {
-            operands.push(loadOperand(operand, slice));
+            operands.push(loadOperand(source, operand, slice));
         } catch (e) {
             throw new Error(`Bad operand ${operand.name} for instruction ${instruction.mnemonic}`, { cause: e })
         }
@@ -54,7 +55,7 @@ export function loadOperands(slice: Slice, instruction: Instruction): OperandVal
     return operands;
 }
 
-function loadOperand(operand: Operand, slice: Slice): OperandValue {
+function loadOperand(source: Cell, operand: Operand, slice: Slice): OperandValue {
     if (operand.type == "uint") {
         return { type: 'numeric', definition: operand, value: slice.loadUint(operand.size) };
     } else if (operand.type == "int") {
@@ -77,7 +78,7 @@ function loadOperand(operand: Operand, slice: Slice): OperandValue {
         for (let i = 0; i < refLength; i++) {
             builder.storeRef(slice.loadRef());
         }
-        return { type: 'subslice', definition: operand, value: builder.endCell(), offsetBits, offsetRefs, limitBits: bitLength, limitRefs: refLength };
+        return { type: 'subslice', definition: operand, value: builder.endCell(), source: source, offsetBits, offsetRefs, limitBits: bitLength, limitRefs: refLength };
     } else {
         throw new Error('unimplemented');
     }

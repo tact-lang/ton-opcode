@@ -159,7 +159,7 @@ export function decompileCell(args: {
                     } else {
                         operands.push(decompileCell({
                             root: false,
-                            source: args.source,
+                            source: operand.source,
                             offset: {
                                 bits: operand.offsetBits,
                                 refs: operand.offsetRefs,
