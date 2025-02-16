@@ -3,11 +3,10 @@
 import {Cell, Dictionary, DictionaryValue} from "@ton/core";
 import {decompile} from "./decompiler";
 import {debugSymbols} from "./knownMethods";
-import {AST, BlockNode, InstructionNode, MethodNode, ProcedureNode, ProgramNode, ScalarNode} from "../ast";
+import {AST, BlockNode, InstructionNode, MethodNode, ProcedureNode, ProgramNode} from "../ast";
 import {AssemblerWriter} from "../printer/AssemblerWriter";
-import {subcell} from "../utils/subcell";
-import { NumericValue, RefValue } from "../codepage/operand-loader";
-import { DisplayHint } from "../codepage/tvm-spec";
+import {NumericValue, RefValue} from "../codepage/operand-loader";
+import {DisplayHint} from "../codepage/tvm-spec";
 
 export function decompileCell(args: {
     root: boolean;
@@ -31,12 +30,17 @@ export function decompileCell(args: {
         && opcodes[3].op.definition.mnemonic === 'THROWARG') {
 
         // Load dictionary
-        let dictKeyLen = opcodes[1].op.operands.find(operand => operand.definition.name == 'n') as NumericValue;
-        let dictCell = opcodes[1].op.operands.find(operand => operand.definition.name == 'd') as RefValue;
+        let dictKeyLen = opcodes[1].op.operands.find(operand => operand.definition.name == 'n');
+        let dictCell = opcodes[1].op.operands.find(operand => operand.definition.name == 'd');
+
+        if (!dictKeyLen || !dictCell) {
+            throw new Error("internal decompiler error")
+        }
+
         let dict = Dictionary.loadDirect<number, {
             offset: number,
             cell: Cell
-        }>(Dictionary.Keys.Int(dictKeyLen.value), createCodeCell(), dictCell.value);
+        }>(Dictionary.Keys.Int((dictKeyLen as NumericValue).value), createCodeCell(), (dictCell as RefValue).value);
 
         // Extract all methods
         let registeredCells = new Map<string, string>();
@@ -124,7 +128,9 @@ export function decompileCell(args: {
         let operands = [];
         for (let operand of opcode.operands) {
             if (operand.type == 'numeric') {
-                let addHint = operand.definition.display_hints.find(hint => hint.type == 'add') as Extract<DisplayHint, {'type': 'add'}>;
+                let addHint = operand.definition.display_hints.find(hint => hint.type == 'add') as Extract<DisplayHint, {
+                    'type': 'add'
+                }>;
                 let add = addHint?.value || 0;
                 let displayNumber = operand.value + add;
                 if (operand.definition.display_hints.some(hint => hint.type == 'pushint4')) {
@@ -225,7 +231,7 @@ export function decompileAll(args: { src: Buffer | Cell }) {
 
 function createCodeCell(): DictionaryValue<{ offset: number, cell: Cell }> {
     return {
-        serialize: (src, builder) => {
+        serialize: (_src, _builder) => {
             throw Error('Not implemented');
         },
         parse: (src) => {

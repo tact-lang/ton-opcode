@@ -80,6 +80,6 @@ function loadOperand(source: Cell, operand: Operand, slice: Slice): OperandValue
         }
         return { type: 'subslice', definition: operand, value: builder.endCell(), source: source, offsetBits, offsetRefs, limitBits: bitLength, limitRefs: refLength };
     } else {
-        throw new Error('unimplemented');
+        throw new Error(`unimplemented`);
     }
 }
