@@ -1,8 +1,6 @@
 # TON Opcodes
 
-A decompiler for The Open Network Virtual Machine (TVM) bytecode.
-
-Result of decompilation can be written back into Fift assembly and compiled into TVM bytecode.
+A decompiler for The Open Network Virtual Machine (TVM) bytecode in Fift assembly.
 
 ## Installation
 
