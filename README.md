@@ -6,7 +6,7 @@ Result of decompilation can be written back into Fift assembly and compiled into
 
 ## Installation
 
-```basb
+```bash
 yarn add @tact-lang/opcode
 ```
 
