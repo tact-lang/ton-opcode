@@ -1,0 +1,1295 @@
+"Asm.fif" include
+// automatically generated from `stdlib.fc` `mathlib.fc` 
+PROGRAM{
+  DECLPROC geom_mean
+  DECLPROC sqrt
+  DECLPROC fixed248::sqrt
+  DECLPROC fixed255::sqrt
+  DECLPROC fixed248::sqr
+  DECLPROC fixed255::sqr
+  DECLPROC log2_xconst_f256
+  DECLPROC Pi_xconst_f254
+  DECLPROC Atan1_16_f260
+  DECLPROC Atan1_8_f259
+  DECLPROC Atan1_32_f261
+  DECLPROC log2_const_f256
+  DECLPROC fixed248::log2_const
+  DECLPROC Pi_const_f254
+  DECLPROC fixed248::Pi_const
+  DECLPROC tanh_f258
+  DECLPROC expm1_f257
+  DECLPROC fixed248::exp
+  DECLPROC fixed248::exp2
+  DECLPROC tan_f260_inlined
+  DECLPROC tan_f260
+  DECLPROC tan_f258_inlined
+  DECLPROC tan_f258
+  DECLPROC sincosm1_f259_inlined
+  DECLPROC sincosm1_f259
+  DECLPROC sincosn_f256
+  DECLPROC sincosm1_f256
+  DECLPROC tan_aux_f256
+  DECLPROC fixed248::sincos
+  DECLPROC fixed248::sin
+  DECLPROC fixed248::cos
+  DECLPROC fixed248::tan
+  DECLPROC fixed248::cot
+  DECLPROC atanh_f258
+  DECLPROC atanh_f261_inlined
+  DECLPROC atanh_f261
+  DECLPROC log_aux_f257
+  DECLPROC pow33
+  DECLPROC pow33b
+  DECLPROC log_auxx_f260
+  DECLPROC log_aux_f256
+  DECLPROC log2_aux_f256
+  DECLPROC fixed248::log
+  DECLPROC fixed248::log2
+  DECLPROC fixed248::pow
+  DECLPROC atan_f259
+  DECLPROC atan_f261_inlined
+  DECLPROC atan_f261
+  DECLPROC atan_aux_prereduce
+  DECLPROC atan_aux_f256
+  DECLPROC atan_auxx_f256
+  DECLPROC atan_f255
+  DECLPROC atan_f256_small
+  DECLPROC asin_f255
+  DECLPROC acos_f255
+  DECLPROC fixed248::asin
+  DECLPROC fixed248::acos
+  DECLPROC fixed248::atan
+  DECLPROC fixed248::acot
+  DECLPROC nrand_f252
+  DECLPROC nrand_fast_f252
+  DECLPROC fixed248::random
+  DECLPROC fixed248::nrand
+  DECLPROC fixed248::nrand_fast
+  DECLPROC main
+  geom_mean PROCREF:<{
+    2DUP
+    MIN
+    IFNOTJMP:<{
+      2DROP
+      0 PUSHINT
+    }>
+    OVER
+    UBITSIZE
+    OVER
+    UBITSIZE
+    2DUP
+    EQUAL
+    IF:<{
+      2DROP
+      2DUP
+      SUB
+      1 RSHIFT#
+      OVER
+      ADD
+    }>ELSE<{
+      ADD
+      1 RSHIFT#
+      POW2
+    }>
+    UNTIL:<{
+      s2 s1 s0 PUSH3
+      MULDIVC
+      OVER
+      SUB
+      1 RSHIFT#
+      TUCK
+      ADD
+      SWAP
+      0 EQINT
+    }>
+    2 1 BLKDROP2
+  }>
+  sqrt PROCINLINE:<{
+    1 PUSHINT
+    geom_mean INLINECALLDICT
+  }>
+  fixed248::sqrt PROCINLINE:<{
+    248 PUSHPOW2
+    geom_mean INLINECALLDICT
+  }>
+  fixed255::sqrt PROCINLINE:<{
+    255 PUSHPOW2
+    geom_mean INLINECALLDICT
+  }>
+  fixed248::sqr PROCINLINE:<{
+    DUP
+    248 MULRSHIFTR#
+  }>
+  fixed255::sqr PROCINLINE:<{
+    DUP
+    255 MULRSHIFTR#
+  }>
+  log2_xconst_f256 PROCREF:<{
+    80260960185991308862233904206310070533990667611589946606122867505419956976172 PUSHINT
+    -32272921378999278490133606779486332143 PUSHINT
+  }>
+  Pi_xconst_f254 PROCREF:<{
+    90942894222941581070058735694432465663348344332098107489693037779484723616546 PUSHINT
+    108051869516004014909778934258921521947 PUSHINT
+  }>
+  Atan1_16_f260 PROCREF:<{
+    115641670674223639132965820642403718536242645001775371762318060545014644837101 PUSHINT
+  }>
+  Atan1_8_f259 PROCREF:<{
+    115194597005316551477397594802136977648153890007566736408151129975021336532841 PUSHINT
+  }>
+  Atan1_32_f261 PROCREF:<{
+    115754418570128574501879331591757054405465733718902755858991306434399246026247 PUSHINT
+  }>
+  log2_const_f256 PROCINLINE:<{
+    log2_xconst_f256 INLINECALLDICT
+    DROP
+  }>
+  fixed248::log2_const PROCINLINE:<{
+    log2_const_f256 INLINECALLDICT
+    8 RSHIFTR#
+  }>
+  Pi_const_f254 PROCINLINE:<{
+    Pi_xconst_f254 INLINECALLDICT
+    DROP
+  }>
+  fixed248::Pi_const PROCINLINE:<{
+    Pi_const_f254 INLINECALLDICT
+    6 RSHIFTR#
+  }>
+  tanh_f258 PROCREF:<{
+    s1 s1 PUSH2
+    255 MULRSHIFTR#
+    OVER
+    1 LSHIFT#
+    5 ADDCONST
+    250 LSHIFT#
+    DUP
+    251 PUSHPOW2
+    s0 s4 XCHG
+    REPEAT:<{
+      s1 s3 XCPU
+      SUB
+      s0 s2 s1 PU2XC
+      239 LSHIFT#DIVR
+      ADD
+    }>
+    NIP
+    s2 POP
+    3 PUSHINT
+    254 LSHIFT#
+    s1 s2 PUXC
+    243 LSHIFT#DIVR
+    s1 s2 XCHG
+    ADD
+    OVER
+    7 RSHIFTR#
+    ADD
+    s2 PUSH
+    -ROT
+    MULDIVR
+    7 RSHIFTR#
+    SUB
+  }>
+  expm1_f257 PROCREF:<{
+    s0 s0 PUSH2
+    255 MULRSHIFTR#
+    251 PUSHPOW2
+    39 PUSHINT
+    250 LSHIFT#
+    DUP
+    17 PUSHINT
+    REPEAT:<{
+      s1 s2 XCPU
+      SUB
+      s0 s3 s1 PU2XC
+      239 LSHIFT#DIVR
+      ADD
+    }>
+    2 1 BLKDROP2
+    3 PUSHINT
+    254 LSHIFT#
+    s2 s1 PUXC
+    243 LSHIFT#DIVR
+    ADD
+    s2 PUSH
+    4 RSHIFTR#
+    OVER
+    SUB
+    DUP
+    1 RSHIFT#
+    s4 s1 PUXC
+    256 MULRSHIFTR#
+    2 RSHIFTR#
+    s1 s2 XCHG
+    ADD
+    MULDIVR
+    2 RSHIFTR#
+    SUB
+  }>
+  fixed248::exp PROCREF:<{
+    log2_xconst_f256 INLINECALLDICT
+    -ROT
+    8 PUSHINT
+    LSHIFTDIVMODR
+    1 LSHIFT#
+    s1 s2 PUXC
+    127 MULRSHIFTR#
+    s1 s2 XCHG
+    SUB
+    expm1_f257 INLINECALLDICT
+    9 PUSHINT
+    s2 PUSH
+    SUB
+    RSHIFTR
+    248 PUSHINT
+    ROT
+    ADD
+    -1 PUSHINT SWAP LSHIFT
+    SUB
+  }>
+  fixed248::exp2 PROCREF:<{
+    248 RSHIFTR#MOD
+    log2_const_f256 INLINECALLDICT
+    247 MULRSHIFTR#
+    expm1_f257 INLINECALLDICT
+    9 PUSHINT
+    s2 PUSH
+    SUB
+    RSHIFTR
+    248 PUSHINT
+    ROT
+    ADD
+    -1 PUSHINT SWAP LSHIFT
+    SUB
+  }>
+  tan_f260_inlined PROCINLINE:<{
+    s0 s0 PUSH2
+    256 MULRSHIFTR#
+    251 PUSHPOW2
+    33 PUSHINT
+    250 LSHIFT#
+    DUP
+    14 PUSHINT
+    REPEAT:<{
+      s1 s2 XCPU
+      SUB
+      s0 s3 s1 PU2XC
+      236 LSHIFT#DIVR
+      SUB
+    }>
+    2 1 BLKDROP2
+    3 PUSHINT
+    254 LSHIFT#
+    s2 s1 PUXC
+    240 LSHIFT#DIVR
+    SUB
+    s2 PUSH
+    1 RSHIFT#
+    s2 PUSH
+    10 RSHIFTR#
+    s1 s2 XCHG
+    SUB
+    s1 s2 XCHG
+    MULDIVR
+    9 RSHIFTR#
+    ADD
+  }>
+  tan_f260 PROCREF:<{
+    tan_f260_inlined INLINECALLDICT
+  }>
+  tan_f258_inlined PROCINLINE:<{
+    s0 s0 PUSH2
+    256 MULRSHIFTR#
+    251 PUSHPOW2
+    41 PUSHINT
+    250 LSHIFT#
+    DUP
+    18 PUSHINT
+    REPEAT:<{
+      s1 s2 XCPU
+      SUB
+      s0 s3 s1 PU2XC
+      240 LSHIFT#DIVR
+      SUB
+    }>
+    2 1 BLKDROP2
+    3 PUSHINT
+    254 LSHIFT#
+    s2 s1 PUXC
+    244 LSHIFT#DIVR
+    SUB
+    s2 PUSH
+    1 RSHIFT#
+    s2 PUSH
+    6 RSHIFTR#
+    s1 s2 XCHG
+    SUB
+    s1 s2 XCHG
+    MULDIVR
+    5 RSHIFTR#
+    ADD
+  }>
+  tan_f258 PROCREF:<{
+    tan_f258_inlined INLINECALLDICT
+  }>
+  sincosm1_f259_inlined PROCINLINE:<{
+    tan_f260_inlined INLINECALLDICT
+    s0 s0 PUSH2
+    256 MULRSHIFTR#
+    DUP
+    9 RSHIFTR#
+    255 PUSHPOW2
+    ADD
+    s2 PUSH
+    1 RSHIFT#
+    s2 s1 PUSH2
+    MULDIVR
+    8 RSHIFTR#
+    s1 s3 XCHG
+    SUB
+    OVER
+    1 RSHIFT#
+    s0 s2 s3 XCPUXC
+    MULDIVR
+    8 RSHIFTR#
+    SUB
+  }>
+  sincosm1_f259 PROCREF:<{
+    sincosm1_f259_inlined INLINECALLDICT
+  }>
+  sincosn_f256 PROCREF:<{
+    OVER
+    ABS
+    Atan1_8_f259 INLINECALLDICT
+    2 LSHIFT#DIVMODR
+    1 LSHIFT#
+    ROT
+    ADD
+    sincosm1_f259 INLINECALLDICT
+    -1 PUSHINT
+    0 PUSHINT
+    1 PUSHINT
+    s0 s5 XCHG
+    REPEAT:<{
+      OVER
+      63 MULCONST
+      OVER
+      4 LSHIFT#
+      SUB
+      s0 s2 XCHG
+      4 LSHIFT#
+      SWAP
+      63 MULCONST
+      ADD
+      s0 s4 XCHG
+      65 MULCONST
+      s0 s4 XCHG
+    }>
+    s4 PUSH
+    256 LSHIFT#DIVMODR
+    s5 PUSH
+    7 LSHIFT#DIVR
+    s2 s5 XCPU
+    256 LSHIFT#DIVMODR
+    s0 s6 XCHG2
+    7 LSHIFT#DIVR
+    s0 s6 XCHG
+    SGN
+    s1 s3 PUSH2
+    256 MULRSHIFTR#
+    s0 s3 XCHG2
+    SUB
+    4 RSHIFTR#
+    s5 s4 PUSH2
+    256 MULRSHIFTR#
+    SUB
+    3 RSHIFTR#
+    OVER
+    SUB
+    s1 s2 XCHG
+    MUL
+    s4 s2 PUXC
+    256 MULRSHIFTR#
+    s0 s5 XCHG2
+    SUB
+    4 RSHIFTR#
+    s4 s2 XCHG2
+    256 MULRSHIFTR#
+    ADD
+    3 RSHIFTR#
+    SUB
+  }>
+  sincosm1_f256 PROCREF:<{
+    sincosm1_f259_inlined INLINECALLDICT
+    7 PUSHINT
+    3 PUSHINT
+    REPEAT:<{
+      s2 s2 PUSH2
+      256 MULRSHIFTR#
+      s3 s2 PUXC
+      256 MULRSHIFTR#
+      OVER
+      RSHIFTR
+      s1 s3 XCHG
+      SUB
+      s0 s2 XCHG
+      -2 ADDCONST
+    }>
+    DROP
+  }>
+  tan_aux_f256 PROCREF:<{
+    tan_f258_inlined INLINECALLDICT
+    s0 s0 PUSH2
+    256 MULRSHIFTR#
+    DUP
+    4 RSHIFTR#
+    256 PUSHNEGPOW2
+    ADD
+    s2 PUSH
+    -ROT
+    MULDIVR
+    4 RSHIFTR#
+    SWAP
+    SUB
+    s0 s0 PUSH2
+    256 MULRSHIFTR#
+    2 RSHIFTR#
+    256 PUSHNEGPOW2
+    ADD
+  }>
+  fixed248::sincos PROCREF:<{
+    Pi_xconst_f254 INLINECALLDICT
+    -ROT
+    7 LSHIFT#DIVMODR
+    1 LSHIFT#
+    s1 s2 PUXC
+    127 MULRSHIFTR#
+    s1 s2 XCHG
+    SUB
+    sincosm1_f256 INLINECALLDICT
+    248 PUSHPOW2
+    SWAP
+    9 RSHIFTR#
+    SUB
+    SWAP
+    8 RSHIFTR#
+    s0 s2 XCHG
+    3 PUSHINT
+    AND
+    REPEAT:<{
+      SWAP
+      NEGATE
+    }>
+  }>
+  fixed248::sin PROCINLINE:<{
+    fixed248::sincos INLINECALLDICT
+    DROP
+  }>
+  fixed248::cos PROCINLINE:<{
+    fixed248::sincos INLINECALLDICT
+    NIP
+  }>
+  fixed248::tan PROCREF:<{
+    Pi_xconst_f254 INLINECALLDICT
+    -ROT
+    7 LSHIFT#DIVMODR
+    1 LSHIFT#
+    s1 s2 PUXC
+    127 MULRSHIFTR#
+    s1 s2 XCHG
+    SUB
+    tan_aux_f256 INLINECALLDICT
+    s0 s2 XCHG
+    1 PUSHINT
+    AND
+    IF:<{
+      NEGATE
+      SWAP
+    }>
+    SWAP
+    248 LSHIFT#DIVR
+  }>
+  fixed248::cot PROCREF:<{
+    Pi_xconst_f254 INLINECALLDICT
+    -ROT
+    7 LSHIFT#DIVMODR
+    1 LSHIFT#
+    s1 s2 PUXC
+    127 MULRSHIFTR#
+    s1 s2 XCHG
+    SUB
+    tan_aux_f256 INLINECALLDICT
+    s0 s2 XCHG
+    1 PUSHINT
+    AND
+    IF:<{
+      SWAP
+      NEGATE
+    }>
+    248 LSHIFT#DIVR
+  }>
+  atanh_f258 PROCREF:<{
+    s1 s1 PUSH2
+    256 MULRSHIFTR#
+    254 PUSHPOW2
+    s0 s2 PUSH2
+    DIVR
+    255 PUSHPOW2
+    ADD
+    s3 PUSH
+    DEC
+    REPEAT:<{
+      s2 s(-1) PUXC
+      248 LSHIFT#DIVR
+      s1 s(-1) PUXC
+      SUB
+      s3 PUSH
+      DEC
+      s4 s4 XCPU
+      MULDIVR
+      OVER
+      ADD
+    }>
+    NIP
+    s2 POP
+    DUP
+    1 RSHIFT#
+    SWAP
+    6 RSHIFTR#
+    s1 s2 XCHG
+    SUB
+    s2 PUSH
+    -ROT
+    MULDIVR
+    5 RSHIFTR#
+    ADD
+  }>
+  atanh_f261_inlined PROCINLINE:<{
+    s1 s1 PUSH2
+    256 MULRSHIFTR#
+    254 PUSHPOW2
+    s0 s2 PUSH2
+    DIVR
+    255 PUSHPOW2
+    ADD
+    s3 PUSH
+    DEC
+    REPEAT:<{
+      s2 s(-1) PUXC
+      242 LSHIFT#DIVR
+      s1 s(-1) PUXC
+      SUB
+      s3 PUSH
+      DEC
+      s4 s4 XCPU
+      MULDIVR
+      OVER
+      ADD
+    }>
+    NIP
+    s2 POP
+    DUP
+    12 RSHIFTR#
+    s1 s2 XCHG
+    SUB
+    s2 PUSH
+    -ROT
+    MULDIVR
+    12 RSHIFTR#
+    ADD
+  }>
+  atanh_f261 PROCREF:<{
+    atanh_f261_inlined INLINECALLDICT
+  }>
+  log_aux_f257 PROCREF:<{
+    DUP
+    UBITSIZE
+    8 PUSHPOW2
+    OVER
+    SUB
+    s1 s2 XCHG
+    LSHIFT
+    256 PUSHNEGPOW2
+    OVER
+    249 RSHIFT#
+    91 LESSINT
+    IF:<{
+      1 RSHIFT#
+      s0 s2 XCHG
+      DEC
+      s0 s2 XCHG
+    }>
+    TUCK
+    ADD
+    DUP
+    1 LSHIFT#
+    SWAP
+    1 RSHIFT#
+    ROT
+    SUB
+    256 LSHIFT#DIVR
+    36 PUSHINT
+    atanh_f258 INLINECALLDICT
+    SWAP
+  }>
+  pow33 PROCINLINE:<{
+    1 PUSHINT
+    SWAP
+    REPEAT:<{
+      33 MULCONST
+    }>
+  }>
+  pow33b PROCINLINE:<{
+    5 PUSHINT
+    DIVMOD
+    1 PUSHINT
+    SWAP
+    REPEAT:<{
+      33 MULCONST
+    }>
+    SWAP
+    REPEAT:<{
+      39135393 PUSHINT
+      MUL
+    }>
+  }>
+  log_auxx_f260 PROCREF:<{
+    DUP
+    UBITSIZE
+    DEC
+    8 PUSHPOW2DEC
+    OVER
+    SUB
+    s1 s2 XCHG
+    LSHIFT
+    2873 PUSHINT
+    244 LSHIFT#
+    2DUP
+    SUB
+    1 RSHIFT#
+    DUP
+    65 PUSHINT
+    s0 s3 XCHG
+    ADD
+    s1 s2 XCHG
+    MULDIVR
+    11 ADDCONST
+    DUP
+    pow33b INLINECALLDICT
+    51 PUSHINT
+    s2 PUSH
+    SUB
+    5 MULCONST
+    LSHIFT
+    s2 s2 XCPU
+    SUB
+    DUP
+    4 LSHIFT#
+    SWAP
+    1 RSHIFT#
+    s0 s3 XCHG2
+    ADD
+    s1 s2 XCHG
+    256 LSHIFT#DIVR
+    18 PUSHINT
+    atanh_f261 INLINECALLDICT
+  }>
+  log_aux_f256 PROCREF:<{
+    log_auxx_f260 INLINECALLDICT
+    4 RSHIFTR#MOD
+    9 LSHIFT#
+    s2 PUSH
+    -3769 PUSHINT
+    MUL
+    ADD
+    13 RSHIFTR#
+    ADD
+    SWAP
+    3563114646320977386603103333812068872452913448227778071188132859183498739150 PUSHINT
+    MUL
+    ADD
+    SWAP
+  }>
+  log2_aux_f256 PROCREF:<{
+    log_auxx_f260 INLINECALLDICT
+    log2_const_f256 INLINECALLDICT
+    256 LSHIFT#DIVR
+    4 RSHIFTR#
+    SWAP
+    5140487830366106860412008603913034462883915832139695448455767612111363481357 PUSHINT
+    MUL
+    ADD
+    SWAP
+  }>
+  fixed248::log PROCREF:<{
+    log_aux_f256 INLINECALLDICT
+    248 PUSHINT
+    SUB
+    log2_const_f256 INLINECALLDICT
+    8 MULRSHIFTR#
+    SWAP
+    8 RSHIFTR#
+    ADD
+  }>
+  fixed248::log2 PROCINLINE:<{
+    log2_aux_f256 INLINECALLDICT
+    248 PUSHINT
+    SUB
+    248 LSHIFT#
+    SWAP
+    8 RSHIFTR#
+    ADD
+  }>
+  fixed248::pow PROCREF:<{
+    DUP
+    IFNOTJMP:<{
+      2DROP
+      248 PUSHPOW2
+    }>
+    OVER
+    1 LESSINT
+    IFJMP:<{
+      OR
+      0 LESSINT
+      0 PUSHINT
+      SWAP
+      RSHIFT
+    }>
+    SWAP
+    log2_aux_f256 INLINECALLDICT
+    248 PUSHINT
+    SUB
+    s2 PUSH
+    248 MULRSHIFTR#MOD
+    s2 s3 XCHG2
+    256 MULRSHIFT#MOD
+    247 RSHIFT#
+    SWAP
+    248 RSHIFTR#MOD
+    s1 s4 XCHG
+    ADD
+    248 RSHIFTR#MOD
+    9 LSHIFT#
+    ROT
+    ADD
+    s2 s3 XCHG2
+    ADD
+    ADD
+    DUP
+    248 PUSHINT
+    ADD
+    DUP
+    1 LESSINT
+    IFJMP:<{
+      2 1 BLKDROP2
+      0 EQINT
+      NEGATE
+    }>
+    log2_const_f256 INLINECALLDICT
+    s1 s3 XCHG
+    256 MULRSHIFTR#
+    expm1_f257 INLINECALLDICT
+    9 PUSHINT
+    ROT
+    SUB
+    RSHIFTR
+    SWAP
+    -1 PUSHINT SWAP LSHIFT
+    SUB
+  }>
+  atan_f259 PROCREF:<{
+    s1 s1 PUSH2
+    256 MULRSHIFTR#
+    254 PUSHPOW2
+    s0 s2 PUSH2
+    DIVR
+    255 PUSHPOW2
+    ADD
+    s3 PUSH
+    DEC
+    REPEAT:<{
+      s2 s(-1) PUXC
+      246 LSHIFT#DIVR
+      s1 s(-1) PUXC
+      ADD
+      s3 PUSH
+      DEC
+      s4 s4 XCPU
+      MULDIVR
+      OVER
+      ADD
+    }>
+    NIP
+    s2 POP
+    DUP
+    8 RSHIFTR#
+    s1 s2 XCHG
+    ADD
+    s2 PUSH
+    -ROT
+    MULDIVR
+    8 RSHIFTR#
+    SUB
+  }>
+  atan_f261_inlined PROCINLINE:<{
+    s1 s1 PUSH2
+    256 MULRSHIFTR#
+    254 PUSHPOW2
+    s0 s2 PUSH2
+    DIVR
+    255 PUSHPOW2
+    ADD
+    s3 PUSH
+    DEC
+    REPEAT:<{
+      s2 s(-1) PUXC
+      242 LSHIFT#DIVR
+      s1 s(-1) PUXC
+      ADD
+      s3 PUSH
+      DEC
+      s4 s4 XCPU
+      MULDIVR
+      OVER
+      ADD
+    }>
+    NIP
+    s2 POP
+    DUP
+    12 RSHIFTR#
+    s1 s2 XCHG
+    ADD
+    s2 PUSH
+    -ROT
+    MULDIVR
+    12 RSHIFTR#
+    SUB
+  }>
+  atan_f261 PROCREF:<{
+    atan_f261_inlined INLINECALLDICT
+  }>
+  atan_aux_prereduce PROCREF:<{
+    DUP
+    ABS
+    7214596 PUSHINT
+    2DUP
+    SUB
+    -ROT
+    MUL
+    48 PUSHPOW2
+    ADD
+    88 LSHIFT#DIVR
+    DUP
+    3073 PUSHINT
+    MUL
+    s1 s0 XCPU
+    MUL
+    3 PUSHINT
+    128 LSHIFT#
+    ADD
+    59 LSHIFT#DIVR
+    13 ADDCONST
+    33226912 PUSHINT
+    5232641 PUSHINT
+    s2 PUSH
+    5 PUSHINT
+    DIVMOD
+    51 PUSHINT
+    s5 PUSH
+    SUB
+    5 MULCONST
+    POW2
+    0 PUSHINT
+    s0 s2 XCHG
+    REPEAT:<{
+      2DUP
+      5 LSHIFT#
+      SUBR
+      s0 s2 XCHG
+      5 LSHIFT#
+      ADD
+      SWAP
+    }>
+    s0 s2 XCHG
+    REPEAT:<{
+      s1 s3 PUSH2
+      MUL
+      s1 s3 PUSH2
+      MUL
+      SUB
+      s2 s3 XCPU
+      MUL
+      s1 s4 XCPU
+      MUL
+      ADD
+    }>
+    2 2 BLKDROP2
+    s0 s3 XCHG
+    SGN
+    s0 s2 PUXC
+    MUL
+    s2 s3 XCHG2
+    MUL
+  }>
+  atan_aux_f256 PROCREF:<{
+    DUP
+    232 RSHIFTR#
+    atan_aux_prereduce INLINECALLDICT
+    s1 s3 PUSH2
+    256 MULRSHIFTR#MOD
+    250 RSHIFTR#
+    s1 s2 XCPU
+    SUB
+    6 LSHIFT#
+    ADD
+    s0 s4 XCHG
+    256 MULRSHIFTR#
+    ADD
+    s1 s2 XCHG
+    255 LSHIFT#DIVR
+    18 PUSHINT
+    atan_f261_inlined INLINECALLDICT
+  }>
+  atan_auxx_f256 PROCREF:<{
+    DUP
+    232 RSHIFTR#
+    atan_aux_prereduce INLINECALLDICT
+    s1 s3 PUSH2
+    256 MULRSHIFTR#MOD
+    1 RSHIFT#
+    s1 s2 XCPU
+    SUB
+    s2 s5 XCHG2
+    256 MULRSHIFTR#MOD
+    1 RSHIFT#
+    s0 s3 XCHG
+    ADD
+    s4 s4 XCPU
+    255 LSHIFT#DIVMODR
+    s1 s2 XCHG
+    ADD
+    s4 PUSH
+    255 LSHIFT#DIVR
+    s2 s2 s4 XCPUXC
+    MULDIVR
+    s1 s3 XCHG
+    SUB
+    249 RSHIFTR#
+    s0 s2 XCHG
+    6 LSHIFT#
+    s1 s2 XCHG
+    ADD
+    18 PUSHINT
+    atan_f261_inlined INLINECALLDICT
+  }>
+  atan_f255 PROCREF:<{
+    DUP
+    256 RSHIFTR#
+    DUP
+    IF:<{
+      255 PUSHNEGPOW2
+      ROT
+      256 LSHIFT#DIVR
+    }>ELSE<{
+      SWAP
+      1 LSHIFT#
+    }>
+    atan_aux_f256 INLINECALLDICT
+    Pi_xconst_f254 INLINECALLDICT
+    Atan1_32_f261 INLINECALLDICT
+    s1 s4 XCHG
+    6 MULRSHIFTR#MOD
+    s5 s2 PUXC
+    MUL
+    ADD
+    -ROT
+    ADD
+    2SWAP
+    122 MULRSHIFTR#
+    ADD
+    6 RSHIFTR#
+    ADD
+  }>
+  atan_f256_small PROCREF:<{
+    atan_aux_f256 INLINECALLDICT
+    Atan1_32_f261 INLINECALLDICT
+    s1 s2 XCHG
+    5 MULRSHIFTR#MOD
+    s1 s2 XCHG
+    ADD
+    5 RSHIFTR#
+    ADD
+  }>
+  asin_f255 PROCREF:<{
+    255 PUSHPOW2
+    OVER
+    fixed255::sqr INLINECALLDICT
+    SUB
+    DUP
+    IFNOTJMP:<{
+      DROP
+      SGN
+      Pi_const_f254 INLINECALLDICT
+      MUL
+    }>
+    fixed255::sqrt INLINECALLDICT
+    255 PUSHNEGPOW2
+    SWAP
+    SUB
+    256 LSHIFT#DIVR
+    NEGATE
+    atan_f256_small INLINECALLDICT
+  }>
+  acos_f255 PROCREF:<{
+    Pi_const_f254 INLINECALLDICT
+    OVER
+    255 PUSHNEGPOW2
+    EQUAL
+    IFJMP:<{
+      NIP
+    }>
+    1 RSHIFT#
+    255 PUSHPOW2
+    s2 PUSH
+    fixed255::sqr INLINECALLDICT
+    SUB
+    fixed255::sqrt INLINECALLDICT
+    255 PUSHNEGPOW2
+    SWAP
+    SUB
+    s1 s2 XCHG
+    256 LSHIFT#DIVR
+    atan_f256_small INLINECALLDICT
+    1 RSHIFTR#
+    ADD
+  }>
+  fixed248::asin PROCINLINE:<{
+    7 LSHIFT#
+    asin_f255 INLINECALLDICT
+    7 RSHIFTR#
+  }>
+  fixed248::acos PROCINLINE:<{
+    7 LSHIFT#
+    acos_f255 INLINECALLDICT
+    6 RSHIFTR#
+  }>
+  fixed248::atan PROCREF:<{
+    DUP
+    249 RSHIFTR#
+    DUP
+    IF:<{
+      SGN
+      248 PUSHNEGPOW2
+      ROT
+      256 LSHIFT#DIVR
+    }>ELSE<{
+      SWAP
+      8 LSHIFT#
+    }>
+    atan_aux_f256 INLINECALLDICT
+    6 RSHIFTR#
+    Pi_const_f254 INLINECALLDICT
+    s1 s3 XCHG
+    MUL
+    s1 s2 XCHG
+    ADD
+    Atan1_32_f261 INLINECALLDICT
+    s1 s2 XCHG
+    6 MULRSHIFTR#
+    ADD
+    7 RSHIFTR#
+  }>
+  fixed248::acot PROCREF:<{
+    DUP
+    249 RSHIFTR#
+    IF:<{
+      248 PUSHNEGPOW2
+      SWAP
+      256 LSHIFT#DIVR
+      0 PUSHINT
+    }>ELSE<{
+      8 LSHIFT#
+      DUP
+      SGN
+    }>
+    SWAP
+    atan_aux_f256 INLINECALLDICT
+    Pi_const_f254 INLINECALLDICT
+    s1 s3 XCHG
+    MUL
+    s0 s2 XCHG
+    6 RSHIFTR#
+    s1 s2 XCHG
+    SUB
+    Atan1_32_f261 INLINECALLDICT
+    s1 s2 XCHG
+    6 MULRSHIFTR#
+    SUB
+    7 RSHIFTR#
+  }>
+  nrand_f252 PROCREF:<{
+    PUSHNAN
+    29483 PUSHINT
+    236 LSHIFT#
+    -3167 PUSHINT
+    239 LSHIFT#
+    12845 PUSHINT
+    16693 PUSHINT
+    9043 PUSHINT
+    UNTIL:<{
+      RANDU256
+      4 RSHIFT#
+      INC
+      RANDU256
+      255 PUSHPOW2
+      SUB
+      7027 PUSHINT
+      16 MULRSHIFTR#
+      DUP
+      ABS
+      s2 s7 PUSH2
+      SUB
+      s1 s7 PUSH2
+      SUB
+      s1 s1 PUSH2
+      252 MULRSHIFTR#
+      s1 s8 PUSH2
+      16 MULRSHIFTR#
+      s3 s8 XCPU
+      16 MULRSHIFTR#
+      s1 s3 XCHG
+      SUB
+      252 MULRSHIFTR#
+      ADD
+      237 RSHIFT#
+      s4 PUSH
+      SUB
+      DUP
+      82 LESSINT
+      s2 s4 XCPU
+      DIV
+      16 LESSINT
+      s1 s2 XCHG
+      AND
+      IF:<{
+        s8 POP
+        OVER
+        252 LSHIFT#DIVR
+        s0 s7 XCHG
+        -1 GTINT
+        IF:<{
+          s6 s6 PUSH2
+          256 MULRSHIFTR#
+          2 RSHIFTR#
+          NEGATE
+          fixed248::exp INLINECALLDICT
+          4 LSHIFT#
+          GREATER
+          IF:<{
+            s5 POP
+            PUSHNAN
+            s0 s5 XCHG
+          }>
+        }>ELSE<{
+          DROP
+        }>
+      }>ELSE<{
+        3 BLKDROP
+      }>
+      s5 PUSH
+      ISNAN
+      NOT
+    }>
+    5 BLKDROP
+  }>
+  nrand_fast_f252 PROCREF:<{
+    -3 PUSHINT
+    253 LSHIFT#
+    12 PUSHINT
+    REPEAT:<{
+      RANDU256
+      4 RSHIFT#
+      ADD
+    }>
+  }>
+  fixed248::random PROCINLINE:<{
+    RANDU256
+    8 RSHIFT#
+  }>
+  fixed248::nrand PROCINLINE:<{
+    nrand_f252 INLINECALLDICT
+    4 RSHIFTR#
+  }>
+  fixed248::nrand_fast PROCINLINE:<{
+    nrand_fast_f252 INLINECALLDICT
+    4 RSHIFTR#
+  }>
+  main PROC:<{
+    geom_mean INLINECALLDICT
+    sqrt INLINECALLDICT
+    fixed248::sqrt INLINECALLDICT
+    fixed255::sqrt INLINECALLDICT
+    fixed248::sqr INLINECALLDICT
+    fixed255::sqr INLINECALLDICT
+    log2_xconst_f256 INLINECALLDICT
+    Pi_xconst_f254 INLINECALLDICT
+    Atan1_16_f260 INLINECALLDICT
+    Atan1_8_f259 INLINECALLDICT
+    Atan1_32_f261 INLINECALLDICT
+    log2_const_f256 INLINECALLDICT
+    fixed248::log2_const INLINECALLDICT
+    Pi_const_f254 INLINECALLDICT
+    fixed248::Pi_const INLINECALLDICT
+    tanh_f258 INLINECALLDICT
+    expm1_f257 INLINECALLDICT
+    fixed248::exp INLINECALLDICT
+    fixed248::exp2 INLINECALLDICT
+    tan_f260_inlined INLINECALLDICT
+    tan_f260 INLINECALLDICT
+    tan_f258_inlined INLINECALLDICT
+    tan_f258 INLINECALLDICT
+    sincosm1_f259_inlined INLINECALLDICT
+    sincosm1_f259 INLINECALLDICT
+    sincosn_f256 INLINECALLDICT
+    sincosm1_f256 INLINECALLDICT
+    tan_aux_f256 INLINECALLDICT
+    fixed248::sincos INLINECALLDICT
+    fixed248::sin INLINECALLDICT
+    fixed248::cos INLINECALLDICT
+    fixed248::tan INLINECALLDICT
+    fixed248::cot INLINECALLDICT
+    atanh_f258 INLINECALLDICT
+    atanh_f261_inlined INLINECALLDICT
+    atanh_f261 INLINECALLDICT
+    log_aux_f257 INLINECALLDICT
+    pow33 INLINECALLDICT
+    pow33b INLINECALLDICT
+    log_auxx_f260 INLINECALLDICT
+    log_aux_f256 INLINECALLDICT
+    log2_aux_f256 INLINECALLDICT
+    fixed248::log INLINECALLDICT
+    fixed248::log2 INLINECALLDICT
+    fixed248::pow INLINECALLDICT
+    atan_f259 INLINECALLDICT
+    atan_f261_inlined INLINECALLDICT
+    atan_f261 INLINECALLDICT
+    atan_aux_prereduce INLINECALLDICT
+    atan_aux_f256 INLINECALLDICT
+    atan_auxx_f256 INLINECALLDICT
+    atan_f255 INLINECALLDICT
+    atan_f256_small INLINECALLDICT
+    asin_f255 INLINECALLDICT
+    acos_f255 INLINECALLDICT
+    fixed248::asin INLINECALLDICT
+    fixed248::acos INLINECALLDICT
+    fixed248::atan INLINECALLDICT
+    fixed248::acot INLINECALLDICT
+    nrand_f252 INLINECALLDICT
+    nrand_fast_f252 INLINECALLDICT
+    fixed248::random INLINECALLDICT
+    fixed248::nrand INLINECALLDICT
+    fixed248::nrand_fast INLINECALLDICT
+  }>
+}END>c
+2 boc+>B "mathlib.boc" B>file

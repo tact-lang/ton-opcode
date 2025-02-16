@@ -1,0 +1,11 @@
+{
+    "reporter": ["html", "text"],
+    "exclude": [
+        "**/node_modules/**",
+        "**/funcfiftlib.js",
+        "**/compileFift.ts",
+        "**/errors.ts",
+        "**/test/**",
+        "**/*.d.ts"
+    ]
+}
