@@ -59,6 +59,12 @@ interface CompilationOk {
 
 type CompileResult = CompilationError | CompilationOk
 
+export async function compileFiftForSourceMap(content: string): Promise<FiftCompilationSourceMap> {
+    const result = await compileFift(content, true)
+    if (result.status !== "source_map") throw new Error("unreachable")
+    return result
+}
+
 export async function compileFift(
     content: string,
     generateSourceMap: boolean = false,
