@@ -52,6 +52,17 @@ export interface AssemblyWriterOptions {
      */
     readonly outputBitcodeAfterInstruction?: boolean
     readonly debugSymbols?: DebugSymbols
+    /**
+     * Map of function hashes to their original names.
+     * Used to restore original function names when decompiling.
+     *
+     * Can be obtained using `obtainSourceMap()` with original `.fif` file passed in:
+     *
+     * ```typescript
+     * const sourceMap = await obtainSourceMap("path/to/original.fif")
+     * const result = AssemblyWriter.write(program, { sourceMap })
+     * ```
+     */
     readonly sourceMap?: Map<string, string>
 }
 

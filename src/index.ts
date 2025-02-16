@@ -19,4 +19,4 @@ export type {
     FiftCompilationResultOk,
     FiftCompilationResultError,
 } from "./fift/compileFift"
-export {compileFift} from "./fift/compileFift"
+export {compileFift, compileFiftForSourceMap} from "./fift/compileFift"
