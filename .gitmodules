@@ -1,0 +1,3 @@
+[submodule "src/tvm-spec"]
+	path = src/codepage/tvm-spec
+	url = https://github.com/ton-community/tvm-spec

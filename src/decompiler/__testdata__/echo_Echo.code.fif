@@ -53,7 +53,7 @@ PROGRAM{
     137 THROWIFNOT
   }>
   __tact_store_address PROCINLINE:<{
-    __tact_verify_address INLINECALLDICT
+    __tact_verify_address CALL
     STSLICER
   }>
   __tact_not_null PROCINLINE:<{
@@ -80,11 +80,11 @@ PROGRAM{
     0 PUSHINT
     SWAP
     32 STU
-    __tact_string_builder_start INLINECALLDICT
+    __tact_string_builder_start CALL
   }>
   __tact_string_builder_start_string PROCINLINE:<{
     NEWC
-    __tact_string_builder_start INLINECALLDICT
+    __tact_string_builder_start CALL
   }>
   __tact_string_builder_end PROCINLINE:<{
     UNCONS
@@ -104,7 +104,7 @@ PROGRAM{
     NIP
   }>
   __tact_string_builder_end_slice PROCINLINE:<{
-    __tact_string_builder_end INLINECALLDICT
+    __tact_string_builder_end CALL
     CTOS
   }>
   __tact_string_builder_append PROCREF:<{
@@ -199,10 +199,10 @@ PROGRAM{
       10 PUSHPOW2
       EQUAL
       137 THROWIFNOT
-      $Echo$init$_load INLINECALLDICT
+      $Echo$init$_load CALL
       SWAP
       ENDS
-      $Echo$_contract_init INLINECALLDICT
+      $Echo$_contract_init CALL
     }>
   }>
   $Echo$_contract_store PROCINLINE:<{
@@ -223,12 +223,12 @@ PROGRAM{
     SWAP
     2 STI
     s0 s7 XCHG2
-    __tact_store_bool INLINECALLDICT
+    __tact_store_bool CALL
     0 PUSHINT
     SWAP
     3 STI
     s0 s5 XCHG2
-    __tact_store_address INLINECALLDICT
+    __tact_store_address CALL
     s0 s3 XCHG2
     STGRAMS
     0 PUSHINT
@@ -246,49 +246,49 @@ PROGRAM{
     }>
     IF:<{
       TRUE
-      __tact_store_bool INLINECALLDICT
+      __tact_store_bool CALL
       NEWC
       FALSE
-      __tact_store_bool INLINECALLDICT
+      __tact_store_bool CALL
       FALSE
-      __tact_store_bool INLINECALLDICT
+      __tact_store_bool CALL
       s4 PUSH
       ISNULL
       NOT
       IF:<{
         TRUE
-        __tact_store_bool INLINECALLDICT
+        __tact_store_bool CALL
         s0 s4 XCHG
-        __tact_not_null INLINECALLDICT
+        __tact_not_null CALL
         s0 s4 XCHG2
         STREF
       }>ELSE<{
         s4 POP
         s0 s3 XCHG
         FALSE
-        __tact_store_bool INLINECALLDICT
+        __tact_store_bool CALL
       }>
       s4 PUSH
       ISNULL
       NOT
       IF:<{
         TRUE
-        __tact_store_bool INLINECALLDICT
+        __tact_store_bool CALL
         s0 s4 XCHG
-        __tact_not_null INLINECALLDICT
+        __tact_not_null CALL
         s0 s4 XCHG2
         STREF
       }>ELSE<{
         s4 POP
         s0 s3 XCHG
         FALSE
-        __tact_store_bool INLINECALLDICT
+        __tact_store_bool CALL
       }>
       FALSE
-      __tact_store_bool INLINECALLDICT
+      __tact_store_bool CALL
       s0 s2 XCHG
       TRUE
-      __tact_store_bool INLINECALLDICT
+      __tact_store_bool CALL
       s0 s2 XCHG
       ENDC
       ROT
@@ -298,22 +298,22 @@ PROGRAM{
       s3 POP
       SWAP
       FALSE
-      __tact_store_bool INLINECALLDICT
+      __tact_store_bool CALL
     }>
     OVER
     ISNULL
     NOT
     IF:<{
       TRUE
-      __tact_store_bool INLINECALLDICT
+      __tact_store_bool CALL
       SWAP
-      __tact_not_null INLINECALLDICT
+      __tact_not_null CALL
       SWAP
       STREF
     }>ELSE<{
       NIP
       FALSE
-      __tact_store_bool INLINECALLDICT
+      __tact_store_bool CALL
     }>
     ENDC
     SWAP
@@ -325,14 +325,14 @@ PROGRAM{
   }>
   $global_reply PROCREF:<{
     TRUE
-    __tact_context_get_sender INLINECALLDICT
+    __tact_context_get_sender CALL
     0 PUSHINT
     ROT
     s0 s3 XCHG
     66 PUSHINT
     SWAP
-    $SendParameters$_constructor_bounce_to_value_mode_body INLINECALLDICT
-    $global_send INLINECALLDICT
+    $SendParameters$_constructor_bounce_to_value_mode_body CALL
+    $global_send CALL
   }>
   $Slice$_fun_asCell PROCREF:<{
     NEWC
@@ -341,31 +341,31 @@ PROGRAM{
     ENDC
   }>
   $String$_fun_asComment PROCREF:<{
-    __tact_string_builder_start_comment INLINECALLDICT
+    __tact_string_builder_start_comment CALL
     SWAP
-    __tact_string_builder_append INLINECALLDICT
-    __tact_string_builder_end INLINECALLDICT
+    __tact_string_builder_append CALL
+    __tact_string_builder_end CALL
   }>
   $Echo$_fun_hello PROCREF:<{
-    __tact_string_builder_start_string INLINECALLDICT
+    __tact_string_builder_start_string CALL
     B{b5ee9c7241010101000900000e48656c6c6f2c20e8d197d2} B>boc <s PUSHSLICE
-    __tact_string_builder_append INLINECALLDICT
+    __tact_string_builder_append CALL
     SWAP
-    __tact_string_builder_append INLINECALLDICT
-    __tact_string_builder_end_slice INLINECALLDICT
+    __tact_string_builder_append CALL
+    __tact_string_builder_end_slice CALL
   }>
   $Echo$_receive_any_text PROCINLINE:<{
-    $String$_fun_asComment INLINECALLDICT
-    $global_reply INLINECALLDICT
+    $String$_fun_asComment CALL
+    $global_reply CALL
   }>
   $Echo$_receive_any PROCINLINE:<{
-    $Slice$_fun_asCell INLINECALLDICT
-    $global_reply INLINECALLDICT
+    $Slice$_fun_asCell CALL
+    $global_reply CALL
   }>
   %hello PROC:<{
-    $Echo$_contract_load INLINECALLDICT
+    $Echo$_contract_load CALL
     SWAP
-    $Echo$_fun_hello INLINECALLDICT
+    $Echo$_fun_hello CALL
     NIP
   }>
   supported_interfaces PROC:<{
@@ -409,12 +409,12 @@ PROGRAM{
       IFJMP:<{
         32 PUSHINT
         SDSKIPFIRST
-        $Echo$_receive_any_text INLINECALLDICT
+        $Echo$_receive_any_text CALL
         TRUE
         RETALT
       }>
     }>
-    $Echo$_receive_any INLINECALLDICT
+    $Echo$_receive_any CALL
     TRUE
   }>
   recv_internal PROC:<{
@@ -433,17 +433,17 @@ PROGRAM{
     SWAP
     LDMSGADDR
     SWAP
-    __tact_verify_address INLINECALLDICT
+    __tact_verify_address CALL
     s0 s4 s2 PUXCPU
     s0 s3 XCHG
     4 TUPLE
     __tact_context SETGLOB
     s0 s2 XCHG
     __tact_context_sender SETGLOB
-    $Echo$_contract_load INLINECALLDICT
+    $Echo$_contract_load CALL
     -ROT
-    $Echo$_contract_router INLINECALLDICT
+    $Echo$_contract_router CALL
     DROP
-    $Echo$_contract_store INLINECALLDICT
+    $Echo$_contract_store CALL
   }>
 }END>c

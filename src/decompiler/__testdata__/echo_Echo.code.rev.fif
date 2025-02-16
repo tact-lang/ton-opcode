@@ -39,14 +39,14 @@ SETCP0
     0 4 2 PUXCPU
     s0 s3 XCHG
     4 TUPLE
-    1 SETGLOBVAR
+    1 SETGLOB
     s0 s2 XCHG
-    2 SETGLOBVAR
+    2 SETGLOB
     c4 PUSH
     CTOS
     LDREF
     s0 s1 XCHG
-    3 SETGLOBVAR
+    3 SETGLOB
     1 LDI
     s0 s1 XCHG
     <{
@@ -203,7 +203,7 @@ SETCP0
           }> CALLREF
           <{
             -1 PUSHINT
-            2 GETGLOBVAR
+            2 GETGLOB
             0 PUSHINT
             ROT
             s0 s3 XCHG
@@ -374,7 +374,7 @@ SETCP0
       }> CALLREF
       <{
         -1 PUSHINT
-        2 GETGLOBVAR
+        2 GETGLOB
         0 PUSHINT
         ROT
         s0 s3 XCHG
@@ -536,7 +536,7 @@ SETCP0
     s0 POP
     s0 POP
     NEWC
-    3 GETGLOBVAR
+    3 GETGLOB
     s0 s1 XCHG
     STREF
     -1 PUSHINT
@@ -556,7 +556,7 @@ SETCP0
     CTOS
     LDREF
     s0 s1 XCHG
-    3 SETGLOBVAR
+    3 SETGLOB
     1 LDI
     s0 s1 XCHG
     <{
