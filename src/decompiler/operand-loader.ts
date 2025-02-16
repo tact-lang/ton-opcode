@@ -3,6 +3,7 @@ import type {Instruction, Operand} from "../spec/tvm-spec"
 import {removeCompletionTag} from "../utils/binutils"
 import {PrefixMatcher} from "../utils/prefix-matcher"
 import {DisassemblerError} from "./errors"
+import {repeat} from "../utils/tricks"
 
 type ExtractType<T extends Operand["type"], A = Operand> = A extends {type: T} ? A : never
 
@@ -147,17 +148,13 @@ function parseInstruction(source: Cell, operand: Operand, slice: Slice): Operand
     const offsetBits = slice.offsetBits
     const offsetRefs = slice.offsetRefs
 
-    let bits = slice.loadBits(bitLength)
-    if (operand.completion_tag) {
-        bits = removeCompletionTag(bits)
-    }
+    const loadedBits = slice.loadBits(bitLength)
+    const bits = operand.completion_tag ? removeCompletionTag(loadedBits) : loadedBits
 
     const builder = new Builder()
     builder.storeBits(bits)
 
-    for (let i = 0; i < refLength; i++) {
-        builder.storeRef(slice.loadRef())
-    }
+    repeat(refLength, () => builder.storeRef(slice.loadRef()))
 
     return {
         type: "subslice",

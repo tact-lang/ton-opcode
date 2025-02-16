@@ -19,15 +19,13 @@ export const prefixToBin = (prefix: string): BitString => {
 }
 
 export const removeCompletionTag = (bits: BitString): BitString => {
-    let newLength = -1
-    for (let i = bits.length; i > 0; i--) {
-        if (bits.at(i - 1)) {
-            newLength = i - 1
-            break
-        }
-    }
-    if (newLength === -1) {
+    const lastSetBitIndex = Array.from({length: bits.length}).findIndex((_, i): boolean =>
+        bits.at(bits.length - 1 - i),
+    )
+
+    if (lastSetBitIndex === -1) {
         throw new Error("no completion tag")
     }
-    return bits.substring(0, newLength)
+
+    return bits.substring(0, bits.length - lastSetBitIndex - 1)
 }

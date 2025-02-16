@@ -1,4 +1,5 @@
 import {beginCell, Cell, Slice} from "@ton/core"
+import {repeat} from "./tricks"
 
 export function subslice(args: {
     cell: Cell
@@ -12,17 +13,13 @@ export function subslice(args: {
 
     // Copy bits and refs
     b.storeBits(s.loadBits(args.bits + args.offsetBits))
-    for (let i = 0; i < args.refs + args.offsetRefs; i++) {
-        b.storeRef(s.loadRef())
-    }
+    repeat(args.refs + args.offsetRefs, () => b.storeRef(s.loadRef()))
 
     const s2 = b.endCell().beginParse()
 
     // Skip bits and refs
     s2.skip(args.offsetBits)
-    for (let i = 0; i < args.offsetRefs; i++) {
-        s2.loadRef()
-    }
+    repeat(args.offsetRefs, () => s2.loadRef())
 
     return s2
 }
