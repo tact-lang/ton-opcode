@@ -13,6 +13,7 @@ const main = async (): Promise<void> => {
     try {
         await cp("./src/fift/funcfiftlib.js", "./dist/fift/")
         await cp("./src/fift/funcfiftlib.wasm", "./dist/fift/")
+        await cp("./src/fift/AsmWithDebugInfo.fif", "./dist/fift/")
     } catch (error) {
         console.error(error)
         process.exit(1)

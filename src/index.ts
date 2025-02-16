@@ -8,6 +8,8 @@ export {
 
 export type {AssemblyWriterOptions} from "./printer/assembly-writer"
 export {AssemblyWriter} from "./printer/assembly-writer"
+export type {SourceMap, ProcedureHash} from "./decompiler/source-map"
+export {obtainSourceMap} from "./decompiler/source-map"
 
 export {debugSymbols} from "./utils/known-methods"
 export {Cell} from "@ton/core"

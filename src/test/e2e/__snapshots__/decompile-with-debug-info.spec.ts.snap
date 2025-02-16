@@ -1,0 +1,1040 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`disassemble > should decompile JettonMinter with debug info 1`] = `
+""Asm.fif" include
+PROGRAM{
+  DECLPROC recv_internal
+  83229 DECLMETHOD owner
+  103289 DECLMETHOD get_wallet_address
+  106029 DECLMETHOD get_jetton_data
+  115390 DECLMETHOD lazy_deployment_completed
+  DECLPROC $JettonMinter$_contract_router_internal
+  DECLPROC ?fun_ref_42dfbe7c44ef3021
+  DECLPROC ?fun_ref_44086a5ce86162fe
+  DECLPROC ?fun_ref_5107b8836cd326d2
+  DECLPROC ?fun_ref_71bde1515a4deb68
+  DECLPROC $JettonMinter$_internal_binary_Mint
+  DECLPROC ?fun_ref_acfa8729a67010cf
+  DECLPROC ?fun_ref_b5b464853112a273
+  DECLPROC $JettonMinter$_internal_binary_ProvideWalletAddress
+  DECLPROC ?fun_ref_e1b5bb080fc73cd8
+  DECLPROC ?fun_ref_ec4e6a4d4bc86e9f
+  recv_internal PROC:<{
+    s0 s1 XCHG                                    // 0x0
+    CTOS                                          // 0xD0
+    4 LDU                                         // 0xD3 03
+    s0 s1 XCHG                                    // 0x0
+    1 PUSHINT                                     // 0x7 1
+    AND                                           // 0xB0
+    NEGATE                                        // 0xA3
+    s0 s1 XCHG                                    // 0x0
+    LDMSGADDR                                     // 0xFA40
+    s0 s1 XCHG                                    // 0x0
+    s0 PUSH                                       // 0x2 0
+    SBITS                                         // 0xD749
+    267 PUSHINT                                   // 0x81 010B
+    EQUAL                                         // 0xBA
+    136 THROWIFNOT                                // 0xF2E4_ 111_
+    s0 PUSH                                       // 0x2 0
+    11 PLDU                                       // 0xD70B 0A
+    s0 PUSH                                       // 0x2 0
+    10 PUSHPOW2                                   // 0x83 09
+    EQUAL                                         // 0xBA
+    s0 s1 XCHG                                    // 0x0
+    1279 PUSHINT                                  // 0x81 04FF
+    EQUAL                                         // 0xBA
+    OR                                            // 0xB1
+    136 THROWIFNOT                                // 0xF2E4_ 111_
+    s0 s4 s2 PUXCPU                               // 0x545 0 5 3
+    s0 s3 XCHG                                    // 0x0
+    4 TUPLE                                       // 0x6F0 4
+    1 SETGLOB                                     // 0xF87_ 0C_
+    s0 s2 XCHG                                    // 0x0
+    2 SETGLOB                                     // 0xF87_ 14_
+    ?fun_ref_acfa8729a67010cf INLINECALLDICT      // 0x
+    2 4 BLKSWAP                                   // 0x55 1 3
+    $JettonMinter$_contract_router_internal INLINECALLDICT // 0x
+    130 THROWIFNOT                                // 0xF2E4_ 105_
+    NEWC                                          // 0xC8
+    3 GETGLOB                                     // 0xF85_ 1C_
+    s0 s1 XCHG                                    // 0x0
+    STREF                                         // 0xCC
+    -1 PUSHINT                                    // 0x7 F
+    s0 s1 XCHG                                    // 0x0
+    1 STI                                         // 0xCA 00
+    4 1 BLKSWAP                                   // 0x55 3 0
+    s4 s3 XCHG2                                   // 0x50 4 3
+    STGRAMS                                       // 0xFA02
+    1 STI                                         // 0xCA 00
+    ROT                                           // 0x58
+    s0 PUSH                                       // 0x2 0
+    SBITS                                         // 0xD749
+    267 PUSHINT                                   // 0x81 010B
+    EQUAL                                         // 0xBA
+    136 THROWIFNOT                                // 0xF2E4_ 111_
+    s0 PUSH                                       // 0x2 0
+    11 PLDU                                       // 0xD70B 0A
+    s0 PUSH                                       // 0x2 0
+    10 PUSHPOW2                                   // 0x83 09
+    EQUAL                                         // 0xBA
+    s0 s1 XCHG                                    // 0x0
+    1279 PUSHINT                                  // 0x81 04FF
+    EQUAL                                         // 0xBA
+    OR                                            // 0xB1
+    136 THROWIFNOT                                // 0xF2E4_ 111_
+    STSLICER                                      // 0xCF16
+    STREF                                         // 0xCC
+    ENDC                                          // 0xC9
+    c4 POPCTR                                     // 0xED5 4
+  }>
+  owner PROC:<{
+    ?fun_ref_acfa8729a67010cf INLINECALLDICT      // 0x
+    ?fun_ref_44086a5ce86162fe INLINECALLDICT      // 0x
+    4 1 BLKDROP2                                  // 0x6C 4 1
+  }>
+  get_wallet_address PROC:<{
+    s0 PUSH                                       // 0x2 0
+    SBITS                                         // 0xD749
+    267 PUSHINT                                   // 0x81 010B
+    EQUAL                                         // 0xBA
+    136 THROWIFNOT                                // 0xF2E4_ 111_
+    s0 PUSH                                       // 0x2 0
+    11 PLDU                                       // 0xD70B 0A
+    s0 PUSH                                       // 0x2 0
+    10 PUSHPOW2                                   // 0x83 09
+    EQUAL                                         // 0xBA
+    s0 s1 XCHG                                    // 0x0
+    1279 PUSHINT                                  // 0x81 04FF
+    EQUAL                                         // 0xBA
+    OR                                            // 0xB1
+    136 THROWIFNOT                                // 0xF2E4_ 111_
+    ?fun_ref_acfa8729a67010cf INLINECALLDICT      // 0x
+    1 4 BLKSWAP                                   // 0x55 0 3
+    ?fun_ref_71bde1515a4deb68 INLINECALLDICT      // 0x
+    4 1 BLKDROP2                                  // 0x6C 4 1
+  }>
+  get_jetton_data PROC:<{
+    ?fun_ref_acfa8729a67010cf INLINECALLDICT      // 0x
+    ?fun_ref_b5b464853112a273 INLINECALLDICT      // 0x
+    4 5 BLKDROP2                                  // 0x6C 4 5
+  }>
+  lazy_deployment_completed PROC:<{
+    c4 PUSHCTR                                    // 0xED4 4
+    CTOS                                          // 0xD0
+    1 LDI                                         // 0xD2 00
+    s0 s1 XCHG                                    // 0x0
+  }>
+  $JettonMinter$_contract_router_internal PROCREF:<{
+    s0 s1 XCHG                                    // 0x0
+    <{
+      32 PUSHINT                                  // 0x80 20
+      SDSKIPFIRST                                 // 0xD721
+      0 PUSHINT                                   // 0x7 0
+      s1 PUSH                                     // 0x2 1
+      SBITS                                       // 0xD749
+      31 GTINT                                    // 0xC2 1F
+      <{
+        s0 POP                                    // 0x3 0
+        s0 PUSH                                   // 0x2 0
+        32 PLDU                                   // 0xD70B 1F
+      }> PUSHCONT                                 // 0x9 3020D70B1F
+      IF                                          // 0xDE
+      395134233 PUSHINT                           // 0x82 10178D4519
+      EQUAL                                       // 0xBA
+      <{
+        32 LDU                                    // 0xD3 1F
+        s0 s1 XCHG                                // 0x0
+        395134233 PUSHINT                         // 0x82 10178D4519
+        EQUAL                                     // 0xBA
+        129 THROWIFNOT                            // 0xF2E4_ 103_
+        64 LDU                                    // 0xD3 3F
+        LDGRAMS                                   // 0xFA00
+        ROTREV                                    // 0x59
+        1 2 BLKDROP2                              // 0x6C 1 2
+        s1 POP                                    // 0x3 1
+        s1 s4 XCHG                                // 0x1
+        SUB                                       // 0xA1
+        s0 s3 XCHG                                // 0x0
+        -1 PUSHINT                                // 0x7 F
+      }> PUSHCONT                                 // 0x8F_ D31F018210178D4519BAF2E081D33FFA00596C123114A1037F
+      IFJMP                                       // 0xE0
+      s0 POP                                      // 0x3 0
+      -1 PUSHINT                                  // 0x7 F
+    }> PUSHCONT                                   // 0x8F_ 8020D7217021D749C21F953020D70B1FDE8210178D4519BA8E19D31F018210178D4519BAF2E081D33FFA00596C123114A1037FE0307F
+    IFJMP                                         // 0xE0
+    0 PUSHINT                                     // 0x7 0
+    s1 PUSH                                       // 0x2 1
+    SBITS                                         // 0xD749
+    31 GTINT                                      // 0xC2 1F
+    <{
+      s0 POP                                      // 0x3 0
+      s0 PUSH                                     // 0x2 0
+      32 PLDU                                     // 0xD70B 1F
+    }> PUSHCONT                                   // 0x9 3020D70B1F
+    IF                                            // 0xDE
+    s0 PUSH                                       // 0x2 0
+    2078119902 PUSHINT                            // 0x82 107BDD97DE
+    EQUAL                                         // 0xBA
+    <{
+      s0 POP                                      // 0x3 0
+      32 LDU                                      // 0xD3 1F
+      s0 s1 XCHG                                  // 0x0
+      2078119902 PUSHINT                          // 0x82 107BDD97DE
+      EQUAL                                       // 0xBA
+      129 THROWIFNOT                              // 0xF2E4_ 103_
+      64 LDU                                      // 0xD3 3F
+      LDGRAMS                                     // 0xFA00
+      LDMSGADDR                                   // 0xFA40
+      s0 s1 XCHG                                  // 0x0
+      s0 PUSH                                     // 0x2 0
+      SBITS                                       // 0xD749
+      267 PUSHINT                                 // 0x81 010B
+      EQUAL                                       // 0xBA
+      136 THROWIFNOT                              // 0xF2E4_ 111_
+      s0 PUSH                                     // 0x2 0
+      11 PLDU                                     // 0xD70B 0A
+      s0 PUSH                                     // 0x2 0
+      10 PUSHPOW2                                 // 0x83 09
+      EQUAL                                       // 0xBA
+      s0 s1 XCHG                                  // 0x0
+      1279 PUSHINT                                // 0x81 04FF
+      EQUAL                                       // 0xBA
+      OR                                          // 0xB1
+      136 THROWIFNOT                              // 0xF2E4_ 111_
+      s0 s1 XCHG                                  // 0x0
+      LDMSGADDR                                   // 0xFA40
+      s0 s1 XCHG                                  // 0x0
+      s0 PUSH                                     // 0x2 0
+      SBITS                                       // 0xD749
+      267 PUSHINT                                 // 0x81 010B
+      EQUAL                                       // 0xBA
+      136 THROWIFNOT                              // 0xF2E4_ 111_
+      s0 PUSH                                     // 0x2 0
+      11 PLDU                                     // 0xD70B 0A
+      s0 PUSH                                     // 0x2 0
+      10 PUSHPOW2                                 // 0x83 09
+      EQUAL                                       // 0xBA
+      s0 s1 XCHG                                  // 0x0
+      1279 PUSHINT                                // 0x81 04FF
+      EQUAL                                       // 0xBA
+      OR                                          // 0xB1
+      136 THROWIFNOT                              // 0xF2E4_ 111_
+      s1 s4 XCHG                                  // 0x1
+      s3 s3 s0 XCHG3                              // 0x4 3 3 0
+      1 4 BLKDROP2                                // 0x6C 1 4
+      s4 s7 XCHG                                  // 0x10
+      s3 s6 XCHG                                  // 0x10
+      s5 s7 s7 XCHG3                              // 0x4 5 7 7
+      3 GETGLOB                                   // 0xF85_ 1C_
+      8 GETPARAM                                  // 0xF82 8
+      s1 s2 XCHG                                  // 0x1
+      ?fun_ref_e1b5bb080fc73cd8 INLINECALLDICT    // 0x
+      0 PUSHINT                                   // 0x7 0
+      ROTREV                                      // 0x59
+      NEWC                                        // 0xC8
+      0 PUSHINT                                   // 0x7 0
+      s0 s1 XCHG                                  // 0x0
+      2 STU                                       // 0xCB 01
+      3 PUSHINT                                   // 0x7 3
+      s0 s1 XCHG                                  // 0x0
+      2 STU                                       // 0xCB 01
+      0 PUSHINT                                   // 0x7 0
+      s0 s1 XCHG                                  // 0x0
+      1 STU                                       // 0xCB 00
+      s1 s2 XCHG                                  // 0x1
+      STREF                                       // 0xCC
+      STREF                                       // 0xCC
+      ENDC                                        // 0xC9
+      HASHCU                                      // 0xF900
+      NEWC                                        // 0xC8
+      2 PUSHINT                                   // 0x7 2
+      s0 s1 XCHG                                  // 0x0
+      2 STU                                       // 0xCB 01
+      0 PUSHINT                                   // 0x7 0
+      s0 s1 XCHG                                  // 0x0
+      1 STU                                       // 0xCB 00
+      s1 s2 XCHG                                  // 0x1
+      8 STI                                       // 0xCA 07
+      256 STU                                     // 0xCB FF
+      ENDC                                        // 0xC9
+      CTOS                                        // 0xD0
+      s0 PUSH                                     // 0x2 0
+      SBITS                                       // 0xD749
+      267 PUSHINT                                 // 0x81 010B
+      EQUAL                                       // 0xBA
+      136 THROWIFNOT                              // 0xF2E4_ 111_
+      s0 PUSH                                     // 0x2 0
+      11 PLDU                                     // 0xD70B 0A
+      s0 PUSH                                     // 0x2 0
+      10 PUSHPOW2                                 // 0x83 09
+      EQUAL                                       // 0xBA
+      s0 s1 XCHG                                  // 0x0
+      1279 PUSHINT                                // 0x81 04FF
+      EQUAL                                       // 0xBA
+      OR                                          // 0xB1
+      136 THROWIFNOT                              // 0xF2E4_ 111_
+      2 GETGLOB                                   // 0xF85_ 14_
+      SDEQ                                        // 0xC705
+      74 THROWIFNOT                               // 0xF2E4_ 095_
+      s3 s4 XCHG2                                 // 0x50 3 4
+      SUB                                         // 0xA1
+      0 PUSHINT                                   // 0x7 0
+      0 PUSHINT                                   // 0x7 0
+      66 PUSHINT                                  // 0x80 42
+      s0 s7 XCHG                                  // 0x0
+      NEWC                                        // 0xC8
+      s0 s1 XCHG                                  // 0x0
+      3576854235 PUSHINT                          // 0x82 10D53276DB
+      ROT                                         // 0x58
+      32 STU                                      // 0xCB 1F
+      64 STU                                      // 0xCB 3F
+      ENDC                                        // 0xC9
+      s4 s8 XCHG                                  // 0x10
+      s1 s3 s0 XCHG3                              // 0x4 1 3 0
+      s1 s7 XCHG                                  // 0x1
+      s2 s4 XCHG                                  // 0x10
+      s2 s3 XCHG                                  // 0x10
+      NULL                                        // 0x6D
+      NULL                                        // 0x6D
+      ?fun_ref_5107b8836cd326d2 INLINECALLDICT    // 0x
+      s0 POP                                      // 0x3 0
+      s3 s0 s0 XCHG3                              // 0x4 3 0 0
+      -1 PUSHINT                                  // 0x7 F
+    }>c IFJMPREF                                  // 0xE302 30D31F0182107BDD97DEBAF2E081D33FFA00FA400120D74981010BBAF2E08820D70B0A208309BA018104FFBAB1F2E08801FA400120D74981010BBAF2E08820D70B0A208309BA018104FFBAB1F2E0881443306C14
+    s0 PUSH                                       // 0x2 0
+    3 EQINT                                       // 0xC0 03
+    <{
+      s0 POP                                      // 0x3 0
+      32 LDU                                      // 0xD3 1F
+      s0 s1 XCHG                                  // 0x0
+      3 EQINT                                     // 0xC0 03
+      129 THROWIFNOT                              // 0xF2E4_ 103_
+      64 LDU                                      // 0xD3 3F
+      LDMSGADDR                                   // 0xFA40
+      s0 s1 XCHG                                  // 0x0
+      s0 PUSH                                     // 0x2 0
+      SBITS                                       // 0xD749
+      267 PUSHINT                                 // 0x81 010B
+      EQUAL                                       // 0xBA
+      136 THROWIFNOT                              // 0xF2E4_ 111_
+      s0 PUSH                                     // 0x2 0
+      11 PLDU                                     // 0xD70B 0A
+      s0 PUSH                                     // 0x2 0
+      10 PUSHPOW2                                 // 0x83 09
+      EQUAL                                       // 0xBA
+      s0 s1 XCHG                                  // 0x0
+      1279 PUSHINT                                // 0x81 04FF
+      EQUAL                                       // 0xBA
+      OR                                          // 0xB1
+      136 THROWIFNOT                              // 0xF2E4_ 111_
+      s1 s2 XCHG                                  // 0x1
+      1 2 BLKDROP2                                // 0x6C 1 2
+      s1 POP                                      // 0x3 1
+      2 GETGLOB                                   // 0xF85_ 14_
+      s1 s3 XCHG                                  // 0x1
+      SDEQ                                        // 0xC705
+      73 THROWIFNOT                               // 0xF2E4_ 093_
+      -1 PUSHINT                                  // 0x7 F
+    }>c IFJMPREF                                  // 0xE302 30D31F01C003F2E081D33FFA400120D74981010BBAF2E08820D70B0A208309BA018104FFBAB1F2E088126C1231F84213C705F2E0497F
+    s0 PUSH                                       // 0x2 0
+    4 EQINT                                       // 0xC0 04
+    <{
+      s0 POP                                      // 0x3 0
+      32 LDU                                      // 0xD3 1F
+      s0 s1 XCHG                                  // 0x0
+      4 EQINT                                     // 0xC0 04
+      129 THROWIFNOT                              // 0xF2E4_ 103_
+      LDREF                                       // 0xD4
+      s0 s1 XCHG                                  // 0x0
+      s1 POP                                      // 0x3 1
+      s1 POP                                      // 0x3 1
+      2 GETGLOB                                   // 0xF85_ 14_
+      s2 s(-1) PUXC                               // 0x52 2 0
+      SDEQ                                        // 0xC705
+      73 THROWIFNOT                               // 0xF2E4_ 093_
+      -1 PUSHINT                                  // 0x7 F
+    }> PUSHCONT                                   // 0x8F_ 30D31F01C004F2E081D4013131F8425220C705F2E0497F
+    IFJMP                                         // 0xE0
+    s0 PUSH                                       // 0x2 0
+    745978227 PUSHINT                             // 0x82 102C76B973
+    EQUAL                                         // 0xBA
+    <{
+      s0 POP                                      // 0x3 0
+      32 LDU                                      // 0xD3 1F
+      s0 s1 XCHG                                  // 0x0
+      745978227 PUSHINT                           // 0x82 102C76B973
+      EQUAL                                       // 0xBA
+      129 THROWIFNOT                              // 0xF2E4_ 103_
+      64 LDU                                      // 0xD3 3F
+      LDMSGADDR                                   // 0xFA40
+      s0 s1 XCHG                                  // 0x0
+      s0 PUSH                                     // 0x2 0
+      SBITS                                       // 0xD749
+      267 PUSHINT                                 // 0x81 010B
+      EQUAL                                       // 0xBA
+      136 THROWIFNOT                              // 0xF2E4_ 111_
+      s0 PUSH                                     // 0x2 0
+      11 PLDU                                     // 0xD70B 0A
+      s0 PUSH                                     // 0x2 0
+      10 PUSHPOW2                                 // 0x83 09
+      EQUAL                                       // 0xBA
+      s0 s1 XCHG                                  // 0x0
+      1279 PUSHINT                                // 0x81 04FF
+      EQUAL                                       // 0xBA
+      OR                                          // 0xB1
+      136 THROWIFNOT                              // 0xF2E4_ 111_
+      s0 s1 XCHG                                  // 0x0
+      1 LDI                                       // 0xD2 00
+      3 1 BLKSWAP                                 // 0x55 2 0
+      1 3 BLKDROP2                                // 0x6C 1 3
+      $JettonMinter$_internal_binary_ProvideWalletAddress INLINECALLDICT // 0x
+      -1 PUSHINT                                  // 0x7 F
+    }> PUSHCONT                                   // 0x8F_ 30D31F0182102C76B973BAF2E081D33FFA400120D74981010BBAF2E08820D70B0A208309BA018104FFBAB1F2E08801D20055206C13DB3C7F
+    IFJMP                                         // 0xE0
+    21 EQINT                                      // 0xC0 15
+    <{
+      32 LDU                                      // 0xD3 1F
+      s0 s1 XCHG                                  // 0x0
+      21 EQINT                                    // 0xC0 15
+      129 THROWIFNOT                              // 0xF2E4_ 103_
+      64 LDU                                      // 0xD3 3F
+      257 PUSHINT                                 // 0x81 0101
+      LDIX                                        // 0xD700
+      LDMSGADDR                                   // 0xFA40
+      s0 s1 XCHG                                  // 0x0
+      s0 PUSH                                     // 0x2 0
+      SBITS                                       // 0xD749
+      267 PUSHINT                                 // 0x81 010B
+      EQUAL                                       // 0xBA
+      136 THROWIFNOT                              // 0xF2E4_ 111_
+      s0 PUSH                                     // 0x2 0
+      11 PLDU                                     // 0xD70B 0A
+      s0 PUSH                                     // 0x2 0
+      10 PUSHPOW2                                 // 0x83 09
+      EQUAL                                       // 0xBA
+      s0 s1 XCHG                                  // 0x0
+      1279 PUSHINT                                // 0x81 04FF
+      EQUAL                                       // 0xBA
+      OR                                          // 0xB1
+      136 THROWIFNOT                              // 0xF2E4_ 111_
+      s3 s3 s0 XCHG3                              // 0x4 3 3 0
+      1 3 BLKDROP2                                // 0x6C 1 3
+      $JettonMinter$_internal_binary_Mint INLINECALLDICT // 0x
+      -1 PUSHINT                                  // 0x7 F
+    }> PUSHCONT                                   // 0x8F_ D31F01C015F2E081D33F810101D700FA400120D74981010BBAF2E08820D70B0A208309BA018104FFBAB1F2E08843306C13DB3C7F
+    IFJMP                                         // 0xE0
+    s0 POP                                        // 0x3 0
+    0 PUSHINT                                     // 0x7 0
+  }>
+  ?fun_ref_42dfbe7c44ef3021 PROCREF:<{
+    0 PUSHINT                                     // 0x7 0
+    s0 s2 XCHG                                    // 0x0
+    -1 PUSHINT                                    // 0x7 F
+    s0 s2 XCHG                                    // 0x0
+  }>
+  ?fun_ref_44086a5ce86162fe PROCREF:<{
+    s1 PUSH                                       // 0x2 1
+  }>
+  ?fun_ref_5107b8836cd326d2 PROCREF:<{
+    NEWC                                          // 0xC8
+    1 PUSHINT                                     // 0x7 1
+    s0 s1 XCHG                                    // 0x0
+    2 STI                                         // 0xCA 01
+    s0 s7 XCHG2                                   // 0x50 0 7
+    s0 s1 XCHG                                    // 0x0
+    1 STI                                         // 0xCA 00
+    0 PUSHINT                                     // 0x7 0
+    s0 s1 XCHG                                    // 0x0
+    3 STI                                         // 0xCA 02
+    s0 s5 XCHG2                                   // 0x50 0 5
+    s0 PUSH                                       // 0x2 0
+    SBITS                                         // 0xD749
+    267 PUSHINT                                   // 0x81 010B
+    EQUAL                                         // 0xBA
+    136 THROWIFNOT                                // 0xF2E4_ 111_
+    s0 PUSH                                       // 0x2 0
+    11 PLDU                                       // 0xD70B 0A
+    s0 PUSH                                       // 0x2 0
+    10 PUSHPOW2                                   // 0x83 09
+    EQUAL                                         // 0xBA
+    s0 s1 XCHG                                    // 0x0
+    1279 PUSHINT                                  // 0x81 04FF
+    EQUAL                                         // 0xBA
+    OR                                            // 0xB1
+    136 THROWIFNOT                                // 0xF2E4_ 111_
+    STSLICER                                      // 0xCF16
+    s0 s3 XCHG2                                   // 0x50 0 3
+    STGRAMS                                       // 0xFA02
+    0 PUSHINT                                     // 0x7 0
+    s0 s1 XCHG                                    // 0x0
+    105 STI                                       // 0xCA 68
+    s3 PUSH                                       // 0x2 3
+    ISNULL                                        // 0x6E
+    NOT                                           // 0xB3
+    <{
+      -1 PUSHINT                                  // 0x7 F
+    }> PUSHCONT                                   // 0x9 7F
+    <{
+      s4 PUSH                                     // 0x2 4
+      ISNULL                                      // 0x6E
+      NOT                                         // 0xB3
+    }> PUSHCONT                                   // 0x9 246EB3
+    IFELSE                                        // 0xE2
+    <{
+      s3 POP                                      // 0x3 3
+      s3 POP                                      // 0x3 3
+      s0 s1 XCHG                                  // 0x0
+      0 PUSHINT                                   // 0x7 0
+      s0 s1 XCHG                                  // 0x0
+      1 STI                                       // 0xCA 00
+    }> PUSHCONT                                   // 0x9 3333017001CA00
+    <{
+      -1 PUSHINT                                  // 0x7 F
+      s0 s1 XCHG                                  // 0x0
+      1 STI                                       // 0xCA 00
+      NEWC                                        // 0xC8
+      0 PUSHINT                                   // 0x7 0
+      s0 s1 XCHG                                  // 0x0
+      1 STI                                       // 0xCA 00
+      0 PUSHINT                                   // 0x7 0
+      s0 s1 XCHG                                  // 0x0
+      1 STI                                       // 0xCA 00
+      s4 PUSH                                     // 0x2 4
+      ISNULL                                      // 0x6E
+      NOT                                         // 0xB3
+      <{
+        -1 PUSHINT                                // 0x7 F
+        s0 s1 XCHG                                // 0x0
+        1 STI                                     // 0xCA 00
+        s0 s4 XCHG                                // 0x0
+        s0 PUSH                                   // 0x2 0
+        ISNULL                                    // 0x6E
+        128 THROWIF                               // 0xF2D4_ 101_
+        s0 s4 XCHG2                               // 0x50 0 4
+        STREF                                     // 0xCC
+      }> PUSHCONT                                 // 0x9 7F01CA0004206EF2D0805004CC
+      <{
+        s4 POP                                    // 0x3 4
+        s0 s3 XCHG                                // 0x0
+        0 PUSHINT                                 // 0x7 0
+        s0 s1 XCHG                                // 0x0
+        1 STI                                     // 0xCA 00
+      }> PUSHCONT                                 // 0x9 34037001CA00
+      IFELSE                                      // 0xE2
+      s4 PUSH                                     // 0x2 4
+      ISNULL                                      // 0x6E
+      NOT                                         // 0xB3
+      <{
+        -1 PUSHINT                                // 0x7 F
+        s0 s1 XCHG                                // 0x0
+        1 STI                                     // 0xCA 00
+        s0 s4 XCHG                                // 0x0
+        s0 PUSH                                   // 0x2 0
+        ISNULL                                    // 0x6E
+        128 THROWIF                               // 0xF2D4_ 101_
+        s0 s4 XCHG2                               // 0x50 0 4
+        STREF                                     // 0xCC
+      }> PUSHCONT                                 // 0x9 7F01CA0004206EF2D0805004CC
+      <{
+        s4 POP                                    // 0x3 4
+        s0 s3 XCHG                                // 0x0
+        0 PUSHINT                                 // 0x7 0
+        s0 s1 XCHG                                // 0x0
+        1 STI                                     // 0xCA 00
+      }> PUSHCONT                                 // 0x9 34037001CA00
+      IFELSE                                      // 0xE2
+      0 PUSHINT                                   // 0x7 0
+      s0 s1 XCHG                                  // 0x0
+      1 STI                                       // 0xCA 00
+      s0 s2 XCHG                                  // 0x0
+      -1 PUSHINT                                  // 0x7 F
+      s0 s1 XCHG                                  // 0x0
+      1 STI                                       // 0xCA 00
+      s0 s2 XCHG                                  // 0x0
+      ENDC                                        // 0xC9
+      ROT                                         // 0x58
+      STREF                                       // 0xCC
+    }>c IFREFELSE                                 // 0xE30D 7F01CA00C87001CA007001CA00246EB39D7F01CA0004206EF2D0805004CC9634037001CA00E2246EB39D7F01CA0004206EF2D0805004CC9634037001CA00E27001CA00027F01CA0002C958CC
+    s1 PUSH                                       // 0x2 1
+    ISNULL                                        // 0x6E
+    NOT                                           // 0xB3
+    <{
+      -1 PUSHINT                                  // 0x7 F
+      s0 s1 XCHG                                  // 0x0
+      1 STI                                       // 0xCA 00
+      s0 s1 XCHG                                  // 0x0
+      s0 PUSH                                     // 0x2 0
+      ISNULL                                      // 0x6E
+      128 THROWIF                                 // 0xF2D4_ 101_
+      s0 s1 XCHG                                  // 0x0
+      STREF                                       // 0xCC
+    }> PUSHCONT                                   // 0x9 7F01CA0001206EF2D08001CC
+    <{
+      s1 POP                                      // 0x3 1
+      0 PUSHINT                                   // 0x7 0
+      s0 s1 XCHG                                  // 0x0
+      1 STI                                       // 0xCA 00
+    }> PUSHCONT                                   // 0x9 317001CA00
+    IFELSE                                        // 0xE2
+    ENDC                                          // 0xC9
+    s0 s1 XCHG                                    // 0x0
+    SENDMSG                                       // 0xFB08
+  }>
+  ?fun_ref_71bde1515a4deb68 PROCREF:<{
+    3 GETGLOB                                     // 0xF85_ 1C_
+    8 GETPARAM                                    // 0xF82 8
+    s1 s2 XCHG                                    // 0x1
+    ?fun_ref_e1b5bb080fc73cd8 INLINECALLDICT      // 0x
+    0 PUSHINT                                     // 0x7 0
+    ROTREV                                        // 0x59
+    NEWC                                          // 0xC8
+    0 PUSHINT                                     // 0x7 0
+    s0 s1 XCHG                                    // 0x0
+    2 STU                                         // 0xCB 01
+    3 PUSHINT                                     // 0x7 3
+    s0 s1 XCHG                                    // 0x0
+    2 STU                                         // 0xCB 01
+    0 PUSHINT                                     // 0x7 0
+    s0 s1 XCHG                                    // 0x0
+    1 STU                                         // 0xCB 00
+    s1 s2 XCHG                                    // 0x1
+    STREF                                         // 0xCC
+    STREF                                         // 0xCC
+    ENDC                                          // 0xC9
+    HASHCU                                        // 0xF900
+    NEWC                                          // 0xC8
+    2 PUSHINT                                     // 0x7 2
+    s0 s1 XCHG                                    // 0x0
+    2 STU                                         // 0xCB 01
+    0 PUSHINT                                     // 0x7 0
+    s0 s1 XCHG                                    // 0x0
+    1 STU                                         // 0xCB 00
+    s1 s2 XCHG                                    // 0x1
+    8 STI                                         // 0xCA 07
+    256 STU                                       // 0xCB FF
+    ENDC                                          // 0xC9
+    CTOS                                          // 0xD0
+    s0 PUSH                                       // 0x2 0
+    SBITS                                         // 0xD749
+    267 PUSHINT                                   // 0x81 010B
+    EQUAL                                         // 0xBA
+    136 THROWIFNOT                                // 0xF2E4_ 111_
+    s0 PUSH                                       // 0x2 0
+    11 PLDU                                       // 0xD70B 0A
+    s0 PUSH                                       // 0x2 0
+    10 PUSHPOW2                                   // 0x83 09
+    EQUAL                                         // 0xBA
+    s0 s1 XCHG                                    // 0x0
+    1279 PUSHINT                                  // 0x81 04FF
+    EQUAL                                         // 0xBA
+    OR                                            // 0xB1
+    136 THROWIFNOT                                // 0xF2E4_ 111_
+  }>
+  $JettonMinter$_internal_binary_Mint PROCREF:<{
+    2 GETGLOB                                     // 0xF85_ 14_
+    s5 s(-1) PUXC                                 // 0x52 5 0
+    SDEQ                                          // 0xC705
+    73 THROWIFNOT                                 // 0xF2E4_ 093_
+    3688 PUSHINT                                  // 0x81 0E68
+    s6 PUSH                                       // 0x2 6
+    THROWANYIFNOT                                 // 0xF2F4
+    s6 s1 XCPU                                    // 0x51 6 1
+    ADD                                           // 0xA0
+    s0 s4 XCHG                                    // 0x0
+    s3 s5 XCHG                                    // 0x10
+    s0 s5 s6 XCHG3                                // 0x4 0 5 6
+    3 GETGLOB                                     // 0xF85_ 1C_
+    8 GETPARAM                                    // 0xF82 8
+    s1 s2 XCHG                                    // 0x1
+    ?fun_ref_e1b5bb080fc73cd8 INLINECALLDICT      // 0x
+    DUP2                                          // 0x5C
+    0 PUSHINT                                     // 0x7 0
+    ROTREV                                        // 0x59
+    NEWC                                          // 0xC8
+    0 PUSHINT                                     // 0x7 0
+    s0 s1 XCHG                                    // 0x0
+    2 STU                                         // 0xCB 01
+    3 PUSHINT                                     // 0x7 3
+    s0 s1 XCHG                                    // 0x0
+    2 STU                                         // 0xCB 01
+    0 PUSHINT                                     // 0x7 0
+    s0 s1 XCHG                                    // 0x0
+    1 STU                                         // 0xCB 00
+    s1 s2 XCHG                                    // 0x1
+    STREF                                         // 0xCC
+    STREF                                         // 0xCC
+    ENDC                                          // 0xC9
+    HASHCU                                        // 0xF900
+    NEWC                                          // 0xC8
+    2 PUSHINT                                     // 0x7 2
+    s0 s1 XCHG                                    // 0x0
+    2 STU                                         // 0xCB 01
+    0 PUSHINT                                     // 0x7 0
+    s0 s1 XCHG                                    // 0x0
+    1 STU                                         // 0xCB 00
+    s1 s2 XCHG                                    // 0x1
+    8 STI                                         // 0xCA 07
+    256 STU                                       // 0xCB FF
+    ENDC                                          // 0xC9
+    CTOS                                          // 0xD0
+    s0 PUSH                                       // 0x2 0
+    SBITS                                         // 0xD749
+    267 PUSHINT                                   // 0x81 010B
+    EQUAL                                         // 0xBA
+    136 THROWIFNOT                                // 0xF2E4_ 111_
+    s0 PUSH                                       // 0x2 0
+    11 PLDU                                       // 0xD70B 0A
+    s0 PUSH                                       // 0x2 0
+    10 PUSHPOW2                                   // 0x83 09
+    EQUAL                                         // 0xBA
+    s0 s1 XCHG                                    // 0x0
+    1279 PUSHINT                                  // 0x81 04FF
+    EQUAL                                         // 0xBA
+    OR                                            // 0xB1
+    136 THROWIFNOT                                // 0xF2E4_ 111_
+    0 PUSHINT                                     // 0x7 0
+    -1 PUSHINT                                    // 0x7 F
+    64 PUSHINT                                    // 0x80 40
+    8 GETPARAM                                    // 0xF82 8
+    1 PUSHINT                                     // 0x7 1
+    NEWC                                          // 0xC8
+    ENDC                                          // 0xC9
+    CTOS                                          // 0xD0
+    s10 PUSH                                      // 0x2 A
+    s5 s15 XCHG                                   // 0x10
+    s4 s14 XCHG                                   // 0x10
+    ROTREV                                        // 0x59
+    NEWC                                          // 0xC8
+    6 1 BLKSWAP                                   // 0x55 5 0
+    ?fun_ref_ec4e6a4d4bc86e9f INLINECALLDICT      // 0x
+    ENDC                                          // 0xC9
+    s6 s5 s0 XCHG3                                // 0x4 6 5 0
+    s4 s10 XCHG                                   // 0x10
+    s3 s9 XCHG                                    // 0x10
+    s0 s10 s9 XCHG3                               // 0x4 0 A 9
+    s4 s6 XCHG                                    // 0x10
+    s4 s5 XCHG                                    // 0x10
+    ?fun_ref_5107b8836cd326d2 INLINECALLDICT      // 0x
+    s0 POP                                        // 0x3 0
+    s0 s0 s3 XCHG3                                // 0x4 0 0 3
+  }>
+  ?fun_ref_acfa8729a67010cf PROCREF:<{
+    c4 PUSHCTR                                    // 0xED4 4
+    CTOS                                          // 0xD0
+    LDREF                                         // 0xD4
+    s0 s1 XCHG                                    // 0x0
+    3 SETGLOB                                     // 0xF87_ 1C_
+    1 LDI                                         // 0xD2 00
+    s0 s1 XCHG                                    // 0x0
+    <{
+      LDGRAMS                                     // 0xFA00
+      1 LDI                                       // 0xD2 00
+      LDMSGADDR                                   // 0xFA40
+      s0 s1 XCHG                                  // 0x0
+      s0 PUSH                                     // 0x2 0
+      SBITS                                       // 0xD749
+      267 PUSHINT                                 // 0x81 010B
+      EQUAL                                       // 0xBA
+      136 THROWIFNOT                              // 0xF2E4_ 111_
+      s0 PUSH                                     // 0x2 0
+      11 PLDU                                     // 0xD70B 0A
+      s0 PUSH                                     // 0x2 0
+      10 PUSHPOW2                                 // 0x83 09
+      EQUAL                                       // 0xBA
+      s0 s1 XCHG                                  // 0x0
+      1279 PUSHINT                                // 0x81 04FF
+      EQUAL                                       // 0xBA
+      OR                                          // 0xB1
+      136 THROWIFNOT                              // 0xF2E4_ 111_
+      s0 s1 XCHG                                  // 0x0
+      LDREF                                       // 0xD4
+      4 1 BLKSWAP                                 // 0x55 3 0
+      1 4 BLKDROP2                                // 0x6C 1 4
+    }> PUSHCONT                                   // 0x8F_ FA00D200FA400120D74981010BBAF2E08820D70B0A208309BA018104FFBAB1F2E08801D455306C14
+    IFJMP                                         // 0xE0
+    LDMSGADDR                                     // 0xFA40
+    s0 s1 XCHG                                    // 0x0
+    s0 PUSH                                       // 0x2 0
+    SBITS                                         // 0xD749
+    267 PUSHINT                                   // 0x81 010B
+    EQUAL                                         // 0xBA
+    136 THROWIFNOT                                // 0xF2E4_ 111_
+    s0 PUSH                                       // 0x2 0
+    11 PLDU                                       // 0xD70B 0A
+    s0 PUSH                                       // 0x2 0
+    10 PUSHPOW2                                   // 0x83 09
+    EQUAL                                         // 0xBA
+    s0 s1 XCHG                                    // 0x0
+    1279 PUSHINT                                  // 0x81 04FF
+    EQUAL                                         // 0xBA
+    OR                                            // 0xB1
+    136 THROWIFNOT                                // 0xF2E4_ 111_
+    s0 s1 XCHG                                    // 0x0
+    LDREF                                         // 0xD4
+    ROTREV                                        // 0x59
+    s0 s2 XCHG                                    // 0x0
+    ENDS                                          // 0xD1
+    s0 s1 XCHG                                    // 0x0
+    ?fun_ref_42dfbe7c44ef3021 INLINECALLDICT      // 0x
+  }>
+  ?fun_ref_b5b464853112a273 PROCREF:<{
+    3 GETGLOB                                     // 0xF85_ 1C_
+    8 GETPARAM                                    // 0xF82 8
+    8 GETPARAM                                    // 0xF82 8
+    ?fun_ref_e1b5bb080fc73cd8 INLINECALLDICT      // 0x
+    s0 POP                                        // 0x3 0
+    s4 s3 s(-2) PU2XC                             // 0x546 4 4 0
+    s4 s3 s(-2) PU2XC                             // 0x546 4 4 0
+  }>
+  $JettonMinter$_internal_binary_ProvideWalletAddress PROCREF:<{
+    1 GETGLOB                                     // 0xF85_ 0C_
+    4 UNTUPLE                                     // 0x6F2 4
+    s1 s3 XCHG                                    // 0x1
+    3 BLKDROP                                     // 0x5F0 3
+    6705600 PUSHINT                               // 0x82 086651C0
+    GEQ                                           // 0xBE
+    75 THROWIFNOT                                 // 0xF2E4_ 097_
+    NULL                                          // 0x6D
+    s2 PUSH                                       // 0x2 2
+    REWRITESTDADDR                                // 0xFA44
+    s0 POP                                        // 0x3 0
+    x{2_} PUSHSLICE                               // 0x8B 2_
+    s0 s1 XCHG                                    // 0x0
+    0 EQINT                                       // 0xC0 00
+    <{
+      s0 POP                                      // 0x3 0
+      3 GETGLOB                                   // 0xF85_ 1C_
+      8 GETPARAM                                  // 0xF82 8
+      s4 s(-1) PUXC                               // 0x52 4 0
+      ?fun_ref_e1b5bb080fc73cd8 INLINECALLDICT    // 0x
+      0 PUSHINT                                   // 0x7 0
+      ROTREV                                      // 0x59
+      NEWC                                        // 0xC8
+      0 PUSHINT                                   // 0x7 0
+      s0 s1 XCHG                                  // 0x0
+      2 STU                                       // 0xCB 01
+      3 PUSHINT                                   // 0x7 3
+      s0 s1 XCHG                                  // 0x0
+      2 STU                                       // 0xCB 01
+      0 PUSHINT                                   // 0x7 0
+      s0 s1 XCHG                                  // 0x0
+      1 STU                                       // 0xCB 00
+      s1 s2 XCHG                                  // 0x1
+      STREF                                       // 0xCC
+      STREF                                       // 0xCC
+      ENDC                                        // 0xC9
+      HASHCU                                      // 0xF900
+      NEWC                                        // 0xC8
+      2 PUSHINT                                   // 0x7 2
+      s0 s1 XCHG                                  // 0x0
+      2 STU                                       // 0xCB 01
+      0 PUSHINT                                   // 0x7 0
+      s0 s1 XCHG                                  // 0x0
+      1 STU                                       // 0xCB 00
+      s1 s2 XCHG                                  // 0x1
+      8 STI                                       // 0xCA 07
+      256 STU                                     // 0xCB FF
+      ENDC                                        // 0xC9
+      CTOS                                        // 0xD0
+      s0 PUSH                                     // 0x2 0
+      SBITS                                       // 0xD749
+      267 PUSHINT                                 // 0x81 010B
+      EQUAL                                       // 0xBA
+      136 THROWIFNOT                              // 0xF2E4_ 111_
+      s0 PUSH                                     // 0x2 0
+      11 PLDU                                     // 0xD70B 0A
+      s0 PUSH                                     // 0x2 0
+      10 PUSHPOW2                                 // 0x83 09
+      EQUAL                                       // 0xBA
+      s0 s1 XCHG                                  // 0x0
+      1279 PUSHINT                                // 0x81 04FF
+      EQUAL                                       // 0xBA
+      OR                                          // 0xB1
+      136 THROWIFNOT                              // 0xF2E4_ 111_
+    }> PUSHCONT                                   // 0x8F_ 30F843F8285240DB3C7059C87001CB017301CB017001CB0012CCCCC9F900C87201CB017001CB0012CA07CBFFC9D020D74981010BBAF2E08820D70B0A208309BA018104FFBAB1F2E088
+    IF                                            // 0xDE
+    s0 s2 XCHG                                    // 0x0
+    <{
+      s0 POP                                      // 0x3 0
+    }> PUSHCONT                                   // 0x9 30
+    <{
+      s2 POP                                      // 0x3 2
+    }> PUSHCONT                                   // 0x9 32
+    IFELSE                                        // 0xE2
+    2 GETGLOB                                     // 0xF85_ 14_
+    s4 s7 XCHG                                    // 0x10
+    s3 s6 XCHG                                    // 0x10
+    s5 s1 s7 XCHG3                                // 0x4 5 1 7
+    0 PUSHINT                                     // 0x7 0
+    s2 s6 XCHG2                                   // 0x50 2 6
+    64 PUSHINT                                    // 0x80 40
+    s0 s8 XCHG                                    // 0x0
+    NEWC                                          // 0xC8
+    3513996288 PUSHINT                            // 0x82 10D1735400
+    s0 s1 XCHG                                    // 0x0
+    32 STU                                        // 0xCB 1F
+    64 STU                                        // 0xCB 3F
+    ROT                                           // 0x58
+    STSLICER                                      // 0xCF16
+    s1 PUSH                                       // 0x2 1
+    ISNULL                                        // 0x6E
+    NOT                                           // 0xB3
+    <{
+      NEWC                                        // 0xC8
+      s0 s2 XCHG                                  // 0x0
+      s0 PUSH                                     // 0x2 0
+      ISNULL                                      // 0x6E
+      128 THROWIF                                 // 0xF2D4_ 101_
+      s1 s2 XCHG                                  // 0x1
+      STSLICER                                    // 0xCF16
+      ENDC                                        // 0xC9
+      s0 s1 XCHG                                  // 0x0
+      -1 PUSHINT                                  // 0x7 F
+      s0 s1 XCHG                                  // 0x0
+      1 STI                                       // 0xCA 00
+      STREF                                       // 0xCC
+    }> PUSHCONT                                   // 0x8F_ C802206EF2D08012CF16C9017F01CA00CC
+    <{
+      s1 POP                                      // 0x3 1
+      0 PUSHINT                                   // 0x7 0
+      s0 s1 XCHG                                  // 0x0
+      1 STI                                       // 0xCA 00
+    }> PUSHCONT                                   // 0x9 317001CA00
+    IFELSE                                        // 0xE2
+    ENDC                                          // 0xC9
+    s3 s7 XCHG                                    // 0x10
+    s5 s6 s0 XCHG3                                // 0x4 5 6 0
+    -1 PUSHINT                                    // 0x7 F
+    4 1 BLKSWAP                                   // 0x55 3 0
+    NULL                                          // 0x6D
+    NULL                                          // 0x6D
+    ?fun_ref_5107b8836cd326d2 INLINECALLDICT      // 0x
+    s0 POP                                        // 0x3 0
+    s3 s1 s3 XCHG3                                // 0x4 3 1 3
+  }>
+  ?fun_ref_e1b5bb080fc73cd8 PROCREF:<{
+    s0 s2 XCHG                                    // 0x0
+    CTOS                                          // 0xD0
+    LDDICT                                        // 0xF404
+    s0 POP                                        // 0x3 0
+    NULL                                          // 0x6D
+    s0 s1 XCHG                                    // 0x0
+    3765 PUSHINT                                  // 0x81 0EB5
+    s0 s1 XCHG                                    // 0x0
+    16 PUSHINT                                    // 0x80 10
+    DICTUGETREF                                   // 0xF40F
+    NULLSWAPIFNOT                                 // 0x6FA1
+    135 THROWIFNOT                                // 0xF2E4_ 10F_
+    s0 s1 XCHG                                    // 0x0
+    3765 PUSHINT                                  // 0x81 0EB5
+    s2 PUSH                                       // 0x2 2
+    s0 s2 XCHG                                    // 0x0
+    16 PUSHINT                                    // 0x80 10
+    DICTUSETREF                                   // 0xF417
+    NEWC                                          // 0xC8
+    s0 s1 XCHG                                    // 0x0
+    NEWC                                          // 0xC8
+    STDICT                                        // 0xF400
+    ENDC                                          // 0xC9
+    s0 s1 XCHG                                    // 0x0
+    STREF                                         // 0xCC
+    0 PUSHINT                                     // 0x7 0
+    s0 s1 XCHG                                    // 0x0
+    1 STI                                         // 0xCA 00
+    s0 s0 s3 XCHG3                                // 0x4 0 0 3
+    ROTREV                                        // 0x59
+    s0 PUSH                                       // 0x2 0
+    SBITS                                         // 0xD749
+    267 PUSHINT                                   // 0x81 010B
+    EQUAL                                         // 0xBA
+    136 THROWIFNOT                                // 0xF2E4_ 111_
+    s0 PUSH                                       // 0x2 0
+    11 PLDU                                       // 0xD70B 0A
+    s0 PUSH                                       // 0x2 0
+    10 PUSHPOW2                                   // 0x83 09
+    EQUAL                                         // 0xBA
+    s0 s1 XCHG                                    // 0x0
+    1279 PUSHINT                                  // 0x81 04FF
+    EQUAL                                         // 0xBA
+    OR                                            // 0xB1
+    136 THROWIFNOT                                // 0xF2E4_ 111_
+    STSLICER                                      // 0xCF16
+    s0 s1 XCHG                                    // 0x0
+    s0 PUSH                                       // 0x2 0
+    SBITS                                         // 0xD749
+    267 PUSHINT                                   // 0x81 010B
+    EQUAL                                         // 0xBA
+    136 THROWIFNOT                                // 0xF2E4_ 111_
+    s0 PUSH                                       // 0x2 0
+    11 PLDU                                       // 0xD70B 0A
+    s0 PUSH                                       // 0x2 0
+    10 PUSHPOW2                                   // 0x83 09
+    EQUAL                                         // 0xBA
+    s0 s1 XCHG                                    // 0x0
+    1279 PUSHINT                                  // 0x81 04FF
+    EQUAL                                         // 0xBA
+    OR                                            // 0xB1
+    136 THROWIFNOT                                // 0xF2E4_ 111_
+    STSLICER                                      // 0xCF16
+    ENDC                                          // 0xC9
+  }>
+  ?fun_ref_ec4e6a4d4bc86e9f PROCREF:<{
+    395134233 PUSHINT                             // 0x82 10178D4519
+    s0 s7 XCHG2                                   // 0x50 0 7
+    32 STU                                        // 0xCB 1F
+    s1 s5 XCHG                                    // 0x1
+    64 STU                                        // 0xCB 3F
+    s0 s3 XCHG2                                   // 0x50 0 3
+    STGRAMS                                       // 0xFA02
+    s0 s1 XCHG                                    // 0x0
+    s0 PUSH                                       // 0x2 0
+    SBITS                                         // 0xD749
+    267 PUSHINT                                   // 0x81 010B
+    EQUAL                                         // 0xBA
+    136 THROWIFNOT                                // 0xF2E4_ 111_
+    s0 PUSH                                       // 0x2 0
+    11 PLDU                                       // 0xD70B 0A
+    s0 PUSH                                       // 0x2 0
+    10 PUSHPOW2                                   // 0x83 09
+    EQUAL                                         // 0xBA
+    s0 s1 XCHG                                    // 0x0
+    1279 PUSHINT                                  // 0x81 04FF
+    EQUAL                                         // 0xBA
+    OR                                            // 0xB1
+    136 THROWIFNOT                                // 0xF2E4_ 111_
+    STSLICER                                      // 0xCF16
+    s0 s1 XCHG                                    // 0x0
+    s0 PUSH                                       // 0x2 0
+    ISNULL                                        // 0x6E
+    <{
+      s0 POP                                      // 0x3 0
+      0 PUSHINT                                   // 0x7 0
+      s0 s1 XCHG                                  // 0x0
+      2 STU                                       // 0xCB 01
+    }> PUSHCONT                                   // 0x9 307001CB01
+    <{
+      s0 PUSH                                     // 0x2 0
+      SBITS                                       // 0xD749
+      267 PUSHINT                                 // 0x81 010B
+      EQUAL                                       // 0xBA
+      136 THROWIFNOT                              // 0xF2E4_ 111_
+      s0 PUSH                                     // 0x2 0
+      11 PLDU                                     // 0xD70B 0A
+      s0 PUSH                                     // 0x2 0
+      10 PUSHPOW2                                 // 0x83 09
+      EQUAL                                       // 0xBA
+      s0 s1 XCHG                                  // 0x0
+      1279 PUSHINT                                // 0x81 04FF
+      EQUAL                                       // 0xBA
+      OR                                          // 0xB1
+      136 THROWIFNOT                              // 0xF2E4_ 111_
+      STSLICER                                    // 0xCF16
+    }> PUSHCONT                                   // 0x8F_ 20D74981010BBAF2E08820D70B0A208309BA018104FFBAB1F2E088CF16
+    IFELSE                                        // 0xE2
+    s0 s1 XCHG                                    // 0x0
+    STGRAMS                                       // 0xFA02
+    s0 s1 XCHG                                    // 0x0
+    STSLICER                                      // 0xCF16
+  }>
+}END>c"
+`;

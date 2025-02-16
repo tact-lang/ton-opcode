@@ -426,7 +426,7 @@ var CompilerModule = (() => {
                 Module["asm"] = exports
                 wasmMemory = Module["asm"]["Ja"]
                 updateGlobalBufferAndViews(wasmMemory.buffer)
-                wasmTable = Module["asm"]["Na"]
+                wasmTable = Module["asm"]["Oa"]
                 addOnInit(Module["asm"]["Ka"])
                 removeRunDependency("wasm-instantiate")
             }
@@ -5388,139 +5388,143 @@ var CompilerModule = (() => {
         var _version = (Module["_version"] = function () {
             return (_version = Module["_version"] = Module["asm"]["La"]).apply(null, arguments)
         })
-        var _func_compile = (Module["_func_compile"] = function () {
-            return (_func_compile = Module["_func_compile"] = Module["asm"]["Ma"]).apply(
+        var _fift_compile = (Module["_fift_compile"] = function () {
+            return (_fift_compile = Module["_fift_compile"] = Module["asm"]["Ma"]).apply(
                 null,
                 arguments,
             )
         })
+        var _fift_compile_anyway = (Module["_fift_compile_anyway"] = function () {
+            return (_fift_compile_anyway = Module["_fift_compile_anyway"] =
+                Module["asm"]["Na"]).apply(null, arguments)
+        })
         var _free = (Module["_free"] = function () {
-            return (_free = Module["_free"] = Module["asm"]["Oa"]).apply(null, arguments)
+            return (_free = Module["_free"] = Module["asm"]["Pa"]).apply(null, arguments)
         })
         var _malloc = (Module["_malloc"] = function () {
-            return (_malloc = Module["_malloc"] = Module["asm"]["Pa"]).apply(null, arguments)
+            return (_malloc = Module["_malloc"] = Module["asm"]["Qa"]).apply(null, arguments)
         })
         var ___errno_location = (Module["___errno_location"] = function () {
-            return (___errno_location = Module["___errno_location"] = Module["asm"]["Qa"]).apply(
+            return (___errno_location = Module["___errno_location"] = Module["asm"]["Ra"]).apply(
                 null,
                 arguments,
             )
         })
         var _emscripten_builtin_memalign = (Module["_emscripten_builtin_memalign"] = function () {
             return (_emscripten_builtin_memalign = Module["_emscripten_builtin_memalign"] =
-                Module["asm"]["Ra"]).apply(null, arguments)
+                Module["asm"]["Sa"]).apply(null, arguments)
         })
         var _setThrew = (Module["_setThrew"] = function () {
-            return (_setThrew = Module["_setThrew"] = Module["asm"]["Sa"]).apply(null, arguments)
+            return (_setThrew = Module["_setThrew"] = Module["asm"]["Ta"]).apply(null, arguments)
         })
         var stackSave = (Module["stackSave"] = function () {
-            return (stackSave = Module["stackSave"] = Module["asm"]["Ta"]).apply(null, arguments)
+            return (stackSave = Module["stackSave"] = Module["asm"]["Ua"]).apply(null, arguments)
         })
         var stackRestore = (Module["stackRestore"] = function () {
-            return (stackRestore = Module["stackRestore"] = Module["asm"]["Ua"]).apply(
+            return (stackRestore = Module["stackRestore"] = Module["asm"]["Va"]).apply(
                 null,
                 arguments,
             )
         })
         var stackAlloc = (Module["stackAlloc"] = function () {
-            return (stackAlloc = Module["stackAlloc"] = Module["asm"]["Va"]).apply(null, arguments)
+            return (stackAlloc = Module["stackAlloc"] = Module["asm"]["Wa"]).apply(null, arguments)
         })
         var ___cxa_can_catch = (Module["___cxa_can_catch"] = function () {
-            return (___cxa_can_catch = Module["___cxa_can_catch"] = Module["asm"]["Wa"]).apply(
+            return (___cxa_can_catch = Module["___cxa_can_catch"] = Module["asm"]["Xa"]).apply(
                 null,
                 arguments,
             )
         })
         var ___cxa_is_pointer_type = (Module["___cxa_is_pointer_type"] = function () {
             return (___cxa_is_pointer_type = Module["___cxa_is_pointer_type"] =
-                Module["asm"]["Xa"]).apply(null, arguments)
+                Module["asm"]["Ya"]).apply(null, arguments)
         })
         var dynCall_j = (Module["dynCall_j"] = function () {
-            return (dynCall_j = Module["dynCall_j"] = Module["asm"]["Ya"]).apply(null, arguments)
+            return (dynCall_j = Module["dynCall_j"] = Module["asm"]["Za"]).apply(null, arguments)
         })
         var dynCall_viijj = (Module["dynCall_viijj"] = function () {
-            return (dynCall_viijj = Module["dynCall_viijj"] = Module["asm"]["Za"]).apply(
+            return (dynCall_viijj = Module["dynCall_viijj"] = Module["asm"]["_a"]).apply(
                 null,
                 arguments,
             )
         })
         var dynCall_iij = (Module["dynCall_iij"] = function () {
-            return (dynCall_iij = Module["dynCall_iij"] = Module["asm"]["_a"]).apply(
+            return (dynCall_iij = Module["dynCall_iij"] = Module["asm"]["$a"]).apply(
                 null,
                 arguments,
             )
         })
         var dynCall_viiijj = (Module["dynCall_viiijj"] = function () {
-            return (dynCall_viiijj = Module["dynCall_viiijj"] = Module["asm"]["$a"]).apply(
+            return (dynCall_viiijj = Module["dynCall_viiijj"] = Module["asm"]["ab"]).apply(
                 null,
                 arguments,
             )
         })
         var dynCall_ji = (Module["dynCall_ji"] = function () {
-            return (dynCall_ji = Module["dynCall_ji"] = Module["asm"]["ab"]).apply(null, arguments)
+            return (dynCall_ji = Module["dynCall_ji"] = Module["asm"]["bb"]).apply(null, arguments)
         })
         var dynCall_viiij = (Module["dynCall_viiij"] = function () {
-            return (dynCall_viiij = Module["dynCall_viiij"] = Module["asm"]["bb"]).apply(
+            return (dynCall_viiij = Module["dynCall_viiij"] = Module["asm"]["cb"]).apply(
                 null,
                 arguments,
             )
         })
         var dynCall_viij = (Module["dynCall_viij"] = function () {
-            return (dynCall_viij = Module["dynCall_viij"] = Module["asm"]["cb"]).apply(
+            return (dynCall_viij = Module["dynCall_viij"] = Module["asm"]["db"]).apply(
                 null,
                 arguments,
             )
         })
         var dynCall_vij = (Module["dynCall_vij"] = function () {
-            return (dynCall_vij = Module["dynCall_vij"] = Module["asm"]["db"]).apply(
+            return (dynCall_vij = Module["dynCall_vij"] = Module["asm"]["eb"]).apply(
                 null,
                 arguments,
             )
         })
         var dynCall_jijj = (Module["dynCall_jijj"] = function () {
-            return (dynCall_jijj = Module["dynCall_jijj"] = Module["asm"]["eb"]).apply(
+            return (dynCall_jijj = Module["dynCall_jijj"] = Module["asm"]["fb"]).apply(
                 null,
                 arguments,
             )
         })
         var dynCall_iiji = (Module["dynCall_iiji"] = function () {
-            return (dynCall_iiji = Module["dynCall_iiji"] = Module["asm"]["fb"]).apply(
+            return (dynCall_iiji = Module["dynCall_iiji"] = Module["asm"]["gb"]).apply(
                 null,
                 arguments,
             )
         })
         var dynCall_jii = (Module["dynCall_jii"] = function () {
-            return (dynCall_jii = Module["dynCall_jii"] = Module["asm"]["gb"]).apply(
+            return (dynCall_jii = Module["dynCall_jii"] = Module["asm"]["hb"]).apply(
                 null,
                 arguments,
             )
         })
         var dynCall_viji = (Module["dynCall_viji"] = function () {
-            return (dynCall_viji = Module["dynCall_viji"] = Module["asm"]["hb"]).apply(
+            return (dynCall_viji = Module["dynCall_viji"] = Module["asm"]["ib"]).apply(
                 null,
                 arguments,
             )
         })
         var dynCall_iiiij = (Module["dynCall_iiiij"] = function () {
-            return (dynCall_iiiij = Module["dynCall_iiiij"] = Module["asm"]["ib"]).apply(
+            return (dynCall_iiiij = Module["dynCall_iiiij"] = Module["asm"]["jb"]).apply(
                 null,
                 arguments,
             )
         })
         var dynCall_viiijjj = (Module["dynCall_viiijjj"] = function () {
-            return (dynCall_viiijjj = Module["dynCall_viiijjj"] = Module["asm"]["jb"]).apply(
+            return (dynCall_viiijjj = Module["dynCall_viiijjj"] = Module["asm"]["kb"]).apply(
                 null,
                 arguments,
             )
         })
         var dynCall_iiiiij = (Module["dynCall_iiiiij"] = function () {
-            return (dynCall_iiiiij = Module["dynCall_iiiiij"] = Module["asm"]["kb"]).apply(
+            return (dynCall_iiiiij = Module["dynCall_iiiiij"] = Module["asm"]["lb"]).apply(
                 null,
                 arguments,
             )
         })
         var dynCall_jiiii = (Module["dynCall_jiiii"] = function () {
-            return (dynCall_jiiii = Module["dynCall_jiiii"] = Module["asm"]["lb"]).apply(
+            return (dynCall_jiiii = Module["dynCall_jiiii"] = Module["asm"]["mb"]).apply(
                 null,
                 arguments,
             )
@@ -5531,6 +5535,16 @@ var CompilerModule = (() => {
             var sp = stackSave()
             try {
                 getWasmTableEntry(index)(a1, a2, a3)
+            } catch (e) {
+                stackRestore(sp)
+                if (e !== e + 0) throw e
+                _setThrew(1, 0)
+            }
+        }
+        function invoke_vii(index, a1, a2) {
+            var sp = stackSave()
+            try {
+                getWasmTableEntry(index)(a1, a2)
             } catch (e) {
                 stackRestore(sp)
                 if (e !== e + 0) throw e
@@ -5587,10 +5601,10 @@ var CompilerModule = (() => {
                 _setThrew(1, 0)
             }
         }
-        function invoke_vii(index, a1, a2) {
+        function invoke_iiiiiiii(index, a1, a2, a3, a4, a5, a6, a7) {
             var sp = stackSave()
             try {
-                getWasmTableEntry(index)(a1, a2)
+                return getWasmTableEntry(index)(a1, a2, a3, a4, a5, a6, a7)
             } catch (e) {
                 stackRestore(sp)
                 if (e !== e + 0) throw e
@@ -5641,16 +5655,6 @@ var CompilerModule = (() => {
             var sp = stackSave()
             try {
                 return getWasmTableEntry(index)(a1, a2, a3, a4, a5)
-            } catch (e) {
-                stackRestore(sp)
-                if (e !== e + 0) throw e
-                _setThrew(1, 0)
-            }
-        }
-        function invoke_iiiiiiii(index, a1, a2, a3, a4, a5, a6, a7) {
-            var sp = stackSave()
-            try {
-                return getWasmTableEntry(index)(a1, a2, a3, a4, a5, a6, a7)
             } catch (e) {
                 stackRestore(sp)
                 if (e !== e + 0) throw e
