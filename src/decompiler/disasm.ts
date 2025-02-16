@@ -23,8 +23,17 @@ import {getDisplayNumber, hasHint} from "../spec/helpers"
 import {LayoutError, OperandError, UnknownOperandTypeError} from "./errors"
 
 export interface DisassembleParams {
+    /**
+     * The cell to disassemble.
+     */
     readonly source: Cell
+    /**
+     * The offset in the cell to start disassembling from.
+     */
     readonly offset?: {bits: number; refs: number}
+    /**
+     * The limit in the cell to stop disassembling at.
+     */
     readonly limit?: {bits: number; refs: number}
 }
 
@@ -370,6 +379,9 @@ function checkLayout(opcodes: DecompiledInstruction[]): void {
 export function disassembleRoot(
     cell: Cell,
     options: {
+        /**
+         * Whether to deduplicate refs into separate functions. True, by default.
+         */
         computeRefs: boolean
     },
 ): ProgramNode {

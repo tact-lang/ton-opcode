@@ -4,7 +4,7 @@ import {disassembleRawRoot, disassembleRoot} from "../../index"
 import {AssemblyWriter} from "../../printer/assembly-writer"
 import {debugSymbols} from "../../utils/known-methods"
 import {fail} from "node:assert"
-import {fiftCompile} from "../../fift/fiftCompile"
+import {compileFift} from "../../fift/compileFift"
 
 export function decompileAll(
     src: Buffer,
@@ -37,9 +37,7 @@ export async function compileFiftBackAndCompare(
     before: Buffer,
     raw: boolean = false,
 ): Promise<void> {
-    const result = await fiftCompile({
-        content: content,
-    })
+    const result = await compileFift(content)
     if (!result.ok) {
         fail(`cannot compile boc:\n${result.log}`)
         return

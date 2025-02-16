@@ -44,9 +44,9 @@ interface CompilationOk {
     readonly warnings: string
 }
 
-export type CompileResult = CompilationError | CompilationOk
+type CompileResult = CompilationError | CompilationOk
 
-export async function fiftCompile(args: {content: string}): Promise<FiftCompilationResult> {
+export async function compileFift(content: string): Promise<FiftCompilationResult> {
     const allocatedPointers: Pointer[] = []
     const allocatedFunctions: Pointer[] = []
 
@@ -85,7 +85,7 @@ export async function fiftCompile(args: {content: string}): Promise<FiftCompilat
             }, "viiii"),
         )
 
-        const contentCString = trackPointer(writeToCString(mod, args.content))
+        const contentCString = trackPointer(writeToCString(mod, content))
         const resultPointer = trackPointer(mod._func_compile(contentCString, callbackPtr))
         const retJson = readFromCString(mod, resultPointer)
         const result = JSON.parse(retJson) as CompileResult
