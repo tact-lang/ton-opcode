@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`disassemble > should decompile and compile back PUSHREF with bytes 1`] = `
+""Asm.fif" include
+PROGRAM{
+  DECLPROC recv_internal
+  recv_internal PROC:<{
+    <b x{0000000053756363657373} s, b> PUSHREF
+    HASHCU
+    THROWANY
+  }>
+}END>c"
+`;

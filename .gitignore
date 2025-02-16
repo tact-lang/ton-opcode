@@ -1,2 +1,12 @@
 node_modules
-dist
+.DS_Store
+.idea
+dist/
+*.wasm
+
+# yarn
+yarn-error.log
+.yarn/
+
+# eslint
+.eslintcache
