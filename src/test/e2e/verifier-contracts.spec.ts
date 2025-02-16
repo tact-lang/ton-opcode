@@ -4,6 +4,7 @@ import {decompileAll} from "./utils"
 import * as fs from "fs"
 import {compileFift} from "../../fift/compileFift"
 import {fail} from "node:assert"
+import {hash} from "crypto"
 
 describe("tact contracts", () => {
     const contractsData = JSON.parse(
@@ -38,7 +39,9 @@ describe("tact contracts", () => {
             const source = Buffer.from(contract.code, "base64")
 
             const res = decompileAll(source)
-            expect(res).toMatchSnapshot(`${contract.mainFile ?? contract.address}-with-refs`)
+            expect(hash("md5", res)).toMatchSnapshot(
+                `${contract.mainFile ?? contract.address}-with-refs`,
+            )
 
             const withoutRefs = decompileAll(source, debugSymbols, false)
 

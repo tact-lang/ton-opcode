@@ -10,6 +10,3 @@ yarn-error.log
 
 # eslint
 .eslintcache
-
- # it's too big
-.verifier-contracts.spec.ts.snap

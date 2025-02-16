@@ -1,0 +1,933 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`tact contracts > should decompile Crowdfunding.fc-EQBfhmtuIEyXlsmS6jXAdB7gTenZUC35DQt6WNtD_ZVKLPsD > Crowdfunding.fc-with-refs 1`] = `"bb5f5c40fe9276804dc55d0d57e54040"`;
+
+exports[`tact contracts > should decompile Main.fc-EQBU6k8HH6yX4Jf3d18swWbnYr31D3PJI7PgjXT-flsKHqql > Main.fc-with-refs 1`] = `"231d4023369a717929dde45563c9b7e6"`;
+
+exports[`tact contracts > should decompile Wallet.fc-EQCgpgaIbbB_tGBCgy6htl_2I3f4-JKmfQ3m97WGFtN4OwRS > Wallet.fc-with-refs 1`] = `"18c27162604789c6819a14b5d6622037"`;
+
+exports[`tact contracts > should decompile badge-collection.func-EQBLD7XOgZXELd4gJViIt3jF3j_DFWG2t0uI9XCy2M6K0m0v > badge-collection.func-with-refs 1`] = `"bb076eb4e647bb3bf5f8dd5d51830551"`;
+
+exports[`tact contracts > should decompile badge-item.func-EQB3mvh3Mzir2N1sUd2G9Bktn1CvFzYj94KA-ZJ5_fiPpQ_s > badge-item.func-with-refs 1`] = `"1faeaf2cf8a744853c633b431bacb234"`;
+
+exports[`tact contracts > should decompile batch_sender.fc-EQDkwpQY9y1PQAWCig19O-eYHeUS58Zt1QSrRL0oOhEUXxsX > batch_sender.fc-with-refs 1`] = `"f82e0f8493dcf3b478d4276d71fbb142"`;
+
+exports[`tact contracts > should decompile bcl_jetton_minter.fc-EQDFu29cK35aAPEHcZRfeC0QqoeY1UdfVpsjO_kjVS3VLF_P > bcl_jetton_minter.fc-with-refs 1`] = `"b9070017ceac3f3455f5c16c63144ecc"`;
+
+exports[`tact contracts > should decompile bcl_jetton_minter.fc-EQDo8QC6mVi7Gq6uGWDF4XVp3cZ4wKZ-bqKBkmhVMPm-1ojm > bcl_jetton_minter.fc-with-refs 1`] = `"e48e7c4a019ee554a1fc24b22daa931d"`;
+
+exports[`tact contracts > should decompile big_money.fc-EQAlZ1hzvJHIEsOcZhIaZ_lhsmSv9pel9znd5P7mxbDtrZv5 > big_money.fc-with-refs 1`] = `"bb6de9e195a53bbaec7fcc088d99934d"`;
+
+exports[`tact contracts > should decompile bridge.fc-EQAxmNZSRMIseeozNFk0juAXUM9NNucpXGXwmqafNep7Pr36 > bridge.fc-with-refs 1`] = `"f44585f13778cfcad587fc6af981e7d4"`;
+
+exports[`tact contracts > should decompile bridge.fc-EQC2P4BL26FGtvamKbjc_108QHKTUgqwK69oKz1HRDNtAxcu > bridge.fc-with-refs 1`] = `"455ee1cbab895818fd79967198503fea"`;
+
+exports[`tact contracts > should decompile bridge_contract.fc-EQAj3SoOk4MPzjn816Crw1b4RxW79fB_Z549tyCd9HIQV6b7 > bridge_contract.fc-with-refs 1`] = `"9f251c8df898720a8b5655bf79d4eaa9"`;
+
+exports[`tact contracts > should decompile bsx_daily_journey.fc-EQBlNFv7dR7L1nuEM00zfvpMFrfocaZjVUKuWzY3UEvNgffy > bsx_daily_journey.fc-with-refs 1`] = `"9fa23f7b5221d06ba8529425baeb8b90"`;
+
+exports[`tact contracts > should decompile bsx_wallet.fc-EQA6rD7cQARUuoKYuZ4w807ODHzpZI8AzZMcFko7lFVNxla9 > bsx_wallet.fc-with-refs 1`] = `"1ed72b5b6fc846b0e6a9891d3a12a368"`;
+
+exports[`tact contracts > should decompile bsx_wallet.fc-EQCO2GS2Idbm1C0r6yYDP0KGM96yVXMzslG-FkmCz4G-kamM > bsx_wallet.fc-with-refs 1`] = `"cdccdb8950a47d4b484424badbe1340b"`;
+
+exports[`tact contracts > should decompile btn-jwallet.func-EQD9-7aAn8B5ALnsG9HvuLa8doDgT_IA1DIvooUnhaFxivSU > btn-jwallet.func-with-refs 1`] = `"40973e44b36a1300b0364742955f1d42"`;
+
+exports[`tact contracts > should decompile cdp_contract.fc-EQCw5CzDt767ZLwm4_sdW7mc2xsele2Vf8cU77S9XaySLZvQ > cdp_contract.fc-with-refs 1`] = `"c08f3db7e0eb95f4cd29e32968ed7179"`;
+
+exports[`tact contracts > should decompile check-in.fc-EQCPiDCGwdttxcC0Hl7ZFi8oi2UY-T3f0D4JEYikEFJXTydY > check-in.fc-with-refs 1`] = `"8ccb2f412216e5e73fec9e4bf25f0bfc"`;
+
+exports[`tact contracts > should decompile checkin.fc-EQA7mny-m1CPgdC9yMil3MFNCjDpb8Ne6TFwukyBsfXUYV3U > checkin.fc-with-refs 1`] = `"e57568d284a381740c061367901b34bb"`;
+
+exports[`tact contracts > should decompile claim.func-EQBIJblXFy3eKyUVozilAhrD4f7TDc9mihew_tlA14i4U_CL > claim.func-with-refs 1`] = `"b16ae0ab115074c4e1dbf51bf3e53c5f"`;
+
+exports[`tact contracts > should decompile claim-master.fc-EQDW0zXBLRr9w0cxCl3a_n8zfcBZuYgzOPgDpwhBv8ITOOHq > claim-master.fc-with-refs 1`] = `"c0e3207704c8bbb855f07598da419313"`;
+
+exports[`tact contracts > should decompile coin-flip.fc-EQA793kjXyVtc2oZpE--Vm-xJqYH0-dBPJk1xbIgDctACeyW > coin-flip.fc-with-refs 1`] = `"05a1eb6eb3ea9ab2911c7b6e5223dd07"`;
+
+exports[`tact contracts > should decompile coin-flip.fc-EQBP3SRCgHM-KXBwMUAhZ2geFthgkzLHW0xMLztsgOn8wYA3 > coin-flip.fc-with-refs 1`] = `"7d705108b2003a271fed18616a090bf0"`;
+
+exports[`tact contracts > should decompile coin-flip.fc-EQC_k94hcFzJ3XncgTLOAta-eMH0CTzbpn3pbbjI7DJLwa9c > coin-flip.fc-with-refs 1`] = `"dd6697a49c8649cf4b8f60bcd7bdcaea"`;
+
+exports[`tact contracts > should decompile coin-flip.fc-EQC8BHRnyW4skIWdGklAEWyS86FMHaXnZs3BWrYb2yP5BSvT > coin-flip.fc-with-refs 1`] = `"2e2e3ae28f3e617e1f257349d94f55bb"`;
+
+exports[`tact contracts > should decompile collection.fc-EQA0WXDCJicpsFLu2DwxHktxffC04-B_PGRDGmCcfWKjXSzq > collection.fc-with-refs 1`] = `"9dc7e21c71909ab92c1dabec9cdd2105"`;
+
+exports[`tact contracts > should decompile counter.fc-EQD4eA1SdQOivBbTczzElFmfiKu4SXNL4S29TReQwzzr_70k > counter.fc-with-refs 1`] = `"0341ceee58fe363f03c2af55cdfa1cd4"`;
+
+exports[`tact contracts > should decompile counter.fc-EQDWOQSw_tIKMWbSoOW_eSG63f4-nW9YpW8n4eed-lxf2n8t > counter.fc-with-refs 1`] = `"9bdde1435a7b634c445fbb11c3b2f972"`;
+
+exports[`tact contracts > should decompile daily-checkin.fc-EQC5TTN_BhCnngUrM-AMoh8Q1Etp60VZ6eq9X3JwAkmHIjVS > daily-checkin.fc-with-refs 1`] = `"b15c8a69e856a5b4c13f161809336d86"`;
+
+exports[`tact contracts > should decompile daily-checkin.fc-EQCiY6qFHFtYtUt4pmggppA2V7OzZPmM2M7yKhD269txqcX- > daily-checkin.fc-with-refs 1`] = `"831ae77a9b5bd51943c6ecd631ae3373"`;
+
+exports[`tact contracts > should decompile delabs_daily_journey.fc-EQDHnKu-2cOHO6CekyYsXAD2GhrQMz6XmDnYEoHtcXeAWztH > delabs_daily_journey.fc-with-refs 1`] = `"382a56973a622a1300f51abe23382607"`;
+
+exports[`tact contracts > should decompile discovery.func-EQBtIpIYDgm_8Zs6HMdlbdphwEsJNuVOJk6Bc1ujMaTa50AL > discovery.func-with-refs 1`] = `"1cec53b1f3693db290778e7f0877b39a"`;
+
+exports[`tact contracts > should decompile donation.func-EQCcZgRLDEPJYxkhA_mwARl_Kkp_mVARWijhyxrpp0TxQd0N > donation.func-with-refs 1`] = `"afdf435cc266e2704931dab5cb957647"`;
+
+exports[`tact contracts > should decompile dragonz_land_telegram_diamonds_source.fc-EQB-tdyPDlCL1C7A34qq8lIl-uH3eKuc4KSNMn2O33O6CCxA > dragonz_land_telegram_diamonds_source.fc-with-refs 1`] = `"b22be771f32556d838de19ef7f98fb1c"`;
+
+exports[`tact contracts > should decompile drockets.fc-EQA2CcFit556Qp9HGNoh0M4rz5Gip9pgiMngb_r5UIaxTGNI > drockets.fc-with-refs 1`] = `"2d6ced43e3ea6d3595c229be19c8f39e"`;
+
+exports[`tact contracts > should decompile drockets.fc-EQCbjfK8dJ_Pu9lk-sM5OV1WySqzKsNbVqG7TFQfwpg7cwq7 > drockets.fc-with-refs 1`] = `"114eaec9724d7f9d4d53e18b487b4462"`;
+
+exports[`tact contracts > should decompile exchange_contract.fc-EQAjMmuplS2qNW3mDIE-PZkD3v24WksmUXA-LTh5E22US_pR > exchange_contract.fc-with-refs 1`] = `"46519c1333c36d352cd4ccd0124913a5"`;
+
+exports[`tact contracts > should decompile exchange_contract.fc-EQBdXwXRqfqu8klsaDWD0HhumpKbo7WxK-QzuO5XBd3BD4wP > exchange_contract.fc-with-refs 1`] = `"c69b1400bd0e4936864a5a607dd43b4e"`;
+
+exports[`tact contracts > should decompile flip_res_proxy.fc-Ef-bm_l43vU_Y9tfuRcyOe5QV5bqt7PJ5i34dwpOaeidH883 > flip_res_proxy.fc-with-refs 1`] = `"b35a34d0ff8246758ab2d6cf05e67547"`;
+
+exports[`tact contracts > should decompile flip_res_proxy.fc-Ef8wfThd5n4ervx1P1Lyo2CEtjs9MwoAEOAbwTES3R5Qvqwk > flip_res_proxy.fc-with-refs 1`] = `"627de0881e86f766ebebdd6fe225fd3b"`;
+
+exports[`tact contracts > should decompile flip-coin.fc-EQDJBgp4rnh3VgJMyDeovpj65ZNAxY8S5f_Wl74IIgHkZEGT > flip-coin.fc-with-refs 1`] = `"b77c9f1fc632d96ab5bc0b14b81b51da"`;
+
+exports[`tact contracts > should decompile from_scratch.fc-EQDR62eudp25OMiy7rs77uDbt7RihPsx8iCJ2P5hO7K_n70v > from_scratch.fc-with-refs 1`] = `"ac0978767196c8a534c8dc1183d1b982"`;
+
+exports[`tact contracts > should decompile fund_manager.fc-EQBwo5AHa3EkA4Ew2N0MEped8JA26E6UYYUT5WWmI4eSuvgX > fund_manager.fc-with-refs 1`] = `"ae70c663cfdd080cb1c8774345b167f8"`;
+
+exports[`tact contracts > should decompile game_contract.fc-EQAi6YJA8KdXfMngQVKH7gUhJUb3r04g1sDnIMwbiCSRZRNG > game_contract.fc-with-refs 1`] = `"1e7cd82a8485fb79b3ee809f0afce38d"`;
+
+exports[`tact contracts > should decompile get_lang_skill_validation.fc-EQDtRrrnaO1UwdKQeMz1mfs5gIXgH_WhMMdNBbwxo2vewsly > get_lang_skill_validation.fc-with-refs 1`] = `"2743659bd688c403c4be93493e551582"`;
+
+exports[`tact contracts > should decompile group_message_contract.fc-EQAeKG8B7P4i9FDtutG5ktmKnhnZB5l_2cwIspTzxtTv1XbU > group_message_contract.fc-with-refs 1`] = `"dc14e9faf06f796e8099c5ebe58559f4"`;
+
+exports[`tact contracts > should decompile hello_world.fc-EQBStZxQytbQDnoB7dfWuNlqp1IAxomj_SccXMewZviIBXpT > hello_world.fc-with-refs 1`] = `"df6c883d8b67c7b19dc7d1d05fdf621d"`;
+
+exports[`tact contracts > should decompile jetton.fc-EQB0HFD2mnSfyccNQIvjCc7Zn9fLLRzjqEeaHTqKhk2l3v2- > jetton.fc-with-refs 1`] = `"ba16adf87f558373c6583846ef9bc020"`;
+
+exports[`tact contracts > should decompile jetton.fc-EQBWVC5EWesFEyRYri3DA2RH8wR2FifhClirzCAgLZvBkQXW > jetton.fc-with-refs 1`] = `"bc8d7196e027427f2d36354196b5e4dd"`;
+
+exports[`tact contracts > should decompile jetton.fc-EQCgvX7v5yl2QPTOKQefYtU9m5RMIVENOni6XdV1Lnr2UvKh > jetton.fc-with-refs 1`] = `"f28070b8cf1d9440a9ea862670bb7e38"`;
+
+exports[`tact contracts > should decompile jetton_burner.fc-EQB6rmrxl7xV1T9mxxFuOGrk4LMw1-etaebIi76O3_J-BURN > jetton_burner.fc-with-refs 1`] = `"11a981bb322747261e84a1d68ff471a9"`;
+
+exports[`tact contracts > should decompile jetton_lockup.fc-EQALdxZQ7n9A-YafEDwhW5q00es65mhlVGkVhh50nbsDlwtn > jetton_lockup.fc-with-refs 1`] = `"7080656a6d71fa305c48d2125d2804b3"`;
+
+exports[`tact contracts > should decompile jetton_lockup.fc-EQC02s3g-_LFM-On8i6zdh5FbLyOTDfNFzu_Fi8-3AP-LNsT > jetton_lockup.fc-with-refs 1`] = `"174883bda8463926e21551da4b970698"`;
+
+exports[`tact contracts > should decompile jetton_master_discoverable.fc-EQDu9WA1TbOxZCAO0Gmtpvg26O-qNrzcSzpMS9JQbtPrb8LF > jetton_master_discoverable.fc-with-refs 1`] = `"8ebc5a0297e457f8a0eb1479a9a3e1be"`;
+
+exports[`tact contracts > should decompile jetton_minter.fc-EQAK9rRdUcEAoB3DOYKjzywk08u5p-mF0U9JCeCEkdzAFNBc > jetton_minter.fc-with-refs 1`] = `"50bb64ca12879a61217ff70f2896894e"`;
+
+exports[`tact contracts > should decompile jetton_minter.fc-EQAMrQ05MOlCSgT79xtcyV_zfGUu4RKiIrOc-vEXSajf3RO5 > jetton_minter.fc-with-refs 1`] = `"4a757aacd32ea69325f32786f0d156c8"`;
+
+exports[`tact contracts > should decompile jetton_minter.fc-EQBWHGlne6EVRjlneRR2l0fVneHbEbYmhUwNbKY3KdxNoPU4 > jetton_minter.fc-with-refs 1`] = `"2702a0e64241a2e0493018681c84fd35"`;
+
+exports[`tact contracts > should decompile jetton_minter.fc-EQBh4XMahI9T81bj2DbAd97ZLQDoHM2rv2U5B59DVZkVN1pl > jetton_minter.fc-with-refs 1`] = `"c043477c89465fdf81166ba00df90310"`;
+
+exports[`tact contracts > should decompile jetton_minter.fc-EQBkCw8lcwcgk1nSlMko6SV2cf2ZyxnLR8w3t7923ErnzSBX > jetton_minter.fc-with-refs 1`] = `"0f433febe67f2cbb9eedba1e862eba97"`;
+
+exports[`tact contracts > should decompile jetton_minter.fc-EQBr3sh4w1nNUZnIA8w7CwH95dm1qy3GG-zlJWA_FuDQFIrR > jetton_minter.fc-with-refs 1`] = `"ffaa827de5852c64f4462b4411eabcd4"`;
+
+exports[`tact contracts > should decompile jetton_minter.fc-EQC3XanfxEKZ5FjQS7OXF5UJz29AHm6wsnhWGjIg3OobCteD > jetton_minter.fc-with-refs 1`] = `"fc5ce79c8034329c2deacae6c9172944"`;
+
+exports[`tact contracts > should decompile jetton_minter.fc-EQCGz4QB0oNieoe1jDZ7RAytkzq4qns4NBno_30aAMlF-N2j > jetton_minter.fc-with-refs 1`] = `"35b52a7ec38e951b56cb369a7c771f8a"`;
+
+exports[`tact contracts > should decompile jetton_minter.fc-EQD5eHLPhMBwDCiN_LFafUsy7DlE1PnnIpID-n6B2Ab3FWSR > jetton_minter.fc-with-refs 1`] = `"d77553dce5d811f64d6f40ab0c62f840"`;
+
+exports[`tact contracts > should decompile jetton_minter.fc-EQDCvwxN0MSn65IYR0DQ6DxeDFx2BkI5As8JPY6aioHgiwF1 > jetton_minter.fc-with-refs 1`] = `"c7a78b8355d655886dfb24c964b92311"`;
+
+exports[`tact contracts > should decompile jetton_minter.fc-EQDRD9O7rsRR_aKBAkAiI-DC1z-O5sEiMz3DpbnCTGgB7Zkf > jetton_minter.fc-with-refs 1`] = `"e2bf19e58c7e7c2d70b1a8fbea86cbb1"`;
+
+exports[`tact contracts > should decompile jetton_minter.fc-EQDajqLiyjE3ZdiUjCK0hCZhhFi9lMtw6qjyw75_e7TvIaZF > jetton_minter.fc-with-refs 1`] = `"6a9ac921efc64d5caa6cb9fcff8ebc19"`;
+
+exports[`tact contracts > should decompile jetton_minter.fc-EQDraN9dMOOp57ulP07macuInLK72LzsUJcKtm2Gv8yae9-H > jetton_minter.fc-with-refs 1`] = `"3d77e8c34adf85802b03afe9edd97b28"`;
+
+exports[`tact contracts > should decompile jetton_wallet.fc-EQAdKmH4em45iF6k88f0nMSK5LqEROHBjhmOtfNf2DDfrxTr > jetton_wallet.fc-with-refs 1`] = `"af3c52f695d0590a4d3951b367074c7e"`;
+
+exports[`tact contracts > should decompile jetton_wallet.fc-EQBI1huCg2YY7-dsFXwigVoSUoDFBSNv-MucP-nSJu5o5LJK > jetton_wallet.fc-with-refs 1`] = `"d83d41663fe86f74a72a5159cd5a1ee3"`;
+
+exports[`tact contracts > should decompile jetton_wallet.fc-EQCsdYoVXicLhShmRb98ZLnSlYR-P1xtwaM6bhl-3OrF6Dux > jetton_wallet.fc-with-refs 1`] = `"29eb2ef0b12e238e3000fc9e414f3e23"`;
+
+exports[`tact contracts > should decompile jetton_wallet.fc-EQD6dl5pIqVJyvBNwENdBwcztaPORh4Vvnqo-hYQ2SGQxJr9 > jetton_wallet.fc-with-refs 1`] = `"9153567d720598d360b7330b54155e27"`;
+
+exports[`tact contracts > should decompile jetton_wallet.fc-EQDM0xcrQbhTKE2ttJfz_BOMb3pKuT1bsqlnhFbAf3MZb83V > jetton_wallet.fc-with-refs 1`] = `"44c3e147241da668a8c33b055f190ab2"`;
+
+exports[`tact contracts > should decompile jetton_wallet.fc-EQDNs3odx8KezjnwKFzoPG7m_PN-snc8Njl8h81D279CtDnW > jetton_wallet.fc-with-refs 1`] = `"2613724dcb37b214c5f349944732d0b0"`;
+
+exports[`tact contracts > should decompile jetton_wallet.fc-EQDdPf5_M453qgYCjG0o1I1Sq_JS6qCXUX-TkaTNRkH-HLb9 > jetton_wallet.fc-with-refs 1`] = `"3fa8dff9120fe2e26ed16bb484f4b57f"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQAG05584TvGac3VUarKU5ffxxKXYIDvnbNWacZ01My__PIE > jetton-minter.fc-with-refs 1`] = `"aab4ffc050ed820ad2e0cd22bfb6a734"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQAG5_QsR66lUzlKVRK-8NRk76A4clenfUZlD2ryK5I7dcBQ > jetton-minter.fc-with-refs 1`] = `"9efc457bd2513449cf99dd05973b9949"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQALs7_7EbwCI1J25RJopDLv-QDRcvCzF2Q0evR3G58qLUCG > jetton-minter.fc-with-refs 1`] = `"a0f8c08af4f33feef7651edfd3cddae0"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQAVBXsQucP_5fBRtBMt3bjyijFbKjZwoxQrmBxjyrUV6Ptz > jetton-minter.fc-with-refs 1`] = `"a417bc84f89a7e25bd6d04a4e435faef"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQAn5KVSv2ByaWHDxsmB6P7ALxJMvwh6lLnOPvK80d58Vbpk > jetton-minter.fc-with-refs 1`] = `"889f084e71075f6146980b8bb3e4a5f6"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQAnEXRTRgAowwJXS3v0EUzRgod4o0yefE7BB8iTh1Ysfu3t > jetton-minter.fc-with-refs 1`] = `"ba6b5dd638431df232e6e498cafcc102"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQArMQBJYn1xSZEfYT6w5GUYW84CdVj3yFaAU_3jMTkwbhFb > jetton-minter.fc-with-refs 1`] = `"74371076e89334fddc8af1c2020ba68b"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQBI545o2zzNKDq7CIr3XsOCdVNeCCeYIPVil8AhcWuxQrIk > jetton-minter.fc-with-refs 1`] = `"dcdec4d0518eb92fc245d4cf3afa65e1"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQBMIWfQtSda6ABjDuDzf6_Iac567yclCm9Oar427bsmjZQD > jetton-minter.fc-with-refs 1`] = `"1fd77f73d44bd1042d6d2a806df711aa"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQBXV8kBBo781W72YKX6Rpi_V06sDzCYwgGPyhwAEVmvQdYH > jetton-minter.fc-with-refs 1`] = `"284d0286dc3e33b9c2113d343aa592d1"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQBl43J_4V2LrEbkDz5BCtNIVm1httafcg5sQeK8YphcTe8I > jetton-minter.fc-with-refs 1`] = `"05688d1e3f880c299897098dfce5de81"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQBlaryI1HCY6hIlW9giBoqKGtuMHfxlULZOhD6UyzpqLcll > jetton-minter.fc-with-refs 1`] = `"15ace8658affe4e27dd0a8f3a6be4187"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQBvqZ0FkYZ6XBwutyZFXJi7Mz57iJ5gSmBzh92iyF-1o1kV > jetton-minter.fc-with-refs 1`] = `"98fcbcef114562382bea68304b36a03b"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQBxHPbI_Q8ui5QQic7GLlRRu2b46FdFtLVXlUEayOqjW58r > jetton-minter.fc-with-refs 1`] = `"e46605580c7c821c439090911ef4f341"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQC2CUQqMJuVkO_ioXE9MvW9ckNBuxqFB7Xce7BgwFnWagem > jetton-minter.fc-with-refs 1`] = `"d4ae4b2c0f45717afdbd93536f0f2b8e"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQC7joupGlvu25IvBcCmum7NRNs92gGLRwbma50PTzjhP8gS > jetton-minter.fc-with-refs 1`] = `"4aa07c9420675b441ad02cb0c4748194"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQCFP7gy17ttQU0kVOkkCCM2Nqi3YRPjfpa1im_XkYQkHT4L > jetton-minter.fc-with-refs 1`] = `"6b1f14cc8ab3cf47fd8c141c047d2883"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQCJEN7zi5h2RIZFZCFpaCrVMPmAaGMPGZBbR0cuFQJWO8hE > jetton-minter.fc-with-refs 1`] = `"60b6c1d518828a715962c08576b52df6"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQCSAvp9S4W-ktGeLENfK-QE-xraCs6zlI0qX-1m-2sZ_PR5 > jetton-minter.fc-with-refs 1`] = `"d6fce4bd01e2cc5bfe95b1c396a69e42"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQCSU3b1KmXTS8dgWY2s4pIpdu7DyX7-8ZKVkuq4GWGj6TQf > jetton-minter.fc-with-refs 1`] = `"c20b38ba7eb16c63d08314d613826ce4"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQCXEp3hI6p3ib_FwitTj2lj35au7Z3t9VsYHaXccKlDH62N > jetton-minter.fc-with-refs 1`] = `"14b5ad7168b017ea8f48263e01b02e47"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQCcBn610TQitxXUb1ZTAz8bujis2CWVkmcZJD_S1uOzpE6k > jetton-minter.fc-with-refs 1`] = `"632a6e04abd5e371df91e98d0a7541ad"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQChtsJrBwtUo9zjeXxaMv5fXdM966tkDi1MsuUGYki011gs > jetton-minter.fc-with-refs 1`] = `"ff62bba1d554b10bfcf81b8cbaeb4ae6"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQCwe0g3cEFhsz4VK5nrtOZBkFeSISxhCVUqvON7Im__SOON > jetton-minter.fc-with-refs 1`] = `"0688642d1788deef62f179d31b597f8f"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQCzHL4iJxwQ74lnkz7KV1sHms_uVYw0saTYi4zp2RlGQrQg > jetton-minter.fc-with-refs 1`] = `"82311e2fc023ba98a47025998d8abbb7"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQD0l3HQ0qMKTDXTsWHceTgIteRL83VBiOGRF9v6_RG_2WZl > jetton-minter.fc-with-refs 1`] = `"520c88b3d12241a58ff33b56bc58a60c"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQD4LR8RmFvBQ5Z6_EclugOZi5pGDfmCkT1lXT16yejgAWRS > jetton-minter.fc-with-refs 1`] = `"66e8e86a4238fbff56e51d7f8bfe282c"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQD6Z9DHc5Mx-8PI8I4BjGX0d2NhapaRAK12CgstweNoMint > jetton-minter.fc-with-refs 1`] = `"cce344dc7228b6865dd715278ed53ba4"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQDEE8NY4zoJiBH0U2IP7nRGbLw283RWqUEsNJ0mXvNWNc9D > jetton-minter.fc-with-refs 1`] = `"d95f2e375b44fcd9af70f4fb5b0a2e35"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQDH6F8bXL_ZQtT9zfYZinT2NhsrcXa1VI5koO98slz8rNjs > jetton-minter.fc-with-refs 1`] = `"e2c90858bf684e15e4707ff13dcae703"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQDTzmTlYdQbRgDuVoImN8QchEUY_lfC7u09DkpxJ-EHmseu > jetton-minter.fc-with-refs 1`] = `"bd542567a1869cca4e0b3e34093bbe6a"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQDk5dCM23wbUCANZ5MVm1BMRm_wAwCleSmxfk7TEKK9m_9t > jetton-minter.fc-with-refs 1`] = `"5e9512826c9a1a04da9ea9cb5d0fa06c"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQDwNX_Fs4t_PuUjy3rZZXccoHC4ZyFqAjnz0vyyhfijkMk0 > jetton-minter.fc-with-refs 1`] = `"cd336f8673ecdf58ec5450527a62f9b1"`;
+
+exports[`tact contracts > should decompile jetton-minter.fc-EQDyMv_7zeUXD4PdDprDtLcqyRfzyWDdIsTFehvT2Shc_EOX > jetton-minter.fc-with-refs 1`] = `"b778875cb7054dc5002e051c1dfa0bc3"`;
+
+exports[`tact contracts > should decompile jetton-minter.func-EQCOZfsqwCsLezpieegiA6rEP3y7nhHC53PlcFtw1_upz_OM > jetton-minter.func-with-refs 1`] = `"dcacf0603a282fcd4df0a8840f99283f"`;
+
+exports[`tact contracts > should decompile jetton-minter-ICO.fc-EQA5pmmCYOjmlSuLG4HUsQKU1RPHU3QZ-yVa_CN3M-W-7WIb > jetton-minter-ICO.fc-with-refs 1`] = `"b02ce22ef2c34a74d4c1953828d41445"`;
+
+exports[`tact contracts > should decompile jetton-minter-discoverable.fc-EQBXdvOQyaE9UqPpq2igGI03H58IEjLspAOsRoL374A7yiIQ > jetton-minter-discoverable.fc-with-refs 1`] = `"ae4c825f9be65eb1f9a895c2f6393717"`;
+
+exports[`tact contracts > should decompile jetton-minter-discoverable.fc-EQCWEDyk1prz3Oi73QcIoneiEI7EZJoXslkcQH7_H9LGOCSU > jetton-minter-discoverable.fc-with-refs 1`] = `"4df523f4ace2df4138be74ead7b11e67"`;
+
+exports[`tact contracts > should decompile jetton-minter-discoverable.fc-EQDG8hrMmjWD7iP7Op2XkZ6jGhFtBUqzBrwpj4g50_VRPgYp > jetton-minter-discoverable.fc-with-refs 1`] = `"daf442da54cd99a7c0afb25d32fc48c7"`;
+
+exports[`tact contracts > should decompile jetton-minter-discoverable.fc-EQDsK14LZLpymohcozvz8DObe2vRnNF9UdqkzetTEVYe8z6d > jetton-minter-discoverable.fc-with-refs 1`] = `"00071fbba64de83d4186ef3bfa82550b"`;
+
+exports[`tact contracts > should decompile jetton-minter-market.fc-EQDqDQeR2vqIY-wqDJEihW-Kv2xWEYjajOpZ5GtAvkPxBM3w > jetton-minter-market.fc-with-refs 1`] = `"957deea23f63c979758f1168d7c25b49"`;
+
+exports[`tact contracts > should decompile jetton-minter-market-stonfi.fc-EQBsBPwxhJH8HakUycSJQI_lpqXDFs6wf9ZoYnKfP6xAxpni > jetton-minter-market-stonfi.fc-with-refs 1`] = `"44de959772ea41a33ca786d58f452fc3"`;
+
+exports[`tact contracts > should decompile jetton-minter-onchain.fc-EQAsOii94eAV4VTE7HZo_9GtElkTdXG7tjUZ8BnV2jDpIQ3J > jetton-minter-onchain.fc-with-refs 1`] = `"3bf18fcdb50aa111a8c35555db73cd8c"`;
+
+exports[`tact contracts > should decompile jetton-minter-v2.fc-EQCIa6e39BCVQRqs2ZUeZZ1vL6-WEE4limkcBbhQ1ecRRdjD > jetton-minter-v2.fc-with-refs 1`] = `"3240cfc072931a0886693e47de36b1a1"`;
+
+exports[`tact contracts > should decompile jetton-wallet.fc-EQAR0dyld9GumsiKHxdbfYyc81qu7KusfFtIrcD3ZF0vx-ba > jetton-wallet.fc-with-refs 1`] = `"226bf94a906808d88766a980e2186968"`;
+
+exports[`tact contracts > should decompile jetton-wallet.fc-EQAY6KnsVXjRd9SlgagYIEbULEbkhw0Zrmvm3JeV0jYGJzXc > jetton-wallet.fc-with-refs 1`] = `"5ec1fb658870e721f77843117400c362"`;
+
+exports[`tact contracts > should decompile jetton-wallet.fc-EQAoDSboPzC7xoZN-6ufGkL7F7SI8mlTlcZE5tjEKRshLlAm > jetton-wallet.fc-with-refs 1`] = `"7978bfd07ef8e953ccd0f7c9c2bbe915"`;
+
+exports[`tact contracts > should decompile jetton-wallet.fc-EQAoysCKiVwu5nWLi8dpHw1BNmgDC9JN2t_-21MhPkzencCS > jetton-wallet.fc-with-refs 1`] = `"fe4c0c1292496f47fc7cb22e0b4140e3"`;
+
+exports[`tact contracts > should decompile jetton-wallet.fc-EQBA7yBSv7bct3ARL79cyY9XGFnAiySdOkeMRsQkN_tCc-XM > jetton-wallet.fc-with-refs 1`] = `"ecff9c942b1f929b66cae86755104fe7"`;
+
+exports[`tact contracts > should decompile jetton-wallet.fc-EQBUuUNXyO872V6avg4I5vlEDVcJk9-MjlusNoE_T6xKT1G5 > jetton-wallet.fc-with-refs 1`] = `"4c4ba06abf3dbb24e086d88755d5bc99"`;
+
+exports[`tact contracts > should decompile jetton-wallet.fc-EQCJLZ31ILJJRt1514EH4m84D-yuSBmS1lSEeHfMZNIvW_tE > jetton-wallet.fc-with-refs 1`] = `"b34a06d12aeb4cf3c2df4e76333bff55"`;
+
+exports[`tact contracts > should decompile jetton-wallet.fc-EQCtMwNFbtEXhfAOYIC_WajRvjFKbKuUZa5lMVOGYp7cr_Ep > jetton-wallet.fc-with-refs 1`] = `"6093389a4f995ae20ba832089df0ced1"`;
+
+exports[`tact contracts > should decompile jetton-wallet.fc-EQD2JwIVC_tlRKv-wud91ad0uTi3U5qP6XuCtgQf7P5FCwyZ > jetton-wallet.fc-with-refs 1`] = `"98250287c43c8017547e6c4b4ab1f53f"`;
+
+exports[`tact contracts > should decompile jetton-wallet.fc-EQD4rZx8aKg62IrzDYyn-1H_XEQvS05e3Oe2YhF-r-kXXHTV > jetton-wallet.fc-with-refs 1`] = `"2a375066cfe4f6108204d75999f35b80"`;
+
+exports[`tact contracts > should decompile jetton-wallet.fc-EQD9rqlfg7kYIOsoscLHUuMNNzBszjKySyPZdDo__ZKWQMp4 > jetton-wallet.fc-with-refs 1`] = `"d58713578ebb33b46381e514937613f3"`;
+
+exports[`tact contracts > should decompile jetton-wallet.fc-EQDEEUahAMHsdNwwpKd5dUrNtiQRwf9_SKCD17Q1YSAAXHdj > jetton-wallet.fc-with-refs 1`] = `"bc5cff79562191499adf03fb8c906437"`;
+
+exports[`tact contracts > should decompile jetton-wallet.fc-EQDIucLqL_sZRZx6kiGkZZdvTxRjPnxhKrduSSANK0yH0jgI > jetton-wallet.fc-with-refs 1`] = `"123d6425c56ef59b5bf84d0fe2751cee"`;
+
+exports[`tact contracts > should decompile librarian.func-EQAkG89bnBfKwsUp8ZzqCJM-DeKxwowl_M7uRan7tbMlMGOJ > librarian.func-with-refs 1`] = `"b42882527380e7fe86175f1cdedd29de"`;
+
+exports[`tact contracts > should decompile likes.fc-EQC-N3NIGkS1nY8BWWNGKPxKJf7aXAj20WJ4qaBBEaPA4gRM > likes.fc-with-refs 1`] = `"4f43a16f18de76182982bc17e59a10a4"`;
+
+exports[`tact contracts > should decompile loan_v1.fc-EQBVaVuMLcrXeODhcPU8J1hNXuy0Y0yasiJChN4m6__pNRx5 > loan_v1.fc-with-refs 1`] = `"d1b46bfc4ddcaf5d2510ff1766c91661"`;
+
+exports[`tact contracts > should decompile lock_minter.fc-EQAV-PKQCnGMiF2AGU2VGyyW1WMtAbSfakZV6vCmQ-jg2D_A > lock_minter.fc-with-refs 1`] = `"cee4b88c066d9486a938aee6a1a3981f"`;
+
+exports[`tact contracts > should decompile lock_minter.fc-EQB-3ue2xoTMaGYQ1mhJmuuJGTVfCTI9y9N7C6zsQCDGA-3t > lock_minter.fc-with-refs 1`] = `"5cf5868757197bc6f56c399e02bd1a36"`;
+
+exports[`tact contracts > should decompile lock_minter.fc-EQBa5jr86osI_NRgJTG5GUtxid6_XUAyq1fDuVq3ZqWH8l_K > lock_minter.fc-with-refs 1`] = `"989a7597356e4b2473747b2d1f7e4830"`;
+
+exports[`tact contracts > should decompile lottery_contract.fc-EQAqLHxYEHrnn6WAtrlj1Z8PsnQyn6YV9YWDcor2X4RANDOM > lottery_contract.fc-with-refs 1`] = `"6f3228eb12e7d2cf64f6175a476793e7"`;
+
+exports[`tact contracts > should decompile lottery_contract.fc-EQAqLHxYEHrnn6WAtrlj1Z8PsnQyn6YV9YWDcor2X4RANDOM > lottery_contract.fc-with-refs 2`] = `"6f3228eb12e7d2cf64f6175a476793e7"`;
+
+exports[`tact contracts > should decompile main.fc-EQA3K4M4HNflsy1OS8obavH27grfyJmLLSOxuO3A_7iisidn > main.fc-with-refs 1`] = `"8eb1fe67380834981cb06d9d5ddacb9a"`;
+
+exports[`tact contracts > should decompile main.fc-EQABnFHV5WMEBiLoSHUqwFiriX-YgTnwUf5MKDi_nO_6w2hK > main.fc-with-refs 1`] = `"c4f30764fca30f102ea17d5d33637f3d"`;
+
+exports[`tact contracts > should decompile main.fc-EQAF246ek7KQLJXfKBpuf7wy9WzyWm30Oa4sIo8CPUI2vKvk > main.fc-with-refs 1`] = `"678d74f5af075dff0e5294c6fc3918cf"`;
+
+exports[`tact contracts > should decompile main.fc-EQAKhCtBuLwz-gplIMo3UaMHncc_hzWfjAtBviJc_1tymdGq > main.fc-with-refs 1`] = `"0c832f8afa0f5d8ca66475949a402ac3"`;
+
+exports[`tact contracts > should decompile main.fc-EQAUGRXsUrZGRJC5esqp1YbIqjyJzKEYa9t13sDfuicYvsJa > main.fc-with-refs 1`] = `"4bdf8519e84687a166150fa7c80e2942"`;
+
+exports[`tact contracts > should decompile main.fc-EQAVBkV0biW-VIbrOy9dmLRMazJGl8SNSV0Fn5b8nT7DaMIn > main.fc-with-refs 1`] = `"f3e71b586712ffa712b012a3c074e374"`;
+
+exports[`tact contracts > should decompile main.fc-EQAXByU5SqVhNvvSfQzjHYqY4PiucqTSN5td3oPiEaLV-p0- > main.fc-with-refs 1`] = `"9506b646fe4963042782b0fbcec34abd"`;
+
+exports[`tact contracts > should decompile main.fc-EQAcvltd9ePulrxLq_hp1IzqfPxWZOnfDESOYlcKR1SUaF9L > main.fc-with-refs 1`] = `"7efaa743a3b6bd51a2c13691b8415a6f"`;
+
+exports[`tact contracts > should decompile main.fc-EQAd4dzvIlirVl3r5bXTJz1EldUtwNMJq0YWaoiKUuopMmSj > main.fc-with-refs 1`] = `"60c90d59c585e1dd7e0cc9cef13c9a75"`;
+
+exports[`tact contracts > should decompile main.fc-EQAesrvqPYwNQv9_1g8CZMhmyTS7_3J1Jsp1nnN0yuDBZrEH > main.fc-with-refs 1`] = `"3d2c7ebf1530816eb4314daea3c939f0"`;
+
+exports[`tact contracts > should decompile main.fc-EQAojd8QmWQjVZ2eknLjJoTUzeRlCFh-1g9hns4lsP4nxAhh > main.fc-with-refs 1`] = `"18c0278c31f2595ac3041f609673cc79"`;
+
+exports[`tact contracts > should decompile main.fc-EQB1ejCmq9IMRo46kqgbpW47fpF3-m0-uExC9J9PRTMM-D9j > main.fc-with-refs 1`] = `"6b7bcdd6fcb4390bc985986dbd9dc42e"`;
+
+exports[`tact contracts > should decompile main.fc-EQBkdPw9lFR_iIUrYtOznJPobORBB9up5V4QlBFkhM0bo8CL > main.fc-with-refs 1`] = `"300fa6ee9dcb3dae17ddee4f750c5490"`;
+
+exports[`tact contracts > should decompile main.fc-EQCBfrUlk0NYRFyVM_S_GXwEcoUcMDQ-Yt-BMNsQrnCNp6nj > main.fc-with-refs 1`] = `"aea6d461320312cdf998871ff9b4b8c7"`;
+
+exports[`tact contracts > should decompile main.fc-EQCiXsKfz-UonJaRz1m8iDKgClfLYlAuBBFMzev6ba49rm7t > main.fc-with-refs 1`] = `"9d586eb4a52c4aa4bf17520e296cdb7f"`;
+
+exports[`tact contracts > should decompile main.fc-EQCt-aVKCK6xRhuql3rTm6_ayfgD1Z3NJljcb8GgwL7nn_4H > main.fc-with-refs 1`] = `"12b396c0602c38d20b7280981bad3140"`;
+
+exports[`tact contracts > should decompile main.fc-EQDYTIk6BrdaAuBtLgW5D0wg1pS-1aoEde1AoPqiVJHSrHjp > main.fc-with-refs 1`] = `"bb7e86aea3b75a798f1b95a8a619e3d7"`;
+
+exports[`tact contracts > should decompile main.fc-EQDcEEATD7ZeXl5j1zHcQyh6yOBoKwFoKW7zML35Mm7GJbLG > main.fc-with-refs 1`] = `"5839e420d4f6f0ce517db935066da413"`;
+
+exports[`tact contracts > should decompile main.fc-EQDkv_zv38gu_-ekZjI-0XT3rir0GVDjQ7NxJr4Ntl-szFuG > main.fc-with-refs 1`] = `"09a32f855b6b6ecec53d08a2bba5006f"`;
+
+exports[`tact contracts > should decompile main.fc-EQDrthHeDJf0TttuZrIoT1L3AjBUThdDEGIhbHO7chwL-XSS > main.fc-with-refs 1`] = `"227e5589ed132a2c0d7ed10a3a0dbf96"`;
+
+exports[`tact contracts > should decompile master.fc-EQBcyu5eaGNS1V_7vt63pXhN-rocuEdwG24_k0XJphY0pt1Z > master.fc-with-refs 1`] = `"4852cbf2f5b6e6ced5a91b5a8a3c46d0"`;
+
+exports[`tact contracts > should decompile master_contract.fc-EQBzkOiLAV5M6SnIo9Zthp-lXqNXaZnhrJDRbdPcz8i6Fu98 > master_contract.fc-with-refs 1`] = `"aa970505fc2b952c4466d2688590c545"`;
+
+exports[`tact contracts > should decompile mintable_collection_contract.fc-EQDRBNqjGLiiDyevYHB0fpiWtQQnteTU8azLsxJ-lR3EKJkJ > mintable_collection_contract.fc-with-refs 1`] = `"e4566c59d6564c7c437abb598fdd92a8"`;
+
+exports[`tact contracts > should decompile minter.fc-EQCHaKyXn25CJjxotm-8bM5ZQsp1tDcIesirGX7G2jRNyNZ1 > minter.fc-with-refs 1`] = `"ea1ceed9112dc4a8692b706c45925f89"`;
+
+exports[`tact contracts > should decompile minter.func-EQBaD_JpkDRjGH6fY_ALFx8mn3Log4coUPJ2v_sj70x5jEwG > minter.func-with-refs 1`] = `"6c9d456b4ded56a3754aafbe1b088812"`;
+
+exports[`tact contracts > should decompile minute.fc-EQA3HIbGQJMKCZrCPDm5I8gVILIWWFA99K9gswatvC4-gs44 > minute.fc-with-refs 1`] = `"ca53240bcc92f16b28e9a7e44b2b62c4"`;
+
+exports[`tact contracts > should decompile nft_collection.fc-EQA7MNEWjuUqhz6I1G-q1IIfki6t9jPtmFdabAmk1SOjLip7 > nft_collection.fc-with-refs 1`] = `"4c63a5937731c10d6bd8bd77bf2dae0c"`;
+
+exports[`tact contracts > should decompile nft_collection.fc-EQBHyRKGo07NTlNB4TExV9gFi9iO93dfdWlKbd4TNnk9QktH > nft_collection.fc-with-refs 1`] = `"ecf8f9acf009a04945baf9a666bca51c"`;
+
+exports[`tact contracts > should decompile nft_collection.fc-EQDWM_a3zFJ7YwQd3q0uBIaQ9jv0ExKeXn46pc0jd_jsM3i_ > nft_collection.fc-with-refs 1`] = `"1a11650e6f65599f1aa525e2a7312d4a"`;
+
+exports[`tact contracts > should decompile nft_collection_editable.fc-EQCWB1WLs7rDJfYaeVxTZWnwQmrIFzbUcr-us-9aIn1ZNFpq > nft_collection_editable.fc-with-refs 1`] = `"3a2cfdad67e0b08080fbbce61d1edd53"`;
+
+exports[`tact contracts > should decompile nft_collection_editable.fc-EQCgwMwvJY3uo8RSC7GMXHYAbtJCI5ocUzEfcKivaRWw-Jt9 > nft_collection_editable.fc-with-refs 1`] = `"6ab2fde09cda16f7065b28f5094def45"`;
+
+exports[`tact contracts > should decompile nft_item.fc-EQBg_TmGAbKcXATWQUGJQevJVQwe0qk_G4NnbZLGlhJQfn0S > nft_item.fc-with-refs 1`] = `"7ccaa3917678069d18b02224ed31f930"`;
+
+exports[`tact contracts > should decompile nft_item.fc-EQCymKttchxJAmnDT15yxAQsQk3dPpOOSOAN_Uj_hi4unr0B > nft_item.fc-with-refs 1`] = `"e2ec275f973787c2a16fbd62dc9a7132"`;
+
+exports[`tact contracts > should decompile nft-auction-v4r1.func-EQBfi8pXf2WrNsCriLjk2S2WPYlb-L6oTuwtabDOjiDmyl0k > nft-auction-v4r1.func-with-refs 1`] = `"53c581a4420bac1ce09da30298902ee2"`;
+
+exports[`tact contracts > should decompile nft-collection.fc-EQBbAU_aZHzt6VpuNUuqRR8j26mfOoWBzvSlq8tIs5tCZa-I > nft-collection.fc-with-refs 1`] = `"9daac955606b5db74f54559f422f5643"`;
+
+exports[`tact contracts > should decompile nft-collection.fc-EQD_RdO4_LKPHXQTBqfKnFu7O1CsplfqQX2SkyNNurswjr0M > nft-collection.fc-with-refs 1`] = `"64369cf4ef391948056d9de47b48a0d1"`;
+
+exports[`tact contracts > should decompile nft-collection.fc-EQD0pj9t8_JlH8cBuC90Vv1mdfnEXWQ7nOSNplx-iKWCsQ76 > nft-collection.fc-with-refs 1`] = `"825b8108afb43ddca0fd5b8a5cdffe67"`;
+
+exports[`tact contracts > should decompile nft-collection-champions-mark.fc-EQDFtDDQOc8B_CjRybdi0ZJeZtATvfUiKPipovrbtjTZX_vQ > nft-collection-champions-mark.fc-with-refs 1`] = `"e5e9f0480775e747c49d2d9da1e04068"`;
+
+exports[`tact contracts > should decompile nft-collection-editable.fc-EQBD6ZAlcQIZtoO7d5kQAIg2_h3pl--Dnckmwlm2gzOAfXek > nft-collection-editable.fc-with-refs 1`] = `"39ac4ba48c0de80141a5d8ec998f64f9"`;
+
+exports[`tact contracts > should decompile nft-collection-trophy.fc-EQBFNQ_zszJ21cr4pVOpVn0F77SQQsZFIaHbl3lsRF3MzAbS > nft-collection-trophy.fc-with-refs 1`] = `"8a18f39b1870d21a1a84d139bdceedae"`;
+
+exports[`tact contracts > should decompile nft-collection-trophy.fc-EQDoC09LI1TisC6Kyp_uchirJe6nMHolaNd0BxCYFKTbnPki > nft-collection-trophy.fc-with-refs 1`] = `"3f02b1805079d1ade199a21d66ad5daf"`;
+
+exports[`tact contracts > should decompile nft-fixprice-sale-v3r3.fc-EQCYMGskWjluljswIN6hQDtSj6ImoXIcX-0mdGm4NatBkpmJ > nft-fixprice-sale-v3r3.fc-with-refs 1`] = `"7bee7757c894a99d68503658fac6b5de"`;
+
+exports[`tact contracts > should decompile nft-fixprice-sale-v4r1.fc-EQAOKQ6pWCRlzgYmmNKAIPRUGNeQL5yaoiGiyuNou9jTKf-Q > nft-fixprice-sale-v4r1.fc-with-refs 1`] = `"090383b4e2adddceb2c4d17013eb228f"`;
+
+exports[`tact contracts > should decompile nft-item.fc-EQAJOOUEMWDMtv9qrFW_p0i07cYnJ9Y2tk6g8-zaGyq6TmgG > nft-item.fc-with-refs 1`] = `"209e8d13b3e06dccffa6f8a2bc6a2840"`;
+
+exports[`tact contracts > should decompile nft-item.fc-EQArk1N94bDrIxSVB_CRxDFmfFJDvnWW7NHTUxZtMe2GprIt > nft-item.fc-with-refs 1`] = `"7a61f76f5e3c59cdf029d9f1cd97db54"`;
+
+exports[`tact contracts > should decompile nft-item.fc-EQArrtNZNmGtWUlSr2oaYZVGjIPi_Crmc7A9tgxe-ZKCOz8R > nft-item.fc-with-refs 1`] = `"9ec233aafe05aa5a514e746aafdce832"`;
+
+exports[`tact contracts > should decompile nft-item.fc-EQBHnv8Bjm3mw06L0oeJOXy5LXt8hR-xVV5uqYe__Ti3_QcI > nft-item.fc-with-refs 1`] = `"24d4c0e28a8a02be4fbbc26c634cb988"`;
+
+exports[`tact contracts > should decompile nft-item.fc-EQCYIHo_WLsE5OR7CJxYX4JKwgADDt6LmdHSSs4VYa1FCV5R > nft-item.fc-with-refs 1`] = `"9c9279ec82b27cc11d76317eb0617128"`;
+
+exports[`tact contracts > should decompile okball_daily_tx.fc-EQALZVI80uC461AkK9TY4665IapPhIRUR23H1HPfA9D6llwf > okball_daily_tx.fc-with-refs 1`] = `"5c7e40fc237e8d440d4c0f6576235bd2"`;
+
+exports[`tact contracts > should decompile p_a_w_s.fc-EQBcfRn-iOZ1IE9Ko23_H97winbvizYQBY91ppjYSCtbJUsD > p_a_w_s.fc-with-refs 1`] = `"343e7594b9542a282753b3aa3550b89a"`;
+
+exports[`tact contracts > should decompile pack.fc-EQCrD7VSnXqCxeLq2ri2uld72FBNgj8Pc4Or-RR_o-EFAHXa > pack.fc-with-refs 1`] = `"53680c7bfe3961581c5cfca6d5858bf1"`;
+
+exports[`tact contracts > should decompile payment_processor2copy.fc-EQBiyo7NYtNmPNvykhG25i8QPOPAMjYnOwtu7AHEvGIqTyKl > payment_processor2copy.fc-with-refs 1`] = `"d2ed685d201f6f631cc4aa6da3ae5cc7"`;
+
+exports[`tact contracts > should decompile payment_processorcopy.fc-EQAKr-sZd7Enk9rJkSSLh-yFo4bTSFOm5_eiT0lUWsKT7SfW > payment_processorcopy.fc-with-refs 1`] = `"a953e78e5e2cf945473a5ceca0d192f6"`;
+
+exports[`tact contracts > should decompile pool.func-EQCsJuz0ilim-brei8rjwx9KMg3pUVD9Iviyxvzt7ge3Ik46 > pool.func-with-refs 1`] = `"c1aa12802fceca6727d4bb6300f70cc0"`;
+
+exports[`tact contracts > should decompile presale_contract.fc-EQBYPwEbOHStvlOBLh1arytUGGeNeZZQL6r17IBer6Akuqml > presale_contract.fc-with-refs 1`] = `"3db1a922efc556daf25d959d347f7691"`;
+
+exports[`tact contracts > should decompile proxy_ton.func-EQCgWc1tYw9v6M-VW8TII6GSUzzfIDaMO2PZ2kzxW8Vw-5um > proxy_ton.func-with-refs 1`] = `"a1efedf83c8cbf65bacf6feeba8ff3c3"`;
+
+exports[`tact contracts > should decompile racing.func-EQCtL0KTgXVjWxWLBE4f61aB4dh_LAH8_PuZ7rlDYKK3D4xM > racing.func-with-refs 1`] = `"6cf5535b1bf680e7fc865b92bfb362dc"`;
+
+exports[`tact contracts > should decompile rango-jetton-calc.fc-EQB0ocxCFx85JSwXFZAYhhbJ19Dw5ja1gDvBOyfoNIJT96Xw > rango-jetton-calc.fc-with-refs 1`] = `"41def68bcbf91d0a3d01d033e7c2c6ad"`;
+
+exports[`tact contracts > should decompile rango-jetton-calc.fc-EQC1lOuLFnuJLHU9F9h_4qwIifJDrGr7A5UA7MUlgwQHvMi3 > rango-jetton-calc.fc-with-refs 1`] = `"5280bc29a2fb31f06edb5116623ad0e2"`;
+
+exports[`tact contracts > should decompile reward_vault.fc-EQAp8Ky0paJAAQTpfXefVEiTBGow6gp4EDeBvIVXOEJHtGbC > reward_vault.fc-with-refs 1`] = `"c8a8222e0f528cae89a0159f1d278d07"`;
+
+exports[`tact contracts > should decompile round_pool.fc-EQCSWkjMis9dBBjS5pKDhHFGv1qUTBZlMh6WDr0jZDXlX1u0 > round_pool.fc-with-refs 1`] = `"e9e680443959ab585aa48fc5b730ca3d"`;
+
+exports[`tact contracts > should decompile sbt.fc-EQDgW5H1damYwXqKmsgA6lvdP-4bGDL_Itt0DlGOvDw6UgUu > sbt.fc-with-refs 1`] = `"aaa4212026eb2866d8cca33cc8e30a3a"`;
+
+exports[`tact contracts > should decompile single.fc-EQDgC-k-SduRTVdWnPFxAp-EUYAd8XHYC-mZMYSF_kfdbZgQ > single.fc-with-refs 1`] = `"a7f35fb65dd19bf55817a1ff50cb54f1"`;
+
+exports[`tact contracts > should decompile single-nominator-code.fc-Ef8omjmKQekLfIIzo0R1MnL_eRtBzas_0Iom1ylAc4zH9hHc > single-nominator-code.fc-with-refs 1`] = `"a54c589891ea015d0c4488dfbe291168"`;
+
+exports[`tact contracts > should decompile sources-registry.fc-EQD-BJSVUJviud_Qv7Ymfd3qzXdrmV525e3YDzWQoHIAiInL > sources-registry.fc-with-refs 1`] = `"65fba22605c0fc5fbbdcf1e08c949de8"`;
+
+exports[`tact contracts > should decompile sponge_fun_jetton_airdrop.fc-EQCBh5eBs7I7vu3dhOvRWGTuToOprvZSi6agfvQnhePke72i > sponge_fun_jetton_airdrop.fc-with-refs 1`] = `"1079dc947201172e712ea9fa82c407c8"`;
+
+exports[`tact contracts > should decompile sponge_fun_jetton_minter.fc-EQAg9J1EYrCn4fckJGXBZcKSEnEydQv06Q7GalZbmXY0TSpc > sponge_fun_jetton_minter.fc-with-refs 1`] = `"c8f6c338c252032f6c4c89060594fc7f"`;
+
+exports[`tact contracts > should decompile sponge_fun_jetton_public_sale.fc-EQDZqhbgv-iPXKz8HdyA0ku_lVAWZ1eIotNUHeOGg6KKfuqg > sponge_fun_jetton_public_sale.fc-with-refs 1`] = `"17a533013c99bd6c56dcdc1e98f3792e"`;
+
+exports[`tact contracts > should decompile stdlib.fc-EQCD8D214ig5etoWsuAdzLpvYoc64w2a1ZQUaPGZrU__0fge > stdlib.fc-with-refs 1`] = `"cd14b96906389aa37cb584d5f30c29e1"`;
+
+exports[`tact contracts > should decompile subscription.fc-EQDm2A3MmGB_qurGIDQi3iNyCFj09SDn1nKPOs9NqJFLjj3- > subscription.fc-with-refs 1`] = `"76170340007d9e635bb23c22e9f96aa7"`;
+
+exports[`tact contracts > should decompile subscriptionMonthPrice.fc-EQActx2gKXRwugAzhCoxNjPL9Ks0NoyF6aM6SfEurmmCmeah > subscriptionMonthPrice.fc-with-refs 1`] = `"dc32065585908cb35a989beb45af0654"`;
+
+exports[`tact contracts > should decompile swapJettonDedust.fc-EQDVRwFxu4meCV9jFjSI9A99ZlM4h1ZVTqsxJ-GBA1qVRG1K > swapJettonDedust.fc-with-refs 1`] = `"7eb9e20321da1e44918a43a613089c23"`;
+
+exports[`tact contracts > should decompile test.fc-EQDTQqIVYDBZ7ulibDewtXYCwONgPFe0JeWat3VSedVN0kRV > test.fc-with-refs 1`] = `"2161e3f86cdda19b70831bd5976c1e8d"`;
+
+exports[`tact contracts > should decompile token_contract.fc-EQDN0lDBCIc-ykOjFDgfX94bHKkqk4RCRrukQvWp48-7A61F > token_contract.fc-with-refs 1`] = `"febb39a9de3ded742f62c325bb0cde58"`;
+
+exports[`tact contracts > should decompile token_contract.fc-EQDt3eHzpkZo8jfCcEDxddFdsHSGHFvL3tZeoNpOCb2w0r-f > token_contract.fc-with-refs 1`] = `"5a3b785c5f97119c5a1b07ddd9ffdd43"`;
+
+exports[`tact contracts > should decompile token_withdraw.fc-EQCRLYUbDrs28BZSb3nPgnJLRejUv-affM-MPdag84Q9-4td > token_withdraw.fc-with-refs 1`] = `"e66cc0b1bfc74daea63d7c3d4c4d8144"`;
+
+exports[`tact contracts > should decompile token_withdraw.fc-EQCvsWIFeOn8WOadxjxE_gEOQp_EoKfvwKCme0gFXuibcW3u > token_withdraw.fc-with-refs 1`] = `"362d84eb87bc0490dda298da246a28bb"`;
+
+exports[`tact contracts > should decompile token_withdraw.fc-EQDbfvX0Wf8v_mcE0zxGXZsrNM6BiNSNp3aZK_COpuOkwxPo > token_withdraw.fc-with-refs 1`] = `"46ba6d3a45448dcf3794f8bc74959e37"`;
+
+exports[`tact contracts > should decompile ton_flip.fc-EQAevalgmJpJis4oqJOJfObpDT1bo5M8crEFILHWKOFxFlip > ton_flip.fc-with-refs 1`] = `"9ab21856fcf7b0c881e7dbce63c81f96"`;
+
+exports[`tact contracts > should decompile ton_flip.fc-EQAevalgmJpJis4oqJOJfObpDT1bo5M8crEFILHWKOFxFlip > ton_flip.fc-with-refs 2`] = `"9ab21856fcf7b0c881e7dbce63c81f96"`;
+
+exports[`tact contracts > should decompile ton_flip.fc-EQAevalgmJpJis4oqJOJfObpDT1bo5M8crEFILHWKOFxFlip > ton_flip.fc-with-refs 3`] = `"9ab21856fcf7b0c881e7dbce63c81f96"`;
+
+exports[`tact contracts > should decompile ton_flip.fc-EQAevalgmJpJis4oqJOJfObpDT1bo5M8crEFILHWKOFxFlip > ton_flip.fc-with-refs 4`] = `"9ab21856fcf7b0c881e7dbce63c81f96"`;
+
+exports[`tact contracts > should decompile ton_flip.fc-EQAevalgmJpJis4oqJOJfObpDT1bo5M8crEFILHWKOFxFlip > ton_flip.fc-with-refs 5`] = `"9ab21856fcf7b0c881e7dbce63c81f96"`;
+
+exports[`tact contracts > should decompile ton_flip.fc-EQAevalgmJpJis4oqJOJfObpDT1bo5M8crEFILHWKOFxFlip > ton_flip.fc-with-refs 6`] = `"9ab21856fcf7b0c881e7dbce63c81f96"`;
+
+exports[`tact contracts > should decompile ton_flip.fc-EQAevalgmJpJis4oqJOJfObpDT1bo5M8crEFILHWKOFxFlip > ton_flip.fc-with-refs 7`] = `"9ab21856fcf7b0c881e7dbce63c81f96"`;
+
+exports[`tact contracts > should decompile ton_flip.fc-EQAevalgmJpJis4oqJOJfObpDT1bo5M8crEFILHWKOFxFlip > ton_flip.fc-with-refs 8`] = `"9ab21856fcf7b0c881e7dbce63c81f96"`;
+
+exports[`tact contracts > should decompile ton_flip.fc-EQAevalgmJpJis4oqJOJfObpDT1bo5M8crEFILHWKOFxFlip > ton_flip.fc-with-refs 9`] = `"9ab21856fcf7b0c881e7dbce63c81f96"`;
+
+exports[`tact contracts > should decompile ton_flip.fc-EQAevalgmJpJis4oqJOJfObpDT1bo5M8crEFILHWKOFxFlip > ton_flip.fc-with-refs 10`] = `"9ab21856fcf7b0c881e7dbce63c81f96"`;
+
+exports[`tact contracts > should decompile ton_flip.fc-EQAevalgmJpJis4oqJOJfObpDT1bo5M8crEFILHWKOFxFlip > ton_flip.fc-with-refs 11`] = `"9ab21856fcf7b0c881e7dbce63c81f96"`;
+
+exports[`tact contracts > should decompile ton_flip.fc-EQAevalgmJpJis4oqJOJfObpDT1bo5M8crEFILHWKOFxFlip > ton_flip.fc-with-refs 12`] = `"9ab21856fcf7b0c881e7dbce63c81f96"`;
+
+exports[`tact contracts > should decompile ton_flip.fc-EQAevalgmJpJis4oqJOJfObpDT1bo5M8crEFILHWKOFxFlip > ton_flip.fc-with-refs 13`] = `"9ab21856fcf7b0c881e7dbce63c81f96"`;
+
+exports[`tact contracts > should decompile ton_flip.fc-EQAevalgmJpJis4oqJOJfObpDT1bo5M8crEFILHWKOFxFlip > ton_flip.fc-with-refs 14`] = `"9ab21856fcf7b0c881e7dbce63c81f96"`;
+
+exports[`tact contracts > should decompile ton_flip_proxy.fc-Ef9-1NxwMc01OCGEOL1CTU1pDaxOGV4VR-cwXMTBD5AeFLIP > ton_flip_proxy.fc-with-refs 1`] = `"9a4b01567bc76283fd0bd091b91d7f5e"`;
+
+exports[`tact contracts > should decompile ton_test.fc-EQBj_k4XhlGxz00UbMgc5SDwKZjqM_9uMlasoepXzM1AKmnr > ton_test.fc-with-refs 1`] = `"3e63d2a229465a5159eb11ea492d719c"`;
+
+exports[`tact contracts > should decompile usdr_master.fc-EQBaE7lWFLt2mag9-LBhwdMqIQRT3s5PR5mik4lBUNQYvNRi > usdr_master.fc-with-refs 1`] = `"c40a3f709a5edab0102bbda473417ff2"`;
+
+exports[`tact contracts > should decompile usdr_master.fc-EQBhXUYARpFIye97Wbv05koCiHiXjzb95T5EPhPaIx1nyorI > usdr_master.fc-with-refs 1`] = `"c338c02b08eacd6cf9fc791b7784fe24"`;
+
+exports[`tact contracts > should decompile usdr_master.fc-EQDnWyBc4hobEF21ofYjofILB5FybBHCXLk0s7Suw9r4Rmln > usdr_master.fc-with-refs 1`] = `"ee6284441800721a993e0f23ac458285"`;
+
+exports[`tact contracts > should decompile usdr_wallet.fc-EQBWnJczDmQOGxCMwKoiMwSLaQxtwh_g3NNwbr_IdFlYBmqI > usdr_wallet.fc-with-refs 1`] = `"297ef91c986b1d6223ae60dea8a7f360"`;
+
+exports[`tact contracts > should decompile user.fc-EQDc1v35XBZ3P1MJ5GFjdrmtz3bwoHenC0xIUW8-8EAVo7vS > user.fc-with-refs 1`] = `"eb605e8d6e455d7d677f9e9c0e1b9fdd"`;
+
+exports[`tact contracts > should decompile verifier_AifoxJetton.abi-EQBoW3ctPGUeXUyDEjwnNEmq5bvugSz3jBv4nuHhjGZFFEtd > verifier_AifoxJetton.abi-with-refs 1`] = `"f6d704fcb59f627d2d1449fbe05ee640"`;
+
+exports[`tact contracts > should decompile verifier_Airdropsg.abi-EQBcDQW5qpfyp8FaM3cjIcfcAkSqM3Ged21TTWbuLVo6mIUY > verifier_Airdropsg.abi-with-refs 1`] = `"8e7c0b5c6fa4e26c999d57979744cf8b"`;
+
+exports[`tact contracts > should decompile verifier_AlpaTonPlinko.abi-EQD5qOD4Ye7Q8cA6wN9IL6pwzxekENpwv53wWurZIsCrsnxw > verifier_AlpaTonPlinko.abi-with-refs 1`] = `"ae917169c0621c0f506decd65df125f8"`;
+
+exports[`tact contracts > should decompile verifier_AshOnTech.abi-EQD3cFBrJsdAOLpONeYYFby6TomlUu0TO8kk3aItbjXE7OGO > verifier_AshOnTech.abi-with-refs 1`] = `"4ba97ac48f84f18605fb383c92c6d248"`;
+
+exports[`tact contracts > should decompile verifier_Balus.abi-EQDswKn606G8kwS8RuUJg9baJbgAhixb6bYJC6VmIPU873uq > verifier_Balus.abi-with-refs 1`] = `"574d1f2f83e4aa2b1244fd9c9bd67ea1"`;
+
+exports[`tact contracts > should decompile verifier_BanksCrowdSaleV3.abi-EQDe0iw9l9-pyNmoS5eKnCc0dOTvKeW99CHw1P2mPe119nsZ > verifier_BanksCrowdSaleV3.abi-with-refs 1`] = `"2c8ef7c261a6ea7c9a0cd6a68754cb37"`;
+
+exports[`tact contracts > should decompile verifier_BidTest.abi-EQDhbPQ_u2MmwnAtBPPG170ko61PDdKfT6lZmduNgQjU0GZ6 > verifier_BidTest.abi-with-refs 1`] = `"860e82fd3007f27444f05a015c587ee2"`;
+
+exports[`tact contracts > should decompile verifier_BiddingPlatform.abi-EQDbM1IQfeW9-ylz7LLdOU7ftYVbLNqdPnHXhBL9w-wIf6Dp > verifier_BiddingPlatform.abi-with-refs 1`] = `"3b457aadeb22b2f30e1c7e9810c45fe6"`;
+
+exports[`tact contracts > should decompile verifier_BidenDebate.abi-EQA5NXP83LoKEV5WusGtZRDte1UE3jmaSwldKm07EeuoAzo5 > verifier_BidenDebate.abi-with-refs 1`] = `"f7d00647b340a95aa65bbb87646dc351"`;
+
+exports[`tact contracts > should decompile verifier_Bigbait.abi-EQAOzCHBRojSHSN68h4JnUAdeQW768tStjaTP4ysR66u9mv6 > verifier_Bigbait.abi-with-refs 1`] = `"8eef3e26b8acddd55f356ed93679826c"`;
+
+exports[`tact contracts > should decompile verifier_BondingContract.abi-EQB2XaZ06W6CUPyzjvIUpyVb1fA74VNrKyTXLzXLhs0U90a- > verifier_BondingContract.abi-with-refs 1`] = `"6f98d75abf297ada541558718ba47ff8"`;
+
+exports[`tact contracts > should decompile verifier_BondingContract.abi-EQCLQCnhWxdPV4XeCzVsaqb8NAgyq6pEWZT1y_q8LBkTvlA9 > verifier_BondingContract.abi-with-refs 1`] = `"aa590903ec1dea648b5fb532d000e5e1"`;
+
+exports[`tact contracts > should decompile verifier_BondingContract.abi-EQDOdYyidmwsO-2v4nnn3WrgTXiMA7GqX5c7uisV6roxmlXj > verifier_BondingContract.abi-with-refs 1`] = `"fa2beb718676050d913b1da921c5f43d"`;
+
+exports[`tact contracts > should decompile verifier_BountyBayCheckIn.abi-EQAzIUFN8MJ3cGQiKBqHr-COHAz0D7fNnCD2kHneJxmK9gPd > verifier_BountyBayCheckIn.abi-with-refs 1`] = `"be01b1c1aa905f6bdca436af0df5e6e3"`;
+
+exports[`tact contracts > should decompile verifier_COPA.abi-EQD5x8gz3IhTLR2-DGkmL0ehWk7QlIkOTIGu3uhDuL4sbDGb > verifier_COPA.abi-with-refs 1`] = `"d74c3f7afc02a3aa3a9879f6e50eec24"`;
+
+exports[`tact contracts > should decompile verifier_CatTestContract.abi-EQANgw9ZMaxrl87cn6D4cuaQDaFlpIUNUsc9bvLtuiC4fHrf > verifier_CatTestContract.abi-with-refs 1`] = `"950bf767f083fba5df9929637fa47de6"`;
+
+exports[`tact contracts > should decompile verifier_CheckIn.abi-EQBav_JnvNbWLAtJ96p-45-G0dOf8GbpSOk0JRPHuT74fIsB > verifier_CheckIn.abi-with-refs 1`] = `"935e9628c03c3fad685a9464e2c32ef0"`;
+
+exports[`tact contracts > should decompile verifier_CheckInContract.abi-EQDjJzXGVdiYruOtiVqjMH6eCjzJMDRxaM3cryx5q4Bk32z9 > verifier_CheckInContract.abi-with-refs 1`] = `"33fe60b61115ce58e0372901662bf614"`;
+
+exports[`tact contracts > should decompile verifier_ClaimJetton.abi-EQCf4u3WOMWQ65qDRM5sa7hbghCZv-iHvpny3D8ViIW-urBZ > verifier_ClaimJetton.abi-with-refs 1`] = `"e2afbf6133d3e530189ff73c11d397df"`;
+
+exports[`tact contracts > should decompile verifier_ClaimUXUYContract.abi-EQA8ZOn4pS2hte98yxcBGlh6P-eFbdNmoWCucidylw-cWgD8 > verifier_ClaimUXUYContract.abi-with-refs 1`] = `"a857e83020ff2594e3c5097198b8c05c"`;
+
+exports[`tact contracts > should decompile verifier_ClaimUXUYContract.abi-EQAYNJOQTA9FqZF4QGxzcPEvvMWkP76snfI7gATCur_86psC > verifier_ClaimUXUYContract.abi-with-refs 1`] = `"5eb39a08d92cc3703cc6916c4faf62f6"`;
+
+exports[`tact contracts > should decompile verifier_CoinWallet.abi-EQAWdEojxpzObWR1lGUwt2G31rURDtEsmd2jqNLitZ7V5bZe > verifier_CoinWallet.abi-with-refs 1`] = `"b535110e642f1a41317085de50c6e0ec"`;
+
+exports[`tact contracts > should decompile verifier_CoinWallet.abi-EQAWdEojxpzObWR1lGUwt2G31rURDtEsmd2jqNLitZ7V5bZe > verifier_CoinWallet.abi-with-refs 2`] = `"b535110e642f1a41317085de50c6e0ec"`;
+
+exports[`tact contracts > should decompile verifier_CoinWallet.abi-EQAaNLxlY8IvZjilZfbZqnogHqjwgDh83PUrRRw0sVqI5EN4 > verifier_CoinWallet.abi-with-refs 1`] = `"045240e2d313de7605d6972e54e995ac"`;
+
+exports[`tact contracts > should decompile verifier_Counter.abi-EQBjZf-UZaz6YQTkHJ3EBxJpgh6GROxoecRm3vVNcncwHNy9 > verifier_Counter.abi-with-refs 1`] = `"ae60fe28401de3d64c04809048104e90"`;
+
+exports[`tact contracts > should decompile verifier_Counter.abi-EQDeiA-hBMrNpo7mt1p79xAwc_MhetS9CLHIJhd-NmEtuQTh > verifier_Counter.abi-with-refs 1`] = `"73f08ab924b5afc116dc89011244522c"`;
+
+exports[`tact contracts > should decompile verifier_CurrencyConverter.abi-EQCI0pGBI80iBhT7Ba_1qMLLpdQf_jCeF5RPx6dld0g2CuJf > verifier_CurrencyConverter.abi-with-refs 1`] = `"ee5f0722c18cb4cb7d65d0f0d4917ff1"`;
+
+exports[`tact contracts > should decompile verifier_CurrencyConverter.abi-EQDht25Q3OEzSR-0l_NPUjMmwRLfpDwPnAGLF1agwGLEoxjX > verifier_CurrencyConverter.abi-with-refs 1`] = `"a145b44d942bfc567f2f4403a24c640a"`;
+
+exports[`tact contracts > should decompile verifier_DemoContract.abi-EQCEcsyKQhGK2ofX4FIVpOTPd9DcC2HqzFUIpYrXo5kOyo61 > verifier_DemoContract.abi-with-refs 1`] = `"95e7487e6deabf57b9471942e7b65d8d"`;
+
+exports[`tact contracts > should decompile verifier_DexRouter.abi-EQDi7ubyJJMpz97Z9mFOP7C36tiakwqwOwPXDef1iWPV9D41 > verifier_DexRouter.abi-with-refs 1`] = `"7b45919024459cc6d61bcae6ab776fbc"`;
+
+exports[`tact contracts > should decompile verifier_DiceGame.abi-EQAPYFVvV0t2qBWpsH7RF6Xqfu7hFwe2_QB-LmNeksxCuofk > verifier_DiceGame.abi-with-refs 1`] = `"febc54b2be9fc81c1186084ac667052f"`;
+
+exports[`tact contracts > should decompile verifier_Distributor.abi-EQAQRmE0QE5EldQUv499oqh0PadyPQDX7Ub86VljS76ZdN5E > verifier_Distributor.abi-with-refs 1`] = `"310f33742a67efa6712d6bbf099cc2ef"`;
+
+exports[`tact contracts > should decompile verifier_EmmetBridge.abi-EQB0FqgZVPMiVOF109a5FbGwoA1g0z7ieV0cd3I1ROz80wjP > verifier_EmmetBridge.abi-with-refs 1`] = `"f933910700204ff015485b6cb3b7ff81"`;
+
+exports[`tact contracts > should decompile verifier_FinchCoin.abi-EQBEpV1AP1bPJzOIinJSK0CQmplxCs-4oxWM_jPCEo9SP1GT > verifier_FinchCoin.abi-with-refs 1`] = `"54c13c77a522dd86a9aa9861cf430a28"`;
+
+exports[`tact contracts > should decompile verifier_GDTapBooster.abi-EQA1453Ca9mh06f8cu4pMzK1Z-s9PtuEcwoRycFtR0ubVosU > verifier_GDTapBooster.abi-with-refs 1`] = `"481cfd40b89c79d237e341dfb4dd3f13"`;
+
+exports[`tact contracts > should decompile verifier_GDTapBooster.abi-EQAL_9jD_ykuFo6WeWXB70WuqzFHUS0mZHNThQnIWNpZ7w6E > verifier_GDTapBooster.abi-with-refs 1`] = `"003cd1b72e86527e6d1bf85eaac86f66"`;
+
+exports[`tact contracts > should decompile verifier_GDTapBooster.abi-EQBDaILjUTPYEE2ibO8Lg-8X1f6jH0H1lHUAdzPRNXgs24iL > verifier_GDTapBooster.abi-with-refs 1`] = `"3d94ff188c321c72123a70b639f501b9"`;
+
+exports[`tact contracts > should decompile verifier_GTWJetton.abi-EQDEUGDaT21AXQCSFsTXDvNQ1vOSRb4OO9tSR5fJlt9J8UxF > verifier_GTWJetton.abi-with-refs 1`] = `"fd2ae74eb4803ffc9ed111445a086200"`;
+
+exports[`tact contracts > should decompile verifier_GiftAuction.abi-EQAuin7DACov8oOvH_UH1ccTrwR4FWkwh9To32vLZZcAajto > verifier_GiftAuction.abi-with-refs 1`] = `"365e3b970dec96ce1c639d257e9726df"`;
+
+exports[`tact contracts > should decompile verifier_GiftAuction.abi-EQC9sn7hoPLPxZNEXjWrVcudHHOKmBwPFe4X2LobC0E6PO4a > verifier_GiftAuction.abi-with-refs 1`] = `"b3254bec90cea8642d60708618b5038d"`;
+
+exports[`tact contracts > should decompile verifier_GleamInvoices.abi-EQAaP62gcmar9uRh0AkIP9wrABT6dWHLet4_RmVrbwNRlrpJ > verifier_GleamInvoices.abi-with-refs 1`] = `"172bdb22bca802905b29b8846f1fd991"`;
+
+exports[`tact contracts > should decompile verifier_GtwContract.abi-EQCw1WpyEa_R1Dn3pRUDKVR4udiHIyY0WlrkVVf59XVhyotw > verifier_GtwContract.abi-with-refs 1`] = `"fc56eb5d6c56dd409969f1e75e4473b5"`;
+
+exports[`tact contracts > should decompile verifier_Gurutom.abi-EQCOUFYjH43UV4v669N9t17zx7yFAt4nLzXv-ufyVyv7Vl5X > verifier_Gurutom.abi-with-refs 1`] = `"5a1c87a2f773c1d3a91838e48b1cfe0e"`;
+
+exports[`tact contracts > should decompile verifier_HorseMarketUsd.abi-EQC8XHALng14SUJ7emBstyKNT-Po32Yhumu8ZWZNQ6bg8wP4 > verifier_HorseMarketUsd.abi-with-refs 1`] = `"eda1b69af03632446a9d3982b57dad3d"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQA2NZ8Y93XrEAlPZyqsJxDDsz5cKactSPufF1vVLtQoF79P > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"9072c5c1d8d0a48fcb9cbed330937853"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQA3RVIl1MEmZPjbMDmGk8W5NYXsyFUGZIqdiFUkXadUJ4Dz > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"3c8c4fbe063b7457ae4d92b76bcc6882"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQA7lVdPYR-vYfDxvYGKFcaZ7OvedmDiIF_ESpC3P1j9BW2z > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"43fa3cb5943891a1096c77c147633195"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQA7vplVtEOC6HHfHwgPC6Ekd2p9tVip-7s6hfZ3ar-GrJBP > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"3ae58795f394ad80d07a627c2ce95a39"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQA66_DRrQgZmuir6myLH2GxoKLvJ_3dKSM-sGJaX2VFXkH0 > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"3e9d4736301b7c2ce3c4b9bd6c3152f5"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQA295B4UxlLTJYQsst4bx9-mm7rUgg607Zbz1pNFuffMMxf > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"dc249b7bc744edf8f3da9fe2ac808632"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQA295B4UxlLTJYQsst4bx9-mm7rUgg607Zbz1pNFuffMMxf > verifier_JettonDefaultWallet.abi-with-refs 2`] = `"dc249b7bc744edf8f3da9fe2ac808632"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQANh3LxYEmiP-cjYoraY8ZxMbNgt4E2bubm3q0EP5L97d_1 > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"bb2f5a4bd6138947c4f059e1928a4617"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQAWVv2x6txoc5Nel9CltbfYSBMOOf0R9sb7GnqY-4ncmjcQ > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"01680b8af324b7b84757da10a927d591"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQAXS3ALuGVYq9Tv99o4L2ooNcjSqYKLSxXGvrd7FTTdng6K > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"606219fffaec2bb5dd68708bca61f2ae"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQAXUrUJlEfTDsUirgHNw9EC6t7Sx5S-_d-ppOt2fqepAK9r > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"34302b468d53c3275ebc6a47bfbd4fdc"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQAZWjL_bAemZOLO7txY-dHkp9oSNkQ9GQUDR5rKhL5pX692 > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"af06e43ddb19d8397105f80d8ad84ebc"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQAhbW7_FD-6aHhHHdH9kc0hA20HxtLHx33WOTazyT8nZqjP > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"5fc2568894bf5e2a26e227de568f4262"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQAhd0e9mOvkR_iUtrn0DXk8hegAZiS-jtB3HtB6phmJF88b > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"ddd2331abbbc465865361f3a7df07942"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQB_df1TT19YqqdfZmEUIpVbnCXZQI6rimlvX5lpWiO-ozJz > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"e3224549a7a62b9d8f9bb6f6c0074ddf"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQB1PFHV8z3LThVq6VP1lRYQ0TuxPNx4WH_HtmmZNh2CIE5I > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"b08c2b650315b7d1701bd5f0cee3a507"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQB4yjwifFv1FFqP1Y1gtlx1ae19PDWd_dPVVRo0ziH85_g8 > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"0e36eac3648dc8bfb344075ba5f2d56d"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQB74P-xT6AlR4ZOUtddMxY6mbYJmPqMhyykH40Tf8gAszE1 > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"6c37f5ac9fbf65caa97799fe96c9fa77"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQBEuPaUU0JIFQasb2gQrqNA0A63RGoFnoi0DABoyCYyTiJe > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"b089478186f7d09f22e2d5571c19a956"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQBFIqrOL1bjACnewEzHfHySkRi5h0uN43j7YdyV9NvxOvTy > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"31ba55cc3563b041e860724796e738ed"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQBH-lTgGoe6x-wBoZGbOSBdVjfImvLEA2bueS_JR3GBsqFb > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"0edfd1499ac7ef1cc55918116f035449"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQBMHPzgZVx4jodwqbAw5r5tmOWLPI5W4unaon2tgv2kxuwk > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"92c835900b3c672bebbd8c683361ff6b"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQBQTW9j2gtjF4aCcBlk0QXYiOhD_D6BwkUYV34QebOLdVPs > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"f45aa7a2ff65065ec04eab743037eda2"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQBbPHAIvPOIQV75TWcLUjsf3NNLAZFOrEkadt18PoLobj5S > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"cbb153712cfddd78be59753dfb32bdd7"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQBnyp_7TXUXld965YwLnJB7p1jqZ72HCoJRzgdFinOpCVtR > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"29d23e63d1b3463e076f6df60949aff3"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQC2s2ydfuPl781ZekzEsFyIwaAcDuxtFnQ998Ud3gHOnaLH > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"d868b96bb1b321eec715c6f05b94142e"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQC6ij-uyJqGQg7__9r5tFufDj0qJEHY6sM7K90yZVgqBEJP > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"e4666a35d6ea45daeaacecb5e1da99ee"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQC8-h7XYjmUZTVqLCQ5cPT-EXLgBnQdGX0bjARNope_lgwM > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"ea832e53198d14fcf81f3ca5feb29ea5"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQC9aPUb7-icikuXAhOlgU0jSXfZbEjPWw79o30iGNo9GPkX > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"0a7090a55b6d67c172bab9456126b2cc"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQC9njjhLQYqIDw2ysIk-B2NRpcJAM8WlS9GigJNGwCeJDzX > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"980381d71b63e8865cce96a4b1fd9a93"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQCEfjGlCkiDE8H7m3XokjzdTwhu7fQzkqVpHF3KvssLrPGQ > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"f3c82f08212b0da7712d463ea6e13a6f"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQCQ8FSCoOnCIaeX29YFGOgGdRn7p9A1uS8giVjZKQyRDxui > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"86d36cc9f02cf109080f0eb73a75f53d"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQCR-0nAPrEaYlqQ652hSUIy1vRVC4kjMduMM03rzpYt8bCT > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"457caf10ea403222fcea211572212f16"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQCVOa46HiTOzCevYV44-3FFm9nQcMJA5h60qYDI3VpdubES > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"b1328986c113ab683b86a678bd1077da"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQCW5-Cg0itxyQ8icd-iqoQF5r2A0hsHlY1hAEY6TpKNj5hY > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"924d54659cd469ae99d707be4916c6b6"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQCa091KS39WGX1b_t0a39j0nnnEA5R1yfbz9nfDmRx5PukF > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"abf3546eebefb52d9208113e89501d48"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQCc35dkBNtOBJr65OXd41SD5G2iRO5oYOTXUhRqUM7UEBTl > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"90a8c91d7ac2a93184253ec6f8a64d4e"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQCgIySBl4jZSwDVVbh6hbeHD-l6Tygq5De8m1jXXD_beGsI > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"bc75b3dfc96282e1bbce2847aacb492e"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQCkJCWxFhF8Mc0C6irm9rArJamvsmPe8zzu9AB1K2Zla27i > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"530f5a87eead70cc11c4230867d21709"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQCm0mvdYY-8EG6Z_7csrQoODQj92cU57duXTOwvYymcGIJ9 > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"8e2de274004d4830a3ea1b63fd301629"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQD4GRuykEsXkm4Hv2Jp8U0DzLAs2vOPknduAZ7WCH8-C5H8 > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"6047032ffd0df4a8814277e25e6d3862"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQDLHk9U20OSE1IZDqeqqzn4-5Cryp_fu6OP-tIGmL-k28wH > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"0e40b43bdd9f44fd92adb01216e58f1e"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQDLlRvkRf5dbTiDFtd8cP5e3tqAoc5N9hdF1-kmLg02l9jE > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"484f7ea2d7b4f085e46693c9b14973b9"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQDYqeLV3PStav522hdDLzzzG-By4f3YlJCPXZdfejwxOXdY > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"3d81273e74c241708a94b90f87dbee6b"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQDgfoSMp1kLRaBXz3v77jr2NhWUI0rHhkkoTkxKM4YUniBX > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"9ac33f4d2784b0655ef55cf87a0c1b16"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQDlXjc2GfjW_z2jtXkgT2Ogm3-CEOrgmM1XVbGMBRfyt9sy > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"8c8fbe1ba2409baf51b8fbf7299fe751"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQDpJ2p-s1pJflScVZU__E6GyOJIVo9mB_57TI8RTE7-oZnd > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"a9b0502ebb258c8d50b40ff72c918698"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQDqoMF-Eb7-P8dn5MBqa1-BapxOXYeGOl_VIQ-NXQNqQ6KI > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"78369e9d53e831d1e17005dbcbcc48d0"`;
+
+exports[`tact contracts > should decompile verifier_JettonDefaultWallet.abi-EQDsfWa0L9QidgBqc7IqzJk49JFp_dOJczeGHiVEtlnbmxxZ > verifier_JettonDefaultWallet.abi-with-refs 1`] = `"764bcfb971d105adae2473d2873f3967"`;
+
+exports[`tact contracts > should decompile verifier_JettonMasterTemplate.abi-EQCEEphN0H0ee9xWPaal3nfep5ogkt4v7OV_ih29509h85Yn > verifier_JettonMasterTemplate.abi-with-refs 1`] = `"4cfe5b0206649bc8fbf03c7f27b722d4"`;
+
+exports[`tact contracts > should decompile verifier_JettonSale.abi-EQD8HPLmxfr2KJQNqhpdsv-J_3lrdUODLFzf2vYiz3hTxI8D > verifier_JettonSale.abi-with-refs 1`] = `"582d578546babc559adb9f4aab03a6b6"`;
+
+exports[`tact contracts > should decompile verifier_JettonWallet.abi-EQAgKimWiJokLn2TNvrboqFHaZGnMjsS4gqclkqUMmIrMV8o > verifier_JettonWallet.abi-with-refs 1`] = `"ecc9ada29c7c110c07ca6cd532b6b4ee"`;
+
+exports[`tact contracts > should decompile verifier_JettonWallet.abi-EQAxz73UvAS7S1BqhCUIgUKSWOBIoDn609pGjZ4CUfL7sIkw > verifier_JettonWallet.abi-with-refs 1`] = `"79918a5a945a4e645a3681fd326c4bda"`;
+
+exports[`tact contracts > should decompile verifier_JettonWallet.abi-EQBHGBlqqItOugGi270RqisaZGSGgFwH6DG8X8jrlRJelpuN > verifier_JettonWallet.abi-with-refs 1`] = `"b18a77d74b7982ebbf3b7887ee2fcde7"`;
+
+exports[`tact contracts > should decompile verifier_JettonWallet.abi-EQBYBI-HAGQfiso0iAWDgusoWDuZuSp99EaYAr1XLjNBRDW5 > verifier_JettonWallet.abi-with-refs 1`] = `"e60b22b0cbc82fb01f62a73b76251770"`;
+
+exports[`tact contracts > should decompile verifier_JettonWallet.abi-EQCXyh3fMjhi892D8BtymYXv6UiBZ6mFtVrfWxAPmV-Zhhfu > verifier_JettonWallet.abi-with-refs 1`] = `"c8e9cb6d926a9f1e00e8997ba23a6f81"`;
+
+exports[`tact contracts > should decompile verifier_JettonWallet.abi-EQCkdx5PSWjj-Bt0X-DRCfNev6ra1NVv9qqcu-W2-SaToSHI > verifier_JettonWallet.abi-with-refs 1`] = `"9f93195a63c0089401a67bb1c629c48d"`;
+
+exports[`tact contracts > should decompile verifier_Join.abi-EQBeY0eQVUR5PCUEdrnzqGF3Yd_QT6js-JCvG1dFOyTzyuW_ > verifier_Join.abi-with-refs 1`] = `"fe3694ceea9dca76b6392c99ff514ad8"`;
+
+exports[`tact contracts > should decompile verifier_Join.abi-EQCDf3l2b2fmFk23Q7t2nfRUCFnJtaXGsR-KH6ZZzV8ev77I > verifier_Join.abi-with-refs 1`] = `"b160685d8eaf053c024a7284c3a0b9ee"`;
+
+exports[`tact contracts > should decompile verifier_LPWallet.abi-EQB2K2l3moYzcCLQOOsBhj1Wc38GXNegAL8wDlZOOeqN4ghp > verifier_LPWallet.abi-with-refs 1`] = `"3bd6cf2b33e69e23e6e26a508205973f"`;
+
+exports[`tact contracts > should decompile verifier_LPWallet.abi-EQBKsbdisI3edVXBEXOeQ98SUxotLNLMVKlVHd6VF2irL4Oj > verifier_LPWallet.abi-with-refs 1`] = `"ec0ff51269bc34cdae0a93ba1038e438"`;
+
+exports[`tact contracts > should decompile verifier_LPWallet.abi-EQBtXpI4_coKY8gWjbTUhxQkgpRrcmHg02Gj-vOyfckBcVhY > verifier_LPWallet.abi-with-refs 1`] = `"7911bf227d0ce32ee3e5bfaecbd2ece6"`;
+
+exports[`tact contracts > should decompile verifier_LPWallet.abi-EQCf9E812a5M-uSQ55gKGsfVbQGxCYW6kJrBI0TzGuCwYZLt > verifier_LPWallet.abi-with-refs 1`] = `"8356d3cc9bce3c338c2e77cad1ea49b7"`;
+
+exports[`tact contracts > should decompile verifier_LPWallet.abi-EQDkRCJ0D0hJaj3F-YnaLMuTm5CJL9bHseLZVtim2_JN0BTA > verifier_LPWallet.abi-with-refs 1`] = `"a67797fd25f46008af42a8f85082205d"`;
+
+exports[`tact contracts > should decompile verifier_LPWallet.abi-EQDpVqOINfNV4FshzGVm7LlTFas15gikUMeRkCaC0vWd24_v > verifier_LPWallet.abi-with-refs 1`] = `"26508941617795e329afa6e27d74ef17"`;
+
+exports[`tact contracts > should decompile verifier_LPWallet.abi-EQDtru9TD5PyhbUkaCGh7SIeFQZeVaA9ONf0AN2O3SV_JMYM > verifier_LPWallet.abi-with-refs 1`] = `"230ba991ea63ffdb930b8fcc40f769da"`;
+
+exports[`tact contracts > should decompile verifier_LingoRaffle.abi-EQBK5kTpqNjyehWQ2HTb18F8NgsS6p10QrNo555YgVazFcfx > verifier_LingoRaffle.abi-with-refs 1`] = `"5278c275f0ef6eea00e3877d9c7e93b9"`;
+
+exports[`tact contracts > should decompile verifier_Lottery.abi-EQAFRuC-40tm0FlXKRi0KBgTAYFgz8HRDE4reFrhn1rRxVif > verifier_Lottery.abi-with-refs 1`] = `"9cc163b13d273acb0814167e3d145ca8"`;
+
+exports[`tact contracts > should decompile verifier_Lottery.abi-EQBy9fB2TKwHpeExPoskcOudErBon8A8EIT39Roer2NqQnRs > verifier_Lottery.abi-with-refs 1`] = `"72a847efe05beac13ee0b6bf67fb163f"`;
+
+exports[`tact contracts > should decompile verifier_LotteryGame.abi-EQBVM95HHjxAZkS9-H6xSocIRVt4O1FJuxbfK7UO_K3MsuwL > verifier_LotteryGame.abi-with-refs 1`] = `"88e4118e70c045774d00e4e9a64330e4"`;
+
+exports[`tact contracts > should decompile verifier_MadWallet.abi-EQC5hZnwNvZMYBLOm7ZIp_FVQMfWW02Fgl-O-XA1ll6nqF84 > verifier_MadWallet.abi-with-refs 1`] = `"f3775122547b851f209090c6ceb95b4e"`;
+
+exports[`tact contracts > should decompile verifier_MadWallet.abi-EQCAQsZtC_ekaifN1SQWP89ynyMnsAiYHwnWt9ZZtz1R-hjq > verifier_MadWallet.abi-with-refs 1`] = `"c628662bc13908e2e7b9f9a0e5a60537"`;
+
+exports[`tact contracts > should decompile verifier_Main.abi-EQDK4nGfPQGDPoxkSzfJIVt7JxpOZ5ryjL8Cf_Ld8q4zvL-N > verifier_Main.abi-with-refs 1`] = `"b0321bdbafba44cdd5404664314d129d"`;
+
+exports[`tact contracts > should decompile verifier_MessageVerifier.abi-EQCO_OePR1jZt7KAhou7jU4tozXLmrN34vJEOJ3O2Ot286BZ > verifier_MessageVerifier.abi-with-refs 1`] = `"bb1647f7df945a1cef4381a6cd48ecfe"`;
+
+exports[`tact contracts > should decompile verifier_MiniTonMatchToncoinContract.abi-EQC2Qf45G0IlrKk9eIe4aXtCmBrZp5cRWhrglSICDKUHj3ve > verifier_MiniTonMatchToncoinContract.abi-with-refs 1`] = `"0163b63fe50e4ddc24da545d7a0ea602"`;
+
+exports[`tact contracts > should decompile verifier_MiniTonMatchUSDTContract.abi-EQBzTmPo921ziqtEL1qHqPcBzGW1lYOYjh8qQSBvWPfQM1nQ > verifier_MiniTonMatchUSDTContract.abi-with-refs 1`] = `"be9ca65769061b85a6115b04682d20fe"`;
+
+exports[`tact contracts > should decompile verifier_MiniTonMatchUSDTContract.abi-EQCvwD5oq1WdlusVEmgO0ftp2tx8VIKAWtUY16MrHpWFqx8O > verifier_MiniTonMatchUSDTContract.abi-with-refs 1`] = `"62f45a1822f78d3f695d388790d45ee7"`;
+
+exports[`tact contracts > should decompile verifier_MiniTonToncoinMatchContract.abi-EQA5Mc2mqM4UjNBL09tVl6kQ6p-8ekltIw2Cu2IFnFQ9yPAn > verifier_MiniTonToncoinMatchContract.abi-with-refs 1`] = `"79769851c4d2928d56dedbff9d4070d2"`;
+
+exports[`tact contracts > should decompile verifier_MiniTonUSDTMatchContract.abi-EQBkZvzSibJAJZl1C7gIlWrJ4g_1V7uitmlOqm6CadoAq_1W > verifier_MiniTonUSDTMatchContract.abi-with-refs 1`] = `"29bc693045a580a49e2189e4bdbd54e3"`;
+
+exports[`tact contracts > should decompile verifier_MintManager.abi-EQBHsNBjHUncg9ZBUKx-tZbTmFwOXrB049o9TgN0r0d61Gs4 > verifier_MintManager.abi-with-refs 1`] = `"462cd467e9ff032693a84012539ee44a"`;
+
+exports[`tact contracts > should decompile verifier_MinterProxyContract.abi-EQBsestcbGavIyp27nDxFWtG7Yt7-sagkeLs--9rS3aVpReT > verifier_MinterProxyContract.abi-with-refs 1`] = `"f5820d0d987b162617bd1b831d140670"`;
+
+exports[`tact contracts > should decompile verifier_MinterProxyContract.abi-EQDTTXXfYWX9hcPGSJWe4vwao1IUa69oePbGq7teYwPRLOXH > verifier_MinterProxyContract.abi-with-refs 1`] = `"dd0e9fd88debc10ce3ec69f59447f9d9"`;
+
+exports[`tact contracts > should decompile verifier_Monster.abi-EQAn95MspiVx8gP3LieWM55I6tCRUWv7rnTjUBwU4PEqVMuE > verifier_Monster.abi-with-refs 1`] = `"9dfffb3e5bee355d798cffa6a6d18df9"`;
+
+exports[`tact contracts > should decompile verifier_Monster.abi-EQCNsuhaE52e1g4e4Te819lOw1PLvFGn5mIqTuuce_prVjiG > verifier_Monster.abi-with-refs 1`] = `"f3e997fa51516378f5b3fdb1497e44d8"`;
+
+exports[`tact contracts > should decompile verifier_Multisender.abi-EQCdfoFCUSyqJE7O4TmfbF4KI_oYcz1aaI2VHYW9KLSyomAL > verifier_Multisender.abi-with-refs 1`] = `"f223e7467c4fdb6b223583958c312cf9"`;
+
+exports[`tact contracts > should decompile verifier_MultisigSigner.abi-EQBjd6gv2R45GwT73KsrEEfiYum7HLCfzo_IypV4cDxVSYw6 > verifier_MultisigSigner.abi-with-refs 1`] = `"4b42e131ae008529b3b673997847bae0"`;
+
+exports[`tact contracts > should decompile verifier_MyRow.abi-EQCL4MBQNDb23DNopZtdyQbBnN_sAi-1AxetAxz40Lfg0NUm > verifier_MyRow.abi-with-refs 1`] = `"98c99037886e449aeb81141c2231fb40"`;
+
+exports[`tact contracts > should decompile verifier_Newbie.abi-EQAkAlNvHezenpyYh5Rln9YXNbnKiRHnV6d6KP8t0TOBeDRj > verifier_Newbie.abi-with-refs 1`] = `"a53dea4c82a5aba0e5582ae5df533f1a"`;
+
+exports[`tact contracts > should decompile verifier_Newbie.abi-EQDIkpw-5S8MY3t3WHAnK6nQls2dtQKLEh72zsA1g4bru-97 > verifier_Newbie.abi-with-refs 1`] = `"e2fcf44f8f9d9e0c3c20021747b912dd"`;
+
+exports[`tact contracts > should decompile verifier_NextBitcoinEnergyToken.abi-EQDuxrt-3BcaR7CrkZyu5crEr1CNDm2spLwqh2CL5DrNOk2N > verifier_NextBitcoinEnergyToken.abi-with-refs 1`] = `"0a6c8840d5cbc3e9bbc578719e6f383e"`;
+
+exports[`tact contracts > should decompile verifier_NftCollection.abi-EQAodnlr867ObKkAZN0YJPXGi38YKjOdC0zIAQjSWy-oGTJ1 > verifier_NftCollection.abi-with-refs 1`] = `"6c51991ad01ebcbf18bae43c2fe93947"`;
+
+exports[`tact contracts > should decompile verifier_NftCollection.abi-EQArcdSGP_o5mhed2MJhebsG2-n_76Dm91aKMgfInQwe0Sfe > verifier_NftCollection.abi-with-refs 1`] = `"87a61c347c0dd5f918a9bbae8acabb95"`;
+
+exports[`tact contracts > should decompile verifier_NftCollection.abi-EQCLD_h2fN9_wkMw6g-xlXreLNIwdRGUDv8MHmhaX4FTKVzB > verifier_NftCollection.abi-with-refs 1`] = `"f3be07378f3bba05f417bec408f3a753"`;
+
+exports[`tact contracts > should decompile verifier_NftCollection.abi-EQCWvY1AGBf0Yq0BaUDE_jjfl6pjMlvcf21wvLv8a95wMX2P > verifier_NftCollection.abi-with-refs 1`] = `"14cb485e41945060274b00ab4a7ae048"`;
+
+exports[`tact contracts > should decompile verifier_NftCollection.abi-EQCYNdc2ZjZJ7PDL_l5Yslar4pZzz0ayKeBUJTDSbzAlek1q > verifier_NftCollection.abi-with-refs 1`] = `"c2858eb20ea906aebf01821002de250a"`;
+
+exports[`tact contracts > should decompile verifier_NftCollection.abi-EQCyiYkEhRTJwte6k9JOt46hjwszikQWzNRCU1-U3bg8y3Rw > verifier_NftCollection.abi-with-refs 1`] = `"e11b4cf37efc05bd62b75ec0fbb27d1f"`;
+
+exports[`tact contracts > should decompile verifier_NftCollection.abi-EQDEDRVHbYcWtWvEw-LSP38BByWac6N3EsT4SErF78dw8x03 > verifier_NftCollection.abi-with-refs 1`] = `"6e64b2694c8dfeaa05a5ca73727744b5"`;
+
+exports[`tact contracts > should decompile verifier_NftCollection.abi-EQDnyoS3Uwo1IexPSrVBMYDT3I510PLtNu1u8h21ctoVyMeV > verifier_NftCollection.abi-with-refs 1`] = `"7edd8e003ca09fc865123457100b559a"`;
+
+exports[`tact contracts > should decompile verifier_NftItem.abi-EQAImsBKoqmuX0SGhlxB6VMfmY5wENuFEcREtKestWZ7V8fX > verifier_NftItem.abi-with-refs 1`] = `"f1738cbb53642a6181cd5e8a7c9e25c8"`;
+
+exports[`tact contracts > should decompile verifier_NftItem.abi-EQC4eDwpJGHI_FKw1Uw6CZiLOcjRMjJnXEQCpj0HxmFxriRi > verifier_NftItem.abi-with-refs 1`] = `"9133f3f2d6993e681c3bcd5774f148b3"`;
+
+exports[`tact contracts > should decompile verifier_NftItem.abi-EQCGmsnSkCDvqps0fe0RFgkpSz0GnRQumg0dsrGIgFBeToYq > verifier_NftItem.abi-with-refs 1`] = `"22bf32323731f2b6b24597143170be66"`;
+
+exports[`tact contracts > should decompile verifier_NftItem.abi-EQD7poiB7dRJxNZe0dxRiYIF1xMJ_lzGK7qRur9YUCHzVUlQ > verifier_NftItem.abi-with-refs 1`] = `"1b8548b65a26fcae60e569459da86ad6"`;
+
+exports[`tact contracts > should decompile verifier_NftItem.abi-EQDlyoF9IoyePDq22Xdk2K5q6b37_MOP7LOdAU3xZW8OEMiy > verifier_NftItem.abi-with-refs 1`] = `"82634e076f0265d3fa7bb4fbc086e71b"`;
+
+exports[`tact contracts > should decompile verifier_NftItem.abi-EQDmoCH3MbyHswUbuHUHeW96h3CWwcy21L9tzOxnqZWE_f-R > verifier_NftItem.abi-with-refs 1`] = `"7b4258537d85d67d22fd727947e29855"`;
+
+exports[`tact contracts > should decompile verifier_NzComTact.abi-EQA83ZyoAmxP9EkKddsK4JK3yExB_G4EkNblgXb85kqEL0dj > verifier_NzComTact.abi-with-refs 1`] = `"1b5cd57189ec1d34bceae7d7a060c65d"`;
+
+exports[`tact contracts > should decompile verifier_OracleContract.abi-EQAcJuzyMGTNJH0V8QJRn5wLOrj93wwhkNIOX0skFTfaCXnJ > verifier_OracleContract.abi-with-refs 1`] = `"3d9c73ca8806f5ef02f757dea6eb7071"`;
+
+exports[`tact contracts > should decompile verifier_Order.abi-EQD2Ws29zwwWCdiXd6j4tsfdlp2t7ciwAcMmrbFhCPd_-Igq > verifier_Order.abi-with-refs 1`] = `"0f1ac9079b998c615b8e0c86326cdebc"`;
+
+exports[`tact contracts > should decompile verifier_OrderBuyTon.abi-EQAT0KwNNYUinQrjnbeFlJHqAUK8EdDreoobpiAQqBaDC1gE > verifier_OrderBuyTon.abi-with-refs 1`] = `"e9bac3b30cbaf7338b9d2b782f4e54b3"`;
+
+exports[`tact contracts > should decompile verifier_OrderSellTon.abi-EQC1DQxqTWnb5ZCrxsGWQHyxY1VKwkwYVrMH9I4PL7bAmxjo > verifier_OrderSellTon.abi-with-refs 1`] = `"0108531c53fda0c1829f18fc201c3629"`;
+
+exports[`tact contracts > should decompile verifier_PixelHatcher.abi-EQALmxZfaZh4hbpo4IZm-hBkHKO4Q1_gfJo4x0v7IYn2l2BT > verifier_PixelHatcher.abi-with-refs 1`] = `"a27b110521b84846a16ac28683c723c2"`;
+
+exports[`tact contracts > should decompile verifier_PolyMarket.abi-EQBrW9kLz3nv2JJPiZTxusMzv5z-D6yUR_uo3I4L6KiliTFa > verifier_PolyMarket.abi-with-refs 1`] = `"ca09b46a221abf0afed4d86b00151277"`;
+
+exports[`tact contracts > should decompile verifier_PolymarketUserWallet.abi-EQBLV2QHaW7z2avC5coVDXP-3lSBVW18NPnFm3zKgXxCl8fB > verifier_PolymarketUserWallet.abi-with-refs 1`] = `"57d7fb4a20cb872526af663030cb2a99"`;
+
+exports[`tact contracts > should decompile verifier_PolymarketUserWallet.abi-EQCZlMULHd9lvvpiejBfPmwVlAcjiW5vO4ZYSwghi5Nv1b3y > verifier_PolymarketUserWallet.abi-with-refs 1`] = `"dca8a28660adbe52568994d337141311"`;
+
+exports[`tact contracts > should decompile verifier_PolymarketUserWallet.abi-EQCjV_FUq0JBfARkfetof7uzFy52lO_Q9iK9Hxa72FVHI0nA > verifier_PolymarketUserWallet.abi-with-refs 1`] = `"29883989e44ce4c75a8b0d2fa2720ffb"`;
+
+exports[`tact contracts > should decompile verifier_PolymarketUserWallet.abi-EQDgS3zFQZwSLBKJ7aoHpZQL5csNekLnepf8Rw24RZSF3mJC > verifier_PolymarketUserWallet.abi-with-refs 1`] = `"02034db157363ebff23d93fcd4b74287"`;
+
+exports[`tact contracts > should decompile verifier_PremiumPass.abi-EQD-r3joXyZ2kWRxraqze6ypKoVtSx1qlKlJsNEjyLM7ujs7 > verifier_PremiumPass.abi-with-refs 1`] = `"6feba718380bcba7287b26fc26c6ffa1"`;
+
+exports[`tact contracts > should decompile verifier_ProofOfCapital.abi-EQBGN2w9fUVNfJ0IBKDQ2vVy6S_lDug4q1UYdRhkFA-r_POK > verifier_ProofOfCapital.abi-with-refs 1`] = `"fe7c1a16c8e28661cd96aed2c365b698"`;
+
+exports[`tact contracts > should decompile verifier_Rats.abi-EQB9qWUHn9u0FDTrkM_qioVaVYh6Kzf9Ty1rzLDTqPOcPHg0 > verifier_Rats.abi-with-refs 1`] = `"e8b30735775f20cd2faacb926c43faf6"`;
+
+exports[`tact contracts > should decompile verifier_ReferralDistributionV2.abi-EQBPeWyStupV7epRW34dWq5yfznl0Ibw2Ntg7kDQWmBdVQp0 > verifier_ReferralDistributionV2.abi-with-refs 1`] = `"d23893cd0d5ad12a8bd491cd03dee440"`;
+
+exports[`tact contracts > should decompile verifier_ReferralDistributionV2.abi-EQCvUeaHXl9A9p6AL4AwOLaYrYjOlhmVHs9MOL2a7F8C1U6_ > verifier_ReferralDistributionV2.abi-with-refs 1`] = `"a0e5a27d75a97df8841ccd84d9c90a19"`;
+
+exports[`tact contracts > should decompile verifier_Register.abi-EQBlOH213gefKaM_ZowfuUVz8fMVR5ohvCH9zaDh3rb1Z4ah > verifier_Register.abi-with-refs 1`] = `"7013e8f52ed40388661459f068fddee4"`;
+
+exports[`tact contracts > should decompile verifier_RewardUXUYContract.abi-EQDYQ1DzAramy1hlMlZnuS_2W8Vw45Bmu6Hwld0YvyNiWpj- > verifier_RewardUXUYContract.abi-with-refs 1`] = `"17d56a337058e8fa7813d612e164ab02"`;
+
+exports[`tact contracts > should decompile verifier_SPAJettonWallet.abi-EQDy3gdYfGyicUwXFl6K4-cZ8vhsFbjJpMPkV8uypA5VevU6 > verifier_SPAJettonWallet.abi-with-refs 1`] = `"bde771a422d77407c570dd2a6f4af3a6"`;
+
+exports[`tact contracts > should decompile verifier_SampleJetton.abi-EQA30iFe8bdC7ZKw94key8UA21Aey4FDVxQ2TWDcQTZ2LsJf > verifier_SampleJetton.abi-with-refs 1`] = `"ac61eb1f5c53f1ebfdd8f3cfef2a0e61"`;
+
+exports[`tact contracts > should decompile verifier_SampleJetton.abi-EQAGj6wPwI052ratl-X4wJtiSvHnFR4Ty-9Tvc0XfXKOo7fF > verifier_SampleJetton.abi-with-refs 1`] = `"d9add2071e3f27f535a98b1182f88e9f"`;
+
+exports[`tact contracts > should decompile verifier_SampleJetton.abi-EQASjKmYxgcE-XKH-8BCE4cD6dj4Bmy5G_E20se4PqE9IIw2 > verifier_SampleJetton.abi-with-refs 1`] = `"35c6c269c3060750cdc4b6c839d38253"`;
+
+exports[`tact contracts > should decompile verifier_SampleJetton.abi-EQBT16bxc176DW-I-rDjpyY6uoJW9EZG_P0lQHZm91NX490p > verifier_SampleJetton.abi-with-refs 1`] = `"61b5e09e07eaf9d86259ab2e9cfcdf74"`;
+
+exports[`tact contracts > should decompile verifier_SampleJetton.abi-EQBd07PBNM9JqkklXssycdQ9vXk8wpnWzv9hICl_1sxzAoy0 > verifier_SampleJetton.abi-with-refs 1`] = `"703e51b8c5d05eb1dbee98caf0462e47"`;
+
+exports[`tact contracts > should decompile verifier_SampleJetton.abi-EQClgnFNLfgjQUUcN_j1WFsfBzfU9z1w2kj8gTDWHm-TBv52 > verifier_SampleJetton.abi-with-refs 1`] = `"6532ee57df5d961a1f07b2c29456997a"`;
+
+exports[`tact contracts > should decompile verifier_SampleJetton.abi-EQD0PsFgUd2ByJYLgjVKHbD4Ncx1y8CbwIWEgoqROcx6CzHr > verifier_SampleJetton.abi-with-refs 1`] = `"f4367fa9d87f551bc5af103b8468230b"`;
+
+exports[`tact contracts > should decompile verifier_SampleJetton.abi-EQDNBuyG5QGqQC2lK36pkhCD_alLPVYlFndtfi1XSETZkEUp > verifier_SampleJetton.abi-with-refs 1`] = `"3dbe6e189276f18d74364d03b7aa678e"`;
+
+exports[`tact contracts > should decompile verifier_SampleTactContract.abi-EQCOfTy07jKa5kkRiGwIdx_ZZ-ES0bWlaagUfZg4t55G9dCE > verifier_SampleTactContract.abi-with-refs 1`] = `"07315ab8077bf561ebd9aadd62cb3fed"`;
+
+exports[`tact contracts > should decompile verifier_SampleTactContract.abi-EQCpBk4hkBKKq65XxeEY_HW6hzxXOzO2Od5VD290Vhvk4Bny > verifier_SampleTactContract.abi-with-refs 1`] = `"8fc08a7c5cfc5f5a77e7885d33d51d92"`;
+
+exports[`tact contracts > should decompile verifier_SimpleCounter.abi-EQCBLGzxHylxmjDqEYQIZ_M60ZfccYWtMbYYR7ZrkUHkYhOg > verifier_SimpleCounter.abi-with-refs 1`] = `"aa84bf7efc87f401759dab29af3e9494"`;
+
+exports[`tact contracts > should decompile verifier_SimpleCounter1.abi-EQATjPFCI9ct0JSVRYzTFCZ8qzU6cqhLYQ5khnwXqjv3CmQ4 > verifier_SimpleCounter1.abi-with-refs 1`] = `"a31be4b23e1dcbf4110054a56077cbd6"`;
+
+exports[`tact contracts > should decompile verifier_SkateActionBox.abi-EQBfxvDDMZhVQewS-zDh0zvRtN2DIegHsu8gDPpa0KOznbNW > verifier_SkateActionBox.abi-with-refs 1`] = `"fc6a5a8a1244123e29a26fea1b95de7a"`;
+
+exports[`tact contracts > should decompile verifier_SkateGateway.abi-EQB6vEgowWR7rOf6tYdNXUmR3vylhuJJU7VOPiS5ucfrQeBV > verifier_SkateGateway.abi-with-refs 1`] = `"965b02b489f99602c896d52dab12b032"`;
+
+exports[`tact contracts > should decompile verifier_SkateGateway.abi-EQC2lcb0OI3lWxdvOYnca2_3AQwD3Pw3oy2dCfzlSdz4LmTe > verifier_SkateGateway.abi-with-refs 1`] = `"880aa0e2b2e70c9ad07e6ab8db6c7894"`;
+
+exports[`tact contracts > should decompile verifier_SkateGateway.abi-EQCR2Qtceo_uQI2v6Q89V0OxTNrUjbwDAoj1hNWbkFYTiwT8 > verifier_SkateGateway.abi-with-refs 1`] = `"5cfb35281d401f10b0719ecf6d343de6"`;
+
+exports[`tact contracts > should decompile verifier_SkatePassport.abi-EQBru99D_GCTLA7eYE8pICvphoV3zI1uro1w_wPyO7hN37HI > verifier_SkatePassport.abi-with-refs 1`] = `"b5b8f296c367500f703db174b60b5754"`;
+
+exports[`tact contracts > should decompile verifier_SmartCity.abi-EQC7zhd-iBjexU2PvxPYlI_2mFCk9ooG4GMyciQOWHbsIU-- > verifier_SmartCity.abi-with-refs 1`] = `"638c5d539953eda42cc1e6bf11c29f11"`;
+
+exports[`tact contracts > should decompile verifier_SnatchTresasureContract.abi-EQCN0DO4VADdqR9-qsB5CyfzZ1lEASdiCjesPRlgu8gT0c3F > verifier_SnatchTresasureContract.abi-with-refs 1`] = `"bfdd4ce331da1d1297c5310cedb20c08"`;
+
+exports[`tact contracts > should decompile verifier_SnatchTresasureContract.abi-EQDUZesrkjHdRZFm_N3ZtzfZK-G5Q7oBH8C1bV6s3QEZuHIE > verifier_SnatchTresasureContract.abi-with-refs 1`] = `"d45bb4150c14bc9d77a7c1343c999792"`;
+
+exports[`tact contracts > should decompile verifier_SnatchTresasureContract.abi-EQDq-OmYXY-Umhk5dzjLfsydjsh_QXejWjnrqBL72zm8U_Os > verifier_SnatchTresasureContract.abi-with-refs 1`] = `"589232be3f141af05db39da2a42c7e30"`;
+
+exports[`tact contracts > should decompile verifier_StakeStorage.abi-EQAj1qW6WZTd7sd33Uk48O3TqxNPMjYrgwRHAcBM8RcQCQAD > verifier_StakeStorage.abi-with-refs 1`] = `"2a643b5076ee36df29cd48b2c3ef481d"`;
+
+exports[`tact contracts > should decompile verifier_StakeStorage.abi-EQBXRdZTk5P49mL0nOYfDR1VR33N3sPUgB7PNQMaj6DhxOJH > verifier_StakeStorage.abi-with-refs 1`] = `"2a42d18a02301cb95fd7f346dfaf7c68"`;
+
+exports[`tact contracts > should decompile verifier_Stakee.abi-EQDbNL_xblDPOuFGYCcSCPDXGBDcrdTs-V4WBpLnE5S3U26L > verifier_Stakee.abi-with-refs 1`] = `"409a760f2ba16cbf50edb0112bd7bea6"`;
+
+exports[`tact contracts > should decompile verifier_Strings.abi-EQBS-t9VszbPNhwCle6QP_ZTfLOGSQFj9ZSdtNTraYB-Torb > verifier_Strings.abi-with-refs 1`] = `"3b44464eed07b081b912a000e078c2de"`;
+
+exports[`tact contracts > should decompile verifier_SybilBil.abi-EQCUrSyEHtYbQvfhqjFnJMHBZQ3QlTMbv7zEFOFwkOek3LtK > verifier_SybilBil.abi-with-refs 1`] = `"066ce6e81bdd93d7a069e2f32df6c8ee"`;
+
+exports[`tact contracts > should decompile verifier_TONLAUNCHPAD.abi-EQDJNbSg-EwjEInepYcCIM7r09733D2E83w4CiR6-IHfiTJd > verifier_TONLAUNCHPAD.abi-with-refs 1`] = `"0e2235cd077a22fa5f89d92b3bae7fae"`;
+
+exports[`tact contracts > should decompile verifier_TestContract.abi-EQAJf9d7HnAuXpOzLsHdpds0780Sc5WujKq-TSFd6Mt7PpUR > verifier_TestContract.abi-with-refs 1`] = `"ad4de3530a20a57ab82cae84cd54e459"`;
+
+exports[`tact contracts > should decompile verifier_Testds.abi-EQC38Sc5PoK2ByvtBjmjv42KVbfd97XN2jKiHUeJyDFWkrP3 > verifier_Testds.abi-with-refs 1`] = `"e4f46de93769a07bd200670f06041a05"`;
+
+exports[`tact contracts > should decompile verifier_Token.abi-EQBASx59u4o_IG2VPytVLL_jsfSplGikRGIHXYfY4lP4ORH3 > verifier_Token.abi-with-refs 1`] = `"ae907ea87d217d73a76137873800b09e"`;
+
+exports[`tact contracts > should decompile verifier_Token.abi-EQCVwKug5CgNrdqV3OVKiaJ3eEFzV_I3QGWsKlBG3dGppQ1J > verifier_Token.abi-with-refs 1`] = `"0b73cb886c5d0f82f07df8f2636da12a"`;
+
+exports[`tact contracts > should decompile verifier_Token.abi-EQDa5-yO3m0PoiuAaDtRuNm_M_nUMkA1X3p9cwKXjk266NL7 > verifier_Token.abi-with-refs 1`] = `"1bed97a46b515b97b7699ee2ee443546"`;
+
+exports[`tact contracts > should decompile verifier_TokenSeller.abi-EQAgsecML65P-C4JPHAnuYNAeNQ1CycKKDbthKbG_ng_c96T > verifier_TokenSeller.abi-with-refs 1`] = `"31421dd2cbb84449b1df915b83d30027"`;
+
+exports[`tact contracts > should decompile verifier_TokenSeller.abi-EQBnahYlGeHWl5O31nVoYH7dEaLFFrMho-qLglFS7Tfr_cOd > verifier_TokenSeller.abi-with-refs 1`] = `"86a5d0d458b48714346d7aa02ba3d1b9"`;
+
+exports[`tact contracts > should decompile verifier_TonBetPlayContract.abi-EQAmKyVDv7f6ZV5NIMmP_JKllLVabh2zuscYXceNBfyTXAD2 > verifier_TonBetPlayContract.abi-with-refs 1`] = `"8d6a2880e191e1e449569a25f7e885e8"`;
+
+exports[`tact contracts > should decompile verifier_TonDex.abi-EQAcMOb7qgWHKHtQck6ndwN1WsQarad1WxvtTi6pbG83Y0XN > verifier_TonDex.abi-with-refs 1`] = `"61b5e09e07eaf9d86259ab2e9cfcdf74"`;
+
+exports[`tact contracts > should decompile verifier_TonHamsterJetton.abi-EQAZhmijyR6CmHRSmoc-10Jvw8Hvth-fcWdD_IXYeb0v3FKt > verifier_TonHamsterJetton.abi-with-refs 1`] = `"089197b0bb450da45ae1b7512cee9395"`;
+
+exports[`tact contracts > should decompile verifier_TonHamsterJetton.abi-EQAokrrU_hqHSiXNwKP3vxPG54uF5eRq4z9eHnUnrHvzExRO > verifier_TonHamsterJetton.abi-with-refs 1`] = `"1a999a1d0f68f77274f2294049ae6578"`;
+
+exports[`tact contracts > should decompile verifier_TonMaze.abi-EQC8mPTLT4hyROWBjrLqPqxb4-mIPN-A5tcp_ySGT2MP_4SM > verifier_TonMaze.abi-with-refs 1`] = `"983d1df869f7f9460569287af65a918b"`;
+
+exports[`tact contracts > should decompile verifier_TonMaze.abi-EQDoVKIIXQirpjr31knqM9Y6QgZSK2EH8SGY1ltz6d4uxys3 > verifier_TonMaze.abi-with-refs 1`] = `"069e4428c5ff018e1475f7dabd9cdd30"`;
+
+exports[`tact contracts > should decompile verifier_TonOptinetContract.abi-EQD1fUwIIerzSYlXKSflDyejzYBvx1KFdFSFdVkCfilPyFv4 > verifier_TonOptinetContract.abi-with-refs 1`] = `"9df16715023f85020f3d8634618b3684"`;
+
+exports[`tact contracts > should decompile verifier_TonOptinetContract.abi-EQDkIyMXPIG2CDQgtM2jPFIpxEfuQ-Kuu8qcao7Ol6wY5NQU > verifier_TonOptinetContract.abi-with-refs 1`] = `"8918a2a98dc67b2ddb25993ffca90e98"`;
+
+exports[`tact contracts > should decompile verifier_TonPro.abi-EQCU7--gmSzNejZFNj_Ju9B02iaLu3dP_Fbu6pZqyDD9TXsJ > verifier_TonPro.abi-with-refs 1`] = `"b27de2e84c63641e9ae25afbc5169587"`;
+
+exports[`tact contracts > should decompile verifier_TonPro.abi-EQD-VYSt-p-MB1cAVvHz_Wfx6U7hJIl_CpIlw-JE10BRij7F > verifier_TonPro.abi-with-refs 1`] = `"db5d0660fb523accaa4197dd05d9688a"`;
+
+exports[`tact contracts > should decompile verifier_TonTestContract.abi-EQAQfpOkbrYEvNIPUpgbrA--kmEAVX2Uv9EFHqBfWytP1IuL > verifier_TonTestContract.abi-with-refs 1`] = `"97dfbe7198984a69af1be05fc5fbcb48"`;
+
+exports[`tact contracts > should decompile verifier_UXUYSwapContract.abi-EQCJLMW--VGK631YKi8rqsamyUjC4oLUPy96tc1PiEWVMxW5 > verifier_UXUYSwapContract.abi-with-refs 1`] = `"86e0339d60cc81765e2546044630e5fb"`;
+
+exports[`tact contracts > should decompile verifier_UltraMinter.abi-EQAOjm0Xm-mYbAYWT2f_lwgqQPBE3_lC9MJmGPCBbFCdxewa > verifier_UltraMinter.abi-with-refs 1`] = `"7e599b9a78cbb259b48bbd728c329f9a"`;
+
+exports[`tact contracts > should decompile verifier_VestingContract.abi-EQCiZV1IpdiKX5lPsg4Lh9TYqkva7rRlLxGhmyV7OCCDV4cx > verifier_VestingContract.abi-with-refs 1`] = `"7e3c21a5ef53345a8333aa790ec5ac82"`;
+
+exports[`tact contracts > should decompile verifier_VirusTonRaffle.abi-EQBRo-0PCa4IfuWnQ8P5J1bLNByZhTCuUdSoC1kEVGbqsoYD > verifier_VirusTonRaffle.abi-with-refs 1`] = `"088ab4f91a5e88059aba95f0347af223"`;
+
+exports[`tact contracts > should decompile verifier_VirusTonRaffle.abi-EQDZ9c8QyAW7XKFhrp6TrQ6sX1M2bfolvditX9sjAqxaizca > verifier_VirusTonRaffle.abi-with-refs 1`] = `"bb992856609dc9c2c834b750f71a08b7"`;
+
+exports[`tact contracts > should decompile verifier_WinLotteryManager.abi-EQA17aZ7xbB_ayAnVgYgERSzeaE-hmXbf1hIxNQTelgXhkvV > verifier_WinLotteryManager.abi-with-refs 1`] = `"07cba1405a1778e1583e22a808ab2675"`;
+
+exports[`tact contracts > should decompile verifier_WinLotteryManager.abi-EQCSGRgLUtWTlWHWnoYcAIrosZQ0m4j7ty0GfpOijxwgJG8q > verifier_WinLotteryManager.abi-with-refs 1`] = `"a8e142b1bb26f3c98e0cc4f8d1b65ee1"`;
+
+exports[`tact contracts > should decompile verifier_WrappedJettonWallet.abi-EQAqRZdF74cQ7h2x-U_aMgSeidfkzr9CQMPKKcI4ueMmUgRd > verifier_WrappedJettonWallet.abi-with-refs 1`] = `"da5a7587179d480e40b3101ca4b12aee"`;
+
+exports[`tact contracts > should decompile verifier_YyJetton.abi-EQC30dP57IrBaSN9A9VCAOMZwCSUJdcJUfI54TUKdx05FnIW > verifier_YyJetton.abi-with-refs 1`] = `"6ae435feab41f8ba53d87ccb877e1c3b"`;
+
+exports[`tact contracts > should decompile verifier_ZkmeVerifyLite.abi-EQClHTdbdcewx-dK6xYaQLdJcRXs5IVb96HaR6YFw02MMTvB > verifier_ZkmeVerifyLite.abi-with-refs 1`] = `"1eba9dd1a7cde5c1c59ec549901a8712"`;
+
+exports[`tact contracts > should decompile verifier-registry.fc-EQDn0lCfJbUPhD6ST-Lwh8bj-9xcc24_G_C1QAk6uBAfaeMN > verifier-registry.fc-with-refs 1`] = `"3fd584c5efefc508c565dca24b16e253"`;
+
+exports[`tact contracts > should decompile wallet.fc-EQDy_JjePaJB-v3woZHpCaA46WnwDRmU_Dz4InfA081JrODJ > wallet.fc-with-refs 1`] = `"31507e8c1dafb1ebfd059ab67cda2e81"`;
+
+exports[`tact contracts > should decompile wallet.func-EQB1UK7ENlJTvx_MTE_WfyEd1mbvdHmoqgWl7Je72mJgZ5FH > wallet.func-with-refs 1`] = `"901edbece4e5789053358b429a01c525"`;
+
+exports[`tact contracts > should decompile wallet_v5.fc-EQDvZL_iplGL72On1ipQdH6Kc6EEcrhCJ0JpNdo669-QnpME > wallet_v5.fc-with-refs 1`] = `"b8e1c44ca92088eaac8eadded0b05ebf"`;
+
+exports[`tact contracts > should decompile wallet-v4-code-prex.fc-EQAFBjEgyxDcnNPyDeiW8E85oiIz1lt41yByrtM81kGtyBzV > wallet-v4-code-prex.fc-with-refs 1`] = `"05c8b8997f0627581d64bbf407377494"`;
+
+exports[`tact contracts > should decompile withdraw.func-EQAmHk1fC1D_AT1ZTS3NhUtNSsL_9WekXYZ9B5KoPzpqQZ8C > withdraw.func-with-refs 1`] = `"c17cb660650f0e758be7477a9145d688"`;
