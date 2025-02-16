@@ -54,7 +54,7 @@ export interface AssemblyWriterOptions {
     readonly debugSymbols?: DebugSymbols
     /**
      * Map of function hashes to their original names.
-     * Used to restore original function names when decompiling.
+     * Used to restore original function names when printing.
      *
      * Can be obtained using `obtainSourceMap()` with original `.fif` file passed in:
      *
