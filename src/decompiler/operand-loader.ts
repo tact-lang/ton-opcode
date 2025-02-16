@@ -80,11 +80,11 @@ export function parseInstructions(
     for (const operand of instruction.bytecode.operands) {
         try {
             operands.push(parseInstruction(source, operand, slice))
-        } catch (e) {
+        } catch (error) {
             throw new DisassemblerError(
                 `Bad operand ${operand.name} for instruction ${instruction.mnemonic}`,
                 {
-                    cause: e,
+                    cause: error,
                 },
             )
         }

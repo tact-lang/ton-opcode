@@ -2,6 +2,7 @@ import path from "node:path"
 import tseslint from "typescript-eslint"
 import url from "node:url"
 import unusedImports from "eslint-plugin-unused-imports"
+import unicornPlugin from "eslint-plugin-unicorn"
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url))
 
@@ -31,6 +32,7 @@ export default tseslint.config(
     },
 
     tseslint.configs.all,
+    unicornPlugin.configs["flat/all"],
 
     {
         languageOptions: {
@@ -75,6 +77,15 @@ export default tseslint.config(
             "@typescript-eslint/max-params": "off",
 
             "@/eqeqeq": "error",
+
+            // override unicorn
+            "unicorn/prevent-abbreviations": "off",
+            "unicorn/prefer-string-slice": "off",
+            "unicorn/no-keyword-prefix": "off",
+            "unicorn/no-abusive-eslint-disable": "off",
+            "unicorn/no-array-for-each": "off",
+            "unicorn/no-null": "off",
+            "unicorn/no-lonely-if": "off",
         },
     },
 )

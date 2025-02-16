@@ -417,42 +417,43 @@ export class AssemblyWriter {
 
         node.arguments.forEach(arg => {
             switch (arg.type) {
-                case "stack_entry":
+                case "stack_entry": {
                     if (arg.value < 0) {
                         this.writer.write(`s(${arg.value}) `)
                         break
                     }
                     this.writer.write(`s${arg.value} `)
                     break
-
-                case "control_register":
+                }
+                case "control_register": {
                     if (arg.value < 0) {
                         this.writer.write(`c(${arg.value}) `)
                         break
                     }
                     this.writer.write(`c${arg.value} `)
                     break
-
-                case "scalar":
+                }
+                case "scalar": {
                     this.writer.write(`${arg.value.toString()} `)
                     break
-
-                case "reference":
+                }
+                case "reference": {
                     this.writer.write(`${this.resolveProcedureName(arg.hash)} `)
                     break
-
-                case "global_variable":
+                }
+                case "global_variable": {
                     this.writer.write(`${this.resolveGlobalName(arg.value)} `)
                     break
-
-                case "method_reference":
+                }
+                case "method_reference": {
                     this.writer.write(`${this.resolveMethodName(arg.methodId)} `)
                     break
-
-                case "block":
+                }
+                case "block": {
                     this.writeBlockNode(arg, false)
                     this.writer.write(" ")
                     break
+                }
             }
         })
 
@@ -476,12 +477,14 @@ export class AssemblyWriter {
                 switch (arg.type) {
                     case "numeric":
                     case "ref":
-                    case "bigint":
+                    case "bigint": {
                         this.writer.write(arg.bitcode.toString())
                         break
-                    case "subslice":
+                    }
+                    case "subslice": {
                         this.writer.write(arg.value.bits.toString())
                         break
+                    }
                 }
             })
         }
@@ -494,25 +497,26 @@ export class AssemblyWriter {
         top: boolean = false,
     ): void {
         switch (node.type) {
-            case "program":
+            case "program": {
                 this.writeProgramNode(node)
                 break
-
-            case "method":
+            }
+            case "method": {
                 this.writeMethodNode(node)
                 break
-
-            case "procedure":
+            }
+            case "procedure": {
                 this.writeProcedureNode(node)
                 break
-
-            case "block":
+            }
+            case "block": {
                 this.writeBlockNode(node, top)
                 break
-
-            case "instruction":
+            }
+            case "instruction": {
                 this.writeInstructionNode(node)
                 break
+            }
         }
     }
 

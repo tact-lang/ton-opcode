@@ -93,7 +93,9 @@ export function disassembleAndProcess(args: DisassembleAndProcessParams): BlockN
         return createBlock([], hash, offset, 0)
     }
 
-    const lastInstruction = instructions[instructions.length - 1]
+    const lastInstruction = instructions.at(-1)
+    if (lastInstruction === undefined) throw new Error("unreachable")
+
     return createBlock(instructions, hash, offset, lastInstruction.offset + lastInstruction.length)
 }
 
@@ -108,12 +110,14 @@ function processInstruction(
     const opcodeName = opcode.definition.mnemonic
 
     switch (opcodeName) {
-        case "CALLREF":
+        case "CALLREF": {
             return processCallRef(op, args)
+        }
         case "CALLDICT":
         case "CALLDICT_LONG":
-        case "JMPDICT":
+        case "JMPDICT": {
             return processCallDict(op)
+        }
     }
 
     return processDefaultInstruction(op, args)
@@ -213,20 +217,24 @@ function processDefaultInstruction(
 
     const operands = opcode.operands.map((operand): InstructionArgument => {
         switch (operand.type) {
-            case "numeric":
+            case "numeric": {
                 return processNumericOperand(operand)
-            case "bigint":
+            }
+            case "bigint": {
                 return {
                     type: "scalar",
                     value: operand.value,
                 }
+            }
             case "ref":
-            case "subslice":
+            case "subslice": {
                 return processRefOrSliceOperand(opcode, operand, args)
-            default:
+            }
+            default: {
                 throw new UnknownOperandTypeError(operand, {
                     instruction: opcode.definition.mnemonic,
                 })
+            }
         }
     })
 
@@ -418,7 +426,7 @@ function deserializeDict(
     function createCodeCell(): DictionaryValue<{offset: number; cell: Cell}> {
         return {
             serialize: (_src, _builder): never => {
-                throw Error("Not implemented")
+                throw new Error("Not implemented")
             },
             parse: (src): {offset: number; cell: Cell} => {
                 const cloned = src.clone(true)

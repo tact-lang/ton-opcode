@@ -7,11 +7,11 @@ export const prefixToBin = (prefix: string): BitString => {
         prefix = prefix.slice(0, -1)
     }
 
-    const padLen = prefix.length % 2
-    const paddedHex = prefix.padEnd(prefix.length + padLen, "0")
+    const padLength = prefix.length % 2
+    const paddedHex = prefix.padEnd(prefix.length + padLength, "0")
     const buffer = Buffer.from(paddedHex, "hex")
 
-    const bits = new BitString(buffer, 0, buffer.byteLength * 8 - padLen * 4)
+    const bits = new BitString(buffer, 0, buffer.byteLength * 8 - padLength * 4)
     if (completionTag) {
         return removeCompletionTag(bits)
     }
