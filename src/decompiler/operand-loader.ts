@@ -15,52 +15,52 @@ export type RefOperand = ExtractType<"ref">
 export type NumericOperand = UintOperand | IntOperand
 
 export interface NumericValue {
-    type: "numeric"
-    definition: NumericOperand
-    value: number
-    bitcode: BitString
+    readonly type: "numeric"
+    readonly definition: NumericOperand
+    readonly value: number
+    readonly bitcode: BitString
 }
 
 export interface BigIntValue {
-    type: "bigint"
-    definition: PushLongOperand
-    value: bigint
-    bitcode: BitString
+    readonly type: "bigint"
+    readonly definition: PushLongOperand
+    readonly value: bigint
+    readonly bitcode: BitString
 }
 
 export interface RefValue {
-    type: "ref"
-    definition: RefOperand
-    value: Cell
-    bitcode: BitString
+    readonly type: "ref"
+    readonly definition: RefOperand
+    readonly value: Cell
+    readonly bitcode: BitString
 }
 
 export interface SliceValue {
-    type: "subslice"
-    definition: SubsliceOperand
-    value: Cell
-    source: Cell
-    offsetBits: number
-    offsetRefs: number
-    limitBits: number
-    limitRefs: number
+    readonly type: "subslice"
+    readonly definition: SubsliceOperand
+    readonly value: Cell
+    readonly source: Cell
+    readonly offsetBits: number
+    readonly offsetRefs: number
+    readonly limitBits: number
+    readonly limitRefs: number
 }
 
 export type OperandValue = NumericValue | BigIntValue | RefValue | SliceValue
 
-const prefixMatcher: PrefixMatcher = new PrefixMatcher()
-
 export interface DecodedInstruction {
-    definition: Instruction
-    operands: OperandValue[]
+    readonly definition: Instruction
+    readonly operands: OperandValue[]
 }
 
 export interface DecompiledInstruction {
-    op: DecodedInstruction
-    hash: string
-    offset: number
-    length: number
+    readonly op: DecodedInstruction
+    readonly hash: string
+    readonly offset: number
+    readonly length: number
 }
+
+const prefixMatcher: PrefixMatcher = new PrefixMatcher()
 
 export function decodeInstruction(source: Cell, slice: Slice): DecodedInstruction {
     const definition = prefixMatcher.loadPrefix(slice)

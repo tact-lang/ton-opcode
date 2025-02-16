@@ -32,11 +32,11 @@ export interface AssemblyWriterOptions {
      *
      * `true` by default.
      */
-    useAliases?: boolean
+    readonly useAliases?: boolean
     /**
      * Don't add any additional header comments in file, by default: false
      */
-    withoutHeader?: boolean
+    readonly withoutHeader?: boolean
     /**
      * If true, shows `//` comment with hex bitcode:
      * ```
@@ -49,8 +49,8 @@ export interface AssemblyWriterOptions {
      *
      * `false` by default.
      */
-    outputBitcodeAfterInstruction?: boolean
-    debugSymbols?: DebugSymbols
+    readonly outputBitcodeAfterInstruction?: boolean
+    readonly debugSymbols?: DebugSymbols
 }
 
 export class AssemblyWriter {

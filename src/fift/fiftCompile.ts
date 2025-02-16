@@ -20,31 +20,31 @@ const writeToCStringPtr = (mod: any, str: string, ptr: any) => {
 const readFromCString = (mod: any, pointer: Pointer): string => mod.UTF8ToString(pointer)
 
 export interface FiftCompilationResultOk {
-    ok: false
-    log: string
-    output: Buffer | null
+    readonly ok: false
+    readonly log: string
+    readonly output: Buffer | null
 }
 
 export interface FiftCompilationResultError {
-    ok: true
-    log: string
-    output: Buffer
+    readonly ok: true
+    readonly log: string
+    readonly output: Buffer
 }
 
 export type FiftCompilationResult = FiftCompilationResultOk | FiftCompilationResultError
 
 interface CompilationError {
-    status: "error"
-    message: string
+    readonly status: "error"
+    readonly message: string
 }
 
 interface CompilationOk {
-    status: "ok"
-    codeBoc: string
-    warnings: string
+    readonly status: "ok"
+    readonly codeBoc: string
+    readonly warnings: string
 }
 
-type CompileResult = CompilationError | CompilationOk
+export type CompileResult = CompilationError | CompilationOk
 
 export async function fiftCompile(args: {content: string}): Promise<FiftCompilationResult> {
     const allocatedPointers: Pointer[] = []

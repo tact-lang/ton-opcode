@@ -23,9 +23,9 @@ import {getDisplayNumber, hasHint} from "../spec/helpers"
 import {LayoutError, OperandError, UnknownOperandTypeError} from "./errors"
 
 export interface DisassembleParams {
-    source: Cell
-    offset?: {bits: number; refs: number}
-    limit?: {bits: number; refs: number}
+    readonly source: Cell
+    readonly offset?: {bits: number; refs: number}
+    readonly limit?: {bits: number; refs: number}
 }
 
 /**
@@ -73,7 +73,7 @@ export function disassemble(args: DisassembleParams): DecompiledInstruction[] {
 }
 
 export interface DisassembleAndProcessParams extends DisassembleParams {
-    onCellReference?: (cell: Cell) => void
+    readonly onCellReference?: (cell: Cell) => void
 }
 
 /**
