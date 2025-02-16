@@ -3,7 +3,7 @@
     "exclude": [
         "**/node_modules/**",
         "**/funcfiftlib.js",
-        "**/fiftCompile.ts",
+        "**/compileFift.ts",
         "**/errors.ts",
         "**/test/**",
         "**/*.d.ts"
