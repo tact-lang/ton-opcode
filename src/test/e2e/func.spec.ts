@@ -39,6 +39,29 @@ describe("disassemble", () => {
         `)
     })
 
+    it("should decompile SDBEGINSXQ correctly", async () => {
+        await compileAndCheck(`
+            forall X -> (X, ()) ~impure_touch(X x) impure asm "NOP";
+
+            builder begin_cell() asm "NEWC";
+            builder store_slice(builder b, slice s) asm "STSLICER";
+            cell end_cell(builder b) asm "ENDC";
+            slice begin_parse(cell c) asm "CTOS";
+
+            slice trim_prefix(slice where, slice prefix) asm "SDBEGINSX";
+            slice trim_prefix_quite(slice where, slice prefix) asm "SDBEGINSXQ";
+
+            () recv_internal() {
+                slice where = begin_cell().store_slice("hello world").end_cell().begin_parse();
+                slice prefix = begin_cell().store_slice("hello").end_cell().begin_parse();
+                slice result = trim_prefix(where, prefix);
+                slice result2 = trim_prefix_quite(where, prefix);
+                ~impure_touch(result);
+                ~impure_touch(result2);
+            }
+        `)
+    })
+
     async function compileAndCheck(content: string) {
         const funcRes = await compileFunc({
             sources: [
