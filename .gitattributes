@@ -1,2 +1,2 @@
 * text=auto eol=lf
-funcfiftlib.js linguist-vendored
+src/fift/funcfiftlib.js linguist-vendored
