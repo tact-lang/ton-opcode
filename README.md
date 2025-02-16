@@ -1,4 +1,4 @@
-# TOP Opcodes
+# TON Opcodes
 
 A decompiler for The Open Network Virtual Machine (TVM) bytecode.
 
