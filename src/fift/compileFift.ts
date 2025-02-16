@@ -1,5 +1,5 @@
 /* eslint-disable */
-import fs, {readFileSync} from "node:fs"
+import fs from "node:fs"
 
 const CompilerModule = require("./funcfiftlib.js")
 
@@ -90,7 +90,7 @@ export async function compileFift(
     })
 
     function addDebugInfoHelper(content: string) {
-        const asmFile = readFileSync(`${__dirname}/AsmWithDebugInfo.fif`).toString()
+        const asmFile = fs.readFileSync(`${__dirname}/AsmWithDebugInfo.fif`).toString()
         return asmFile + "\n\n" + content
     }
 
