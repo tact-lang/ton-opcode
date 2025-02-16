@@ -7,7 +7,8 @@
     "license": "MIT",
     "description": "TVM BoC disassembler",
     "scripts": {
-        "build": "tsc --declaration",
+        "build": "tsc --declaration && yarn run copy:fift",
+        "copy:fift": "ts-node src/fift/copy.build.ts",
         "fmt": "prettier --write -l --cache .",
         "fmt:check": "prettier --check --cache .",
         "lint": "eslint --cache .",
@@ -74,7 +75,7 @@
     },
     "files": [
         "dist",
-        "!src/test",
-        "!src/test/**/*"
+        "!dist/test",
+        "!dist/test/**/*"
     ]
 }

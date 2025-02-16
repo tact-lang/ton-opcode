@@ -86,6 +86,7 @@ export default tseslint.config(
             "unicorn/no-array-for-each": "off",
             "unicorn/no-null": "off",
             "unicorn/no-lonely-if": "off",
+            "unicorn/no-process-exit": "off",
         },
     },
 )
