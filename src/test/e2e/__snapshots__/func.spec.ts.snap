@@ -16,6 +16,22 @@ PROGRAM{
 }END>c"
 `;
 
+exports[`disassemble > should decompile GETGLOB and GETGLOBVAR correctly 1`] = `
+""Asm.fif" include
+PROGRAM{
+  DECLPROC recv_internal
+  recv_internal PROC:<{
+    ONE
+    ONE
+    ADD
+    GETGLOBVAR
+    DROP
+    2 GETGLOB
+    DROP
+  }>
+}END>c"
+`;
+
 exports[`disassemble > should decompile and compile back PUSHREF with bytes 1`] = `
 ""Asm.fif" include
 PROGRAM{
