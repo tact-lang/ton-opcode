@@ -407,7 +407,7 @@ export class AssemblyWriter {
             this.writer.write(specific)
 
             if (this.options.outputBitcodeAfterInstruction) {
-                const space = " ".repeat(50 - this.writer.lineLength())
+                const space = " ".repeat(Math.max(1, 50 - this.writer.lineLength()))
                 this.writer.write(`${space}// 0x` + node.opcode.definition.bytecode.prefix)
             }
 
