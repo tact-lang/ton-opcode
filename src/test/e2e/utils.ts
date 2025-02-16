@@ -40,7 +40,6 @@ export async function compileFiftBackAndCompare(
     const result = await compileFift(content)
     if (!result.ok) {
         fail(`cannot compile boc:\n${result.log}`)
-        return
     }
 
     const resultBase64 = result.output.toString("base64")

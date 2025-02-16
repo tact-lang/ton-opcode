@@ -20,6 +20,7 @@ const OPCODE_RENAMES = new Map([
     ["PUSHCONT_SHORT", "PUSHCONT"],
     ["THROWIFNOT_SHORT", "THROWIFNOT"],
     ["THROWIF_SHORT", "THROWIF"],
+    ["CALLDICT_LONG", "CALLDICT"],
 ])
 
 export interface AssemblyWriterOptions {
