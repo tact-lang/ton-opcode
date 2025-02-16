@@ -49,13 +49,13 @@ describe("disassemble", () => {
             slice begin_parse(cell c) asm "CTOS";
 
             slice trim_prefix(slice where, slice prefix) asm "SDBEGINSX";
-            slice trim_prefix_quite(slice where, slice prefix) asm "SDBEGINSXQ";
+            slice trim_prefix_quiet(slice where, slice prefix) asm "SDBEGINSXQ";
 
             () recv_internal() {
                 slice where = begin_cell().store_slice("hello world").end_cell().begin_parse();
                 slice prefix = begin_cell().store_slice("hello").end_cell().begin_parse();
                 slice result = trim_prefix(where, prefix);
-                slice result2 = trim_prefix_quite(where, prefix);
+                slice result2 = trim_prefix_quiet(where, prefix);
                 ~impure_touch(result);
                 ~impure_touch(result2);
             }
