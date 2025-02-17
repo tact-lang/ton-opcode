@@ -3841,3 +3841,795 @@ PROGRAM{
   }>
 }END>c"
 `;
+
+exports[`known contracts > should decompile wallet v5 with bitcode 1`] = `
+""Asm.fif" include
+PROGRAM{
+  -1 DECLMETHOD recv_external
+  DECLPROC recv_internal
+  78748 DECLMETHOD get_public_key
+  81467 DECLMETHOD get_subwallet_id
+  85143 DECLMETHOD seqno
+  88459 DECLMETHOD ?fun_88459
+  117729 DECLMETHOD ?fun_117729
+  recv_external PROC:<{
+    s0 PUSH                                       // 0x2 0
+    32 PLDU                                       // 0xD70B 1F
+    1936287598 PUSHINT                            // 0x82 107369676E
+    EQUAL                                         // 0xBA
+    138 THROWIFNOT                                // 0xF2E4_ 115_
+    -1 PUSHINT                                    // 0x7 F
+    <{
+      c2 SAVE                                     // 0xEDA 2
+      SAMEALTSAVE                                 // 0xEDFB
+      s1 PUSH                                     // 0x2 1
+      9 PUSHPOW2                                  // 0x83 08
+      SDCUTLAST                                   // 0xD722
+      s0 s2 XCHG                                  // 0x0 2
+      9 PUSHPOW2                                  // 0x83 08
+      SDSKIPLAST                                  // 0xD723
+      s0 PUSH                                     // 0x2 0
+      32 PUSHINT                                  // 0x80 20
+      SDSKIPFIRST                                 // 0xD721
+      32 LDU                                      // 0xD3 1F
+      32 LDU                                      // 0xD3 1F
+      32 LDU                                      // 0xD3 1F
+      c4 PUSHCTR                                  // 0xED4 4
+      CTOS                                        // 0xD0
+      1 LDI                                       // 0xD2 00
+      32 LDU                                      // 0xD3 1F
+      s0 PUSH                                     // 0x2 0
+      32 LDU                                      // 0xD3 1F
+      256 LDU                                     // 0xD3 FF
+      1 PLDI                                      // 0xD70A 00
+      s0 s10 XCHG                                 // 0x0 A
+      HASHSU                                      // 0xF901
+      s0 s12 s12 XCHG3                            // 0x4 0 C C
+      CHKSIGNU                                    // 0xF910
+      <{
+        s8 PUSH                                   // 0x2 8
+        <{
+          10 BLKDROP                              // 0x5F0 A
+          RETALT                                  // 0xDB31
+        }> PUSHCONT                               // 0x9 5F0ADB31
+        IFNOTJMP                                  // 0xE1
+        135 THROW                                 // 0xF2C4_ 10F_
+      }> PUSHCONT                                 // 0x9 28945F0ADB31E1F2C087
+      IFNOT                                       // 0xDF
+      s0 s2 XCHG                                  // 0x0 2
+      NOT                                         // 0xB3
+      s0 s7 XCHG2                                 // 0x50 0 7
+      AND                                         // 0xB0
+      132 THROWIF                                 // 0xF2D4_ 109_
+      s2 s5 XCPU                                  // 0x51 2 5
+      EQUAL                                       // 0xBA
+      133 THROWIFNOT                              // 0xF2E4_ 10B_
+      s3 s6 XCHG2                                 // 0x50 3 6
+      EQUAL                                       // 0xBA
+      134 THROWIFNOT                              // 0xF2E4_ 10D_
+      3 GETPARAM                                  // 0xF82 3
+      LEQ                                         // 0xBB
+      136 THROWIF                                 // 0xF2D4_ 111_
+      s2 PUSH                                     // 0x2 2
+      <{
+        ACCEPT                                    // 0xF800
+      }> PUSHCONT                                 // 0x9 F800
+      IF                                          // 0xDE
+      s0 s1 XCHG                                  // 0x0 1
+      INC                                         // 0xA4
+      -1 PUSHINT                                  // 0x7 F
+      NEWC                                        // 0xC8
+      1 STI                                       // 0xCA 00
+      32 STU                                      // 0xCB 1F
+      s0 s1 XCHG                                  // 0x0 1
+      STSLICER                                    // 0xCF16
+      ENDC                                        // 0xC9
+      c4 POPCTR                                   // 0xED5 4
+      s0 PUSH                                     // 0x2 0
+      <{
+        COMMIT                                    // 0xF80F
+      }> PUSHCONT                                 // 0x9 F80F
+      IF                                          // 0xDE
+      0 PUSHINT                                   // 0x7 0
+      <{
+        c2 SAVE                                   // 0xEDA 2
+        SAMEALTSAVE                               // 0xEDFB
+        s0 s2 XCHG                                // 0x0 2
+        LDDICT                                    // 0xF404
+        s1 PUSH                                   // 0x2 1
+        ISNULL                                    // 0x6E
+        <{
+          2 1 BLKDROP2                            // 0x6C 2 1
+        }> PUSHCONT                               // 0x9 6C21
+        <{
+          s0 s2 XCHG                              // 0x0 2
+          s1 PUSH                                 // 0x2 1
+          XCTOS                                   // 0xD739
+          s0 POP                                  // 0x3 0
+          0 PUSHINT                               // 0x7 0
+          <{
+            s1 PUSH                               // 0x2 1
+            SEMPTY                                // 0xC700
+            NOT                                   // 0xB3
+          }> PUSHCONT                             // 0x9 21C700B3
+          <{
+            s0 s1 XCHG                            // 0x0 1
+            x{0EC3C86D} SDBEGINS                  // 0xD72A_ 0EC3C86D
+            s0 PUSH                               // 0x2 0
+            SBITS                                 // 0xD749
+            8 EQINT                               // 0xC0 08
+            147 THROWIFNOT                        // 0xF2E4_ 127_
+            s0 PUSH                               // 0x2 0
+            SREFS                                 // 0xD74A
+            2 EQINT                               // 0xC0 02
+            147 THROWIFNOT                        // 0xF2E4_ 127_
+            s0 PUSH                               // 0x2 0
+            7 PLDSLICE                            // 0xD71D 06
+            SDCNTTRAIL0                           // 0xC712
+            0 GTINT                               // 0xC2 00
+            s3 s(-1) PUXC                         // 0x52 3 0
+            AND                                   // 0xB0
+            137 THROWIF                           // 0xF2D4_ 113_
+            0 PLDREFIDX                           // 0xD74E_ 2_
+            XCTOS                                 // 0xD739
+            s0 POP                                // 0x3 0
+            s0 s1 XCHG                            // 0x0 1
+            INC                                   // 0xA4
+          }> PUSHCONT                             // 0x8F_ 01D72820761E436C20D749C008F2E09320D74AC002F2E09320D71D06C712C2005230B0F2D089D74CD7393001A4
+          WHILE                                   // 0xE8
+          1 2 BLKDROP2                            // 0x6C 1 2
+          8 PUSHPOW2DEC                           // 0x84 07
+          LEQ                                     // 0xBB
+          147 THROWIFNOT                          // 0xF2E4_ 127_
+          SREFS                                   // 0xD74A
+          0 EQINT                                 // 0xC0 00
+          147 THROWIFNOT                          // 0xF2E4_ 127_
+          c5 POPCTR                               // 0xED5 5
+        }> PUSHCONT                               // 0x8F_ 0221D73930709421C700B38E2D01D72820761E436C20D749C008F2E09320D74AC002F2E09320D71D06C712C2005230B0F2D089D74CD7393001A4E86C128407BBF2E093D74AC000F2E093ED55
+        IFELSE                                    // 0xE2
+        1 LDI                                     // 0xD2 00
+        s0 s1 XCHG                                // 0x0 1
+        0 EQINT                                   // 0xC0 00
+        <{
+          DROP2                                   // 0x5B
+        }> PUSHCONT                               // 0x9 5B
+        IFJMP                                     // 0xE0
+        AGAINEND                                  // 0xEB
+        x{02} SDBEGINSQ                           // 0xD72E_ 02
+        s0 PUSH                                   // 0x2 0
+        <{
+          0 PUSHINT                               // 0x7 0
+        }> PUSHCONT                               // 0x9 70
+        <{
+          s0 s1 XCHG                              // 0x0 1
+          x{03} SDBEGINSQ                         // 0xD72E_ 03
+          s1 s2 XCHG                              // 0x1 2
+        }> PUSHCONT                               // 0x9 01D72C081C12
+        IFELSE                                    // 0xE2
+        s1 s(-1) PUXC                             // 0x52 1 0
+        OR                                        // 0xB1
+        <{
+          s0 s1 XCHG                              // 0x0 1
+          LDMSGADDR                               // 0xFA40
+          s0 s1 XCHG                              // 0x0 1
+          REWRITESTDADDR                          // 0xFA44
+          8 GETPARAM                              // 0xF82 8
+          REWRITESTDADDR                          // 0xFA44
+          s0 POP                                  // 0x3 0
+          ROT                                     // 0x58
+          EQUAL                                   // 0xBA
+          145 THROWIFNOT                          // 0xF2E4_ 123_
+          c4 PUSHCTR                              // 0xED4 4
+          CTOS                                    // 0xD0
+          321 PUSHINT                             // 0x81 0141
+          LDSLICEX                                // 0xD718
+          PLDDICT                                 // 0xF405
+          s0 s4 XCHG                              // 0x0 4
+          <{
+            -1 PUSHINT                            // 0x7 F
+            NEWC                                  // 0xC8
+            1 STI                                 // 0xCA 00
+            s0 s0 s4 XCHG3                        // 0x4 0 0 4
+            8 PUSHPOW2                            // 0x83 07
+            DICTUADDB                             // 0xF453
+            139 THROWIFNOT                        // 0xF2E4_ 117_
+          }> PUSHCONT                             // 0x9 7FC8CA0040048307F453F2E08B
+          <{
+            s0 s3 XCHG                            // 0x0 3
+            8 PUSHPOW2                            // 0x83 07
+            DICTUDEL                              // 0xF45B
+            140 THROWIFNOT                        // 0xF2E4_ 119_
+            s2 PUSH                               // 0x2 2
+            1 PLDI                                // 0xD70A 00
+            s1 PUSH                               // 0x2 1
+            ISNULL                                // 0x6E
+            s0 s1 XCHG                            // 0x0 1
+            NOT                                   // 0xB3
+            AND                                   // 0xB0
+            144 THROWIF                           // 0xF2D4_ 121_
+          }> PUSHCONT                             // 0x8F_ 038307F45BF2E08C22D70A00216E01B3B0F2D090
+          IFELSE                                  // 0xE2
+          NEWC                                    // 0xC8
+          s0 s3 XCHG2                             // 0x50 0 3
+          STSLICER                                // 0xCF16
+          s1 s2 XCHG                              // 0x1 2
+          STDICT                                  // 0xF400
+          ENDC                                    // 0xC9
+          c4 POPCTR                               // 0xED5 4
+        }>c <{
+          s0 POP                                  // 0x3 0
+          x{04} SDBEGINSQ                         // 0xD72E_ 04
+          <{
+            s1 PUSH                               // 0x2 1
+            146 THROWIFNOT                        // 0xF2E4_ 125_
+            1 LDI                                 // 0xD2 00
+            c4 PUSHCTR                            // 0xED4 4
+            CTOS                                  // 0xD0
+            1 LDI                                 // 0xD2 00
+            s1 s3 XCPU                            // 0x51 1 3
+            EQUAL                                 // 0xBA
+            143 THROWIF                           // 0xF2D4_ 11F_
+            s0 s2 s(-1) PUXCPU                    // 0x545 0 3 0
+            <{
+              s1 POP                              // 0x3 1
+            }> PUSHCONT                           // 0x9 31
+            <{
+              s0 s1 XCHG                          // 0x0 1
+              320 PUSHINT                         // 0x81 0140
+              SDSKIPFIRST                         // 0xD721
+              1 PLDI                              // 0xD70A 00
+              142 THROWIFNOT                      // 0xF2E4_ 11D_
+            }> PUSHCONT                           // 0x9 01810140D721D70A00F2E08E
+            IFELSE                                // 0xE2
+            NEWC                                  // 0xC8
+            1 STI                                 // 0xCA 00
+            ROT                                   // 0x58
+            STSLICER                              // 0xCF16
+            ENDC                                  // 0xC9
+            c4 POPCTR                             // 0xED5 4
+          }> PUSHCONT                             // 0x8F_ 21F2E092D200ED44D0D2005113BAF2D08F54503091319C01810140D721D70A00F2E08EE2C8CA0058CF16C9ED54
+          <{
+            141 THROW                             // 0xF2C4_ 11B_
+          }> PUSHCONT                             // 0x9 F2C08D
+          IFELSE                                  // 0xE2
+        }>c IFREFELSEREF                          // 0xE30F 01FA4001FA44F828FA443058BAF2E091ED44D0810141D718F405049D7FC8CA0040048307F453F2E08B8E14038307F45BF2E08C22D70A00216E01B3B0F2D090E2C85003CF1612F400C9ED54 30D72C08248E2D21F2E092D200ED44D0D2005113BAF2D08F54503091319C01810140D721D70A00F2E08EE2C8CA0058CF16C9ED5493F2C08DE2
+        s0 PUSH                                   // 0x2 0
+        SREFS                                     // 0xD74A
+        <{
+          DROP2                                   // 0x5B
+          RETALT                                  // 0xDB31
+        }> PUSHCONT                               // 0x9 5BDB31
+        IFNOTJMP                                  // 0xE1
+        0 PLDREFIDX                               // 0xD74E_ 2_
+        CTOS                                      // 0xD0
+      }>c CALLREF                                 // 0xDB3C EDA2EDFB02F404216E926C218E4C0221D73930709421C700B38E2D01D72820761E436C20D749C008F2E09320D74AC002F2E09320D71D06C712C2005230B0F2D089D74CD7393001A4E86C128407BBF2E093D74AC000F2E093ED55E2D20001C000915BE0EBD72C08142091709601D72C081C12E25210B1E30F20D74A
+    }> PUSHCONT                                   // 0x8F_ EDA2EDFB218308D722028308D723208020D721D31FD31FD31FED44D0D200D31F20D31FD3FFD70A000AF90140CCF9109A28945F0ADB31E1F2C087DF02B35007B0F2D0845125BAF2E0855036BAF2E086F823BBF2D0882292F800DE01A47FC8CA00CB1F01CF16C9ED542092F80FDE70DB3C
+    EXECUTE                                       // 0xD8
+  }>
+  recv_internal PROC:<{
+    s0 PUSH                                       // 0x2 0
+    SBITS                                         // 0xD749
+    32 LESSINT                                    // 0xC1 20
+    <{
+      DROP2                                       // 0x5B
+    }> PUSHCONT                                   // 0x9 5B
+    <{
+      s0 PUSH                                     // 0x2 0
+      32 PLDU                                     // 0xD70B 1F
+      s0 PUSH                                     // 0x2 0
+      1702392942 PUSHINT                          // 0x82 106578746E
+      NEQ                                         // 0xBD
+      s1 PUSH                                     // 0x2 1
+      1936289396 PUSHINT                          // 0x82 1073696E74
+      NEQ                                         // 0xBD
+      AND                                         // 0xB0
+      <{
+        3 BLKDROP                                 // 0x5F0 3
+      }> PUSHCONT                                 // 0x9 5F03
+      IFJMP                                       // 0xE0
+      1702392942 PUSHINT                          // 0x82 106578746E
+      EQUAL                                       // 0xBA
+      <{
+        32 PUSHINT                                // 0x80 20
+        SDSKIPFIRST                               // 0xD721
+        s0 s1 XCHG                                // 0x0 1
+        CTOS                                      // 0xD0
+        4 PUSHINT                                 // 0x7 4
+        SDSKIPFIRST                               // 0xD721
+        LDMSGADDR                                 // 0xFA40
+        s0 POP                                    // 0x3 0
+        REWRITESTDADDR                            // 0xFA44
+        8 GETPARAM                                // 0xF82 8
+        REWRITESTDADDR                            // 0xFA44
+        s0 POP                                    // 0x3 0
+        ROT                                       // 0x58
+        NEQ                                       // 0xBD
+        <{
+          DROP2                                   // 0x5B
+        }> PUSHCONT                               // 0x9 5B
+        IFJMP                                     // 0xE0
+        c4 PUSHCTR                                // 0xED4 4
+        CTOS                                      // 0xD0
+        321 PUSHINT                               // 0x81 0141
+        SDSKIPFIRST                               // 0xD721
+        PLDDICT                                   // 0xF405
+        8 PUSHPOW2                                // 0x83 07
+        DICTUGET                                  // 0xF40E
+        NULLSWAPIFNOT                             // 0x6FA1
+        s1 POP                                    // 0x3 1
+        <{
+          s0 POP                                  // 0x3 0
+        }> PUSHCONT                               // 0x9 30
+        IFNOTJMP                                  // 0xE1
+        64 PUSHINT                                // 0x80 40
+        SDSKIPFIRST                               // 0xD721
+        0 PUSHINT                                 // 0x7 0
+        -1 PUSHINT                                // 0x7 F
+        <{
+          c2 SAVE                                 // 0xEDA 2
+          SAMEALTSAVE                             // 0xEDFB
+          s0 s2 XCHG                              // 0x0 2
+          LDDICT                                  // 0xF404
+          s1 PUSH                                 // 0x2 1
+          ISNULL                                  // 0x6E
+          <{
+            2 1 BLKDROP2                          // 0x6C 2 1
+          }> PUSHCONT                             // 0x9 6C21
+          <{
+            s0 s2 XCHG                            // 0x0 2
+            s1 PUSH                               // 0x2 1
+            XCTOS                                 // 0xD739
+            s0 POP                                // 0x3 0
+            0 PUSHINT                             // 0x7 0
+            <{
+              s1 PUSH                             // 0x2 1
+              SEMPTY                              // 0xC700
+              NOT                                 // 0xB3
+            }> PUSHCONT                           // 0x9 21C700B3
+            <{
+              s0 s1 XCHG                          // 0x0 1
+              x{0EC3C86D} SDBEGINS                // 0xD72A_ 0EC3C86D
+              s0 PUSH                             // 0x2 0
+              SBITS                               // 0xD749
+              8 EQINT                             // 0xC0 08
+              147 THROWIFNOT                      // 0xF2E4_ 127_
+              s0 PUSH                             // 0x2 0
+              SREFS                               // 0xD74A
+              2 EQINT                             // 0xC0 02
+              147 THROWIFNOT                      // 0xF2E4_ 127_
+              s0 PUSH                             // 0x2 0
+              7 PLDSLICE                          // 0xD71D 06
+              SDCNTTRAIL0                         // 0xC712
+              0 GTINT                             // 0xC2 00
+              s3 s(-1) PUXC                       // 0x52 3 0
+              AND                                 // 0xB0
+              137 THROWIF                         // 0xF2D4_ 113_
+              0 PLDREFIDX                         // 0xD74E_ 2_
+              XCTOS                               // 0xD739
+              s0 POP                              // 0x3 0
+              s0 s1 XCHG                          // 0x0 1
+              INC                                 // 0xA4
+            }> PUSHCONT                           // 0x8F_ 01D72820761E436C20D749C008F2E09320D74AC002F2E09320D71D06C712C2005230B0F2D089D74CD7393001A4
+            WHILE                                 // 0xE8
+            1 2 BLKDROP2                          // 0x6C 1 2
+            8 PUSHPOW2DEC                         // 0x84 07
+            LEQ                                   // 0xBB
+            147 THROWIFNOT                        // 0xF2E4_ 127_
+            SREFS                                 // 0xD74A
+            0 EQINT                               // 0xC0 00
+            147 THROWIFNOT                        // 0xF2E4_ 127_
+            c5 POPCTR                             // 0xED5 5
+          }> PUSHCONT                             // 0x8F_ 0221D73930709421C700B38E2D01D72820761E436C20D749C008F2E09320D74AC002F2E09320D71D06C712C2005230B0F2D089D74CD7393001A4E86C128407BBF2E093D74AC000F2E093ED55
+          IFELSE                                  // 0xE2
+          1 LDI                                   // 0xD2 00
+          s0 s1 XCHG                              // 0x0 1
+          0 EQINT                                 // 0xC0 00
+          <{
+            DROP2                                 // 0x5B
+          }> PUSHCONT                             // 0x9 5B
+          IFJMP                                   // 0xE0
+          AGAINEND                                // 0xEB
+          x{02} SDBEGINSQ                         // 0xD72E_ 02
+          s0 PUSH                                 // 0x2 0
+          <{
+            0 PUSHINT                             // 0x7 0
+          }> PUSHCONT                             // 0x9 70
+          <{
+            s0 s1 XCHG                            // 0x0 1
+            x{03} SDBEGINSQ                       // 0xD72E_ 03
+            s1 s2 XCHG                            // 0x1 2
+          }> PUSHCONT                             // 0x9 01D72C081C12
+          IFELSE                                  // 0xE2
+          s1 s(-1) PUXC                           // 0x52 1 0
+          OR                                      // 0xB1
+          <{
+            s0 s1 XCHG                            // 0x0 1
+            LDMSGADDR                             // 0xFA40
+            s0 s1 XCHG                            // 0x0 1
+            REWRITESTDADDR                        // 0xFA44
+            8 GETPARAM                            // 0xF82 8
+            REWRITESTDADDR                        // 0xFA44
+            s0 POP                                // 0x3 0
+            ROT                                   // 0x58
+            EQUAL                                 // 0xBA
+            145 THROWIFNOT                        // 0xF2E4_ 123_
+            c4 PUSHCTR                            // 0xED4 4
+            CTOS                                  // 0xD0
+            321 PUSHINT                           // 0x81 0141
+            LDSLICEX                              // 0xD718
+            PLDDICT                               // 0xF405
+            s0 s4 XCHG                            // 0x0 4
+            <{
+              -1 PUSHINT                          // 0x7 F
+              NEWC                                // 0xC8
+              1 STI                               // 0xCA 00
+              s0 s0 s4 XCHG3                      // 0x4 0 0 4
+              8 PUSHPOW2                          // 0x83 07
+              DICTUADDB                           // 0xF453
+              139 THROWIFNOT                      // 0xF2E4_ 117_
+            }> PUSHCONT                           // 0x9 7FC8CA0040048307F453F2E08B
+            <{
+              s0 s3 XCHG                          // 0x0 3
+              8 PUSHPOW2                          // 0x83 07
+              DICTUDEL                            // 0xF45B
+              140 THROWIFNOT                      // 0xF2E4_ 119_
+              s2 PUSH                             // 0x2 2
+              1 PLDI                              // 0xD70A 00
+              s1 PUSH                             // 0x2 1
+              ISNULL                              // 0x6E
+              s0 s1 XCHG                          // 0x0 1
+              NOT                                 // 0xB3
+              AND                                 // 0xB0
+              144 THROWIF                         // 0xF2D4_ 121_
+            }> PUSHCONT                           // 0x8F_ 038307F45BF2E08C22D70A00216E01B3B0F2D090
+            IFELSE                                // 0xE2
+            NEWC                                  // 0xC8
+            s0 s3 XCHG2                           // 0x50 0 3
+            STSLICER                              // 0xCF16
+            s1 s2 XCHG                            // 0x1 2
+            STDICT                                // 0xF400
+            ENDC                                  // 0xC9
+            c4 POPCTR                             // 0xED5 4
+          }>c <{
+            s0 POP                                // 0x3 0
+            x{04} SDBEGINSQ                       // 0xD72E_ 04
+            <{
+              s1 PUSH                             // 0x2 1
+              146 THROWIFNOT                      // 0xF2E4_ 125_
+              1 LDI                               // 0xD2 00
+              c4 PUSHCTR                          // 0xED4 4
+              CTOS                                // 0xD0
+              1 LDI                               // 0xD2 00
+              s1 s3 XCPU                          // 0x51 1 3
+              EQUAL                               // 0xBA
+              143 THROWIF                         // 0xF2D4_ 11F_
+              s0 s2 s(-1) PUXCPU                  // 0x545 0 3 0
+              <{
+                s1 POP                            // 0x3 1
+              }> PUSHCONT                         // 0x9 31
+              <{
+                s0 s1 XCHG                        // 0x0 1
+                320 PUSHINT                       // 0x81 0140
+                SDSKIPFIRST                       // 0xD721
+                1 PLDI                            // 0xD70A 00
+                142 THROWIFNOT                    // 0xF2E4_ 11D_
+              }> PUSHCONT                         // 0x9 01810140D721D70A00F2E08E
+              IFELSE                              // 0xE2
+              NEWC                                // 0xC8
+              1 STI                               // 0xCA 00
+              ROT                                 // 0x58
+              STSLICER                            // 0xCF16
+              ENDC                                // 0xC9
+              c4 POPCTR                           // 0xED5 4
+            }> PUSHCONT                           // 0x8F_ 21F2E092D200ED44D0D2005113BAF2D08F54503091319C01810140D721D70A00F2E08EE2C8CA0058CF16C9ED54
+            <{
+              141 THROW                           // 0xF2C4_ 11B_
+            }> PUSHCONT                           // 0x9 F2C08D
+            IFELSE                                // 0xE2
+          }>c IFREFELSEREF                        // 0xE30F 01FA4001FA44F828FA443058BAF2E091ED44D0810141D718F405049D7FC8CA0040048307F453F2E08B8E14038307F45BF2E08C22D70A00216E01B3B0F2D090E2C85003CF1612F400C9ED54 30D72C08248E2D21F2E092D200ED44D0D2005113BAF2D08F54503091319C01810140D721D70A00F2E08EE2C8CA0058CF16C9ED5493F2C08DE2
+          s0 PUSH                                 // 0x2 0
+          SREFS                                   // 0xD74A
+          <{
+            DROP2                                 // 0x5B
+            RETALT                                // 0xDB31
+          }> PUSHCONT                             // 0x9 5BDB31
+          IFNOTJMP                                // 0xE1
+          0 PLDREFIDX                             // 0xD74E_ 2_
+          CTOS                                    // 0xD0
+        }>c CALLREF                               // 0xDB3C EDA2EDFB02F404216E926C218E4C0221D73930709421C700B38E2D01D72820761E436C20D749C008F2E09320D74AC002F2E09320D71D06C712C2005230B0F2D089D74CD7393001A4E86C128407BBF2E093D74AC000F2E093ED55E2D20001C000915BE0EBD72C08142091709601D72C081C12E25210B1E30F20D74A
+      }> PUSHCONT                                 // 0x8F_ 8020D72101D074D721FA4030FA44F828FA443058BD915BE0ED44D0810141D721F4058307F40E6FA1319130E18040D721707FDB3C
+      IFJMP                                       // 0xE0
+      s1 POP                                      // 0x3 1
+      s0 PUSH                                     // 0x2 0
+      SBITS                                       // 0xD749
+      640 PUSHINT                                 // 0x81 0280
+      LESS                                        // 0xB9
+      <{
+        s0 POP                                    // 0x3 0
+      }> PUSHCONT                                 // 0x9 30
+      IFJMP                                       // 0xE0
+      0 PUSHINT                                   // 0x7 0
+      <{
+        c2 SAVE                                   // 0xEDA 2
+        SAMEALTSAVE                               // 0xEDFB
+        s1 PUSH                                   // 0x2 1
+        9 PUSHPOW2                                // 0x83 08
+        SDCUTLAST                                 // 0xD722
+        s0 s2 XCHG                                // 0x0 2
+        9 PUSHPOW2                                // 0x83 08
+        SDSKIPLAST                                // 0xD723
+        s0 PUSH                                   // 0x2 0
+        32 PUSHINT                                // 0x80 20
+        SDSKIPFIRST                               // 0xD721
+        32 LDU                                    // 0xD3 1F
+        32 LDU                                    // 0xD3 1F
+        32 LDU                                    // 0xD3 1F
+        c4 PUSHCTR                                // 0xED4 4
+        CTOS                                      // 0xD0
+        1 LDI                                     // 0xD2 00
+        32 LDU                                    // 0xD3 1F
+        s0 PUSH                                   // 0x2 0
+        32 LDU                                    // 0xD3 1F
+        256 LDU                                   // 0xD3 FF
+        1 PLDI                                    // 0xD70A 00
+        s0 s10 XCHG                               // 0x0 A
+        HASHSU                                    // 0xF901
+        s0 s12 s12 XCHG3                          // 0x4 0 C C
+        CHKSIGNU                                  // 0xF910
+        <{
+          s8 PUSH                                 // 0x2 8
+          <{
+            10 BLKDROP                            // 0x5F0 A
+            RETALT                                // 0xDB31
+          }> PUSHCONT                             // 0x9 5F0ADB31
+          IFNOTJMP                                // 0xE1
+          135 THROW                               // 0xF2C4_ 10F_
+        }> PUSHCONT                               // 0x9 28945F0ADB31E1F2C087
+        IFNOT                                     // 0xDF
+        s0 s2 XCHG                                // 0x0 2
+        NOT                                       // 0xB3
+        s0 s7 XCHG2                               // 0x50 0 7
+        AND                                       // 0xB0
+        132 THROWIF                               // 0xF2D4_ 109_
+        s2 s5 XCPU                                // 0x51 2 5
+        EQUAL                                     // 0xBA
+        133 THROWIFNOT                            // 0xF2E4_ 10B_
+        s3 s6 XCHG2                               // 0x50 3 6
+        EQUAL                                     // 0xBA
+        134 THROWIFNOT                            // 0xF2E4_ 10D_
+        3 GETPARAM                                // 0xF82 3
+        LEQ                                       // 0xBB
+        136 THROWIF                               // 0xF2D4_ 111_
+        s2 PUSH                                   // 0x2 2
+        <{
+          ACCEPT                                  // 0xF800
+        }> PUSHCONT                               // 0x9 F800
+        IF                                        // 0xDE
+        s0 s1 XCHG                                // 0x0 1
+        INC                                       // 0xA4
+        -1 PUSHINT                                // 0x7 F
+        NEWC                                      // 0xC8
+        1 STI                                     // 0xCA 00
+        32 STU                                    // 0xCB 1F
+        s0 s1 XCHG                                // 0x0 1
+        STSLICER                                  // 0xCF16
+        ENDC                                      // 0xC9
+        c4 POPCTR                                 // 0xED5 4
+        s0 PUSH                                   // 0x2 0
+        <{
+          COMMIT                                  // 0xF80F
+        }> PUSHCONT                               // 0x9 F80F
+        IF                                        // 0xDE
+        0 PUSHINT                                 // 0x7 0
+        <{
+          c2 SAVE                                 // 0xEDA 2
+          SAMEALTSAVE                             // 0xEDFB
+          s0 s2 XCHG                              // 0x0 2
+          LDDICT                                  // 0xF404
+          s1 PUSH                                 // 0x2 1
+          ISNULL                                  // 0x6E
+          <{
+            2 1 BLKDROP2                          // 0x6C 2 1
+          }> PUSHCONT                             // 0x9 6C21
+          <{
+            s0 s2 XCHG                            // 0x0 2
+            s1 PUSH                               // 0x2 1
+            XCTOS                                 // 0xD739
+            s0 POP                                // 0x3 0
+            0 PUSHINT                             // 0x7 0
+            <{
+              s1 PUSH                             // 0x2 1
+              SEMPTY                              // 0xC700
+              NOT                                 // 0xB3
+            }> PUSHCONT                           // 0x9 21C700B3
+            <{
+              s0 s1 XCHG                          // 0x0 1
+              x{0EC3C86D} SDBEGINS                // 0xD72A_ 0EC3C86D
+              s0 PUSH                             // 0x2 0
+              SBITS                               // 0xD749
+              8 EQINT                             // 0xC0 08
+              147 THROWIFNOT                      // 0xF2E4_ 127_
+              s0 PUSH                             // 0x2 0
+              SREFS                               // 0xD74A
+              2 EQINT                             // 0xC0 02
+              147 THROWIFNOT                      // 0xF2E4_ 127_
+              s0 PUSH                             // 0x2 0
+              7 PLDSLICE                          // 0xD71D 06
+              SDCNTTRAIL0                         // 0xC712
+              0 GTINT                             // 0xC2 00
+              s3 s(-1) PUXC                       // 0x52 3 0
+              AND                                 // 0xB0
+              137 THROWIF                         // 0xF2D4_ 113_
+              0 PLDREFIDX                         // 0xD74E_ 2_
+              XCTOS                               // 0xD739
+              s0 POP                              // 0x3 0
+              s0 s1 XCHG                          // 0x0 1
+              INC                                 // 0xA4
+            }> PUSHCONT                           // 0x8F_ 01D72820761E436C20D749C008F2E09320D74AC002F2E09320D71D06C712C2005230B0F2D089D74CD7393001A4
+            WHILE                                 // 0xE8
+            1 2 BLKDROP2                          // 0x6C 1 2
+            8 PUSHPOW2DEC                         // 0x84 07
+            LEQ                                   // 0xBB
+            147 THROWIFNOT                        // 0xF2E4_ 127_
+            SREFS                                 // 0xD74A
+            0 EQINT                               // 0xC0 00
+            147 THROWIFNOT                        // 0xF2E4_ 127_
+            c5 POPCTR                             // 0xED5 5
+          }> PUSHCONT                             // 0x8F_ 0221D73930709421C700B38E2D01D72820761E436C20D749C008F2E09320D74AC002F2E09320D71D06C712C2005230B0F2D089D74CD7393001A4E86C128407BBF2E093D74AC000F2E093ED55
+          IFELSE                                  // 0xE2
+          1 LDI                                   // 0xD2 00
+          s0 s1 XCHG                              // 0x0 1
+          0 EQINT                                 // 0xC0 00
+          <{
+            DROP2                                 // 0x5B
+          }> PUSHCONT                             // 0x9 5B
+          IFJMP                                   // 0xE0
+          AGAINEND                                // 0xEB
+          x{02} SDBEGINSQ                         // 0xD72E_ 02
+          s0 PUSH                                 // 0x2 0
+          <{
+            0 PUSHINT                             // 0x7 0
+          }> PUSHCONT                             // 0x9 70
+          <{
+            s0 s1 XCHG                            // 0x0 1
+            x{03} SDBEGINSQ                       // 0xD72E_ 03
+            s1 s2 XCHG                            // 0x1 2
+          }> PUSHCONT                             // 0x9 01D72C081C12
+          IFELSE                                  // 0xE2
+          s1 s(-1) PUXC                           // 0x52 1 0
+          OR                                      // 0xB1
+          <{
+            s0 s1 XCHG                            // 0x0 1
+            LDMSGADDR                             // 0xFA40
+            s0 s1 XCHG                            // 0x0 1
+            REWRITESTDADDR                        // 0xFA44
+            8 GETPARAM                            // 0xF82 8
+            REWRITESTDADDR                        // 0xFA44
+            s0 POP                                // 0x3 0
+            ROT                                   // 0x58
+            EQUAL                                 // 0xBA
+            145 THROWIFNOT                        // 0xF2E4_ 123_
+            c4 PUSHCTR                            // 0xED4 4
+            CTOS                                  // 0xD0
+            321 PUSHINT                           // 0x81 0141
+            LDSLICEX                              // 0xD718
+            PLDDICT                               // 0xF405
+            s0 s4 XCHG                            // 0x0 4
+            <{
+              -1 PUSHINT                          // 0x7 F
+              NEWC                                // 0xC8
+              1 STI                               // 0xCA 00
+              s0 s0 s4 XCHG3                      // 0x4 0 0 4
+              8 PUSHPOW2                          // 0x83 07
+              DICTUADDB                           // 0xF453
+              139 THROWIFNOT                      // 0xF2E4_ 117_
+            }> PUSHCONT                           // 0x9 7FC8CA0040048307F453F2E08B
+            <{
+              s0 s3 XCHG                          // 0x0 3
+              8 PUSHPOW2                          // 0x83 07
+              DICTUDEL                            // 0xF45B
+              140 THROWIFNOT                      // 0xF2E4_ 119_
+              s2 PUSH                             // 0x2 2
+              1 PLDI                              // 0xD70A 00
+              s1 PUSH                             // 0x2 1
+              ISNULL                              // 0x6E
+              s0 s1 XCHG                          // 0x0 1
+              NOT                                 // 0xB3
+              AND                                 // 0xB0
+              144 THROWIF                         // 0xF2D4_ 121_
+            }> PUSHCONT                           // 0x8F_ 038307F45BF2E08C22D70A00216E01B3B0F2D090
+            IFELSE                                // 0xE2
+            NEWC                                  // 0xC8
+            s0 s3 XCHG2                           // 0x50 0 3
+            STSLICER                              // 0xCF16
+            s1 s2 XCHG                            // 0x1 2
+            STDICT                                // 0xF400
+            ENDC                                  // 0xC9
+            c4 POPCTR                             // 0xED5 4
+          }>c <{
+            s0 POP                                // 0x3 0
+            x{04} SDBEGINSQ                       // 0xD72E_ 04
+            <{
+              s1 PUSH                             // 0x2 1
+              146 THROWIFNOT                      // 0xF2E4_ 125_
+              1 LDI                               // 0xD2 00
+              c4 PUSHCTR                          // 0xED4 4
+              CTOS                                // 0xD0
+              1 LDI                               // 0xD2 00
+              s1 s3 XCPU                          // 0x51 1 3
+              EQUAL                               // 0xBA
+              143 THROWIF                         // 0xF2D4_ 11F_
+              s0 s2 s(-1) PUXCPU                  // 0x545 0 3 0
+              <{
+                s1 POP                            // 0x3 1
+              }> PUSHCONT                         // 0x9 31
+              <{
+                s0 s1 XCHG                        // 0x0 1
+                320 PUSHINT                       // 0x81 0140
+                SDSKIPFIRST                       // 0xD721
+                1 PLDI                            // 0xD70A 00
+                142 THROWIFNOT                    // 0xF2E4_ 11D_
+              }> PUSHCONT                         // 0x9 01810140D721D70A00F2E08E
+              IFELSE                              // 0xE2
+              NEWC                                // 0xC8
+              1 STI                               // 0xCA 00
+              ROT                                 // 0x58
+              STSLICER                            // 0xCF16
+              ENDC                                // 0xC9
+              c4 POPCTR                           // 0xED5 4
+            }> PUSHCONT                           // 0x8F_ 21F2E092D200ED44D0D2005113BAF2D08F54503091319C01810140D721D70A00F2E08EE2C8CA0058CF16C9ED54
+            <{
+              141 THROW                           // 0xF2C4_ 11B_
+            }> PUSHCONT                           // 0x9 F2C08D
+            IFELSE                                // 0xE2
+          }>c IFREFELSEREF                        // 0xE30F 01FA4001FA44F828FA443058BAF2E091ED44D0810141D718F405049D7FC8CA0040048307F453F2E08B8E14038307F45BF2E08C22D70A00216E01B3B0F2D090E2C85003CF1612F400C9ED54 30D72C08248E2D21F2E092D200ED44D0D2005113BAF2D08F54503091319C01810140D721D70A00F2E08EE2C8CA0058CF16C9ED5493F2C08DE2
+          s0 PUSH                                 // 0x2 0
+          SREFS                                   // 0xD74A
+          <{
+            DROP2                                 // 0x5B
+            RETALT                                // 0xDB31
+          }> PUSHCONT                             // 0x9 5BDB31
+          IFNOTJMP                                // 0xE1
+          0 PLDREFIDX                             // 0xD74E_ 2_
+          CTOS                                    // 0xD0
+        }>c CALLREF                               // 0xDB3C EDA2EDFB02F404216E926C218E4C0221D73930709421C700B38E2D01D72820761E436C20D749C008F2E09320D74AC002F2E09320D71D06C712C2005230B0F2D089D74CD7393001A4E86C128407BBF2E093D74AC000F2E093ED55E2D20001C000915BE0EBD72C08142091709601D72C081C12E25210B1E30F20D74A
+      }> PUSHCONT                                 // 0x8F_ EDA2EDFB218308D722028308D723208020D721D31FD31FD31FED44D0D200D31F20D31FD3FFD70A000AF90140CCF9109A28945F0ADB31E1F2C087DF02B35007B0F2D0845125BAF2E0855036BAF2E086F823BBF2D0882292F800DE01A47FC8CA00CB1F01CF16C9ED542092F80FDE70DB3C
+      EXECUTE                                     // 0xD8
+    }> PUSHCONT                                   // 0x8F_ 20D70B1F2082106578746EBD21821073696E74BDB0925F03E082106578746EBA8EB48020D72101D074D721FA4030FA44F828FA443058BD915BE0ED44D0810141D721F4058307F40E6FA1319130E18040D721707FDB3CE03120D749810280B99130E070
+    IFELSE                                        // 0xE2
+  }>
+  get_public_key PROC:<{
+    c4 PUSHCTR                                    // 0xED4 4
+    CTOS                                          // 0xD0
+    65 PUSHINT                                    // 0x80 41
+    SDSKIPFIRST                                   // 0xD721
+    256 PLDU                                      // 0xD70B FF
+  }>
+  get_subwallet_id PROC:<{
+    c4 PUSHCTR                                    // 0xED4 4
+    CTOS                                          // 0xD0
+    33 PUSHINT                                    // 0x80 21
+    SDSKIPFIRST                                   // 0xD721
+    32 PLDU                                       // 0xD70B 1F
+  }>
+  seqno PROC:<{
+    c4 PUSHCTR                                    // 0xED4 4
+    CTOS                                          // 0xD0
+    1 PUSHINT                                     // 0x7 1
+    SDSKIPFIRST                                   // 0xD721
+    32 PLDU                                       // 0xD70B 1F
+  }>
+  ?fun_88459 PROC:<{
+    c4 PUSHCTR                                    // 0xED4 4
+    CTOS                                          // 0xD0
+    1 PLDI                                        // 0xD70A 00
+  }>
+  ?fun_117729 PROC:<{
+    c4 PUSHCTR                                    // 0xED4 4
+    CTOS                                          // 0xD0
+    321 PUSHINT                                   // 0x81 0141
+    SDSKIPFIRST                                   // 0xD721
+    PLDDICT                                       // 0xF405
+  }>
+}END>c"
+`;
