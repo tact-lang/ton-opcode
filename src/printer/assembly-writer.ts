@@ -75,6 +75,18 @@ export interface AssemblyWriterOptions {
      */
     readonly outputBitcodeAfterInstruction?: boolean
     readonly debugSymbols?: DebugSymbols
+    /**
+     * Map of function hashes to their original names.
+     * Used to restore original function names when printing.
+     *
+     * Can be obtained using `obtainSourceMap()` with original `.fif` file passed in:
+     *
+     * ```typescript
+     * const sourceMap = await obtainSourceMap("path/to/original.fif")
+     * const result = AssemblyWriter.write(program, { sourceMap })
+     * ```
+     */
+    readonly sourceMap?: Map<string, string>
 }
 
 export class AssemblyWriter {
@@ -89,6 +101,16 @@ export class AssemblyWriter {
 
     public constructor(options: AssemblyWriterOptions) {
         const actualDebugSymbols = options.debugSymbols ?? debugSymbols
+
+        if (options.sourceMap) {
+            options.sourceMap.entries().forEach(([hash, name]) => {
+                actualDebugSymbols.procedures.push({
+                    name: name,
+                    cellHash: hash,
+                    methodId: -9999,
+                })
+            })
+        }
 
         actualDebugSymbols.globals.forEach(glob => {
             this.knownGlobals.set(glob.index, glob.name)

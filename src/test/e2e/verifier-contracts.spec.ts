@@ -46,7 +46,7 @@ describe("tact contracts", () => {
             const withoutRefs = decompileAll(source, debugSymbols, false)
 
             const result = await compileFift(withoutRefs)
-            if (!result.ok) {
+            if (result.status === "error") {
                 fail(`cannot compile boc:\n${result.log}`)
             }
         })

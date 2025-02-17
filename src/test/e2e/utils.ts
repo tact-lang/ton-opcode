@@ -38,8 +38,11 @@ export async function compileFiftBackAndCompare(
     raw: boolean = false,
 ): Promise<void> {
     const result = await compileFift(content)
-    if (!result.ok) {
+    if (result.status === "error") {
         fail(`cannot compile boc:\n${result.log}`)
+    }
+    if (result.status === "source_map") {
+        return
     }
 
     const resultBase64 = result.output.toString("base64")
