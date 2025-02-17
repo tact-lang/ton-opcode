@@ -20,15 +20,15 @@ const writeToCStringPtr = (mod: any, str: string, ptr: any) => {
 const readFromCString = (mod: any, pointer: Pointer): string => mod.UTF8ToString(pointer)
 
 export interface FiftCompilationResultOk {
-    readonly status: "error"
-    readonly log: string
-    readonly output: Buffer | null
-}
-
-export interface FiftCompilationResultError {
     readonly status: "ok"
     readonly log: string
     readonly output: Buffer
+}
+
+export interface FiftCompilationResultError {
+    readonly status: "error"
+    readonly log: string
+    readonly output: Buffer | null
 }
 
 export interface FiftCompilationSourceMap {
