@@ -16,6 +16,30 @@ PROGRAM{
 }END>c"
 `;
 
+exports[`disassemble > should decompile SDBEGINSXQ correctly 1`] = `
+""Asm.fif" include
+PROGRAM{
+  DECLPROC recv_internal
+  recv_internal PROC:<{
+    NEWC
+    x{68656C6C6F20776F726C64} PUSHSLICE
+    STSLICER
+    ENDC
+    CTOS
+    NEWC
+    x{68656C6C6F} PUSHSLICE
+    STSLICER
+    ENDC
+    CTOS
+    DUP2
+    SDBEGINSX
+    ROTREV
+    SDBEGINSXQ
+    DROP2
+  }>
+}END>c"
+`;
+
 exports[`disassemble > should decompile and compile back PUSHREF with bytes 1`] = `
 ""Asm.fif" include
 PROGRAM{
