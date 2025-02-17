@@ -360,7 +360,9 @@ function checkLayout(opcodes: DecompiledInstruction[]): void {
     const isValidLayout =
         opcodes[RootLayout.instructions.SETCP].op.definition.mnemonic === "SETCP" &&
         opcodes[RootLayout.instructions.DICTPUSHCONST].op.definition.mnemonic === "DICTPUSHCONST" &&
-        opcodes[RootLayout.instructions.DICTIGETJMPZ].op.definition.mnemonic === "DICTIGETJMPZ" &&
+        (opcodes[RootLayout.instructions.DICTIGETJMPZ].op.definition.mnemonic === "DICTIGETJMPZ" ||
+            opcodes[RootLayout.instructions.DICTIGETJMPZ].op.definition.mnemonic ===
+                "DICTIGETJMP") &&
         opcodes[RootLayout.instructions.THROWARG].op.definition.mnemonic === "THROWARG"
 
     if (!isValidLayout) {

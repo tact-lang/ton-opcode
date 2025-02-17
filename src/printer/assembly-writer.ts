@@ -18,9 +18,32 @@ const OPCODE_RENAMES = new Map([
     ["PUSHINT_16", "PUSHINT"],
     ["PUSHINT_LONG", "PUSHINT"],
     ["PUSHCONT_SHORT", "PUSHCONT"],
+    ["THROW_SHORT", "THROW"],
     ["THROWIFNOT_SHORT", "THROWIFNOT"],
     ["THROWIF_SHORT", "THROWIF"],
     ["CALLDICT_LONG", "CALLDICT"],
+
+    ["LSHIFTDIVMODR_VAR", "LSHIFTDIVMODR"],
+    ["LSHIFT_VAR", "LSHIFT"],
+    ["RSHIFTR_VAR", "RSHIFTR"],
+    ["RSHIFT_VAR", "RSHIFT"],
+    ["MULRSHIFTC_VAR", "MULRSHIFTC"],
+    ["MULRSHIFTR_VAR", "MULRSHIFTR"],
+    ["MULRSHIFT_VAR", "MULRSHIFT"],
+    ["QMULRSHIFT_VAR", "QMULRSHIFT"],
+    ["PUSHSLICE_LONG", "PUSHSLICE"],
+
+    ["LSHIFTDIVR", "LSHIFT#DIVR"],
+    ["LSHIFTDIVMODR", "LSHIFT#DIVMODR"],
+    ["RSHIFTRMOD", "RSHIFTR#MOD"],
+    ["QLSHIFTDIVMODR", "QLSHIFT#DIVMODR"],
+    ["MULRSHIFTRMOD", "MULRSHIFTR#MOD"],
+
+    ["LSHIFT", "LSHIFT#"],
+    ["RSHIFT", "RSHIFT#"],
+    ["MULRSHIFTR", "MULRSHIFTR#"],
+    ["MULRSHIFTC", "MULRSHIFTC#"],
+    ["MULMODPOW2", "MULMODPOW2#"],
 ])
 
 export interface AssemblyWriterOptions {
@@ -187,41 +210,7 @@ export class AssemblyWriter {
 
         const firstArg = (node.arguments[0] as ScalarNode | undefined)?.value
         const secondArg = (node.arguments[1] as ScalarNode | undefined)?.value
-        if (firstArg === undefined) {
-            if (opcode === "LSHIFTDIVMODR_VAR") {
-                return "LSHIFTDIVMODR"
-            }
-
-            if (opcode === "LSHIFT_VAR") {
-                return "LSHIFT"
-            }
-
-            if (opcode === "RSHIFTR_VAR") {
-                return "RSHIFTR"
-            }
-
-            if (opcode === "RSHIFT_VAR") {
-                return "RSHIFT"
-            }
-
-            if (opcode === "MULRSHIFTC_VAR") {
-                return "MULRSHIFTC"
-            }
-
-            if (opcode === "MULRSHIFTR_VAR") {
-                return "MULRSHIFTR"
-            }
-
-            if (opcode === "MULRSHIFT_VAR") {
-                return "MULRSHIFT"
-            }
-
-            if (opcode === "QMULRSHIFT_VAR") {
-                return "QMULRSHIFT"
-            }
-
-            return null
-        }
+        if (firstArg === undefined) return null
 
         const originalInstruction = this.cp0.instructions.find(i => i.mnemonic === opcode)
         if (!originalInstruction) return null
@@ -286,10 +275,6 @@ export class AssemblyWriter {
             return `${firstArg.toString()} s() POP`
         }
 
-        if (opcode === "PUSHSLICE_LONG") {
-            return `${firstArg.toString()} PUSHSLICE`
-        }
-
         if (opcode === "XCHG_IJ" && secondArg !== undefined) {
             return `s${firstArg.toString()} s${secondArg.toString()} XCHG`
         }
@@ -316,46 +301,12 @@ export class AssemblyWriter {
             return `${firstArg.toString()} ${opcode}#`
         }
 
-        if (
-            opcode === "LSHIFT" ||
-            opcode === "RSHIFT" ||
-            opcode === "MULRSHIFTR" ||
-            opcode === "MULRSHIFTC" ||
-            opcode === "MULMODPOW2"
-        ) {
-            return `${firstArg.toString()} ${opcode}#`
-        }
-
-        if (opcode === "LSHIFTDIVR") {
-            return `${firstArg.toString()} LSHIFT#DIVR`
-        }
-
-        if (opcode === "LSHIFTDIVMODR") {
-            return `${firstArg.toString()} LSHIFT#DIVMODR`
-        }
-
-        if (opcode === "RSHIFTRMOD") {
-            return `${firstArg.toString()} RSHIFTR#MOD`
-        }
-
-        if (opcode === "QLSHIFTDIVMODR") {
-            return `${firstArg.toString()} QLSHIFT#DIVMODR`
-        }
-
-        if (opcode === "MULRSHIFTRMOD") {
-            return `${firstArg.toString()} MULRSHIFTR#MOD`
-        }
-
         if (opcode === "CALLXARGS_VAR") {
             return `${firstArg.toString()} -1 CALLXARGS`
         }
 
         if (opcode === "PUSH_LONG") {
             return `${firstArg.toString()} s() PUSH`
-        }
-
-        if (opcode === "THROW_SHORT") {
-            return `${firstArg.toString()} THROW`
         }
 
         if (opcode === "PUSHREF" && firstArg.toString().startsWith("x")) {
@@ -406,12 +357,7 @@ export class AssemblyWriter {
         const specific = this.maybeSpecificWrite(node)
         if (specific !== null) {
             this.writer.write(specific)
-
-            if (this.options.outputBitcodeAfterInstruction) {
-                const space = " ".repeat(Math.max(1, 50 - this.writer.lineLength()))
-                this.writer.write(`${space}// 0x` + node.opcode.definition.bytecode.prefix)
-            }
-
+            this.writeBinaryRepresentationIfNeeded(node)
             this.writer.writeLine("")
             return
         }
@@ -462,35 +408,40 @@ export class AssemblyWriter {
             OPCODE_RENAMES.get(node.opcode.definition.mnemonic) ?? node.opcode.definition.mnemonic,
         )
 
-        if (this.options.outputBitcodeAfterInstruction) {
-            // Example output
-            // CTOS                                          // 0xD0
-            // 4 LDU                                         // 0xD3 03
-            // s0 s1 XCHG                                    // 0x0
-            // 1 PUSHINT                                     // 0x7 1
-            // AND                                           // 0xB0
-            // NEGATE                                        // 0xA3
-            const space = " ".repeat(Math.max(1, 50 - this.writer.lineLength()))
-            this.writer.write(`${space}// 0x` + node.opcode.definition.bytecode.prefix)
-
-            node.opcode.operands.forEach(arg => {
-                this.writer.write(" ")
-                switch (arg.type) {
-                    case "numeric":
-                    case "ref":
-                    case "bigint": {
-                        this.writer.write(arg.bitcode.toString())
-                        break
-                    }
-                    case "subslice": {
-                        this.writer.write(arg.value.bits.toString())
-                        break
-                    }
-                }
-            })
-        }
+        this.writeBinaryRepresentationIfNeeded(node)
 
         this.writer.writeLine("")
+    }
+
+    private writeBinaryRepresentationIfNeeded(node: InstructionNode): void {
+        if (!this.options.outputBitcodeAfterInstruction) return
+
+        // Example output
+        // CTOS                                          // 0xD0
+        // 4 LDU                                         // 0xD3 03
+        // s0 s1 XCHG                                    // 0x0 1
+        // 1 PUSHINT                                     // 0x7 1
+        // AND                                           // 0xB0
+        // NEGATE                                        // 0xA3
+
+        const space = " ".repeat(Math.max(1, 50 - this.writer.lineLength()))
+        this.writer.write(`${space}// 0x` + node.opcode.definition.bytecode.prefix)
+
+        node.opcode.operands.forEach(arg => {
+            this.writer.write(" ")
+            switch (arg.type) {
+                case "numeric":
+                case "ref":
+                case "bigint": {
+                    this.writer.write(arg.bitcode.toString())
+                    break
+                }
+                case "subslice": {
+                    this.writer.write(arg.value.bits.toString())
+                    break
+                }
+            }
+        })
     }
 
     protected writeNode(
