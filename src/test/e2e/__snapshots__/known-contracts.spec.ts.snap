@@ -3842,7 +3842,7 @@ PROGRAM{
 }END>c"
 `;
 
-exports[`known contracts > should decompile wallet v5 with bitcode 1`] = `
+exports[`known contracts > should decompile wallet v5 and print Fift with bitcode 1`] = `
 ""Asm.fif" include
 PROGRAM{
   -1 DECLMETHOD recv_external
