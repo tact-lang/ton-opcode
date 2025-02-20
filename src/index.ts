@@ -1,3 +1,5 @@
+export type * from "./ast/ast"
+
 export type {DisassembleAndProcessParams, DisassembleParams} from "./decompiler/disasm"
 export {
     disassemble,
