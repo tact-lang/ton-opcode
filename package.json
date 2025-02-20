@@ -15,7 +15,7 @@
         "gen-spec": "ts-node scripts/gen-codepage.ts",
         "test": "vitest",
         "coverage": "c8 vitest",
-        "postinstall": "husky || true"
+        "postinstall": "node .husky/install.mjs || true"
     },
     "devDependencies": {
         "@scaleton/func-debug-symbols": "0.1.5",
