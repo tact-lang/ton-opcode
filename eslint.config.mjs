@@ -22,6 +22,7 @@ export default tseslint.config(
             "**/*.spec.ts",
             "eslint.config.mjs",
             "vitest.config.ts",
+            ".husky/install.mjs",
             ".github/*",
             ".yarn/*",
             ".testing/*",
