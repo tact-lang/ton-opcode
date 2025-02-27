@@ -12,4 +12,4 @@ export type {AssemblyWriterOptions} from "./printer/assembly-writer"
 export {AssemblyWriter} from "./printer/assembly-writer"
 
 export {debugSymbols} from "./utils/known-methods"
-export {Cell} from "@ton/core"
+export {Cell, Dictionary} from "@ton/core"

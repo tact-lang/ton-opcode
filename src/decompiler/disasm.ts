@@ -344,7 +344,7 @@ function findDictOpcode(opcodes: DecompiledInstruction[]): DecompiledInstruction
 /**
  * Disassembles the root cell into a list of instructions.
  *
- * Use this function if you want to disassemble the whole BoC file.
+ * Use this function if you want to disassemble the whole BoC file with dictionary unpacked.
  */
 export function disassembleRoot(
     cell: Cell,
@@ -387,9 +387,7 @@ export function disassembleRoot(
 }
 
 /**
- * Disassembles a cell without any additional checks for the layout.
- *
- * Use this function if your contract use non-usual layout.
+ * Disassembles a cell without any additional unpacking of the dictionary.
  */
 export function disassembleRawRoot(cell: Cell): BlockNode {
     return disassembleAndProcess({
