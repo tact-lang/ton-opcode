@@ -3,10 +3,10 @@
 exports[`known contracts > should decompile Tact 1.6.0 with other layout 1`] = `
 ""Asm.fif" include
 PROGRAM{
-  DECLPROC main
+  DECLPROC recv_internal
   78250 DECLMETHOD ?fun_78250
   DECLPROC ?fun_ref_92183b49329bb4e4
-  main PROC:<{
+  recv_internal PROC:<{
     DROP
     DROP
     CTOS
@@ -62,7 +62,7 @@ exports[`known contracts > should decompile Tact 1.6.0 with other layout and rec
 ""Asm.fif" include
 PROGRAM{
   -1 DECLMETHOD recv_external
-  DECLPROC main
+  DECLPROC recv_internal
   78250 DECLMETHOD ?fun_78250
   DECLPROC ?fun_ref_92183b49329bb4e4
   recv_external PROC:<{
@@ -96,7 +96,7 @@ PROGRAM{
     ENDC
     POPROOT
   }>
-  main PROC:<{
+  recv_internal PROC:<{
     DROP
     DROP
     CTOS

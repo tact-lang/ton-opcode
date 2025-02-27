@@ -115,11 +115,10 @@ describe("known contracts", () => {
 
     it("should decompile mathlib.fc", async () => {
         const debugSymbols2: DebugSymbols = {
-            procedures: [],
-            globals: [],
-            constants: [],
+            procedures: [...debugSymbols.procedures],
+            globals: [...debugSymbols.globals],
+            constants: [...debugSymbols.constants],
         }
-        Object.assign(debugSymbols2, debugSymbols)
 
         debugSymbols2.procedures[0] = {
             methodId: 0,
