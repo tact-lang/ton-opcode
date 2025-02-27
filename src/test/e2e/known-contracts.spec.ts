@@ -13,7 +13,7 @@ describe("known contracts", () => {
             "te6cckEBAQEARAAAhP8AIN2k8mCBAgDXGCDXCx/tRNDTH9P/0VESuvKhIvkBVBBE+RDyovgAAdMfMSDXSpbTB9QC+wDe0aTIyx/L/8ntVEH98Ik=",
             "base64",
         )
-        const res = decompileRaw(wallet)
+        const res = decompileAll(wallet)
         expect(res).toMatchSnapshot()
 
         // await compileFiftBackAndCompare(res, wallet, true)
@@ -24,7 +24,7 @@ describe("known contracts", () => {
             "te6cckEBAQEAVwAAqv8AIN0gggFMl7qXMO1E0NcLH+Ck8mCDCNcYINMf0x8B+CO78mPtRNDTH9P/0VExuvKhA/kBVBBC+RDyovgAApMg10qW0wfUAvsA6NGkyMsfy//J7VShNwu2",
             "base64",
         )
-        const res = decompileRaw(wallet)
+        const res = decompileAll(wallet)
         expect(res).toMatchSnapshot()
 
         // await compileFiftBackAndCompare(res, wallet)
@@ -115,11 +115,10 @@ describe("known contracts", () => {
 
     it("should decompile mathlib.fc", async () => {
         const debugSymbols2: DebugSymbols = {
-            procedures: [],
-            globals: [],
-            constants: [],
+            procedures: [...debugSymbols.procedures],
+            globals: [...debugSymbols.globals],
+            constants: [...debugSymbols.constants],
         }
-        Object.assign(debugSymbols2, debugSymbols)
 
         debugSymbols2.procedures[0] = {
             methodId: 0,
@@ -134,5 +133,23 @@ describe("known contracts", () => {
         // TODO: spot the difference
         // const withoutRefs = decompileAll(mathlib, debugSymbols2, false)
         // await compileFiftBackAndCompare(withoutRefs, mathlib)
+    })
+
+    it("should decompile Tact 1.6.0 with other layout", async () => {
+        const wallet = Buffer.from(
+            "te6ccgEBAwEAXQABbP8AII4oMDDQctch0gDSAPpAIRA0UFVvBPhhAfhi7UTQ0gAwkW2RbeIw3PLAguH0pBP0vPLICwEBI6ZMartRNDSADCRbZFt4ts8MYAIAGou2hlbGxvIHdvcmxkg=",
+            "base64",
+        )
+        const res = decompileAll(wallet)
+        expect(res).toMatchSnapshot()
+    })
+
+    it("should decompile Tact 1.6.0 with other layout and recv_external", async () => {
+        const wallet = Buffer.from(
+            "te6ccgEBAwEAjAAByv8AII4oMDDQctch0gDSAPpAIRA0UFVvBPhhAfhi7UTQ0gAwkW2RbeIw3PLAguEgwP+OKTAw7UTQ0gAwkW2RbeL4QW8kECNfA4IAoYf4KFjHBfL0MMh/AcoAye1U4PSkE/S88sgLAQEjpkxqu1E0NIAMJFtkW3i2zwxgAgAai7aGVsbG8gd29ybGSA==",
+            "base64",
+        )
+        const res = decompileAll(wallet)
+        expect(res).toMatchSnapshot()
     })
 })

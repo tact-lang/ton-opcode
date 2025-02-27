@@ -132,15 +132,21 @@ export class AssemblyWriter {
             }
         }
 
-        // if (node.topLevelInstructions.length > 0) {
-        //     node.topLevelInstructions.forEach(instruction => {
-        //         // if (i === 1) return
-        //         this.writer.write("// ")
-        //         this.writeInstructionNode(instruction)
-        //     })
-        // }
-
         this.writer.writeLine(`"Asm.fif" include`)
+
+        if (node.procedures.length === 0 && node.methods.length === 0) {
+            this.writer.writeLine("<{")
+
+            this.writer.indent(() => {
+                node.topLevelInstructions.forEach(instruction => {
+                    this.writeInstructionNode(instruction)
+                })
+            })
+
+            this.writer.write("}>c")
+            return
+        }
+
         this.writer.writeLine("PROGRAM{")
         this.writer.indent(() => {
             const methods = [...node.methods].sort((a, b) => a.id - b.id)

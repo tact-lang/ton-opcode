@@ -31,17 +31,6 @@ export class OperandError extends DisassemblerError {
     }
 }
 
-export class LayoutError extends DisassemblerError {
-    public constructor(expected: number, actual: number, details?: Record<string, unknown>) {
-        super(`Unexpected root layout: expected ${expected} instructions, got ${actual}`, {
-            expected,
-            actual,
-            ...details,
-        })
-        this.name = "LayoutError"
-    }
-}
-
 export class UnknownOperandTypeError extends DisassemblerError {
     public constructor(operand: OperandValue, details?: Record<string, unknown>) {
         super(`Unknown operand type: ${operand.type}`, {
