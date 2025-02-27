@@ -410,7 +410,7 @@ export function disassembleRoot(
             type: "program",
             topLevelInstructions: opcodes.map(op => processInstruction(op, args)),
             procedures: [],
-            methods: [],
+            methods: rootMethods,
             withRefs: options.computeRefs,
         }
     }
