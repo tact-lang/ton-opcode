@@ -341,6 +341,44 @@ function findDictOpcode(opcodes: DecompiledInstruction[]): DecompiledInstruction
     return opcodes.find(it => it.op.definition.mnemonic === "DICTPUSHCONST")
 }
 
+function findRootMethods(opcodes: DecompiledInstruction[]): MethodNode[] {
+    const methods: MethodNode[] = []
+
+    if (opcodes[2]?.op.definition.mnemonic === "PUSHCONT") {
+        const cont = opcodes[2].op.operands.at(0)
+        if (!cont || cont.type !== "subslice") {
+            return methods
+        }
+
+        const recvInternal = disassembleRawRoot(cont.value)
+        methods.push({
+            type: "method",
+            hash: recvInternal.hash,
+            offset: recvInternal.offset,
+            body: recvInternal,
+            id: 0,
+        })
+    }
+
+    if (opcodes[6]?.op.definition.mnemonic === "PUSHCONT") {
+        const cont = opcodes[6].op.operands.at(0)
+        if (!cont || cont.type !== "subslice") {
+            return methods
+        }
+
+        const recvExternal = disassembleRawRoot(cont.value)
+        methods.push({
+            type: "method",
+            hash: recvExternal.hash,
+            offset: recvExternal.offset,
+            body: recvExternal,
+            id: -1,
+        })
+    }
+
+    return methods
+}
+
 /**
  * Disassembles the root cell into a list of instructions.
  *
@@ -363,21 +401,7 @@ export function disassembleRoot(
         onCellReference: undefined,
     }
 
-    const rootMethods: MethodNode[] = []
-
-    if (opcodes[2]?.op.definition.mnemonic === "PUSHCONT") {
-        const cont = opcodes[2].op.operands[0]
-        if (cont.type === "subslice") {
-            const recvInternal = disassembleRawRoot(cont.value)
-            rootMethods.push({
-                type: "method",
-                hash: recvInternal.hash,
-                offset: recvInternal.offset,
-                body: recvInternal,
-                id: 0,
-            })
-        }
-    }
+    const rootMethods = findRootMethods(opcodes)
 
     const dictOpcode = findDictOpcode(opcodes)
     if (!dictOpcode) {

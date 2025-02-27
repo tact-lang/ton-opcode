@@ -144,4 +144,13 @@ describe("known contracts", () => {
         const res = decompileAll(wallet)
         expect(res).toMatchSnapshot()
     })
+
+    it("should decompile Tact 1.6.0 with other layout and recv_external", async () => {
+        const wallet = Buffer.from(
+            "te6ccgEBAwEAjAAByv8AII4oMDDQctch0gDSAPpAIRA0UFVvBPhhAfhi7UTQ0gAwkW2RbeIw3PLAguEgwP+OKTAw7UTQ0gAwkW2RbeL4QW8kECNfA4IAoYf4KFjHBfL0MMh/AcoAye1U4PSkE/S88sgLAQEjpkxqu1E0NIAMJFtkW3i2zwxgAgAai7aGVsbG8gd29ybGSA==",
+            "base64",
+        )
+        const res = decompileAll(wallet)
+        expect(res).toMatchSnapshot()
+    })
 })
