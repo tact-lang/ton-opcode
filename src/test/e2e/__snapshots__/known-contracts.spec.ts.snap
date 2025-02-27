@@ -1,5 +1,31 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`known contracts > should decompile Tact 1.6.0 with other layout 1`] = `
+""Asm.fif" include
+PROGRAM{
+  78250 DECLMETHOD ?fun_78250
+  DECLPROC ?fun_ref_92183b49329bb4e4
+  ?fun_78250 PROC:<{
+    PUSHROOT
+    CTOS
+    1 LDI
+    DROP
+    <{
+      NULL
+    }> PUSHCONT
+    <{
+      NULL
+    }> PUSHCONT
+    IFELSE
+    ?fun_ref_92183b49329bb4e4 INLINECALLDICT
+    NIP
+  }>
+  ?fun_ref_92183b49329bb4e4 PROCREF:<{
+    x{68656C6C6F20776F726C64} PUSHSLICE
+  }>
+}END>c"
+`;
+
 exports[`known contracts > should decompile echo 1`] = `
 ""Asm.fif" include
 PROGRAM{
