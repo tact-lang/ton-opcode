@@ -363,6 +363,22 @@ export function disassembleRoot(
         onCellReference: undefined,
     }
 
+    const rootMethods: MethodNode[] = []
+
+    if (opcodes[2]?.op.definition.mnemonic === "PUSHCONT") {
+        const cont = opcodes[2].op.operands[0]
+        if (cont.type === "subslice") {
+            const recvInternal = disassembleRawRoot(cont.value)
+            rootMethods.push({
+                type: "method",
+                hash: recvInternal.hash,
+                offset: recvInternal.offset,
+                body: recvInternal,
+                id: 0,
+            })
+        }
+    }
+
     const dictOpcode = findDictOpcode(opcodes)
     if (!dictOpcode) {
         // Likely some non-Tact/FunC produced BoC
@@ -381,7 +397,7 @@ export function disassembleRoot(
         type: "program",
         topLevelInstructions: opcodes.map(op => processInstruction(op, args)),
         procedures,
-        methods,
+        methods: [...rootMethods, ...methods],
         withRefs: options.computeRefs,
     }
 }

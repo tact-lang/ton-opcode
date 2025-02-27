@@ -3,8 +3,40 @@
 exports[`known contracts > should decompile Tact 1.6.0 with other layout 1`] = `
 ""Asm.fif" include
 PROGRAM{
+  DECLPROC recv_internal
   78250 DECLMETHOD ?fun_78250
   DECLPROC ?fun_ref_92183b49329bb4e4
+  recv_internal PROC:<{
+    DROP
+    DROP
+    CTOS
+    TWO
+    SDSKIPFIRST
+    1 LDI
+    1 LDI
+    LDMSGADDR
+    OVER
+    s3 s4 XCHG
+    s5 s5 XCHG2
+    4 TUPLE
+    1 SETGLOB
+    SWAP
+    2 SETGLOB
+    PUSHROOT
+    CTOS
+    1 LDI
+    DROP
+    <{
+      NULL
+    }> PUSHCONT
+    <{
+      NULL
+    }> PUSHCONT
+    IFELSE
+    DROP
+    IFRET
+    130 THROW
+  }>
   ?fun_78250 PROC:<{
     PUSHROOT
     CTOS
