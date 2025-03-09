@@ -50,6 +50,8 @@ const OPCODE_RENAMES = new Map([
     ["DICTPUSHCONST", "PUSHDICTCONST"],
 ])
 
+const HASHEXT_PREFIXES = ["HASHEXT", "HASHEXTR", "HASHEXTA", "HASHEXTAR"]
+
 export type TSAssemblyWriterOptions = object
 
 export class TSAssemblyWriter {
@@ -72,18 +74,21 @@ export class TSAssemblyWriter {
 
         this.writer.indent(() => {
             node.topLevelInstructions.forEach(it => {
-                const keyLength = it.opcode.operands[1]?.value ?? 19
-
                 if (it.opcode.definition.mnemonic === "DICTPUSHCONST") {
+                    const keyLength = it.opcode.operands[1]?.value ?? 19
+
                     this.writer.writeLine(`i.PUSHDICTCONST(${keyLength.toString()}, new Map([`)
+
                     this.writer.indent(() => {
                         methods.forEach(method => {
                             this.writeMethodNode(method)
                         })
+
                         procedures.forEach(procedure => {
                             this.writeNode(procedure)
                         })
                     })
+
                     this.writer.writeLine("])),")
                     return
                 }
@@ -121,21 +126,15 @@ export class TSAssemblyWriter {
     protected static maybeSpecificWrite(node: InstructionNode): string | null {
         const opcode = node.opcode.definition.mnemonic
 
-        if (opcode.startsWith("HASHEXT_")) {
-            const hashName = opcode.slice("HASHEXT_".length)
-            return `i.HASHEXT(Hash.${hashName})`
-        }
-        if (opcode.startsWith("HASHEXTR_")) {
-            const hashName = opcode.slice("HASHEXTR_".length)
-            return `i.HASHEXTR(Hash.${hashName})`
-        }
-        if (opcode.startsWith("HASHEXTA_")) {
-            const hashName = opcode.slice("HASHEXTA_".length)
-            return `i.HASHEXTA(Hash.${hashName})`
-        }
-        if (opcode.startsWith("HASHEXTAR_")) {
-            const hashName = opcode.slice("HASHEXTAR_".length)
-            return `i.HASHEXTAR(Hash.${hashName})`
+        // Convert HASHEXT_SHA256 to `i.HASHEXT(Hash.SHA256)
+        for (const name of HASHEXT_PREFIXES) {
+            const prefix = `${name}_`
+            if (opcode.startsWith(prefix)) {
+                // HASHEXT_SHA256
+                //         ^^^^^^ this
+                const hashName = opcode.slice(prefix.length)
+                return `i.${name}(Hash.${hashName})`
+            }
         }
 
         const firstArg = (node.arguments[0] as ScalarNode | undefined)?.value
