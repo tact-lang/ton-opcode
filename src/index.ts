@@ -10,6 +10,8 @@ export {
 
 export type {AssemblyWriterOptions} from "./printer/assembly-writer"
 export {AssemblyWriter} from "./printer/assembly-writer"
+export type {TSAssemblyWriterOptions} from "./printer/ts-assembly-writer"
+export {TSAssemblyWriter} from "./printer/ts-assembly-writer"
 
 export {debugSymbols} from "./utils/known-methods"
 export {Cell, Dictionary} from "@ton/core"
