@@ -31,6 +31,13 @@ export interface MethodReferenceNode {
     readonly methodId: number
 }
 
+export interface DictNode {
+    readonly type: "dict"
+    readonly keyLen: number
+    readonly procedures: ProcedureNode[]
+    readonly methods: MethodNode[]
+}
+
 export type InstructionArgument =
     | ScalarNode
     | BlockNode
@@ -39,6 +46,7 @@ export type InstructionArgument =
     | ControlRegisterNode
     | GlobalVariableNode
     | MethodReferenceNode
+    | DictNode
 
 export interface InstructionNode {
     readonly type: "instruction"

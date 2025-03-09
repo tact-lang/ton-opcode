@@ -1055,7 +1055,7 @@
                         "size": 4,
                         "min_value": 0,
                         "max_value": 15,
-                        "display_hints": []
+                        "display_hints": [{"type": "add", "value": 2}]
                     },
                     {
                         "name": "j",
@@ -5075,10 +5075,10 @@
                 "gas": "26",
                 "fift": "MULRSHIFT",
                 "fift_examples": [],
-                "opcode": "A9A4",
+                "opcode": "A9B4",
                 "stack": "x y z - floor(x*y/2^z)"
             },
-            "bytecode": {"tlb": "#A9A4", "prefix": "A9A4", "operands": []},
+            "bytecode": {"tlb": "#A9B4", "prefix": "A9B4", "operands": []},
             "value_flow": {
                 "inputs": {
                     "stack": [
@@ -5454,20 +5454,20 @@
             "control_flow": {"branches": [], "nobranch": true}
         },
         {
-            "mnemonic": "MULRSHIFT",
+            "mnemonic": "MULRSHIFT_",
             "since_version": 0,
             "doc": {
                 "category": "arithm_div",
                 "description": "",
                 "gas": "34",
-                "fift": "[tt+1] MULRSHIFT#",
+                "fift": "[tt+1] MULRSHIFT_",
                 "fift_examples": [],
-                "opcode": "A9B4tt",
+                "opcode": "A9A4tt",
                 "stack": "x y - floor(x*y/2^(tt+1))"
             },
             "bytecode": {
-                "tlb": "#A9B4 tt:uint8",
-                "prefix": "A9B4",
+                "tlb": "#A9A4 tt:uint8",
+                "prefix": "A9A4",
                 "operands": [
                     {
                         "name": "t",

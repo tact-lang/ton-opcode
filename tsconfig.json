@@ -19,7 +19,8 @@
         "noImplicitOverride": true,
         "noImplicitReturns": true,
         "noPropertyAccessFromIndexSignature": true,
-        "noUnusedParameters": true
+        "noUnusedParameters": true,
+        "allowJs": false
     },
     "include": ["src/**/*", "node_modules/vitest/globals.d.ts"],
     "exclude": ["**/**.spec.ts", "**/**.bind.ts", "src/test/features/output/**/*"]

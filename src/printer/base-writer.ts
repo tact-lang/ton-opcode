@@ -26,6 +26,10 @@ export class BaseWriter {
         this.currentLine = ""
     }
 
+    public trim(): void {
+        this.currentLine = this.currentLine.trim()
+    }
+
     public end(): string {
         if (this.currentLine !== "") {
             this.newLine()

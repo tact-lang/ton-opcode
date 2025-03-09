@@ -1,4 +1,4 @@
-import {Cell, Dictionary, DictionaryValue} from "@ton/core"
+import {BitString, Builder, Cell, Dictionary, DictionaryValue, Slice} from "@ton/core"
 import {subslice} from "../utils/subcell"
 import {
     DecodedInstruction,
@@ -34,6 +34,26 @@ export interface DisassembleParams {
      * The limit in the cell to stop disassembling at.
      */
     readonly limit?: {bits: number; refs: number}
+}
+
+export const hex = (value: string): Slice => {
+    const b = new Builder()
+
+    let res2 = ""
+    for (const ch of value) {
+        if (ch === "_") break
+        res2 += Number.parseInt(ch, 16).toString(2).padStart(4, "0")
+    }
+
+    if (value.endsWith("_")) {
+        res2 = res2.replace(/10*$/, "")
+    }
+
+    for (const ch of res2) {
+        b.storeBit(ch === "1")
+    }
+
+    return b.asSlice()
 }
 
 /**
@@ -74,7 +94,60 @@ export function disassemble(args: DisassembleParams): DecompiledInstruction[] {
     // Since every cell can contain references to other cells, we need to disassemble them recursively.
     while (slice.remainingRefs > 0) {
         const source = slice.loadRef()
-        instructions.push(...disassemble({source}))
+
+        const value: RefValue = {
+            type: "ref",
+            value: source,
+            bitcode: new BitString(Buffer.from([]), 0, 0),
+            definition: {
+                type: "ref",
+                name: "PUSHREF",
+                display_hints: [],
+            },
+        }
+
+        const PSEUDO_PUSHREF: DecompiledInstruction = {
+            hash: "",
+            length: 0,
+            offset: 0,
+            op: {
+                definition: {
+                    mnemonic: "PSEUDO_PUSHREF",
+                    doc: {
+                        fift: "",
+                        opcode: "",
+                        gas: "",
+                        category: "",
+                        stack: "",
+                        description: "",
+                        fift_examples: [],
+                    },
+                    bytecode: {
+                        operands: [],
+                        tlb: "",
+                        prefix: "",
+                    },
+                    control_flow: {
+                        branches: [],
+                        nobranch: true,
+                    },
+                    value_flow: {
+                        inputs: {
+                            stack: [],
+                            registers: [],
+                        },
+                        outputs: {
+                            stack: [],
+                            registers: [],
+                        },
+                    },
+                    since_version: 0,
+                },
+                operands: [value],
+            },
+        }
+
+        instructions.push(PSEUDO_PUSHREF)
     }
 
     return instructions
@@ -125,6 +198,28 @@ function processInstruction(
         case "CALLDICT_LONG":
         case "JMPDICT": {
             return processCallDict(op)
+        }
+        case "DICTPUSHCONST": {
+            const {procedures, methods, keyLen} = deserializeDict(
+                op.op.operands,
+                args.onCellReference !== undefined,
+            )
+
+            return {
+                type: "instruction",
+                opcode,
+                hash: op.hash,
+                offset: op.offset,
+                length: op.length,
+                arguments: [
+                    {
+                        type: "dict",
+                        procedures,
+                        methods,
+                        keyLen,
+                    },
+                ],
+            }
         }
     }
 
@@ -300,7 +395,9 @@ function processRefOrSliceOperand(
     if (
         hasHint(displayHints, "continuation") ||
         opcodeName === "PUSHCONT" ||
-        opcodeName === "PUSHCONT_SHORT"
+        opcodeName === "PUSHREF" ||
+        opcodeName === "PUSHCONT_SHORT" ||
+        opcodeName === "PSEUDO_PUSHREF"
     ) {
         if (operand.type === "ref") {
             const block = disassembleAndProcess({
@@ -338,7 +435,24 @@ function processRefOrSliceOperand(
 }
 
 function findDictOpcode(opcodes: DecompiledInstruction[]): DecompiledInstruction | undefined {
-    return opcodes.find(it => it.op.definition.mnemonic === "DICTPUSHCONST")
+    const found = opcodes.find(it => it.op.definition.mnemonic === "DICTPUSHCONST")
+    if (found) {
+        return found
+    }
+
+    for (const opcode of opcodes) {
+        if (
+            opcode.op.definition.mnemonic === "PSEUDO_PUSHREF" ||
+            opcode.op.definition.mnemonic === "PUSHREF"
+        ) {
+            const firstArg = opcode.op.operands[0]
+            const nextOpcodes = disassemble({source: firstArg.value as Cell})
+
+            return findDictOpcode(nextOpcodes)
+        }
+    }
+
+    return found
 }
 
 function findRootMethods(opcodes: DecompiledInstruction[]): MethodNode[] {
@@ -446,6 +560,7 @@ function deserializeDict(
 ): {
     procedures: ProcedureNode[]
     methods: MethodNode[]
+    keyLen: number
 } {
     const dictKeyLen = operands.find(operand => operand.definition.name === "n")
     const dictCell = operands.find(operand => operand.definition.name === "d")
@@ -467,14 +582,14 @@ function deserializeDict(
         }
     }
 
-    const countEntries = dictKeyLen.value
+    const keyLen = dictKeyLen.value
     const dict = Dictionary.loadDirect<
         number,
         {
             offset: number
             cell: Cell
         }
-    >(Dictionary.Keys.Int(countEntries), createCodeCell(), dictCell.value)
+    >(Dictionary.Keys.Int(keyLen), createCodeCell(), dictCell.value)
 
     const registeredCells: Map<string, string> = new Map()
 
@@ -521,6 +636,7 @@ function deserializeDict(
     return {
         procedures,
         methods,
+        keyLen,
     }
 }
 

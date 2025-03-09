@@ -407,6 +407,10 @@ export class AssemblyWriter {
                     this.writer.write(" ")
                     break
                 }
+                case "dict": {
+                    // TODO
+                    break
+                }
             }
         })
 
