@@ -1,6 +1,6 @@
 {
     "name": "@tact-lang/opcode",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "repository": "https://github.com/tact-lang/ton-opcode.git",
     "author": "Tact Authors",
     "main": "dist/index.js",
@@ -14,8 +14,7 @@
         "lint": "eslint --cache .",
         "gen-spec": "ts-node scripts/gen-codepage.ts",
         "test": "vitest",
-        "coverage": "c8 vitest",
-        "postinstall": "node .husky/install.mjs || true"
+        "coverage": "c8 vitest"
     },
     "devDependencies": {
         "@scaleton/func-debug-symbols": "0.1.5",

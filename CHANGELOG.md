@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.1] - 2025-03-07
+
+Removed `postinstall` script.
+
 ## [0.3.0] - 2025-02-27
 
 `disassembleRoot` now supports any layouts without throwing `LayoutError`.
