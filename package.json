@@ -35,8 +35,7 @@
     },
     "dependencies": {
         "@ton/core": "^0.61.0",
-        "@ton/crypto": "^3.3.0",
-        "@ton/sandbox": "^0.32.2"
+        "@ton/crypto": "^3.3.0"
     },
     "publishConfig": {
         "access": "public",
