@@ -1,3 +1,6 @@
+> [!CAUTION]
+> Deprecated. Use [@ton/tasm](https://www.npmjs.com/package/@ton/tasm) instead.
+
 # TON Opcodes
 
 A decompiler for The Open Network Virtual Machine (TVM) bytecode to Fift assembly.
